@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MYf-8O-Pyh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--VGStatsPlus-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="VGStatsPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,141 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vainglory_Dagger_DONOTEDIT" translatesAutoresizingMaskIntoConstraints="NO" id="5h3-Oo-NwA">
+                                <rect key="frame" x="16" y="72" width="343" height="212"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="Fdv-oF-X6o"/>
+                                    <constraint firstAttribute="height" constant="212" id="XC6-Ea-BKL"/>
+                                </constraints>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zSs-3J-gGh">
+                                <rect key="frame" x="16" y="346" width="343" height="150"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="tintColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="deviceRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="Region"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="7LW-1T-9eu"/>
+                                </constraints>
+                            </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter IGN" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZtT-zP-sB2">
+                                <rect key="frame" x="16" y="291" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zn-bh-2YZ">
+                                <rect key="frame" x="138" y="540" width="99" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mcv-H7-Xlf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="5h3-Oo-NwA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2hn-hD-12M"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0Zn-bh-2YZ" secondAttribute="bottom" constant="91" id="HSo-ks-ngv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Zn-bh-2YZ" secondAttribute="trailing" constant="122" id="L6O-yw-lx6"/>
+                            <constraint firstItem="ZtT-zP-sB2" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Mfr-24-23i"/>
+                            <constraint firstItem="0Zn-bh-2YZ" firstAttribute="top" secondItem="zSs-3J-gGh" secondAttribute="bottom" constant="44" id="VdU-LS-aoz"/>
+                            <constraint firstItem="zSs-3J-gGh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aKo-hx-bRr"/>
+                            <constraint firstItem="5h3-Oo-NwA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="fz3-Dg-l5d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zSs-3J-gGh" secondAttribute="trailing" id="j5l-F5-h9I"/>
+                            <constraint firstItem="ZtT-zP-sB2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kOp-ry-PIf"/>
+                            <constraint firstItem="0Zn-bh-2YZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="122" id="qu2-aT-Cho"/>
+                            <constraint firstItem="zSs-3J-gGh" firstAttribute="top" secondItem="ZtT-zP-sB2" secondAttribute="bottom" constant="25" id="xHT-6F-IIH"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="VGStatsPlus" id="ee9-r8-hK1"/>
+                    <connections>
+                        <outlet property="imgView" destination="5h3-Oo-NwA" id="FTR-Ph-PeD"/>
+                        <outlet property="picker" destination="zSs-3J-gGh" id="I0v-5w-ru7"/>
+                        <outlet property="textFieldIGN" destination="ZtT-zP-sB2" id="jCV-v6-n1r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1164" y="138.98050974512745"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="W7I-wX-eYd">
+            <objects>
+                <viewController id="Ab2-MG-hpX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TA4-Q5-Rnn"/>
+                        <viewControllerLayoutGuide type="bottom" id="0iD-Nc-qCa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0xK-dI-iAg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hxi-MC-TKs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2022" y="141"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6Pi-f0-enC">
+            <objects>
+                <viewController id="9iI-rn-XnH" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gn7-Qy-s9I"/>
+                        <viewControllerLayoutGuide type="bottom" id="pTH-5m-ANd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2UZ-j6-HNU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="khw-gc-R6D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2798" y="141"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MMe-kt-ESc">
+            <objects>
+                <viewController id="ypS-eT-bw9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="taK-iR-qAQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="aQd-7B-X8Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H9o-a4-2oR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Npa-Gv-i3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3577" y="139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xFp-Yf-wcj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MYf-8O-Pyh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="71l-gh-9FZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lIu-hq-EJF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bVi-uc-FCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="278" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Vainglory_Dagger_DONOTEDIT" width="640" height="2000"/>
+    </resources>
 </document>
