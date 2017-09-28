@@ -23,6 +23,8 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     //MARK: - Properties
     var regionalShards = ["East Asia", "Europe", "Southeast Asia", "North America", "South America", "East Asia Tournament", "Europe Tournament", "Southeast Asia Tournament", "North America Tournament", "South America Tournament"]
+    var store: PlayerDataStore!
+
     
     
     //MARK: - View Life Cycle
@@ -30,6 +32,7 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         super.viewDidLoad()
         picker.delegate = self
         picker.dataSource = self
+        store.fetchPlayerData()
     }
     
     

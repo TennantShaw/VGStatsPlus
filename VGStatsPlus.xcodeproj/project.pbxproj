@@ -14,7 +14,9 @@
 		302FA9EB1F798EE70042DAD5 /* VGStatsPlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FA9EA1F798EE70042DAD5 /* VGStatsPlusTests.swift */; };
 		302FA9F61F798EE70042DAD5 /* VGStatsPlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FA9F51F798EE70042DAD5 /* VGStatsPlusUITests.swift */; };
 		302FAA041F7991610042DAD5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FAA031F7991610042DAD5 /* LoginViewController.swift */; };
-		302FAA081F7A900F0042DAD5 /* URLStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FAA071F7A900F0042DAD5 /* URLStore.swift */; };
+		302FAA0A1F7AB1EB0042DAD5 /* VainGloryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FAA091F7AB1EB0042DAD5 /* VainGloryAPI.swift */; };
+		302FAA0C1F7B03160042DAD5 /* PlayerDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FAA0B1F7B03160042DAD5 /* PlayerDataStore.swift */; };
+		302FAA0E1F7B04F60042DAD5 /* PlayerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FAA0D1F7B04F60042DAD5 /* PlayerProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +50,9 @@
 		302FA9F51F798EE70042DAD5 /* VGStatsPlusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGStatsPlusUITests.swift; sourceTree = "<group>"; };
 		302FA9F71F798EE70042DAD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		302FAA031F7991610042DAD5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		302FAA071F7A900F0042DAD5 /* URLStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLStore.swift; sourceTree = "<group>"; };
+		302FAA091F7AB1EB0042DAD5 /* VainGloryAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VainGloryAPI.swift; sourceTree = "<group>"; };
+		302FAA0B1F7B03160042DAD5 /* PlayerDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDataStore.swift; sourceTree = "<group>"; };
+		302FAA0D1F7B04F60042DAD5 /* PlayerProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +105,9 @@
 			children = (
 				302FA9D51F798EE70042DAD5 /* AppDelegate.swift */,
 				302FAA031F7991610042DAD5 /* LoginViewController.swift */,
-				302FAA071F7A900F0042DAD5 /* URLStore.swift */,
+				302FAA0D1F7B04F60042DAD5 /* PlayerProfileViewController.swift */,
+				302FAA091F7AB1EB0042DAD5 /* VainGloryAPI.swift */,
+				302FAA0B1F7B03160042DAD5 /* PlayerDataStore.swift */,
 				302FA9D91F798EE70042DAD5 /* Main.storyboard */,
 				302FA9DC1F798EE70042DAD5 /* Assets.xcassets */,
 				302FA9DE1F798EE70042DAD5 /* LaunchScreen.storyboard */,
@@ -265,8 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				302FAA081F7A900F0042DAD5 /* URLStore.swift in Sources */,
+				302FAA0C1F7B03160042DAD5 /* PlayerDataStore.swift in Sources */,
+				302FAA0E1F7B04F60042DAD5 /* PlayerProfileViewController.swift in Sources */,
 				302FAA041F7991610042DAD5 /* LoginViewController.swift in Sources */,
+				302FAA0A1F7AB1EB0042DAD5 /* VainGloryAPI.swift in Sources */,
 				302FA9D61F798EE70042DAD5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +528,7 @@
 				302FA9FC1F798EE70042DAD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		302FA9FD1F798EE70042DAD5 /* Build configuration list for PBXNativeTarget "VGStatsPlusTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +537,7 @@
 				302FA9FF1F798EE70042DAD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		302FAA001F798EE70042DAD5 /* Build configuration list for PBXNativeTarget "VGStatsPlusUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +546,7 @@
 				302FAA021F798EE70042DAD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
