@@ -61,6 +61,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="5h3-Oo-NwA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2hn-hD-12M"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0Zn-bh-2YZ" secondAttribute="bottom" constant="91" id="HSo-ks-ngv"/>
@@ -74,6 +75,9 @@
                             <constraint firstItem="0Zn-bh-2YZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="122" id="qu2-aT-Cho"/>
                             <constraint firstItem="zSs-3J-gGh" firstAttribute="top" secondItem="ZtT-zP-sB2" secondAttribute="bottom" constant="25" id="xHT-6F-IIH"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="zaC-wZ-Wmx" appends="YES" id="Dxv-EM-WR3"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="VGStatsPlus" id="ee9-r8-hK1"/>
                     <connections>
@@ -83,6 +87,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="zaC-wZ-Wmx">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="35u-sE-MJ7"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1164" y="138.98050974512745"/>
         </scene>

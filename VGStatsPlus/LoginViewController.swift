@@ -24,6 +24,10 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         // This is were we will insert the player ign (In Game Name) to what ever we need to construct the GET request url
     }
     
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        textFieldIGN.resignFirstResponder()
+    }
+    
     
     //MARK: - Properties
     var regionalShards = ["East Asia", "Europe", "Southeast Asia", "North America", "South America", "East Asia Tournament", "Europe Tournament", "Southeast Asia Tournament", "North America Tournament", "South America Tournament"]
