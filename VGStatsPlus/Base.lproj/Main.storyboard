@@ -42,7 +42,10 @@
                                 <rect key="frame" x="16" y="291" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <connections>
+                                    <action selector="IGNTextFieldChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="5m3-I4-WkJ"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zn-bh-2YZ">
                                 <rect key="frame" x="138" y="540" width="99" height="36"/>
@@ -53,6 +56,7 @@
                                 </state>
                                 <connections>
                                     <action selector="submitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mcv-H7-Xlf"/>
+                                    <segue destination="Ab2-MG-hpX" kind="show" id="c0N-2s-de2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -75,7 +79,7 @@
                     <connections>
                         <outlet property="imgView" destination="5h3-Oo-NwA" id="FTR-Ph-PeD"/>
                         <outlet property="picker" destination="zSs-3J-gGh" id="I0v-5w-ru7"/>
-                        <outlet property="textFieldIGN" destination="ZtT-zP-sB2" id="jCV-v6-n1r"/>
+                        <outlet property="textFieldIGN" destination="ZtT-zP-sB2" id="muK-Oh-tox"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

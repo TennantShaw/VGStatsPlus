@@ -9,22 +9,28 @@
 import Foundation
 import UIKit
 
-class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
     //MARK: - Outlets
-    @IBOutlet weak var picker: UIPickerView!
-    @IBOutlet weak var textFieldIGN: UITextField!
-    @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet var picker: UIPickerView!
+    @IBOutlet var imgView: UIImageView!
+    @IBOutlet var textFieldIGN: UITextField!
     
     
     //MARK: - Actions
     @IBAction func submitButton(_ sender: UIButton) {
     }
     
+    @IBAction func IGNTextFieldChanged(_ sender: UITextField) {
+        // This is were we will insert the player ign (In Game Name) to what ever we need to construct the GET request url
+    }
+    
     
     //MARK: - Properties
     var regionalShards = ["East Asia", "Europe", "Southeast Asia", "North America", "South America", "East Asia Tournament", "Europe Tournament", "Southeast Asia Tournament", "North America Tournament", "South America Tournament"]
-    var store: PlayerDataStore!
 
+    
+    //MARK: Initializers
+    //Default provided
     
     
     //MARK: - View Life Cycle
@@ -32,7 +38,12 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         super.viewDidLoad()
         picker.delegate = self
         picker.dataSource = self
-        store.fetchPlayerData()
+        textFieldIGN.delegate = self
+//        store.fetchPlayerData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     
@@ -53,5 +64,12 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
+    }
+    
+    
+    //MARK: - TextField Methods
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textFieldIGN.resignFirstResponder()
+        return true
     }
 }
