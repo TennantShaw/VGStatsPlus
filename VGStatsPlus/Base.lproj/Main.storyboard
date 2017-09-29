@@ -95,7 +95,7 @@
             </objects>
             <point key="canvasLocation" x="1164" y="138.98050974512745"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="W7I-wX-eYd">
             <objects>
                 <viewController id="Ab2-MG-hpX" customClass="PlayerProfileViewController" customModule="VGStatsPlus" customModuleProvider="target" sceneMemberID="viewController">
@@ -106,13 +106,46 @@
                     <view key="view" contentMode="scaleToFill" id="0xK-dI-iAg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZDy-ju-rC3">
+                                <rect key="frame" x="0.0" y="64" width="375" height="274"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="274" id="ePS-of-xQv"/>
+                                    <constraint firstAttribute="width" constant="375" id="udp-Bc-tSE"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20l-hc-6UG">
+                                <rect key="frame" x="100" y="363" width="175" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="FS8-rQ-pPb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Match History">
+                                    <color key="titleColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToMatchHistoryPageButton:" destination="Ab2-MG-hpX" eventType="touchUpInside" id="wCw-vg-1dT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="20l-hc-6UG" secondAttribute="trailing" constant="84" id="AeV-mf-La6"/>
+                            <constraint firstItem="ZDy-ju-rC3" firstAttribute="leading" secondItem="0xK-dI-iAg" secondAttribute="leading" id="FwJ-NP-sad"/>
+                            <constraint firstItem="ZDy-ju-rC3" firstAttribute="top" secondItem="TA4-Q5-Rnn" secondAttribute="bottom" id="HU4-w4-MXP"/>
+                            <constraint firstItem="20l-hc-6UG" firstAttribute="leading" secondItem="0xK-dI-iAg" secondAttribute="leadingMargin" constant="84" id="gId-aC-huJ"/>
+                            <constraint firstAttribute="trailing" secondItem="ZDy-ju-rC3" secondAttribute="trailing" id="q9j-Tx-oyH"/>
+                            <constraint firstItem="20l-hc-6UG" firstAttribute="top" secondItem="ZDy-ju-rC3" secondAttribute="bottom" constant="25" id="z8w-Nf-veU"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="u25-gm-yhJ"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="u25-gm-yhJ"/>
+                    <connections>
+                        <outlet property="mostPlayedCharacterImage" destination="ZDy-ju-rC3" id="ksd-m8-UBI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxi-MC-TKs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2960.8000000000002" y="140.77961019490255"/>
+            <point key="canvasLocation" x="2960.8000000000002" y="139.880059970015"/>
         </scene>
         <!--Match History View Controller-->
         <scene sceneID="6Pi-f0-enC">

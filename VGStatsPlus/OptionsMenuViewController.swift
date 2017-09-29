@@ -10,5 +10,11 @@ import Foundation
 import UIKit
 
 class OptionsMenuViewController: UIViewController {
+    //MARK: - Properties
     
+    
+    //MARK: - View Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }

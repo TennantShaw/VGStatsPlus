@@ -10,6 +10,16 @@ import Foundation
 import UIKit
 
 class PlayerProfileViewController: UIViewController, UINavigationControllerDelegate {
+    //MARK: - Outlets
+    @IBOutlet weak var mostPlayedCharacterImage: UIImageView!
+    
+    
+    //MARK: - Actions
+    
+    @IBAction func goToMatchHistoryPageButton(_ sender: Any) {
+    }
+    
+    
     //MARK: - Properties
     var store: PlayerDataStore!
 //    var playerProfile: String {
@@ -20,7 +30,7 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
     
     
     //MARK: - Initializers
-
+    // default in use
     
     
     //MARK: - View Life Cycle
