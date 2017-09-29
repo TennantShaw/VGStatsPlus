@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let rootViewController = window!.rootViewController as! UINavigationController
         let loginViewController = rootViewController.topViewController as! LoginViewController
-        loginViewController.store = PlayerDataStore()
+//        loginViewController.store = PlayerDataStore()
         return true
     }
 
