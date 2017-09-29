@@ -7,8 +7,28 @@
 //
 
 import Foundation
+import UIKit
 
-class PlayerProfileViewController {
+class PlayerProfileViewController: UIViewController, UINavigationControllerDelegate {
     //MARK: - Properties
     var store: PlayerDataStore!
+//    var playerProfile: String {
+//        didSet {
+//            //navigationItem.title = playerIGN // This will come from the json data. Will will have to parse it out for this.
+//        }
+//    }
+    
+    
+    //MARK: - Initializers
+
+    
+    
+    //MARK: - View Life Cycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //        store.fetchPlayerData()
+    }
+    
+    
+    
 }
