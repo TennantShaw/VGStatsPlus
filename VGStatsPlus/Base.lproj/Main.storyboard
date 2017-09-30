@@ -125,6 +125,7 @@
                                 </state>
                                 <connections>
                                     <action selector="goToMatchHistoryPageButton:" destination="Ab2-MG-hpX" eventType="touchUpInside" id="wCw-vg-1dT"/>
+                                    <segue destination="uAu-1J-8hN" kind="show" id="ISi-Ym-Kmj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -147,23 +148,33 @@
             </objects>
             <point key="canvasLocation" x="2960.8000000000002" y="139.880059970015"/>
         </scene>
-        <!--Match History View Controller-->
-        <scene sceneID="6Pi-f0-enC">
+        <!--Match History Table View Controller-->
+        <scene sceneID="5M2-NQ-SpL">
             <objects>
-                <viewController id="9iI-rn-XnH" customClass="MatchHistoryViewController" customModule="VGStatsPlus" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gn7-Qy-s9I"/>
-                        <viewControllerLayoutGuide type="bottom" id="pTH-5m-ANd"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2UZ-j6-HNU">
+                <tableViewController id="uAu-1J-8hN" customClass="MatchHistoryTableViewController" customModule="VGStatsPlus" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4ph-hK-iNB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="khw-gc-R6D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="sMV-FC-vtJ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sMV-FC-vtJ" id="9c3-Um-EeS">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uAu-1J-8hN" id="noq-eY-bw5"/>
+                            <outlet property="delegate" destination="uAu-1J-8hN" id="Lif-ed-qNB"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z3K-g4-C77" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3736.8000000000002" y="140.77961019490255"/>
+            <point key="canvasLocation" x="3775" y="142"/>
         </scene>
         <!--Match Details View Controller-->
         <scene sceneID="MMe-kt-ESc">
@@ -183,7 +194,7 @@
             </objects>
             <point key="canvasLocation" x="4516" y="138.98050974512745"/>
         </scene>
-        <!--Item-->
+        <!--Extras-->
         <scene sceneID="wxp-zA-LYh">
             <objects>
                 <viewController id="igb-fs-Sd4" customClass="OptionsMenuViewController" customModule="VGStatsPlus" customModuleProvider="target" sceneMemberID="viewController">
@@ -196,7 +207,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Ulf-11-soZ"/>
+                    <tabBarItem key="tabBarItem" title="Extras" id="Ulf-11-soZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0yQ-kU-4Md" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

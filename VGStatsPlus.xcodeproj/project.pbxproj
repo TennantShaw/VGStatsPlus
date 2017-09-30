@@ -17,9 +17,10 @@
 		302FAA0A1F7AB1EB0042DAD5 /* VainGloryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FAA091F7AB1EB0042DAD5 /* VainGloryAPI.swift */; };
 		302FAA0C1F7B03160042DAD5 /* PlayerDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FAA0B1F7B03160042DAD5 /* PlayerDataStore.swift */; };
 		302FAA0E1F7B04F60042DAD5 /* PlayerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FAA0D1F7B04F60042DAD5 /* PlayerProfileViewController.swift */; };
-		309DDEAC1F7EB19500794DF8 /* MatchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309DDEAB1F7EB19500794DF8 /* MatchHistoryViewController.swift */; };
 		309DDEAE1F7EB1BB00794DF8 /* MatchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309DDEAD1F7EB1BB00794DF8 /* MatchDetailsViewController.swift */; };
 		309DDEB01F7EB1EE00794DF8 /* OptionsMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309DDEAF1F7EB1EE00794DF8 /* OptionsMenuViewController.swift */; };
+		309DDEB21F7FF4C100794DF8 /* MatchHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309DDEB11F7FF4C100794DF8 /* MatchHistoryTableViewController.swift */; };
+		309DDEB41F7FFE3000794DF8 /* MatchDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309DDEB31F7FFE3000794DF8 /* MatchDataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,9 +57,10 @@
 		302FAA091F7AB1EB0042DAD5 /* VainGloryAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VainGloryAPI.swift; sourceTree = "<group>"; };
 		302FAA0B1F7B03160042DAD5 /* PlayerDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDataStore.swift; sourceTree = "<group>"; };
 		302FAA0D1F7B04F60042DAD5 /* PlayerProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerProfileViewController.swift; sourceTree = "<group>"; };
-		309DDEAB1F7EB19500794DF8 /* MatchHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchHistoryViewController.swift; sourceTree = "<group>"; };
 		309DDEAD1F7EB1BB00794DF8 /* MatchDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewController.swift; sourceTree = "<group>"; };
 		309DDEAF1F7EB1EE00794DF8 /* OptionsMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsMenuViewController.swift; sourceTree = "<group>"; };
+		309DDEB11F7FF4C100794DF8 /* MatchHistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchHistoryTableViewController.swift; sourceTree = "<group>"; };
+		309DDEB31F7FFE3000794DF8 /* MatchDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchDataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +114,12 @@
 				302FA9D51F798EE70042DAD5 /* AppDelegate.swift */,
 				302FAA031F7991610042DAD5 /* LoginViewController.swift */,
 				302FAA0D1F7B04F60042DAD5 /* PlayerProfileViewController.swift */,
-				309DDEAB1F7EB19500794DF8 /* MatchHistoryViewController.swift */,
+				309DDEB11F7FF4C100794DF8 /* MatchHistoryTableViewController.swift */,
 				309DDEAD1F7EB1BB00794DF8 /* MatchDetailsViewController.swift */,
 				309DDEAF1F7EB1EE00794DF8 /* OptionsMenuViewController.swift */,
 				302FAA091F7AB1EB0042DAD5 /* VainGloryAPI.swift */,
 				302FAA0B1F7B03160042DAD5 /* PlayerDataStore.swift */,
+				309DDEB31F7FFE3000794DF8 /* MatchDataStore.swift */,
 				302FA9D91F798EE70042DAD5 /* Main.storyboard */,
 				302FA9DC1F798EE70042DAD5 /* Assets.xcassets */,
 				302FA9DE1F798EE70042DAD5 /* LaunchScreen.storyboard */,
@@ -284,9 +287,10 @@
 				302FAA0E1F7B04F60042DAD5 /* PlayerProfileViewController.swift in Sources */,
 				309DDEB01F7EB1EE00794DF8 /* OptionsMenuViewController.swift in Sources */,
 				302FAA041F7991610042DAD5 /* LoginViewController.swift in Sources */,
+				309DDEB41F7FFE3000794DF8 /* MatchDataStore.swift in Sources */,
 				302FAA0A1F7AB1EB0042DAD5 /* VainGloryAPI.swift in Sources */,
-				309DDEAC1F7EB19500794DF8 /* MatchHistoryViewController.swift in Sources */,
 				309DDEAE1F7EB1BB00794DF8 /* MatchDetailsViewController.swift in Sources */,
+				309DDEB21F7FF4C100794DF8 /* MatchHistoryTableViewController.swift in Sources */,
 				302FA9D61F798EE70042DAD5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
