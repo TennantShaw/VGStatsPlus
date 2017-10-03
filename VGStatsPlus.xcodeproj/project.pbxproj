@@ -519,6 +519,7 @@
 		302FA9FB1F798EE70042DAD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = F8QRZL97KT;
 				INFOPLIST_FILE = VGStatsPlus/Info.plist;
@@ -532,6 +533,7 @@
 		302FA9FC1F798EE70042DAD5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = F8QRZL97KT;
 				INFOPLIST_FILE = VGStatsPlus/Info.plist;
