@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import VaingloryAPI
 
 enum RegionalShards: String {
     case northAmerica = "na"
