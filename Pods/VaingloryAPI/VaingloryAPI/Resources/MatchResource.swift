@@ -48,3 +48,4 @@ public struct MatchResource: Resource {
         asset = try? map.from(assetRelationship)
     }
 }
+

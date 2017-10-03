@@ -2,7 +2,7 @@
 //  Networking:VGDataSource.swift
 //  VGStatsPlus
 //
-//  Created by Tennant Shaw on 10/3/17.
+//  Created by Alisher A. on 10/3/17.
 //  Copyright © 2017 Tennant Shaw. All rights reserved.
 //
 

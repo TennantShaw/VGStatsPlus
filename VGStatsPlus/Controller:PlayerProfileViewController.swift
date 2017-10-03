@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import VaingloryAPI
 
 class PlayerProfileViewController: UIViewController, UINavigationControllerDelegate {
     //MARK: - Outlets
@@ -15,18 +16,14 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
     
     
     //MARK: - Actions
-    
     @IBAction func goToMatchHistoryPageButton(_ sender: Any) {
     }
     
     
     //MARK: - Properties
-    //    var playerProfile: String {
-    //        didSet {
-    //            //navigationItem.title = playerIGN // This will come from the json data. Will will have to parse it out for this.
-    //        }
-    //    }
-    
+    //navigationItem.title = playerIGN // This will come from the json data. Will will have to parse it out for this.
+    var playerData: PlayerResource!
+    var matchData: ParticipantResource!
     
     //MARK: - Initializers
     // default in use

@@ -34,3 +34,4 @@ public struct AssetResource: Resource {
         name = try? map.from(Key.attributes("name"))
     }
 }
+

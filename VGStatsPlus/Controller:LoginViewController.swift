@@ -21,7 +21,7 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBAction func submitButton(_ sender: UIButton) {
         if textFieldIGN.text != nil { vainGloryAPI.getPlayer(withName: playerName!, shard: Shard(rawValue: playerRegionShard!)!) { player, error in
             if let player = player {
-                print("\(player)")
+                print("\(player) \n")
             } else if let error = error {
                 print("\(error)")
             }
@@ -29,7 +29,23 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         } else {
             // let user know that they cannot submit until they have added an IGN and selected a server region
         }
-    }
+        
+        let filters = RouterFilters()
+            .playerName(playerName!)
+            .limit(5)
+
+        vainGloryAPI.getMatches(shard: Shard(rawValue: playerRegionShard!)!, filters: filters) { matches, error in
+            if let matches = matches {
+                for match in matches {
+                    print("[VaingloryAPI] \(match)")
+                }
+            } else if let error = error {
+                    print("[VaingloryAPI] \(error)")
+                }
+            }
+            
+        }
+    
     
     @IBAction func IGNTextFieldChanged(_ sender: UITextField) {
     }
