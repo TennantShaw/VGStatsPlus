@@ -15,12 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Create a MatchDataStore
-        let matchDataStore = MatchDataStore()
-        
         let rootViewController = window!.rootViewController as! UINavigationController
-        let loginViewController = rootViewController.topViewController as! LoginViewController
-//        loginViewController.store = PlayerDataStore()
+        let _ = rootViewController.topViewController as! LoginViewController
         return true
     }
 

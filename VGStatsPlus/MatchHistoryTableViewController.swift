@@ -11,12 +11,11 @@ import UIKit
 
 class MatchHistoryTableViewController: UITableViewController, UINavigationControllerDelegate {
     //MARK: - Properties
-    var matchDataStore: MatchDataStore!
+    var store: MatchDataStore!
     
     //MARK: - View Life Cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //        store.fetchPlayerData()
     }
 
 }

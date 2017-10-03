@@ -10,5 +10,13 @@ import Foundation
 import UIKit
 
 class MatchDetailsViewController: UIViewController {
+    //MARK: - Properties
+    var store: MatchDataStore!
     
+    
+    //MARK: - View Life Cycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+
 }
