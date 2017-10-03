@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_VGStatsPlusTestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_VGStatsPlusTestsVersionString[];
+FOUNDATION_EXPORT double Pods_VGStatsPlusVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_VGStatsPlusVersionString[];
 

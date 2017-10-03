@@ -19,7 +19,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-VGStatsPlusTests.xcscheme</key>
+		<key>Pods-VGStatsPlus.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,17 +42,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3FEBF855AC7037445E8827E2C8F5DFDA</key>
+		<key>4B3E968158C4583CB6CF5F7861972B68</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>477E7EA32CE8F06DD90811EAE1F4F16A</key>
+		<key>5B374B7A83AE67A45D5D45B8EEA64F89</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7EB2B5BB4E5855C6B765420F8F1F47F5</key>
+		<key>6986736CCC9A551F38049D0A15EB8E89</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +62,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9E434BE9ED6E12673E67D1502A4223C8</key>
+		<key>9E8CA645C89003F233490DD53EE812A9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

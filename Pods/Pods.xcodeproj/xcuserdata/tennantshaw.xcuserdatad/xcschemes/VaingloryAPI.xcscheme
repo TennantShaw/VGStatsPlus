@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9E434BE9ED6E12673E67D1502A4223C8'
+               BlueprintIdentifier = '9E8CA645C89003F233490DD53EE812A9'
                BlueprintName = 'VaingloryAPI'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'VaingloryAPI.framework'>

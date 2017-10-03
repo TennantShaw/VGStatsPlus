@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import VaingloryAPI
 
 enum RegionalShards: String {
     case northAmerica = "na"
@@ -27,8 +28,7 @@ enum Method: String {
 
 struct VainGloryAPI {
     //MARK: - Properties
-    private static let baseURLString = "https://api.dc01.gamelockerapp.com/shards/na/players?filter[playerNames]=TennantTheVast"
-
+    
     
     
 }
