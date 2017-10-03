@@ -1,0 +1,6 @@
+framework module VaingloryAPI {
+  umbrella header "VaingloryAPI-umbrella.h"
+
+  export *
+  module * { export * }
+}
