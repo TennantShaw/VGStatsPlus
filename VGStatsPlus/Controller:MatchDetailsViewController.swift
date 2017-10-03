@@ -1,21 +1,21 @@
 //
-//  MatchHistoryTableViewController.swift
+//  Controller:MatchDetailsViewController.swift
 //  VGStatsPlus
 //
-//  Created by Tennant Shaw on 9/30/17.
+//  Created by Tennant Shaw on 10/3/17.
 //  Copyright © 2017 Tennant Shaw. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class MatchHistoryTableViewController: UITableViewController, UINavigationControllerDelegate {
+class MatchDetailsViewController: UIViewController {
     //MARK: - Properties
-    var store: MatchDataStore!
+    
     
     //MARK: - View Life Cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
-
+    
 }

@@ -1,8 +1,8 @@
 //
-//  LoginViewController.swift
+//  Controller:LoginViewController.swift
 //  VGStatsPlus
 //
-//  Created by Tennant Shaw on 9/25/17.
+//  Created by Tennant Shaw on 10/3/17.
 //  Copyright © 2017 Tennant Shaw. All rights reserved.
 //
 
@@ -25,7 +25,7 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
             } else if let error = error {
                 print("\(error)")
             }
-        }
+            }
         } else {
             // let user know that they cannot submit until they have added an IGN and selected a server region
         }
@@ -45,7 +45,7 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     var playerName: String?
     var playerRegionShard: String?
-
+    
     
     //MARK: Initializers
     //Default provided

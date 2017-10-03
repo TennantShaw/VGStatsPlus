@@ -14,14 +14,13 @@
 		302FA9E01F798EE70042DAD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 302FA9DE1F798EE70042DAD5 /* LaunchScreen.storyboard */; };
 		302FA9EB1F798EE70042DAD5 /* VGStatsPlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FA9EA1F798EE70042DAD5 /* VGStatsPlusTests.swift */; };
 		302FA9F61F798EE70042DAD5 /* VGStatsPlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FA9F51F798EE70042DAD5 /* VGStatsPlusUITests.swift */; };
-		302FAA041F7991610042DAD5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FAA031F7991610042DAD5 /* LoginViewController.swift */; };
-		302FAA0A1F7AB1EB0042DAD5 /* VainGloryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FAA091F7AB1EB0042DAD5 /* VainGloryAPI.swift */; };
-		302FAA0C1F7B03160042DAD5 /* PlayerDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FAA0B1F7B03160042DAD5 /* PlayerDataStore.swift */; };
-		302FAA0E1F7B04F60042DAD5 /* PlayerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FAA0D1F7B04F60042DAD5 /* PlayerProfileViewController.swift */; };
-		309DDEAE1F7EB1BB00794DF8 /* MatchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309DDEAD1F7EB1BB00794DF8 /* MatchDetailsViewController.swift */; };
-		309DDEB01F7EB1EE00794DF8 /* OptionsMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309DDEAF1F7EB1EE00794DF8 /* OptionsMenuViewController.swift */; };
-		309DDEB21F7FF4C100794DF8 /* MatchHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309DDEB11F7FF4C100794DF8 /* MatchHistoryTableViewController.swift */; };
-		309DDEB41F7FFE3000794DF8 /* MatchDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309DDEB31F7FFE3000794DF8 /* MatchDataStore.swift */; };
+		30D8CA7D1F842509002C923F /* Model:Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA7C1F842509002C923F /* Model:Player.swift */; };
+		30D8CA7F1F842534002C923F /* Networking:VGDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA7E1F842534002C923F /* Networking:VGDataSource.swift */; };
+		30D8CA811F8425AA002C923F /* Controller:LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA801F8425AA002C923F /* Controller:LoginViewController.swift */; };
+		30D8CA851F842622002C923F /* Controller:PlayerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA841F842622002C923F /* Controller:PlayerProfileViewController.swift */; };
+		30D8CA871F84264C002C923F /* Controller:MatchHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA861F84264C002C923F /* Controller:MatchHistoryTableViewController.swift */; };
+		30D8CA891F84266B002C923F /* Controller:MatchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA881F84266B002C923F /* Controller:MatchDetailsViewController.swift */; };
+		30D8CA8B1F842695002C923F /* Controller:OptionsMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA8A1F842695002C923F /* Controller:OptionsMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,14 +54,13 @@
 		302FA9F11F798EE70042DAD5 /* VGStatsPlusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VGStatsPlusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		302FA9F51F798EE70042DAD5 /* VGStatsPlusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGStatsPlusUITests.swift; sourceTree = "<group>"; };
 		302FA9F71F798EE70042DAD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		302FAA031F7991610042DAD5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		302FAA091F7AB1EB0042DAD5 /* VainGloryAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VainGloryAPI.swift; sourceTree = "<group>"; };
-		302FAA0B1F7B03160042DAD5 /* PlayerDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDataStore.swift; sourceTree = "<group>"; };
-		302FAA0D1F7B04F60042DAD5 /* PlayerProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerProfileViewController.swift; sourceTree = "<group>"; };
-		309DDEAD1F7EB1BB00794DF8 /* MatchDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewController.swift; sourceTree = "<group>"; };
-		309DDEAF1F7EB1EE00794DF8 /* OptionsMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsMenuViewController.swift; sourceTree = "<group>"; };
-		309DDEB11F7FF4C100794DF8 /* MatchHistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchHistoryTableViewController.swift; sourceTree = "<group>"; };
-		309DDEB31F7FFE3000794DF8 /* MatchDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchDataStore.swift; sourceTree = "<group>"; };
+		30D8CA7C1F842509002C923F /* Model:Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model:Player.swift"; sourceTree = "<group>"; };
+		30D8CA7E1F842534002C923F /* Networking:VGDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Networking:VGDataSource.swift"; sourceTree = "<group>"; };
+		30D8CA801F8425AA002C923F /* Controller:LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Controller:LoginViewController.swift"; sourceTree = "<group>"; };
+		30D8CA841F842622002C923F /* Controller:PlayerProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Controller:PlayerProfileViewController.swift"; sourceTree = "<group>"; };
+		30D8CA861F84264C002C923F /* Controller:MatchHistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Controller:MatchHistoryTableViewController.swift"; sourceTree = "<group>"; };
+		30D8CA881F84266B002C923F /* Controller:MatchDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Controller:MatchDetailsViewController.swift"; sourceTree = "<group>"; };
+		30D8CA8A1F842695002C923F /* Controller:OptionsMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Controller:OptionsMenuViewController.swift"; sourceTree = "<group>"; };
 		AA6E6548654459025D7FD01F /* Pods_VGStatsPlusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VGStatsPlusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCABD4D6EC47A852AAFC5FAC /* Pods-VGStatsPlus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VGStatsPlus.release.xcconfig"; path = "Pods/Target Support Files/Pods-VGStatsPlus/Pods-VGStatsPlus.release.xcconfig"; sourceTree = "<group>"; };
 		F768D22E7A12E74B8FBD6AEE /* Pods_VGStatsPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VGStatsPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,14 +118,13 @@
 			isa = PBXGroup;
 			children = (
 				302FA9D51F798EE70042DAD5 /* AppDelegate.swift */,
-				302FAA031F7991610042DAD5 /* LoginViewController.swift */,
-				302FAA0D1F7B04F60042DAD5 /* PlayerProfileViewController.swift */,
-				309DDEB11F7FF4C100794DF8 /* MatchHistoryTableViewController.swift */,
-				309DDEAD1F7EB1BB00794DF8 /* MatchDetailsViewController.swift */,
-				309DDEAF1F7EB1EE00794DF8 /* OptionsMenuViewController.swift */,
-				302FAA091F7AB1EB0042DAD5 /* VainGloryAPI.swift */,
-				302FAA0B1F7B03160042DAD5 /* PlayerDataStore.swift */,
-				309DDEB31F7FFE3000794DF8 /* MatchDataStore.swift */,
+				30D8CA801F8425AA002C923F /* Controller:LoginViewController.swift */,
+				30D8CA841F842622002C923F /* Controller:PlayerProfileViewController.swift */,
+				30D8CA861F84264C002C923F /* Controller:MatchHistoryTableViewController.swift */,
+				30D8CA881F84266B002C923F /* Controller:MatchDetailsViewController.swift */,
+				30D8CA8A1F842695002C923F /* Controller:OptionsMenuViewController.swift */,
+				30D8CA7C1F842509002C923F /* Model:Player.swift */,
+				30D8CA7E1F842534002C923F /* Networking:VGDataSource.swift */,
 				302FA9D91F798EE70042DAD5 /* Main.storyboard */,
 				302FA9DC1F798EE70042DAD5 /* Assets.xcassets */,
 				302FA9DE1F798EE70042DAD5 /* LaunchScreen.storyboard */,
@@ -360,15 +357,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				302FAA0C1F7B03160042DAD5 /* PlayerDataStore.swift in Sources */,
-				302FAA0E1F7B04F60042DAD5 /* PlayerProfileViewController.swift in Sources */,
-				309DDEB01F7EB1EE00794DF8 /* OptionsMenuViewController.swift in Sources */,
-				302FAA041F7991610042DAD5 /* LoginViewController.swift in Sources */,
-				309DDEB41F7FFE3000794DF8 /* MatchDataStore.swift in Sources */,
-				302FAA0A1F7AB1EB0042DAD5 /* VainGloryAPI.swift in Sources */,
-				309DDEAE1F7EB1BB00794DF8 /* MatchDetailsViewController.swift in Sources */,
-				309DDEB21F7FF4C100794DF8 /* MatchHistoryTableViewController.swift in Sources */,
+				30D8CA7D1F842509002C923F /* Model:Player.swift in Sources */,
+				30D8CA851F842622002C923F /* Controller:PlayerProfileViewController.swift in Sources */,
+				30D8CA811F8425AA002C923F /* Controller:LoginViewController.swift in Sources */,
+				30D8CA8B1F842695002C923F /* Controller:OptionsMenuViewController.swift in Sources */,
+				30D8CA7F1F842534002C923F /* Networking:VGDataSource.swift in Sources */,
 				302FA9D61F798EE70042DAD5 /* AppDelegate.swift in Sources */,
+				30D8CA891F84266B002C923F /* Controller:MatchDetailsViewController.swift in Sources */,
+				30D8CA871F84264C002C923F /* Controller:MatchHistoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

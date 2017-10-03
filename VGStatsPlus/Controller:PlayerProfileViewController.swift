@@ -1,8 +1,8 @@
 //
-//  PlayerProfileViewController.swift
+//  Controller:PlayerProfileViewController.swift
 //  VGStatsPlus
 //
-//  Created by Tennant Shaw on 9/26/17.
+//  Created by Tennant Shaw on 10/3/17.
 //  Copyright © 2017 Tennant Shaw. All rights reserved.
 //
 
@@ -21,12 +21,11 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
     
     
     //MARK: - Properties
-    var store: PlayerDataStore!
-//    var playerProfile: String {
-//        didSet {
-//            //navigationItem.title = playerIGN // This will come from the json data. Will will have to parse it out for this.
-//        }
-//    }
+    //    var playerProfile: String {
+    //        didSet {
+    //            //navigationItem.title = playerIGN // This will come from the json data. Will will have to parse it out for this.
+    //        }
+    //    }
     
     
     //MARK: - Initializers
@@ -38,7 +37,5 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
         super.viewWillAppear(animated)
         //        store.fetchPlayerData()
     }
-    
-    
     
 }
