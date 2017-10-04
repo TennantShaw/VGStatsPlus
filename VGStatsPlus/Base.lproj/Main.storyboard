@@ -79,7 +79,9 @@
                             <outletCollection property="gestureRecognizers" destination="zaC-wZ-Wmx" appends="YES" id="Dxv-EM-WR3"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="VGStatsPlus" id="ee9-r8-hK1"/>
+                    <navigationItem key="navigationItem" title="VGStatsPlus" id="ee9-r8-hK1">
+                        <barButtonItem key="backBarButtonItem" title="back" id="max-h8-7B9"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="imgView" destination="5h3-Oo-NwA" id="FTR-Ph-PeD"/>
                         <outlet property="picker" destination="zSs-3J-gGh" id="I0v-5w-ru7"/>
