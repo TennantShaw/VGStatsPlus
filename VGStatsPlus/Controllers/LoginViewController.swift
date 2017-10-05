@@ -19,13 +19,11 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     //MARK: - Actions
     @IBAction func submitButton(_ sender: UIButton) {
-        if textFieldIGN.text != "" { vainGloryAPI.getPlayer(withName: textFieldIGN.text!, shard: Shard(rawValue: playerRegionShard!)!) { player, error in
-            if let player = player {
-                print("\(player) \n")
-            } else if let error = error {
-                print("\(error)")
+        if textFieldIGN.text != "" { VGDataSource.instance.getUserData(name: "TennantTheVast", regional: "na", success: { (success) in
+            if success {
+                print("successFully got data")
             }
-            }
+        })
         } else {
             // let user know that they cannot submit until they have added an IGN and selected a server region
         }
@@ -57,7 +55,6 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     //MARK: - Properties
     var regionalShards = ["ea", "eu", "sg", "na", "sa"] // does not include tournament shards at this time
-    let vainGloryAPI = VaingloryAPIClient(apiKey: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJiOTIwNTM2MC03NTUwLTAxMzUtMDc2NC0yNjU5ZGNhZmNkOWEiLCJpc3MiOiJnYW1lbG9ja2VyIiwiaWF0IjoxNTA0NzE2MzMyLCJwdWIiOiJzZW1jIiwidGl0bGUiOiJ2YWluZ2xvcnkiLCJhcHAiOiJiOTEyNTJiMC03NTUwLTAxMzUtMDc2Mi0yNjU5ZGNhZmNkOWEiLCJzY29wZSI6ImNvbW11bml0eSIsImxpbWl0IjoxMH0.sEQeY5CxgrQpPtiSn8R9TlmhIEDmHYumN_1AssKAcB4")
     
     var playerName: String?
     var playerRegionShard: String?
