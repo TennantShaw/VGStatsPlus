@@ -12,7 +12,13 @@ import VaingloryAPI
 
 class PlayerProfileViewController: UIViewController, UINavigationControllerDelegate {
     //MARK: - Outlets
-    @IBOutlet weak var mostPlayedCharacterImage: UIImageView!
+    @IBOutlet var mostPlayedCharacterImage: UIImageView!
+    @IBOutlet var playerRankImage: UIImageView!
+    @IBOutlet var playerRankTextField: UITextField!
+    @IBOutlet weak var standardCasualTextField: UITextField!
+    @IBOutlet weak var standardRankedTextField: UITextField!
+    @IBOutlet weak var blitzTextField: UITextField!
+    @IBOutlet weak var battleRoyaleTextField: UITextField!
     
     
     //MARK: - Actions
