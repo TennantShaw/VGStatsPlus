@@ -29,17 +29,8 @@
                                     <constraint firstAttribute="height" constant="212" id="XC6-Ea-BKL"/>
                                 </constraints>
                             </imageView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zSs-3J-gGh">
-                                <rect key="frame" x="16" y="346" width="343" height="150"/>
-                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="tintColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="deviceRGB"/>
-                                <accessibility key="accessibilityConfiguration" label="Region"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="7LW-1T-9eu"/>
-                                </constraints>
-                            </pickerView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter IGN" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZtT-zP-sB2">
-                                <rect key="frame" x="16" y="291" width="343" height="30"/>
+                                <rect key="frame" x="16" y="318.5" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
@@ -47,8 +38,14 @@
                                     <action selector="IGNTextFieldChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="5m3-I4-WkJ"/>
                                 </connections>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Region" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="87u-fG-VlX">
+                                <rect key="frame" x="84" y="388" width="207" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zn-bh-2YZ">
-                                <rect key="frame" x="138" y="540" width="99" height="36"/>
+                                <rect key="frame" x="138" y="468" width="99" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="deviceRGB"/>
@@ -64,16 +61,16 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="5h3-Oo-NwA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2hn-hD-12M"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0Zn-bh-2YZ" secondAttribute="bottom" constant="91" id="HSo-ks-ngv"/>
+                            <constraint firstItem="0Zn-bh-2YZ" firstAttribute="top" secondItem="87u-fG-VlX" secondAttribute="bottom" constant="50" id="Irc-YK-tfg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0Zn-bh-2YZ" secondAttribute="trailing" constant="122" id="L6O-yw-lx6"/>
                             <constraint firstItem="ZtT-zP-sB2" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Mfr-24-23i"/>
-                            <constraint firstItem="0Zn-bh-2YZ" firstAttribute="top" secondItem="zSs-3J-gGh" secondAttribute="bottom" constant="44" id="VdU-LS-aoz"/>
-                            <constraint firstItem="zSs-3J-gGh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aKo-hx-bRr"/>
+                            <constraint firstItem="87u-fG-VlX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="68" id="PzP-I5-GeO"/>
+                            <constraint firstItem="87u-fG-VlX" firstAttribute="top" secondItem="ZtT-zP-sB2" secondAttribute="bottom" constant="40" id="ULX-2M-Yz4"/>
+                            <constraint firstItem="ZtT-zP-sB2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="c5h-A4-7t6"/>
                             <constraint firstItem="5h3-Oo-NwA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="fz3-Dg-l5d"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zSs-3J-gGh" secondAttribute="trailing" id="j5l-F5-h9I"/>
                             <constraint firstItem="ZtT-zP-sB2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kOp-ry-PIf"/>
                             <constraint firstItem="0Zn-bh-2YZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="122" id="qu2-aT-Cho"/>
-                            <constraint firstItem="zSs-3J-gGh" firstAttribute="top" secondItem="ZtT-zP-sB2" secondAttribute="bottom" constant="25" id="xHT-6F-IIH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="87u-fG-VlX" secondAttribute="trailing" constant="68" id="rhC-dk-VK5"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="zaC-wZ-Wmx" appends="YES" id="Dxv-EM-WR3"/>
@@ -84,7 +81,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imgView" destination="5h3-Oo-NwA" id="FTR-Ph-PeD"/>
-                        <outlet property="picker" destination="zSs-3J-gGh" id="I0v-5w-ru7"/>
+                        <outlet property="regionShardTextField" destination="87u-fG-VlX" id="BsQ-2W-icD"/>
                         <outlet property="textFieldIGN" destination="ZtT-zP-sB2" id="muK-Oh-tox"/>
                     </connections>
                 </viewController>
