@@ -1,5 +1,5 @@
 //
-//  Controller:PlayerProfileViewController.swift
+//  PlayerProfileViewController.swift
 //  VGStatsPlus
 //
 //  Created by Tennant Shaw on 10/3/17.

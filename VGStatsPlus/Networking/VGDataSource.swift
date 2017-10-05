@@ -1,5 +1,5 @@
 //
-//  Networking:VGDataSource.swift
+//  VGDataSource.swift
 //  VGStatsPlus
 //
 //  Created by Alisher A. on 10/3/17.

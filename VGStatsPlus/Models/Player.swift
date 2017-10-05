@@ -1,5 +1,5 @@
 //
-//  Model:Player.swift
+//  Player.swift
 //  VGStatsPlus
 //
 //  Created by Alisher A. on 10/3/17.

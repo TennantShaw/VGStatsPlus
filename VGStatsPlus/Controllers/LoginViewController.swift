@@ -19,7 +19,7 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     //MARK: - Actions
     @IBAction func submitButton(_ sender: UIButton) {
-        if textFieldIGN.text != nil { vainGloryAPI.getPlayer(withName: playerName!, shard: Shard(rawValue: playerRegionShard!)!) { player, error in
+        if textFieldIGN.text != "" { vainGloryAPI.getPlayer(withName: textFieldIGN.text!, shard: Shard(rawValue: playerRegionShard!)!) { player, error in
             if let player = player {
                 print("\(player) \n")
             } else if let error = error {
@@ -31,7 +31,7 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         }
         
         let filters = RouterFilters()
-            .playerName(playerName!)
+            .playerName(textFieldIGN.text!)
             .limit(5)
 
         vainGloryAPI.getMatches(shard: Shard(rawValue: playerRegionShard!)!, filters: filters) { matches, error in
