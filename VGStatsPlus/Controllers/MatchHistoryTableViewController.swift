@@ -1,5 +1,5 @@
 //
-//  Controller:MatchHistoryTableViewController.swift
+//  MatchHistoryTableViewController.swift
 //  VGStatsPlus
 //
 //  Created by Tennant Shaw on 10/3/17.

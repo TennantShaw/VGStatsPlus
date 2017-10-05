@@ -14,14 +14,14 @@
 		302FA9E01F798EE70042DAD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 302FA9DE1F798EE70042DAD5 /* LaunchScreen.storyboard */; };
 		302FA9EB1F798EE70042DAD5 /* VGStatsPlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FA9EA1F798EE70042DAD5 /* VGStatsPlusTests.swift */; };
 		302FA9F61F798EE70042DAD5 /* VGStatsPlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FA9F51F798EE70042DAD5 /* VGStatsPlusUITests.swift */; };
-		30D8CA7D1F842509002C923F /* Model:Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA7C1F842509002C923F /* Model:Player.swift */; };
-		30D8CA7F1F842534002C923F /* Networking:VGDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA7E1F842534002C923F /* Networking:VGDataSource.swift */; };
-		30D8CA811F8425AA002C923F /* Controller:LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA801F8425AA002C923F /* Controller:LoginViewController.swift */; };
-		30D8CA851F842622002C923F /* Controller:PlayerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA841F842622002C923F /* Controller:PlayerProfileViewController.swift */; };
-		30D8CA871F84264C002C923F /* Controller:MatchHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA861F84264C002C923F /* Controller:MatchHistoryTableViewController.swift */; };
-		30D8CA891F84266B002C923F /* Controller:MatchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA881F84266B002C923F /* Controller:MatchDetailsViewController.swift */; };
-		30D8CA8B1F842695002C923F /* Controller:OptionsMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA8A1F842695002C923F /* Controller:OptionsMenuViewController.swift */; };
-		30D8CA8D1F8427FF002C923F /* Model:MatchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA8C1F8427FF002C923F /* Model:MatchDetails.swift */; };
+		30D8CA7D1F842509002C923F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA7C1F842509002C923F /* Player.swift */; };
+		30D8CA7F1F842534002C923F /* VGDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA7E1F842534002C923F /* VGDataSource.swift */; };
+		30D8CA811F8425AA002C923F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA801F8425AA002C923F /* LoginViewController.swift */; };
+		30D8CA851F842622002C923F /* PlayerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA841F842622002C923F /* PlayerProfileViewController.swift */; };
+		30D8CA871F84264C002C923F /* MatchHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA861F84264C002C923F /* MatchHistoryTableViewController.swift */; };
+		30D8CA891F84266B002C923F /* MatchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA881F84266B002C923F /* MatchDetailsViewController.swift */; };
+		30D8CA8B1F842695002C923F /* OptionsMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA8A1F842695002C923F /* OptionsMenuViewController.swift */; };
+		30D8CA8D1F8427FF002C923F /* MatchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA8C1F8427FF002C923F /* MatchDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,14 +55,14 @@
 		302FA9F11F798EE70042DAD5 /* VGStatsPlusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VGStatsPlusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		302FA9F51F798EE70042DAD5 /* VGStatsPlusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGStatsPlusUITests.swift; sourceTree = "<group>"; };
 		302FA9F71F798EE70042DAD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		30D8CA7C1F842509002C923F /* Model:Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model:Player.swift"; sourceTree = "<group>"; };
-		30D8CA7E1F842534002C923F /* Networking:VGDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Networking:VGDataSource.swift"; sourceTree = "<group>"; };
-		30D8CA801F8425AA002C923F /* Controller:LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Controller:LoginViewController.swift"; sourceTree = "<group>"; };
-		30D8CA841F842622002C923F /* Controller:PlayerProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Controller:PlayerProfileViewController.swift"; sourceTree = "<group>"; };
-		30D8CA861F84264C002C923F /* Controller:MatchHistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Controller:MatchHistoryTableViewController.swift"; sourceTree = "<group>"; };
-		30D8CA881F84266B002C923F /* Controller:MatchDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Controller:MatchDetailsViewController.swift"; sourceTree = "<group>"; };
-		30D8CA8A1F842695002C923F /* Controller:OptionsMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Controller:OptionsMenuViewController.swift"; sourceTree = "<group>"; };
-		30D8CA8C1F8427FF002C923F /* Model:MatchDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model:MatchDetails.swift"; sourceTree = "<group>"; };
+		30D8CA7C1F842509002C923F /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		30D8CA7E1F842534002C923F /* VGDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGDataSource.swift; sourceTree = "<group>"; };
+		30D8CA801F8425AA002C923F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		30D8CA841F842622002C923F /* PlayerProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerProfileViewController.swift; sourceTree = "<group>"; };
+		30D8CA861F84264C002C923F /* MatchHistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchHistoryTableViewController.swift; sourceTree = "<group>"; };
+		30D8CA881F84266B002C923F /* MatchDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewController.swift; sourceTree = "<group>"; };
+		30D8CA8A1F842695002C923F /* OptionsMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsMenuViewController.swift; sourceTree = "<group>"; };
+		30D8CA8C1F8427FF002C923F /* MatchDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchDetails.swift; sourceTree = "<group>"; };
 		AA6E6548654459025D7FD01F /* Pods_VGStatsPlusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VGStatsPlusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCABD4D6EC47A852AAFC5FAC /* Pods-VGStatsPlus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VGStatsPlus.release.xcconfig"; path = "Pods/Target Support Files/Pods-VGStatsPlus/Pods-VGStatsPlus.release.xcconfig"; sourceTree = "<group>"; };
 		F768D22E7A12E74B8FBD6AEE /* Pods_VGStatsPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VGStatsPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,15 +119,11 @@
 		302FA9D41F798EE70042DAD5 /* VGStatsPlus */ = {
 			isa = PBXGroup;
 			children = (
+				AC17DFBB1F86823200271D13 /* Models */,
+				AC17DFBD1F86825600271D13 /* Views */,
+				AC17DFBA1F8681E700271D13 /* Controllers */,
+				AC17DFBC1F86824100271D13 /* Networking */,
 				302FA9D51F798EE70042DAD5 /* AppDelegate.swift */,
-				30D8CA801F8425AA002C923F /* Controller:LoginViewController.swift */,
-				30D8CA841F842622002C923F /* Controller:PlayerProfileViewController.swift */,
-				30D8CA861F84264C002C923F /* Controller:MatchHistoryTableViewController.swift */,
-				30D8CA881F84266B002C923F /* Controller:MatchDetailsViewController.swift */,
-				30D8CA8A1F842695002C923F /* Controller:OptionsMenuViewController.swift */,
-				30D8CA7C1F842509002C923F /* Model:Player.swift */,
-				30D8CA8C1F8427FF002C923F /* Model:MatchDetails.swift */,
-				30D8CA7E1F842534002C923F /* Networking:VGDataSource.swift */,
 				302FA9D91F798EE70042DAD5 /* Main.storyboard */,
 				302FA9DC1F798EE70042DAD5 /* Assets.xcassets */,
 				302FA9DE1F798EE70042DAD5 /* LaunchScreen.storyboard */,
@@ -170,6 +166,42 @@
 				BCABD4D6EC47A852AAFC5FAC /* Pods-VGStatsPlus.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		AC17DFBA1F8681E700271D13 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				30D8CA801F8425AA002C923F /* LoginViewController.swift */,
+				30D8CA841F842622002C923F /* PlayerProfileViewController.swift */,
+				30D8CA861F84264C002C923F /* MatchHistoryTableViewController.swift */,
+				30D8CA881F84266B002C923F /* MatchDetailsViewController.swift */,
+				30D8CA8A1F842695002C923F /* OptionsMenuViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AC17DFBB1F86823200271D13 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				30D8CA7C1F842509002C923F /* Player.swift */,
+				30D8CA8C1F8427FF002C923F /* MatchDetails.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AC17DFBC1F86824100271D13 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				30D8CA7E1F842534002C923F /* VGDataSource.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		AC17DFBD1F86825600271D13 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,15 +392,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30D8CA7D1F842509002C923F /* Model:Player.swift in Sources */,
-				30D8CA851F842622002C923F /* Controller:PlayerProfileViewController.swift in Sources */,
-				30D8CA811F8425AA002C923F /* Controller:LoginViewController.swift in Sources */,
-				30D8CA8B1F842695002C923F /* Controller:OptionsMenuViewController.swift in Sources */,
-				30D8CA7F1F842534002C923F /* Networking:VGDataSource.swift in Sources */,
+				30D8CA7D1F842509002C923F /* Player.swift in Sources */,
+				30D8CA851F842622002C923F /* PlayerProfileViewController.swift in Sources */,
+				30D8CA811F8425AA002C923F /* LoginViewController.swift in Sources */,
+				30D8CA8B1F842695002C923F /* OptionsMenuViewController.swift in Sources */,
+				30D8CA7F1F842534002C923F /* VGDataSource.swift in Sources */,
 				302FA9D61F798EE70042DAD5 /* AppDelegate.swift in Sources */,
-				30D8CA891F84266B002C923F /* Controller:MatchDetailsViewController.swift in Sources */,
-				30D8CA8D1F8427FF002C923F /* Model:MatchDetails.swift in Sources */,
-				30D8CA871F84264C002C923F /* Controller:MatchHistoryTableViewController.swift in Sources */,
+				30D8CA891F84266B002C923F /* MatchDetailsViewController.swift in Sources */,
+				30D8CA8D1F8427FF002C923F /* MatchDetails.swift in Sources */,
+				30D8CA871F84264C002C923F /* MatchHistoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
