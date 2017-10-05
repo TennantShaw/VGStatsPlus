@@ -46,6 +46,7 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         mostPlayedCharacterImage.image = UIImage(named: "Joule_Splash")
+        playerRankImage.image = UIImage(named: "tier_10c")
     }
     
 }
