@@ -17,13 +17,20 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
     
     //MARK: - Actions
     @IBAction func goToMatchHistoryPageButton(_ sender: Any) {
+        
     }
     
     
     //MARK: - Properties
-    //navigationItem.title = playerIGN // This will come from the json data. Will will have to parse it out for this.
-    var playerData: PlayerResource!
+    //navigationItem.title = playerIGN // This will come from the json data. We will have to parse it out for this.
+    var playerData: PlayerResource! {
+        didSet {
+            navigationItem.title = playerData.name
+        }
+    }
+    
     var matchData: ParticipantResource!
+
     
     //MARK: - Initializers
     // default in use
@@ -32,7 +39,7 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
     //MARK: - View Life Cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //        store.fetchPlayerData()
+        mostPlayedCharacterImage.image = UIImage(named: "Joule_Splash")
     }
     
 }

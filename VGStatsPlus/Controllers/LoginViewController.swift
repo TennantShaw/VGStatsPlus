@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 import VaingloryAPI
 
-class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     //MARK: - Outlets
-    @IBOutlet var picker: UIPickerView!
     @IBOutlet var imgView: UIImageView!
     @IBOutlet var textFieldIGN: UITextField!
+    @IBOutlet var regionShardTextField: UITextField!
     
     
     //MARK: - Actions
@@ -48,7 +48,7 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBAction func IGNTextFieldChanged(_ sender: UITextField) {
     }
     
-    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+    @IBAction func dismissKeyboardGesture(_ sender: UITapGestureRecognizer) {
         textFieldIGN.resignFirstResponder()
     }
     
@@ -67,9 +67,10 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        picker.delegate = self
-        picker.dataSource = self
         textFieldIGN.delegate = self
+        
+        createRegionShardPicker()
+        createToolbar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,6 +78,53 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     }
     
     
+    //MARK: - TextField Methods
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        playerName = textFieldIGN.text
+        textFieldIGN.resignFirstResponder()
+        return true
+    }
+    
+    
+    //MARK: - Create UIPickerView Method
+    func createRegionShardPicker() {
+        let regionShardPicker = UIPickerView()
+        regionShardPicker.delegate = self
+        
+        //Customizations
+        regionShardPicker.backgroundColor = .black
+        
+        regionShardTextField.inputView = regionShardPicker
+    }
+    
+    
+    //MARK: - Create toolbar Method
+    func createToolbar() {
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        //Customizations
+        toolbar.barTintColor = .black
+        toolbar.tintColor = .white
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(LoginViewController.dismissKeyboard))
+        
+        toolbar.setItems([doneButton], animated: false)
+        toolbar.isUserInteractionEnabled = true
+        
+        regionShardTextField.inputAccessoryView = toolbar
+    }
+    
+    
+    //MARK: - Class methods
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
+
+
+extension LoginViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     //MARK: - PickerViewDataSource Methods
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return regionalShards.count
@@ -94,15 +142,25 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         playerRegionShard = regionalShards[row]
+        regionShardTextField.text = playerRegionShard
     }
     
-    
-    
-    //MARK: - TextField Methods
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        playerName = textFieldIGN.text
-        textFieldIGN.resignFirstResponder()
-        return true
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var label: UILabel
+        
+        if let view = view as? UILabel {
+            label = view
+        } else {
+            label = UILabel()
+        }
+        
+        label.textColor = .white
+        label.textAlignment = .center
+        label.font = UIFont(name: "Menlo-Regular", size: 17)
+        
+        label.text = regionalShards[row]
+        
+        return label
     }
     
 }
