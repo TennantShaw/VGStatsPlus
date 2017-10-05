@@ -14,6 +14,10 @@
 		302FA9E01F798EE70042DAD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 302FA9DE1F798EE70042DAD5 /* LaunchScreen.storyboard */; };
 		302FA9EB1F798EE70042DAD5 /* VGStatsPlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FA9EA1F798EE70042DAD5 /* VGStatsPlusTests.swift */; };
 		302FA9F61F798EE70042DAD5 /* VGStatsPlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FA9F51F798EE70042DAD5 /* VGStatsPlusUITests.swift */; };
+		30D471701F86990700CC0E8C /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D4716F1F86990700CC0E8C /* Match.swift */; };
+		30D471721F869A6C00CC0E8C /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D471711F869A6C00CC0E8C /* Assets.swift */; };
+		30D471741F869C2200CC0E8C /* Participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D471731F869C2200CC0E8C /* Participant.swift */; };
+		30D471761F869FAB00CC0E8C /* Roster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D471751F869FAB00CC0E8C /* Roster.swift */; };
 		30D8CA7D1F842509002C923F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA7C1F842509002C923F /* Player.swift */; };
 		30D8CA7F1F842534002C923F /* VGDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA7E1F842534002C923F /* VGDataSource.swift */; };
 		30D8CA811F8425AA002C923F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA801F8425AA002C923F /* LoginViewController.swift */; };
@@ -54,6 +58,10 @@
 		302FA9F11F798EE70042DAD5 /* VGStatsPlusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VGStatsPlusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		302FA9F51F798EE70042DAD5 /* VGStatsPlusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGStatsPlusUITests.swift; sourceTree = "<group>"; };
 		302FA9F71F798EE70042DAD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30D4716F1F86990700CC0E8C /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		30D471711F869A6C00CC0E8C /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		30D471731F869C2200CC0E8C /* Participant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Participant.swift; sourceTree = "<group>"; };
+		30D471751F869FAB00CC0E8C /* Roster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Roster.swift; sourceTree = "<group>"; };
 		30D8CA7C1F842509002C923F /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		30D8CA7E1F842534002C923F /* VGDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGDataSource.swift; sourceTree = "<group>"; };
 		30D8CA801F8425AA002C923F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -181,7 +189,11 @@
 		AC17DFBB1F86823200271D13 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				30D471711F869A6C00CC0E8C /* Assets.swift */,
 				30D8CA7C1F842509002C923F /* Player.swift */,
+				30D4716F1F86990700CC0E8C /* Match.swift */,
+				30D471731F869C2200CC0E8C /* Participant.swift */,
+				30D471751F869FAB00CC0E8C /* Roster.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -391,11 +403,15 @@
 			files = (
 				30D8CA7D1F842509002C923F /* Player.swift in Sources */,
 				30D8CA851F842622002C923F /* PlayerProfileViewController.swift in Sources */,
+				30D471761F869FAB00CC0E8C /* Roster.swift in Sources */,
+				30D471701F86990700CC0E8C /* Match.swift in Sources */,
 				30D8CA811F8425AA002C923F /* LoginViewController.swift in Sources */,
 				30D8CA8B1F842695002C923F /* OptionsMenuViewController.swift in Sources */,
 				30D8CA7F1F842534002C923F /* VGDataSource.swift in Sources */,
 				302FA9D61F798EE70042DAD5 /* AppDelegate.swift in Sources */,
+				30D471741F869C2200CC0E8C /* Participant.swift in Sources */,
 				30D8CA891F84266B002C923F /* MatchDetailsViewController.swift in Sources */,
+				30D471721F869A6C00CC0E8C /* Assets.swift in Sources */,
 				30D8CA871F84264C002C923F /* MatchHistoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

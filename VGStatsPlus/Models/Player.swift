@@ -9,6 +9,7 @@
 import Foundation
 
 class Player {
+    //MARK: - Properties
     let name: String
     let id: String
     let titleId: String
@@ -23,6 +24,8 @@ class Player {
     let winStreak: Int
     let lifeTimeGold: Double
     
+    
+    //MARK: - Initializers
     init(name: String, id: String, titleId: String, shardId: String?, createdAt: Date, played: Int, playedRank: Int, level: Int, xp: Double, lossStreak: Int, wins: Int, winStreak: Int, lifetimeGold: Double) {
         self.name = name
         self.id = id
