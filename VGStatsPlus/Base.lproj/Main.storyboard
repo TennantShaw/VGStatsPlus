@@ -58,7 +58,7 @@
                                 </state>
                                 <connections>
                                     <action selector="submitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mcv-H7-Xlf"/>
-                                    <segue destination="Hd4-hA-Iwx" kind="show" id="c0N-2s-de2"/>
+                                    <segue destination="Ab2-MG-hpX" kind="show" id="5eU-Kw-cC8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -294,7 +294,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxi-MC-TKs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2960.8000000000002" y="139.880059970015"/>
+            <point key="canvasLocation" x="1924" y="140"/>
         </scene>
         <!--Match History View Controller-->
         <scene sceneID="MMe-kt-ESc">
@@ -313,7 +313,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="matchHistoryCell" id="js3-1c-Yd6" customClass="MatchHistoryCell" customModule="VGStatsPlus" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="matchHistoryCell" id="js3-1c-Yd6">
                                         <rect key="frame" x="0.0" y="28" width="343" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="js3-1c-Yd6" id="WDv-sc-JSN">
@@ -416,7 +416,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z3K-g4-C77" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3809" y="140"/>
+            <point key="canvasLocation" x="2942" y="140"/>
         </scene>
         <!--Match Details View Controller-->
         <scene sceneID="Hht-kL-50G">
@@ -483,7 +483,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0yQ-kU-4Md" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2021.5999999999999" y="1034.9325337331336"/>
+            <point key="canvasLocation" x="2961" y="842"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xFp-Yf-wcj">
@@ -520,7 +520,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SV5-Tm-98f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2021.5999999999999" y="140.77961019490255"/>
+            <point key="canvasLocation" x="1924" y="842"/>
         </scene>
     </scenes>
     <resources>
@@ -530,4 +530,7 @@
         <image name="win" width="64" height="64"/>
         <image name="xp" width="64" height="64"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="gNe-UR-t8G"/>
+    </inferredMetricsTieBreakers>
 </document>
