@@ -86,11 +86,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="zaC-wZ-Wmx">
-                    <connections>
-                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="35u-sE-MJ7"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="zaC-wZ-Wmx"/>
             </objects>
             <point key="canvasLocation" x="1164" y="138.98050974512745"/>
         </scene>
