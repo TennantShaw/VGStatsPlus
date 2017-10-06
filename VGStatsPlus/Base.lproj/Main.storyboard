@@ -108,7 +108,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LX0-aL-8RE">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="playerCell" rowHeight="312" id="K2J-FN-ito" customClass="PlayerCell" customModule="VGStatsPlus" customModuleProvider="target">
@@ -210,6 +210,7 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="showMatchesButtonTapped:" destination="K2J-FN-ito" eventType="touchUpInside" id="UYa-50-9td"/>
+                                                        <segue destination="ypS-eT-bw9" kind="show" id="Uza-PV-JK7"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -531,6 +532,6 @@
         <image name="xp" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gNe-UR-t8G"/>
+        <segue reference="5eU-Kw-cC8"/>
     </inferredMetricsTieBreakers>
 </document>

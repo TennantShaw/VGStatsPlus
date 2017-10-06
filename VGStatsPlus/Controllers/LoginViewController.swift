@@ -27,7 +27,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: - Actions
     @IBAction func submitButton(_ sender: UIButton) {
-        if textFieldIGN.text == "" { VGDataSource.instance.getUserData(name: "TennantTheVast", regional: "na", success: { (success) in
+        let name = playerName
+        let region = playerRegionShard
+        if textFieldIGN.text != "" { VGDataSource.instance.getUserData(name: name!, regional: region!, success: { (success) in
             if success {
                 print("successFully got data")
             }
