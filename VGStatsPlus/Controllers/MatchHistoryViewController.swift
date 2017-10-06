@@ -37,18 +37,19 @@ class MatchHistoryViewController: UIViewController, UINavigationControllerDelega
 
 }
 
-extension MatchHistoryViewController: UITableViewDelegate, UITableViewDataSource {
-    //MARK: - Delegate Methods
-    
-    
-    //MARK: - DataSource Methods
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let match = matchHistoryData[indexPath.row]
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "matchHistoryCell")
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return matchHistoryData.count
-    }
-}
+//
+//extension MatchHistoryViewController: UITableViewDelegate, UITableViewDataSource {
+//    //MARK: - Delegate Methods
+//    
+//    
+//    //MARK: - DataSource Methods
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let match = matchHistoryData[indexPath.row]
+//        
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "matchHistoryCell")
+//    }
+//    
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return matchHistoryData.count
+//    }
+//}

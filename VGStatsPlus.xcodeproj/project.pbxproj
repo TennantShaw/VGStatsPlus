@@ -435,7 +435,6 @@
 				30D4717A1F87BBB600CC0E8C /* MatchHistoryCell.swift in Sources */,
 				30D471781F87B87300CC0E8C /* MatchHistoryViewController.swift in Sources */,
 				30D471721F869A6C00CC0E8C /* Assets.swift in Sources */,
-				30D8CA871F84264C002C923F /* MatchHistoryTableViewController.swift in Sources */,
 				AC7995661F86C60B000D399C /* PlayerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
