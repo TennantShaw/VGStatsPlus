@@ -21,9 +21,11 @@ class MatchHistoryCell: UITableViewCell {
     @IBOutlet var assistsLabel: UILabel!
     
     
-    //MARK: - Properties
-    
-    
-    //MARK: - View Life Cycle
-    
+    //MARK: - Class Methods
+    func setMatch(match: Match) {
+        let winOrLoseString = match.endGameReason
+        wonOrLossImageView.image = UIImage(named: winOrLoseString!)
+        matchTypeLabel.text = ("\(match.gameMode )\(match.type)")
+        
+    }
 }
