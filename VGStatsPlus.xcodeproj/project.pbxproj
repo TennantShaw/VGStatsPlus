@@ -20,6 +20,7 @@
 		30D471761F869FAB00CC0E8C /* Roster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D471751F869FAB00CC0E8C /* Roster.swift */; };
 		30D471781F87B87300CC0E8C /* MatchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D471771F87B87300CC0E8C /* MatchHistoryViewController.swift */; };
 		30D4717A1F87BBB600CC0E8C /* MatchHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D471791F87BBB600CC0E8C /* MatchHistoryCell.swift */; };
+		30D4717E1F87D99F00CC0E8C /* MatchHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D4717D1F87D99F00CC0E8C /* MatchHistoryCell.swift */; };
 		30D8CA7D1F842509002C923F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA7C1F842509002C923F /* Player.swift */; };
 		30D8CA7F1F842534002C923F /* VGDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA7E1F842534002C923F /* VGDataSource.swift */; };
 		30D8CA811F8425AA002C923F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA801F8425AA002C923F /* LoginViewController.swift */; };
@@ -68,6 +69,7 @@
 		30D471751F869FAB00CC0E8C /* Roster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Roster.swift; sourceTree = "<group>"; };
 		30D471771F87B87300CC0E8C /* MatchHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchHistoryViewController.swift; sourceTree = "<group>"; };
 		30D471791F87BBB600CC0E8C /* MatchHistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchHistoryCell.swift; sourceTree = "<group>"; };
+		30D4717D1F87D99F00CC0E8C /* MatchHistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchHistoryCell.swift; sourceTree = "<group>"; };
 		30D8CA7C1F842509002C923F /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		30D8CA7E1F842534002C923F /* VGDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGDataSource.swift; sourceTree = "<group>"; };
 		30D8CA801F8425AA002C923F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				AC7995651F86C60B000D399C /* PlayerCell.swift */,
+				30D4717D1F87D99F00CC0E8C /* MatchHistoryCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				30D4717A1F87BBB600CC0E8C /* MatchHistoryCell.swift in Sources */,
 				30D471781F87B87300CC0E8C /* MatchHistoryViewController.swift in Sources */,
 				30D471721F869A6C00CC0E8C /* Assets.swift in Sources */,
+				30D4717E1F87D99F00CC0E8C /* MatchHistoryCell.swift in Sources */,
 				AC7995661F86C60B000D399C /* PlayerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
