@@ -11,28 +11,19 @@ import VaingloryAPI
 
 class VGDataSource {
     
-    static let instance = VGDataSource()
-    let filters = RouterFilters()
     
-    var matches = [MatchResource]() {
+    static let instance = VGDataSource()
+    var delegate: PlayerProfileViewController?
+    let filters = RouterFilters()
+    var player: PlayerResource? {
         didSet {
-            getMatch(withId: (matches.first?.id)!, regional: (matches.first?.shardId)!) { (success) in
-                if success {
-                    print((self.matches.first?.id)!, "DONE")
-                }
-            }
+            delegate?.tableView.reloadData()
         }
     }
     
-    var player: PlayerResource? {
-        didSet {
-            getMatches(regional: "na") { (success) in
-                if success {
-                    print("DONE")
-                }
-            }
-        }
-}
+    var matches = [MatchResource]()
+    var selectedMatch: MatchResource?
+    
     private let vainGloryAPI = VaingloryAPIClient(apiKey: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJiOTIwNTM2MC03NTUwLTAxMzUtMDc2NC0yNjU5ZGNhZmNkOWEiLCJpc3MiOiJnYW1lbG9ja2VyIiwiaWF0IjoxNTA0NzE2MzMyLCJwdWIiOiJzZW1jIiwidGl0bGUiOiJ2YWluZ2xvcnkiLCJhcHAiOiJiOTEyNTJiMC03NTUwLTAxMzUtMDc2Mi0yNjU5ZGNhZmNkOWEiLCJzY29wZSI6ImNvbW11bml0eSIsImxpbWl0IjoxMH0.sEQeY5CxgrQpPtiSn8R9TlmhIEDmHYumN_1AssKAcB4")
     
     // Get User Info
@@ -71,11 +62,12 @@ class VGDataSource {
             if oError != nil {
                 success(false)
             } else {
-                print(oMatchResource?.createdAt)
+                self.selectedMatch = oMatchResource
                 success(true)
             }
-            
         }
     }
+    
+
     
 }

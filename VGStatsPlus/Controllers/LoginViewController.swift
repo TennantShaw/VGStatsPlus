@@ -1,5 +1,5 @@
 //
-//  Controller:LoginViewController.swift
+//  LoginViewController.swift
 //  VGStatsPlus
 //
 //  Created by Tennant Shaw on 10/3/17.
@@ -17,29 +17,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var regionShardTextField: UITextField!
     
     
-    //MARK: - Actions
-    @IBAction func submitButton(_ sender: UIButton) {
-        let ignTextField = textFieldIGN.text!
-        let shardTextField = regionShardTextField.text!
-        if textFieldIGN.text != "" { VGDataSource.instance.getUserData(name: ignTextField, regional: shardTextField, success: { (success) in
-            if success {
-                print("successFully got data")
-            }
-        })
-        } else {
-            // let user know that they cannot submit until they have added an IGN and selected a server region
-        }
-                
-        }
-    
-    
-    @IBAction func IGNTextFieldChanged(_ sender: UITextField) {
-    }
-    
-    @IBAction func dismissKeyboardGesture(_ sender: UITapGestureRecognizer) {
-        textFieldIGN.resignFirstResponder()
-    }
-    
+    //MARK: Needs fixing
     
     //MARK: - Properties
     var regionalShards = ["ea", "eu", "sg", "na", "sa"] // does not include tournament shards at this time
@@ -47,9 +25,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     var playerName: String?
     var playerRegionShard: String?
     
+    //MARK: - Actions
+    @IBAction func submitButton(_ sender: UIButton) {
+        if textFieldIGN.text == "" { VGDataSource.instance.getUserData(name: "TennantTheVast", regional: "na", success: { (success) in
+            if success {
+                print("successFully got data")
+            }
+        })
+        } else {
+            // let user know that they cannot submit until they have added an IGN and selected a server region
+        }
+    }
+
+    @IBAction func IGNTextFieldChanged(_ sender: UITextField) {
+    }
     
-    //MARK: Initializers
-    //Default provided
+    @IBAction func dismissKeyboardGesture(_ sender: UITapGestureRecognizer) {
+        textFieldIGN.resignFirstResponder()
+    }
     
     
     //MARK: - View Life Cycle
