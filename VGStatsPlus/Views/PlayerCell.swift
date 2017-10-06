@@ -7,18 +7,37 @@
 //
 
 import UIKit
+import VaingloryAPI
 
 class PlayerCell: UITableViewCell {
 
+    @IBOutlet weak var playerImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var xpLabel: UILabel!
+    @IBOutlet weak var levelLabel: UILabel!
+    @IBOutlet weak var regionLabel: UILabel!
+    @IBOutlet weak var goldLabel: UILabel!
+    @IBOutlet weak var rankLabel: UILabel!
+    @IBOutlet weak var winsLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    @IBAction func showMatchesButtonTapped(_ sender: Any) {
+        
     }
-
+    
+    func setup(player: PlayerResource) {
+        nameLabel.text = player.name!
+        xpLabel.text = "xp: \(player.xp!)"
+        levelLabel.text = "\(player.level!) - level"
+        regionLabel.text = "\(player.shardId!) - region"
+        goldLabel.text = "Gold:  \(player.lifetimeGold!)"
+        rankLabel.text = "Rank:  \(player.playedRanked!)"
+        winsLabel.text = "Wins:  \(player.wins!)"
+    }
+    
 }

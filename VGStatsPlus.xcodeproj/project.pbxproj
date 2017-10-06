@@ -25,6 +25,9 @@
 		30D8CA871F84264C002C923F /* MatchHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA861F84264C002C923F /* MatchHistoryTableViewController.swift */; };
 		30D8CA891F84266B002C923F /* MatchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA881F84266B002C923F /* MatchDetailsViewController.swift */; };
 		30D8CA8B1F842695002C923F /* OptionsMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA8A1F842695002C923F /* OptionsMenuViewController.swift */; };
+		AC7995661F86C60B000D399C /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7995651F86C60B000D399C /* PlayerCell.swift */; };
+		AC7995691F86CB59000D399C /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7995681F86CB59000D399C /* UIImageViewExtension.swift */; };
+		AC79956B1F86DB45000D399C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC79956A1F86DB45000D399C /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,9 @@
 		30D8CA881F84266B002C923F /* MatchDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewController.swift; sourceTree = "<group>"; };
 		30D8CA8A1F842695002C923F /* OptionsMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsMenuViewController.swift; sourceTree = "<group>"; };
 		AA6E6548654459025D7FD01F /* Pods_VGStatsPlusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VGStatsPlusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC7995651F86C60B000D399C /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
+		AC7995681F86CB59000D399C /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		AC79956A1F86DB45000D399C /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		BCABD4D6EC47A852AAFC5FAC /* Pods-VGStatsPlus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VGStatsPlus.release.xcconfig"; path = "Pods/Target Support Files/Pods-VGStatsPlus/Pods-VGStatsPlus.release.xcconfig"; sourceTree = "<group>"; };
 		F768D22E7A12E74B8FBD6AEE /* Pods_VGStatsPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VGStatsPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -125,6 +131,7 @@
 		302FA9D41F798EE70042DAD5 /* VGStatsPlus */ = {
 			isa = PBXGroup;
 			children = (
+				AC7995671F86CB16000D399C /* Extension */,
 				AC17DFBB1F86823200271D13 /* Models */,
 				AC17DFBD1F86825600271D13 /* Views */,
 				AC17DFBA1F8681E700271D13 /* Controllers */,
@@ -209,8 +216,18 @@
 		AC17DFBD1F86825600271D13 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AC7995651F86C60B000D399C /* PlayerCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		AC7995671F86CB16000D399C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AC7995681F86CB59000D399C /* UIImageViewExtension.swift */,
+				AC79956A1F86DB45000D399C /* GradientView.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,16 +420,19 @@
 			files = (
 				30D8CA7D1F842509002C923F /* Player.swift in Sources */,
 				30D8CA851F842622002C923F /* PlayerProfileViewController.swift in Sources */,
+				AC79956B1F86DB45000D399C /* GradientView.swift in Sources */,
 				30D471761F869FAB00CC0E8C /* Roster.swift in Sources */,
 				30D471701F86990700CC0E8C /* Match.swift in Sources */,
 				30D8CA811F8425AA002C923F /* LoginViewController.swift in Sources */,
 				30D8CA8B1F842695002C923F /* OptionsMenuViewController.swift in Sources */,
 				30D8CA7F1F842534002C923F /* VGDataSource.swift in Sources */,
 				302FA9D61F798EE70042DAD5 /* AppDelegate.swift in Sources */,
+				AC7995691F86CB59000D399C /* UIImageViewExtension.swift in Sources */,
 				30D471741F869C2200CC0E8C /* Participant.swift in Sources */,
 				30D8CA891F84266B002C923F /* MatchDetailsViewController.swift in Sources */,
 				30D471721F869A6C00CC0E8C /* Assets.swift in Sources */,
 				30D8CA871F84264C002C923F /* MatchHistoryTableViewController.swift in Sources */,
+				AC7995661F86C60B000D399C /* PlayerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
