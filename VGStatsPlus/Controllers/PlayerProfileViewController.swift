@@ -12,16 +12,8 @@ import VaingloryAPI
 
 class PlayerProfileViewController: UIViewController, UINavigationControllerDelegate {
     
-    @IBOutlet weak var tableView: UITableView!
-    let imageView = UIImageView()
     //MARK: - Outlets
-    @IBOutlet var mostPlayedCharacterImage: UIImageView!
-    @IBOutlet var playerRankImage: UIImageView!
-    @IBOutlet var playerRankTextField: UITextField!
-    @IBOutlet weak var standardCasualTextField: UITextField!
-    @IBOutlet weak var standardRankedTextField: UITextField!
-    @IBOutlet weak var blitzTextField: UITextField!
-    @IBOutlet weak var battleRoyaleTextField: UITextField!
+    @IBOutlet weak var tableView: UITableView!
     
     
     //MARK: - Actions
@@ -31,14 +23,14 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
     
     
     //MARK: - Properties
+    let imageView = UIImageView()
+    
     var player = VGDataSource.instance.player {
         didSet {
             print("Changed")
         }
     }
     
-    
-    //navigationItem.title = playerIGN // This will come from the json data. We will have to parse it out for this.
     var playerData: PlayerResource! {
         didSet {
             navigationItem.title = playerData.name
