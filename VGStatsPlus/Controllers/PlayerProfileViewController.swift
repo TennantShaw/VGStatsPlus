@@ -17,9 +17,6 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
     
     
     //MARK: - Actions
-    @IBAction func goToMatchHistoryPageButton(_ sender: Any) {
-        
-    }
     
     
     //MARK: - Properties
@@ -59,6 +56,10 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
         imageView.clipsToBounds = true
         view.addSubview(imageView)
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
     }
     
 }
