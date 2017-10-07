@@ -29,13 +29,29 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func submitButton(_ sender: UIButton) {
         let name = playerName
         let region = playerRegionShard
-        if textFieldIGN.text != "" { VGDataSource.instance.getUserData(name: name!, regional: region!, success: { (success) in
+        if textFieldIGN.text != "" { VGDataSource.instance.getUserData(name: "TennantTheVast", regional: "na", success: { (success) in
             if success {
                 print("successFully got data")
+                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                let swVC = storyBoard.instantiateViewController(withIdentifier: "SWVC") as! UIViewController
+                self.present(swVC, animated: true, completion: {
+                    SavedStatus.instance.isLoggedIn = true
+                })
             }
         })
         } else {
             // let user know that they cannot submit until they have added an IGN and selected a server region
+            VGDataSource.instance.getUserData(name: "TennantTheVast", regional: "na", success: { (success) in
+                if success {
+                    print("successFully got data")
+                    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                    let swVC = storyBoard.instantiateViewController(withIdentifier: "SWVC") as! UIViewController
+                    self.present(swVC, animated: true, completion: {
+                        SavedStatus.instance.isLoggedIn = true
+                        SavedStatus.instance.savedUserIGN = ["TennantTheVast": "na"]
+                    })
+                }
+            })
         }
     }
 

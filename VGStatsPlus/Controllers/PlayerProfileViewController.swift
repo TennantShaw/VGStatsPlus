@@ -56,10 +56,32 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
         imageView.clipsToBounds = true
         view.addSubview(imageView)
         
+        revealViewController().rightViewRevealWidth = self.view.frame.width - 100
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        
+        checkStatus()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    func checkStatus() {
+        if SavedStatus.instance.isLoggedIn {
+            var name: String = ""
+            var region: String = ""
+            
+            let savedUserInfo = SavedStatus.instance.savedUserIGN
+            for (_name,value) in savedUserInfo {
+                name = _name as String
+                region = value as! String
+            }
+            VGDataSource.instance.getUserData(name: name, regional: region, success: { (success) in
+                self.tableView.reloadData()
+            })
+        }
     }
     
 }

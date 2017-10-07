@@ -15,8 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let rootViewController = window!.rootViewController as! UINavigationController
-        let _ = rootViewController.topViewController as! LoginViewController
+       
+        if SavedStatus.instance.isLoggedIn {
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let swVC = storyBoard.instantiateViewController(withIdentifier: "SWVC") as! UIViewController
+            self.window?.rootViewController = swVC
+        } else {
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let loginVC = storyBoard.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
+            self.window?.rootViewController = loginVC
+        }
+        
         return true
     }
 
