@@ -12,7 +12,7 @@ class MenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.revealViewController().rearViewRevealWidth = self.view.frame.width - 100  
+        self.revealViewController().rearViewRevealWidth = self.view.frame.width / 2
     }
 
 }

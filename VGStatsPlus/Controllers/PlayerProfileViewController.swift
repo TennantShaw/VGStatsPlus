@@ -56,7 +56,7 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
         imageView.clipsToBounds = true
         view.addSubview(imageView)
         
-        revealViewController().rightViewRevealWidth = self.view.frame.width - 100
+        revealViewController().rightViewRevealWidth = self.view.frame.width / 3
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         
