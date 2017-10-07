@@ -33,11 +33,11 @@ class PlayerCell: UITableViewCell {
     func setup(player: PlayerResource) {
         nameLabel.text = player.name!
         xpLabel.text = "xp: \(player.xp!)"
-        levelLabel.text = "\(player.level!) - level"
-        regionLabel.text = "\(player.shardId!) - region"
-        goldLabel.text = "Gold:  \(player.lifetimeGold!)"
+        levelLabel.text = "Level: \(player.level!)"
+        regionLabel.text = "Region: \(player.shardId!)"
+        goldLabel.text = "Lifetime Gold Earned:  \(player.lifetimeGold!)"
         rankLabel.text = "Rank:  \(player.playedRanked!)"
-        winsLabel.text = "Wins:  \(player.wins!)"
+        winsLabel.text = "Total Wins:  \(player.wins!)"
     }
     
 }
