@@ -77,9 +77,6 @@
                             <constraint firstItem="0Zn-bh-2YZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="122" id="qu2-aT-Cho"/>
                             <constraint firstAttribute="trailingMargin" secondItem="87u-fG-VlX" secondAttribute="trailing" constant="68" id="rhC-dk-VK5"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="zaC-wZ-Wmx" appends="YES" id="Dxv-EM-WR3"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="VGStatsPlus" id="ee9-r8-hK1">
                         <barButtonItem key="backBarButtonItem" title="back" id="max-h8-7B9"/>
@@ -91,7 +88,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="zaC-wZ-Wmx"/>
             </objects>
             <point key="canvasLocation" x="1164" y="138.98050974512745"/>
         </scene>
@@ -311,9 +307,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r9v-yD-eU9">
-                                <rect key="frame" x="16" y="64" width="343" height="554"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r9v-yD-eU9">
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -419,6 +414,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r9v-yD-eU9" firstAttribute="leading" secondItem="H9o-a4-2oR" secondAttribute="leadingMargin" id="I9Q-Xi-YXy"/>
+                            <constraint firstItem="r9v-yD-eU9" firstAttribute="top" secondItem="taK-iR-qAQ" secondAttribute="bottom" id="Mm0-nf-mIT"/>
+                            <constraint firstItem="r9v-yD-eU9" firstAttribute="trailing" secondItem="H9o-a4-2oR" secondAttribute="trailingMargin" id="eYs-qn-If8"/>
+                            <constraint firstItem="aQd-7B-X8Q" firstAttribute="top" secondItem="r9v-yD-eU9" secondAttribute="bottom" id="zek-EQ-2RO"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="matchHistoryTableView" destination="r9v-yD-eU9" id="e0f-3D-s65"/>
@@ -426,7 +427,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z3K-g4-C77" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2497" y="140"/>
+            <point key="canvasLocation" x="2662" y="139"/>
         </scene>
         <!--Match Details View Controller-->
         <scene sceneID="Hht-kL-50G">
@@ -444,7 +445,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Udy-sW-GCP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3060" y="140"/>
+            <point key="canvasLocation" x="3382" y="140"/>
         </scene>
         <!--Extras-->
         <scene sceneID="wxp-zA-LYh">
