@@ -100,7 +100,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     
     //MARK: - Class methods
-    func dismissKeyboard() {
+    @objc func dismissKeyboard() {
         view.endEditing(true)
     }
 }
