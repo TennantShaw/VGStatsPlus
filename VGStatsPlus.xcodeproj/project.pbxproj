@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F3EA6A380B455014153872B /* Pods_VGStatsPlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F768D22E7A12E74B8FBD6AEE /* Pods_VGStatsPlus.framework */; };
+		3007519C1F8A616D00DA6BE3 /* MatchHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3007519B1F8A616D00DA6BE3 /* MatchHistoryCell.swift */; };
 		302FA9D61F798EE70042DAD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FA9D51F798EE70042DAD5 /* AppDelegate.swift */; };
 		302FA9DB1F798EE70042DAD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 302FA9D91F798EE70042DAD5 /* Main.storyboard */; };
 		302FA9DD1F798EE70042DAD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 302FA9DC1F798EE70042DAD5 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		027C7D067038BD4805A90359 /* Pods-VGStatsPlus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VGStatsPlus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VGStatsPlus/Pods-VGStatsPlus.debug.xcconfig"; sourceTree = "<group>"; };
+		3007519B1F8A616D00DA6BE3 /* MatchHistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchHistoryCell.swift; sourceTree = "<group>"; };
 		302FA9D21F798EE70042DAD5 /* VGStatsPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VGStatsPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		302FA9D51F798EE70042DAD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		302FA9DA1F798EE70042DAD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				AC7995651F86C60B000D399C /* PlayerCell.swift */,
+				3007519B1F8A616D00DA6BE3 /* MatchHistoryCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3007519C1F8A616D00DA6BE3 /* MatchHistoryCell.swift in Sources */,
 				30D8CA7D1F842509002C923F /* Player.swift in Sources */,
 				30D8CA851F842622002C923F /* PlayerProfileViewController.swift in Sources */,
 				AC79956B1F86DB45000D399C /* GradientView.swift in Sources */,

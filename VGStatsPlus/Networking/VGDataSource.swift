@@ -14,8 +14,14 @@ class VGDataSource {
     
     static let instance = VGDataSource()
     var delegate: PlayerProfileViewController?
+    var matchDelegate: MatchHistoryViewController?
     let filters = RouterFilters()
     var player: PlayerResource? {
+        didSet {
+            delegate?.tableView.reloadData()
+        }
+    }
+    var matchDetails: MatchResource? {
         didSet {
             delegate?.tableView.reloadData()
         }

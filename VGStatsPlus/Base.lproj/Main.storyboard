@@ -315,15 +315,16 @@
                                 <rect key="frame" x="16" y="64" width="343" height="554"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="matchHistoryCell" id="js3-1c-Yd6">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="matchHistoryCell" id="js3-1c-Yd6" customClass="MatchHistoryCell" customModule="VGStatsPlus" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="js3-1c-Yd6" id="WDv-sc-JSN">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CtW-oP-VTb">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defeat" translatesAutoresizingMaskIntoConstraints="NO" id="CtW-oP-VTb">
                                                     <rect key="frame" x="8" y="-1" width="150" height="150.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="150" id="Gyf-5f-crK"/>
@@ -384,6 +385,7 @@
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="z7G-R6-nwK" firstAttribute="leading" secondItem="CtW-oP-VTb" secondAttribute="trailing" constant="36" id="2ex-Ee-IMw"/>
                                                 <constraint firstItem="zxv-kk-wQQ" firstAttribute="leading" secondItem="CtW-oP-VTb" secondAttribute="trailing" constant="12" id="2lV-AD-rf1"/>
@@ -402,13 +404,15 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="assistLabel" destination="cXt-x3-NIs" id="i22-Zj-LPV"/>
                                             <outlet property="assistsLabel" destination="cXt-x3-NIs" id="cuE-84-iqi"/>
-                                            <outlet property="characterUsedLabel" destination="lli-sX-NID" id="PGC-bb-6ou"/>
+                                            <outlet property="characterUsedLabel" destination="lli-sX-NID" id="xcq-fZ-nYi"/>
+                                            <outlet property="deathLabel" destination="TgC-R3-8Y4" id="CBf-yR-kx1"/>
                                             <outlet property="deathsLabel" destination="TgC-R3-8Y4" id="4zr-p4-EWo"/>
                                             <outlet property="killDeathAssistLabel" destination="zxv-kk-wQQ" id="nCz-kt-UKk"/>
+                                            <outlet property="killLabel" destination="aP4-vA-NTY" id="SlQ-TQ-KcB"/>
                                             <outlet property="killsLabel" destination="aP4-vA-NTY" id="vZP-jk-bYt"/>
-                                            <outlet property="matchTypeLabel" destination="AHF-nt-T1N" id="M0X-8K-f8e"/>
-                                            <outlet property="wonOrLossImageView" destination="CtW-oP-VTb" id="Zki-Gp-bAC"/>
+                                            <outlet property="matchTypeLabel" destination="AHF-nt-T1N" id="fxQ-FA-ey3"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -416,10 +420,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="matchHistoryTableView" destination="r9v-yD-eU9" id="e0f-3D-s65"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z3K-g4-C77" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2942" y="140"/>
+            <point key="canvasLocation" x="2497" y="140"/>
         </scene>
         <!--Match Details View Controller-->
         <scene sceneID="Hht-kL-50G">
@@ -437,7 +444,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Udy-sW-GCP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4551" y="139"/>
+            <point key="canvasLocation" x="3060" y="140"/>
         </scene>
         <!--Extras-->
         <scene sceneID="wxp-zA-LYh">
@@ -486,7 +493,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0yQ-kU-4Md" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2961" y="842"/>
+            <point key="canvasLocation" x="2942" y="932"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xFp-Yf-wcj">
@@ -506,34 +513,13 @@
             </objects>
             <point key="canvasLocation" x="278" y="139"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="f05-Ud-jIx">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Hd4-hA-Iwx" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="4Sk-vL-gbv">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="Ab2-MG-hpX" kind="relationship" relationship="viewControllers" id="gNe-UR-t8G"/>
-                        <segue destination="igb-fs-Sd4" kind="relationship" relationship="viewControllers" id="w8M-7h-kjF"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SV5-Tm-98f" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1924" y="842"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Vainglory_Dagger_DONOTEDIT" width="640" height="2000"/>
+        <image name="defeat" width="217" height="340"/>
         <image name="gold" width="64" height="64"/>
         <image name="tier_10c" width="1536" height="1536"/>
         <image name="victory" width="355" height="338"/>
         <image name="xp" width="64" height="64"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="5eU-Kw-cC8"/>
-    </inferredMetricsTieBreakers>
 </document>
