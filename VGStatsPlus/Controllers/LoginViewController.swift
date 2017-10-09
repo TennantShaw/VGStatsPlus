@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import VaingloryAPI
 
+
 class LoginViewController: UIViewController, UITextFieldDelegate {
     //MARK: - Outlets
     @IBOutlet var imgView: UIImageView!
