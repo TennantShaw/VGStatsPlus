@@ -10,6 +10,8 @@ import UIKit
 import VaingloryAPI
 
 class MatchHistoryCell: UITableViewCell {
+    
+    
 
     @IBOutlet var matchImageView: UIImageView!
     @IBOutlet var killDeathAssistLabel: UILabel!

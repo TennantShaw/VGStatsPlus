@@ -21,6 +21,7 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
     
     //MARK: - Properties
     let imageView = UIImageView()
+    var indexNumber: Int?
     
     var player = VGDataSource.instance.player {
         didSet {
@@ -60,6 +61,8 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         
+        revealViewController().rightViewRevealWidth = self.view.frame.width - 50
+        
         checkStatus()
         
     }
@@ -84,8 +87,11 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "showDetailVC" {
+//           guard let destination = segue.destination as? MatchHistoryViewController else { return }
+//        }
+//    }
 }
 
 

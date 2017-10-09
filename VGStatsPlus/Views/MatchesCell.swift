@@ -52,12 +52,12 @@ extension MatchesCell: UICollectionViewDelegate, UICollectionViewDataSource, UIC
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let detailVC = storyboard.instantiateViewController(withIdentifier: "MatchHistoryViewController") as? MatchHistoryViewController else { return }
+        VGDataSource.instance.getMatch(withId: matches[indexPath.row].id, regional: matches[indexPath.row].shardId!) { (success) in
+            if success {
+                print(success)
+            }
+        }
     }
-    
-    
-    
 }
 
 class MatchesCollectionCell: UICollectionViewCell {

@@ -12,11 +12,17 @@ import VaingloryAPI
 
 class MatchHistoryViewController: UIViewController, UINavigationControllerDelegate {
     
-    //MARK: - View Life Cycle
+    //MARK: -
+    var matchResource: MatchResource?
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
+
     }
+    
+
 
 }
 
