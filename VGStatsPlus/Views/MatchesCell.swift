@@ -72,7 +72,11 @@ class MatchesCollectionCell: UICollectionViewCell {
     }
     
     func setupCell(match: MatchResource) {
-        matchImageView.image = UIImage(named: "Celeste_Portrait")
-        matchName.text = match.titleId
+        if match.endGameReason == "victory" {
+            matchImageView.image = UIImage(named: "victory")
+        } else {
+            matchImageView.image = UIImage(named: "defeat")
+        }
+            matchName.text = match.gameMode
     }
 }
