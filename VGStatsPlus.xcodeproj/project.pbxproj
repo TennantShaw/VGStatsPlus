@@ -24,13 +24,11 @@
 		30D8CA7F1F842534002C923F /* VGDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA7E1F842534002C923F /* VGDataSource.swift */; };
 		30D8CA811F8425AA002C923F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA801F8425AA002C923F /* LoginViewController.swift */; };
 		30D8CA851F842622002C923F /* PlayerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA841F842622002C923F /* PlayerProfileViewController.swift */; };
-		30D8CA891F84266B002C923F /* MatchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA881F84266B002C923F /* MatchDetailsViewController.swift */; };
 		30D8CA8B1F842695002C923F /* OptionsMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA8A1F842695002C923F /* OptionsMenuViewController.swift */; };
 		AC52C54F1F893AA700AF7749 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52C54E1F893AA700AF7749 /* MenuViewController.swift */; };
 		AC52C5511F893F1200AF7749 /* SavedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52C5501F893F1200AF7749 /* SavedData.swift */; };
 		AC52C5531F89456100AF7749 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC52C54C1F89376400AF7749 /* SWRevealViewController.m */; };
 		AC52C5551F8B215300AF7749 /* MatchesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52C5541F8B215300AF7749 /* MatchesCell.swift */; };
-		AC52C5571F8B311200AF7749 /* MatchHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52C5561F8B311200AF7749 /* MatchHistoryCell.swift */; };
 		AC7995661F86C60B000D399C /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7995651F86C60B000D399C /* PlayerCell.swift */; };
 		AC7995691F86CB59000D399C /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7995681F86CB59000D399C /* UIImageViewExtension.swift */; };
 		AC79956B1F86DB45000D399C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC79956A1F86DB45000D399C /* GradientView.swift */; };
@@ -77,7 +75,6 @@
 		30D8CA7E1F842534002C923F /* VGDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGDataSource.swift; sourceTree = "<group>"; };
 		30D8CA801F8425AA002C923F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		30D8CA841F842622002C923F /* PlayerProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerProfileViewController.swift; sourceTree = "<group>"; };
-		30D8CA881F84266B002C923F /* MatchDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewController.swift; sourceTree = "<group>"; };
 		30D8CA8A1F842695002C923F /* OptionsMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsMenuViewController.swift; sourceTree = "<group>"; };
 		AA6E6548654459025D7FD01F /* Pods_VGStatsPlusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VGStatsPlusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC52C54B1F89376200AF7749 /* VGStatsPlus-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VGStatsPlus-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -129,6 +126,7 @@
 				302FA9D31F798EE70042DAD5 /* Products */,
 				A4B561686AC672A83244C80F /* Pods */,
 				7631594778336FFC6F21D27E /* Frameworks */,
+				30462A3F1F8BC3BB00348537 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,6 +176,14 @@
 			path = VGStatsPlusUITests;
 			sourceTree = "<group>";
 		};
+		30462A3F1F8BC3BB00348537 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				3007519B1F8A616D00DA6BE3 /* MatchHistoryCell.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		7631594778336FFC6F21D27E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,7 +208,6 @@
 				30D8CA801F8425AA002C923F /* LoginViewController.swift */,
 				30D8CA841F842622002C923F /* PlayerProfileViewController.swift */,
 				30D471771F87B87300CC0E8C /* MatchHistoryViewController.swift */,
-				30D8CA881F84266B002C923F /* MatchDetailsViewController.swift */,
 				30D8CA8A1F842695002C923F /* OptionsMenuViewController.swift */,
 				AC52C54E1F893AA700AF7749 /* MenuViewController.swift */,
 			);
@@ -330,7 +335,7 @@
 				TargetAttributes = {
 					302FA9D11F798EE60042DAD5 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = F8QRZL97KT;
+						DevelopmentTeam = U3FSDK5XFF;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -465,7 +470,6 @@
 				302FA9D61F798EE70042DAD5 /* AppDelegate.swift in Sources */,
 				AC7995691F86CB59000D399C /* UIImageViewExtension.swift in Sources */,
 				30D471741F869C2200CC0E8C /* Participant.swift in Sources */,
-				30D8CA891F84266B002C923F /* MatchDetailsViewController.swift in Sources */,
 				30D471781F87B87300CC0E8C /* MatchHistoryViewController.swift in Sources */,
 				30D471721F869A6C00CC0E8C /* Assets.swift in Sources */,
 				AC7995661F86C60B000D399C /* PlayerCell.swift in Sources */,
@@ -645,7 +649,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Tennant.Shaw.VGStatsPlus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -662,7 +666,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Tennant.Shaw.VGStatsPlus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
