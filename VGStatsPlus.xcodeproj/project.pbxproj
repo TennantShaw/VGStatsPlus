@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2F3EA6A380B455014153872B /* Pods_VGStatsPlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F768D22E7A12E74B8FBD6AEE /* Pods_VGStatsPlus.framework */; };
-		3007519C1F8A616D00DA6BE3 /* MatchHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3007519B1F8A616D00DA6BE3 /* MatchHistoryCell.swift */; };
 		302FA9D61F798EE70042DAD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FA9D51F798EE70042DAD5 /* AppDelegate.swift */; };
 		302FA9DB1F798EE70042DAD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 302FA9D91F798EE70042DAD5 /* Main.storyboard */; };
 		302FA9DD1F798EE70042DAD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 302FA9DC1F798EE70042DAD5 /* Assets.xcassets */; };
@@ -453,7 +452,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3007519C1F8A616D00DA6BE3 /* MatchHistoryCell.swift in Sources */,
 				30D8CA7D1F842509002C923F /* Player.swift in Sources */,
 				30D8CA851F842622002C923F /* PlayerProfileViewController.swift in Sources */,
 				AC52C5511F893F1200AF7749 /* SavedData.swift in Sources */,
@@ -578,6 +576,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "VGStatsPlus/SupportingFiles/VGStatsPlus-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -628,6 +627,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "VGStatsPlus/SupportingFiles/VGStatsPlus-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				TARGETED_DEVICE_FAMILY = "1,2";
