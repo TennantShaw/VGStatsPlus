@@ -39,7 +39,7 @@ extension MatchHistoryViewController: UITableViewDelegate, UITableViewDataSource
     //MARK: - DataSource Methods
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "matchHistoryCell") as? MatchHistoryCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "redSideCell") as? UITableViewCell else { return UITableViewCell() }
         return cell
     }
 }

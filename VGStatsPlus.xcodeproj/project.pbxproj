@@ -83,7 +83,6 @@
 		AC52C54E1F893AA700AF7749 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		AC52C5501F893F1200AF7749 /* SavedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedData.swift; sourceTree = "<group>"; };
 		AC52C5541F8B215300AF7749 /* MatchesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesCell.swift; sourceTree = "<group>"; };
-		AC52C5561F8B311200AF7749 /* MatchHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryCell.swift; sourceTree = "<group>"; };
 		AC7995651F86C60B000D399C /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		AC7995681F86CB59000D399C /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		AC79956A1F86DB45000D399C /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -239,7 +238,6 @@
 			children = (
 				AC7995651F86C60B000D399C /* PlayerCell.swift */,
 				AC52C5541F8B215300AF7749 /* MatchesCell.swift */,
-				AC52C5561F8B311200AF7749 /* MatchHistoryCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
