@@ -56,12 +56,36 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
         imageView.clipsToBounds = true
         view.addSubview(imageView)
         
+        revealViewController().rightViewRevealWidth = self.view.frame.width / 3
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        
+        checkStatus()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
     }
     
+    func checkStatus() {
+        if SavedStatus.instance.isLoggedIn {
+            var name: String = ""
+            var region: String = ""
+            
+            let savedUserInfo = SavedStatus.instance.savedUserIGN
+            for (_name,value) in savedUserInfo {
+                name = _name as String
+                region = value as! String
+            }
+            VGDataSource.instance.getUserData(name: name, regional: region, success: { (success) in
+                self.tableView.reloadData()
+            })
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    }
 }
 
 
@@ -72,15 +96,27 @@ extension PlayerProfileViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "playerCell") as? PlayerCell else  { return UITableViewCell() }
-        if VGDataSource.instance.player != nil {
-           cell.setup(player: VGDataSource.instance.player!)
+        if indexPath.row == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "playerCell") as? PlayerCell else  { return UITableViewCell() }
+            if VGDataSource.instance.player != nil {
+                cell.setup(player: VGDataSource.instance.player!)
+            }
+            return cell
+        } else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "matchesCell") as? MatchesCell else  { return UITableViewCell() }
+            if VGDataSource.instance.player != nil {
+                VGDataSource.instance.getMatches(regional: (VGDataSource.instance.player?.shardId)!, success: { (success) in
+                    if success {
+                     cell.matches = VGDataSource.instance.matches
+                    }
+                })
+            }
+            return cell
         }
-        return cell
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -89,5 +125,13 @@ extension PlayerProfileViewController: UITableViewDelegate, UITableViewDataSourc
         let height = min(max(y, 60), 400)
         
         imageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: height)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return CGFloat(320)
+        } else {
+            return CGFloat(280)
+        }
     }
 }

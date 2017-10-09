@@ -2,7 +2,7 @@
 //  MatchHistoryCell.swift
 //  VGStatsPlus
 //
-//  Created by Tennant Shaw on 10/8/17.
+//  Created by Alisher Abdukarimov on 10/9/17.
 //  Copyright © 2017 Tennant Shaw. All rights reserved.
 //
 
@@ -10,20 +10,29 @@ import UIKit
 import VaingloryAPI
 
 class MatchHistoryCell: UITableViewCell {
-    //MARK: - Outlets
-    @IBOutlet var matchTypeLabel: UILabel!
-    @IBOutlet var characterUsedLabel: UILabel!
-    @IBOutlet var killLabel: UILabel!
-    @IBOutlet var deathLabel: UILabel!
+
+    @IBOutlet var matchImageView: UIImageView!
+    @IBOutlet var killDeathAssistLabel: UILabel!
     @IBOutlet var assistLabel: UILabel!
+    @IBOutlet var deathsLabel: UILabel!
+    @IBOutlet var killsLabel: UILabel!
+    @IBOutlet var matchTypeLabel: UILabel!
     
-    
+    @IBOutlet var characterUserLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
     }
     
-    //MARK: - Class Methods
-    func setup(matchDetails: MatchResource) {
-        matchTypeLabel.text = matchDetails.gameMode!
+    func setupCell(match: MatchResource?) {
+        killDeathAssistLabel.text = "WORKS"
+        
     }
+
 }

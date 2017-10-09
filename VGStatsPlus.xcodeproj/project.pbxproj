@@ -26,6 +26,11 @@
 		30D8CA851F842622002C923F /* PlayerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA841F842622002C923F /* PlayerProfileViewController.swift */; };
 		30D8CA891F84266B002C923F /* MatchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA881F84266B002C923F /* MatchDetailsViewController.swift */; };
 		30D8CA8B1F842695002C923F /* OptionsMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA8A1F842695002C923F /* OptionsMenuViewController.swift */; };
+		AC52C54F1F893AA700AF7749 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52C54E1F893AA700AF7749 /* MenuViewController.swift */; };
+		AC52C5511F893F1200AF7749 /* SavedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52C5501F893F1200AF7749 /* SavedData.swift */; };
+		AC52C5531F89456100AF7749 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC52C54C1F89376400AF7749 /* SWRevealViewController.m */; };
+		AC52C5551F8B215300AF7749 /* MatchesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52C5541F8B215300AF7749 /* MatchesCell.swift */; };
+		AC52C5571F8B311200AF7749 /* MatchHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52C5561F8B311200AF7749 /* MatchHistoryCell.swift */; };
 		AC7995661F86C60B000D399C /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7995651F86C60B000D399C /* PlayerCell.swift */; };
 		AC7995691F86CB59000D399C /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7995681F86CB59000D399C /* UIImageViewExtension.swift */; };
 		AC79956B1F86DB45000D399C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC79956A1F86DB45000D399C /* GradientView.swift */; };
@@ -75,6 +80,13 @@
 		30D8CA881F84266B002C923F /* MatchDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewController.swift; sourceTree = "<group>"; };
 		30D8CA8A1F842695002C923F /* OptionsMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsMenuViewController.swift; sourceTree = "<group>"; };
 		AA6E6548654459025D7FD01F /* Pods_VGStatsPlusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VGStatsPlusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC52C54B1F89376200AF7749 /* VGStatsPlus-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VGStatsPlus-Bridging-Header.h"; sourceTree = "<group>"; };
+		AC52C54C1F89376400AF7749 /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		AC52C54D1F89376500AF7749 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		AC52C54E1F893AA700AF7749 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		AC52C5501F893F1200AF7749 /* SavedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedData.swift; sourceTree = "<group>"; };
+		AC52C5541F8B215300AF7749 /* MatchesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesCell.swift; sourceTree = "<group>"; };
+		AC52C5561F8B311200AF7749 /* MatchHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryCell.swift; sourceTree = "<group>"; };
 		AC7995651F86C60B000D399C /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		AC7995681F86CB59000D399C /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		AC79956A1F86DB45000D399C /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -133,6 +145,7 @@
 		302FA9D41F798EE70042DAD5 /* VGStatsPlus */ = {
 			isa = PBXGroup;
 			children = (
+				AC52C54A1F89370A00AF7749 /* SupportingFiles */,
 				AC7995671F86CB16000D399C /* Extension */,
 				AC17DFBB1F86823200271D13 /* Models */,
 				AC17DFBD1F86825600271D13 /* Views */,
@@ -191,6 +204,7 @@
 				30D471771F87B87300CC0E8C /* MatchHistoryViewController.swift */,
 				30D8CA881F84266B002C923F /* MatchDetailsViewController.swift */,
 				30D8CA8A1F842695002C923F /* OptionsMenuViewController.swift */,
+				AC52C54E1F893AA700AF7749 /* MenuViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -219,9 +233,21 @@
 			isa = PBXGroup;
 			children = (
 				AC7995651F86C60B000D399C /* PlayerCell.swift */,
-				3007519B1F8A616D00DA6BE3 /* MatchHistoryCell.swift */,
+				AC52C5541F8B215300AF7749 /* MatchesCell.swift */,
+				AC52C5561F8B311200AF7749 /* MatchHistoryCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		AC52C54A1F89370A00AF7749 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				AC52C54D1F89376500AF7749 /* SWRevealViewController.h */,
+				AC52C54C1F89376400AF7749 /* SWRevealViewController.m */,
+				AC52C54B1F89376200AF7749 /* VGStatsPlus-Bridging-Header.h */,
+				AC52C5501F893F1200AF7749 /* SavedData.swift */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		AC7995671F86CB16000D399C /* Extension */ = {
@@ -427,11 +453,14 @@
 				3007519C1F8A616D00DA6BE3 /* MatchHistoryCell.swift in Sources */,
 				30D8CA7D1F842509002C923F /* Player.swift in Sources */,
 				30D8CA851F842622002C923F /* PlayerProfileViewController.swift in Sources */,
+				AC52C5511F893F1200AF7749 /* SavedData.swift in Sources */,
 				AC79956B1F86DB45000D399C /* GradientView.swift in Sources */,
 				30D471761F869FAB00CC0E8C /* Roster.swift in Sources */,
+				AC52C5531F89456100AF7749 /* SWRevealViewController.m in Sources */,
 				30D471701F86990700CC0E8C /* Match.swift in Sources */,
 				30D8CA811F8425AA002C923F /* LoginViewController.swift in Sources */,
 				30D8CA8B1F842695002C923F /* OptionsMenuViewController.swift in Sources */,
+				AC52C54F1F893AA700AF7749 /* MenuViewController.swift in Sources */,
 				30D8CA7F1F842534002C923F /* VGDataSource.swift in Sources */,
 				302FA9D61F798EE70042DAD5 /* AppDelegate.swift in Sources */,
 				AC7995691F86CB59000D399C /* UIImageViewExtension.swift in Sources */,
@@ -440,6 +469,7 @@
 				30D471781F87B87300CC0E8C /* MatchHistoryViewController.swift in Sources */,
 				30D471721F869A6C00CC0E8C /* Assets.swift in Sources */,
 				AC7995661F86C60B000D399C /* PlayerCell.swift in Sources */,
+				AC52C5551F8B215300AF7749 /* MatchesCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,7 +639,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = F8QRZL97KT;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = U3FSDK5XFF;
 				INFOPLIST_FILE = VGStatsPlus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Tennant.Shaw.VGStatsPlus;
@@ -625,7 +656,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = F8QRZL97KT;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = U3FSDK5XFF;
 				INFOPLIST_FILE = VGStatsPlus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Tennant.Shaw.VGStatsPlus;
