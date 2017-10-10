@@ -4,4 +4,8 @@ use_frameworks!
 
  target 'VGStatsPlus' do
  	pod 'VaingloryAPI'
+	pod 'FBSDKCoreKit'
+	pod 'FBSDKShareKit'
+	pod 'FBSDKLoginKit'
+	pod 'Firebase/Core'
   end

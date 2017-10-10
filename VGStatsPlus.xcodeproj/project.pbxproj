@@ -28,6 +28,12 @@
 		AC52C5511F893F1200AF7749 /* SavedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52C5501F893F1200AF7749 /* SavedData.swift */; };
 		AC52C5531F89456100AF7749 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC52C54C1F89376400AF7749 /* SWRevealViewController.m */; };
 		AC52C5551F8B215300AF7749 /* MatchesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52C5541F8B215300AF7749 /* MatchesCell.swift */; };
+		AC52C5571F8B311200AF7749 /* MatchHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52C5561F8B311200AF7749 /* MatchHistoryCell.swift */; };
+		AC52C5591F8BD15900AF7749 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52C5581F8BD15900AF7749 /* ChannelVC.swift */; };
+		AC52C55B1F8BE40700AF7749 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52C55A1F8BE40700AF7749 /* ChannelCell.swift */; };
+		AC52C55D1F8BE53C00AF7749 /* ChannelMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52C55C1F8BE53C00AF7749 /* ChannelMessageCell.swift */; };
+		AC52C55F1F8C007D00AF7749 /* BindToKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52C55E1F8C007D00AF7749 /* BindToKeyboard.swift */; };
+		AC52C5611F8C056500AF7749 /* UIViewShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52C5601F8C056500AF7749 /* UIViewShadow.swift */; };
 		AC7995661F86C60B000D399C /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7995651F86C60B000D399C /* PlayerCell.swift */; };
 		AC7995691F86CB59000D399C /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7995681F86CB59000D399C /* UIImageViewExtension.swift */; };
 		AC79956B1F86DB45000D399C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC79956A1F86DB45000D399C /* GradientView.swift */; };
@@ -82,6 +88,12 @@
 		AC52C54E1F893AA700AF7749 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		AC52C5501F893F1200AF7749 /* SavedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedData.swift; sourceTree = "<group>"; };
 		AC52C5541F8B215300AF7749 /* MatchesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesCell.swift; sourceTree = "<group>"; };
+		AC52C5561F8B311200AF7749 /* MatchHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryCell.swift; sourceTree = "<group>"; };
+		AC52C5581F8BD15900AF7749 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
+		AC52C55A1F8BE40700AF7749 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
+		AC52C55C1F8BE53C00AF7749 /* ChannelMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelMessageCell.swift; sourceTree = "<group>"; };
+		AC52C55E1F8C007D00AF7749 /* BindToKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindToKeyboard.swift; sourceTree = "<group>"; };
+		AC52C5601F8C056500AF7749 /* UIViewShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewShadow.swift; sourceTree = "<group>"; };
 		AC7995651F86C60B000D399C /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		AC7995681F86CB59000D399C /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		AC79956A1F86DB45000D399C /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -208,6 +220,7 @@
 				30D471771F87B87300CC0E8C /* MatchHistoryViewController.swift */,
 				30D8CA8A1F842695002C923F /* OptionsMenuViewController.swift */,
 				AC52C54E1F893AA700AF7749 /* MenuViewController.swift */,
+				AC52C5581F8BD15900AF7749 /* ChannelVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -237,6 +250,9 @@
 			children = (
 				AC7995651F86C60B000D399C /* PlayerCell.swift */,
 				AC52C5541F8B215300AF7749 /* MatchesCell.swift */,
+				AC52C5561F8B311200AF7749 /* MatchHistoryCell.swift */,
+				AC52C55A1F8BE40700AF7749 /* ChannelCell.swift */,
+				AC52C55C1F8BE53C00AF7749 /* ChannelMessageCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -257,6 +273,8 @@
 			children = (
 				AC7995681F86CB59000D399C /* UIImageViewExtension.swift */,
 				AC79956A1F86DB45000D399C /* GradientView.swift */,
+				AC52C55E1F8C007D00AF7749 /* BindToKeyboard.swift */,
+				AC52C5601F8C056500AF7749 /* UIViewShadow.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -406,13 +424,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VGStatsPlus-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		69530A492F43FB39CA109943 /* [CP] Copy Pods Resources */ = {
@@ -436,9 +457,34 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VGStatsPlus/Pods-VGStatsPlus-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/ModelMapper/Mapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Treasure/Treasure.framework",
+				"${BUILT_PRODUCTS_DIR}/VaingloryAPI/VaingloryAPI.framework",
+				"${BUILT_PRODUCTS_DIR}/Zip/Zip.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Treasure.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VaingloryAPI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Zip.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -452,18 +498,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC52C55F1F8C007D00AF7749 /* BindToKeyboard.swift in Sources */,
+				AC52C55D1F8BE53C00AF7749 /* ChannelMessageCell.swift in Sources */,
+				AC52C5571F8B311200AF7749 /* MatchHistoryCell.swift in Sources */,
 				30D8CA7D1F842509002C923F /* Player.swift in Sources */,
 				30D8CA851F842622002C923F /* PlayerProfileViewController.swift in Sources */,
+				AC52C55B1F8BE40700AF7749 /* ChannelCell.swift in Sources */,
 				AC52C5511F893F1200AF7749 /* SavedData.swift in Sources */,
 				AC79956B1F86DB45000D399C /* GradientView.swift in Sources */,
 				30D471761F869FAB00CC0E8C /* Roster.swift in Sources */,
 				AC52C5531F89456100AF7749 /* SWRevealViewController.m in Sources */,
 				30D471701F86990700CC0E8C /* Match.swift in Sources */,
+				AC52C5611F8C056500AF7749 /* UIViewShadow.swift in Sources */,
 				30D8CA811F8425AA002C923F /* LoginViewController.swift in Sources */,
 				30D8CA8B1F842695002C923F /* OptionsMenuViewController.swift in Sources */,
 				AC52C54F1F893AA700AF7749 /* MenuViewController.swift in Sources */,
 				30D8CA7F1F842534002C923F /* VGDataSource.swift in Sources */,
 				302FA9D61F798EE70042DAD5 /* AppDelegate.swift in Sources */,
+				AC52C5591F8BD15900AF7749 /* ChannelVC.swift in Sources */,
 				AC7995691F86CB59000D399C /* UIImageViewExtension.swift in Sources */,
 				30D471741F869C2200CC0E8C /* Participant.swift in Sources */,
 				30D471781F87B87300CC0E8C /* MatchHistoryViewController.swift in Sources */,

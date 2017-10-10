@@ -12,16 +12,17 @@ import VaingloryAPI
 
 class MatchHistoryViewController: UIViewController, UINavigationControllerDelegate {
     
-    //MARK: - View Life Cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        VGDataSource.instance.matchDelegate = self
-    }
+    //MARK: -
+    var matchResource: MatchResource?
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
+
     }
+    
+
 
 }
 
