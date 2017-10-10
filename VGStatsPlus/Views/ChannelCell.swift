@@ -9,10 +9,12 @@
 import UIKit
 
 class ChannelCell: UICollectionViewCell {
-    
+    //MARK: - Outlets
     @IBOutlet var channelImage: UIImageView!
     @IBOutlet var channelNameLabel: UILabel!
     
+    
+    //MARK: - Nib
     override func awakeFromNib() {
         super.awakeFromNib()
         

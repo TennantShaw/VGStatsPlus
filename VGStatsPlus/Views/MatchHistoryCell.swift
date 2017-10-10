@@ -10,17 +10,17 @@ import UIKit
 import VaingloryAPI
 
 class MatchHistoryCell: UITableViewCell {
-    
-    
-
+    //MARK: - Outlets
     @IBOutlet var matchImageView: UIImageView!
     @IBOutlet var killDeathAssistLabel: UILabel!
     @IBOutlet var assistLabel: UILabel!
     @IBOutlet var deathsLabel: UILabel!
     @IBOutlet var killsLabel: UILabel!
     @IBOutlet var matchTypeLabel: UILabel!
-    
     @IBOutlet var characterUserLabel: UILabel!
+    
+    
+    //MARK: - Nib
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -32,9 +32,10 @@ class MatchHistoryCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    
+    //MARK: - Class Methods
     func setupCell(match: MatchResource?) {
         killDeathAssistLabel.text = "WORKS"
-        
     }
 
 }

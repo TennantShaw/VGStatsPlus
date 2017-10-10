@@ -9,7 +9,7 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.revealViewController().rearViewRevealWidth = self.view.frame.width / 2

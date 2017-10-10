@@ -10,9 +10,11 @@ import UIKit
 import VaingloryAPI
 
 class MatchesCell: UITableViewCell {
-    
+    //MARK: - Outlets
     @IBOutlet var collectionView: UICollectionView!
     
+    
+    //MARK: - Properties
     var delegate: PlayerProfileViewController?
     
     var matches: [MatchResource] = [] {
@@ -21,6 +23,8 @@ class MatchesCell: UITableViewCell {
         }
     }
 
+    
+    //MARK: - Nib
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -61,16 +65,19 @@ extension MatchesCell: UICollectionViewDelegate, UICollectionViewDataSource, UIC
 }
 
 class MatchesCollectionCell: UICollectionViewCell {
-    
+    //MARK: - Match Cell Outlets
     @IBOutlet var matchImageView: UIImageView!
     @IBOutlet var matchName: UILabel!
     
     
+    //MARK: - Match Cell Nib
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
     
+    
+    //MARK: - MatchCollectionCell Class Methods
     func setupCell(match: MatchResource) {
         if match.endGameReason == "victory" {
             matchImageView.image = UIImage(named: "victory")

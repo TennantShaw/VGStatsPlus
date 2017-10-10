@@ -10,7 +10,7 @@ import UIKit
 import VaingloryAPI
 
 class PlayerCell: UITableViewCell {
-
+    //MARK: - Outlets
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var regionLabel: UILabel!
@@ -23,10 +23,7 @@ class PlayerCell: UITableViewCell {
         // Initialization code
     }
     
-    @IBAction func showMatchesButtonTapped(_ sender: Any) {
-        
-    }
-    
+    //MARK: - Class Methods
     func setup(player: PlayerResource) {
         nameLabel.text = player.name!
         levelLabel.text = "Level: \(player.level!)"

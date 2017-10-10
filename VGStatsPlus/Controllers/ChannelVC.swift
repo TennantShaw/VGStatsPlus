@@ -9,11 +9,13 @@
 import UIKit
 
 class ChannelVC: UIViewController {
-    
+    //MARK: - Outlets
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var keyboardView: UIView!
     
+    
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self

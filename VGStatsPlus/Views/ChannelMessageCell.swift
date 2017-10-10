@@ -9,13 +9,14 @@
 import UIKit
 
 class ChannelMessageCell: UITableViewCell {
-
+    //MARK: - Outlets
     @IBOutlet var userProfileImage: CircleImage!
     @IBOutlet var userNameLabel: UILabel!
     @IBOutlet var messageLabel: UILabel!
     @IBOutlet var timeLabel: UILabel!
     
     
+    //MARK: - Nib
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,6 +27,8 @@ class ChannelMessageCell: UITableViewCell {
         
     }
     
+    
+    //MARK: - Class Methods
     func setup() {
         userNameLabel.text = "Alisher"
         messageLabel.text = "Hello World of Gamers"

@@ -11,7 +11,6 @@ import UIKit
 import VaingloryAPI
 
 class PlayerProfileViewController: UIViewController, UINavigationControllerDelegate {
-    
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
