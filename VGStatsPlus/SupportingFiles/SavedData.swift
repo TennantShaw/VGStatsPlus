@@ -32,4 +32,21 @@ class SavedStatus {
         }
     }
     
+    var currentUserEmail: String {
+        get {
+            return defaults.value(forKey: "userEmail") as! String
+        }
+        set {
+            defaults.set(newValue, forKey: "userEmail")
+        }
+    }
+    
+    var userID: String {
+        get {
+            return defaults.value(forKey: "userID") as! String
+        }
+        set {
+            defaults.set(newValue, forKey: "userID")
+        }
+    }
 }

@@ -20,6 +20,65 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Login To FirebaseVC-->
+        <scene sceneID="YC2-Mh-52j">
+            <objects>
+                <viewController storyboardIdentifier="loginToFirebase" id="Z3f-am-9o8" customClass="LoginToFirebaseVC" customModule="VGStatsPlus" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gMh-aM-c1a"/>
+                        <viewControllerLayoutGuide type="bottom" id="myo-m2-tjM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZC4-Yg-Y2Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VGStatsPlus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYX-YM-mvg">
+                                <rect key="frame" x="0.0" y="60" width="375" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="xN5-NC-kWN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up with Facebook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RE5-2f-taU">
+                                <rect key="frame" x="84" y="470.5" width="207" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Adagio_Angel" translatesAutoresizingMaskIntoConstraints="NO" id="mJl-ga-41e" customClass="CircleImage" customModule="VGStatsPlus" customModuleProvider="target">
+                                <rect key="frame" x="87" y="198.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Egi-DF-Bno"/>
+                                    <constraint firstAttribute="width" constant="200" id="zGf-tE-XWI"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oYX-YM-mvg" firstAttribute="top" secondItem="ZC4-Yg-Y2Z" secondAttribute="top" constant="60" id="26b-uu-wF9"/>
+                            <constraint firstAttribute="trailing" secondItem="oYX-YM-mvg" secondAttribute="trailing" id="42K-Ts-9PG"/>
+                            <constraint firstItem="RE5-2f-taU" firstAttribute="centerX" secondItem="ZC4-Yg-Y2Z" secondAttribute="centerX" id="57H-3V-8ek"/>
+                            <constraint firstItem="mJl-ga-41e" firstAttribute="centerY" secondItem="ZC4-Yg-Y2Z" secondAttribute="centerY" constant="-35" id="Fv4-TR-eA4"/>
+                            <constraint firstItem="mJl-ga-41e" firstAttribute="centerX" secondItem="ZC4-Yg-Y2Z" secondAttribute="centerX" id="UAm-Qu-sKe"/>
+                            <constraint firstItem="oYX-YM-mvg" firstAttribute="leading" secondItem="ZC4-Yg-Y2Z" secondAttribute="leading" id="UO3-VP-xvY"/>
+                            <constraint firstItem="RE5-2f-taU" firstAttribute="centerY" secondItem="ZC4-Yg-Y2Z" secondAttribute="centerY" constant="150" id="gmj-6w-R37"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                <color key="value" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WUw-vL-D4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="778.39999999999998" y="-734.48275862068976"/>
+        </scene>
         <!--VGStatsPlus-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -96,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="914" y="-755"/>
+            <point key="canvasLocation" x="1558" y="-736"/>
         </scene>
         <!--Player Profile View Controller-->
         <scene sceneID="W7I-wX-eYd">
@@ -902,6 +961,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Adagio_Angel" width="1024" height="770"/>
         <image name="Vainglory_Dagger_DONOTEDIT" width="640" height="2000"/>
         <image name="add" width="50" height="50"/>
         <image name="battle" width="50" height="50"/>

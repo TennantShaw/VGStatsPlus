@@ -8,4 +8,7 @@ use_frameworks!
 	pod 'FBSDKShareKit'
 	pod 'FBSDKLoginKit'
 	pod 'Firebase/Core'
+	pod 'FacebookLogin'
+	pod 'Firebase/Database'
+	pod 'Firebase/Auth'	
   end
