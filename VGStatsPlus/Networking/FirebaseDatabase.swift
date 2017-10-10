@@ -51,7 +51,7 @@ class FirebaseDatabase {
                 userCreationComplete(false, nil)
             } else {
                 let userData = ["provider": user?.providerID, "email": user?.email, "name": name, "createdAccountWith": accountType]
-                FirebaseService.instance.createDBUser(uid: (user?.uid)!, userData: userData)
+                FirebaseDatabase.instance.createDBUser(uid: (user?.uid)!, userData: userData)
                 SavedStatus.instance.isLoggedIn = true
                 SavedStatus.instance.userID = (user?.uid)!
                 userCreationComplete(true, error)
@@ -79,6 +79,7 @@ class FirebaseDatabase {
         
         do{
             try Auth.auth().signOut()
+            SavedStatus.instance.isLoggedIn = false
         }catch{
             print("Error while signing out!")
         }

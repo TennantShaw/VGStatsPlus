@@ -49,11 +49,11 @@ class LoginToFirebaseVC: UIViewController {
             FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "email, id, name, picture.type(large)"]).start(completionHandler: { (connection, result, error) -> Void in
                 if (error == nil){
                     self.dict = result as! [String : AnyObject]
-                    FirebaseDatabase.instance.loginUserToFirebase(withEmail: "\(self.dict["id"])@vgstatsplus.com", password: self.dict["id"], loginComplete: { (success, error) in
+                    FirebaseDatabase.instance.loginUserToFirebase(withEmail: "\(self.dict["id"]!)@vgstatsplus.com", password: "\(self.dict["id"]!)", loginComplete: { (success, error) in
                         if success {
                             print("Successfully logged in")
                         } else {
-                            FirebaseDatabase.instance.registerUserToFirebase(withEmail: "\(self.dict["id"])@vgstatsplus.com", password: self.dict["id"], name: self.dict["name"], accountType: "facebook", userCreationComplete: { (success, oError) in
+                            FirebaseDatabase.instance.registerUserToFirebase(withEmail: "\(self.dict["id"]!)@vgstatsplus.com", password: "\(self.dict["id"]!)", name: "\(self.dict["name"]!)", accountType: "facebook", userCreationComplete: { (success, oError) in
                                 if success {
                                     print("Successfully registered user")
                                 }

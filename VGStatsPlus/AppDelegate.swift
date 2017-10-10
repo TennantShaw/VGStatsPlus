@@ -17,12 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-       SavedStatus.instance.isLoggedIn = false
+        SavedStatus.instance.isLoggedIn = false
         FirebaseApp.configure()
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         if SavedStatus.instance.isLoggedIn {
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let swVC = storyBoard.instantiateViewController(withIdentifier: "SWVC") as! UIViewController
+            let swVC = storyBoard.instantiateViewController(withIdentifier: "SWVC")
             self.window?.rootViewController = swVC
         } else {
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
