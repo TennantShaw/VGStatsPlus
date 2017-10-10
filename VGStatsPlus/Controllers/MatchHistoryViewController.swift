@@ -20,6 +20,17 @@ class MatchHistoryViewController: UIViewController, UINavigationControllerDelega
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
 
+        // dataSource delegate setup
+        VGDataSource.instance.matchDelegate = self
+
+        
+        // side menu setup
+        revealViewController().rightViewRevealWidth = self.view.frame.width / 3
+        super.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        super.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        
+        revealViewController().rightViewRevealWidth = self.view.frame.width - 50
+
     }
     
 
