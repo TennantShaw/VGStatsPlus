@@ -14,13 +14,13 @@ public struct ParticipantResource: Resource {
     
     public let id: String
     public let type: String
-
+    
     public let actor: String?
     public let assists: Int?
     public let crystalMineCaptures: Int?
     public let deaths: Int?
     public let farm: Int?
-    public let firstAfkTime: Bool
+    public let gold: Float?
     public let goldMineCaptures: Int?
     public let itemGrants: [String: Any]?
     public let itemSells: [String: Any]?
@@ -51,7 +51,7 @@ public struct ParticipantResource: Resource {
         crystalMineCaptures = try? map.from(Key.attributes("stats.crystalMineCaptures"))
         deaths = try? map.from(Key.attributes("stats.deaths"))
         farm = try? map.from(Key.attributes("stats.farm"))
-        firstAfkTime = try map.from(Key.attributes("stats.firstAfkTime"))
+        gold = try? map.from(Key.attributes("stats.gold"))
         goldMineCaptures = try? map.from(Key.attributes("stats.goldMineCaptures"))
         itemGrants = try? map.from(Key.attributes("stats.itemGrants"))
         itemSells = try? map.from(Key.attributes("stats.itemSells"))
