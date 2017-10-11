@@ -24,6 +24,7 @@
 		30D8CA811F8425AA002C923F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA801F8425AA002C923F /* LoginViewController.swift */; };
 		30D8CA851F842622002C923F /* PlayerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA841F842622002C923F /* PlayerProfileViewController.swift */; };
 		30D8CA8B1F842695002C923F /* OptionsMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA8A1F842695002C923F /* OptionsMenuViewController.swift */; };
+		30DA0D8B1F8D53AC008EB6CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACCFBAAB1F8C6A650085E3FE /* GoogleService-Info.plist */; };
 		AC1555A01F8C608F00069037 /* FirebaseDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC15559F1F8C608F00069037 /* FirebaseDatabase.swift */; };
 		AC52C54F1F893AA700AF7749 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52C54E1F893AA700AF7749 /* MenuViewController.swift */; };
 		AC52C5511F893F1200AF7749 /* SavedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52C5501F893F1200AF7749 /* SavedData.swift */; };
@@ -404,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				302FA9E01F798EE70042DAD5 /* LaunchScreen.storyboard in Resources */,
+				30DA0D8B1F8D53AC008EB6CA /* GoogleService-Info.plist in Resources */,
 				302FA9DD1F798EE70042DAD5 /* Assets.xcassets in Resources */,
 				302FA9DB1F798EE70042DAD5 /* Main.storyboard in Resources */,
 			);
@@ -718,7 +720,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Tennant.Shaw.VGStatsPlus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -735,7 +737,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Tennant.Shaw.VGStatsPlus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

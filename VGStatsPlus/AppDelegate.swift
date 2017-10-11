@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = swVC
         } else {
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let loginVC = storyBoard.instantiateViewController(withIdentifier: "loginToFirebase") as! LoginToFirebaseVC
+            let loginVC = storyBoard.instantiateViewController(withIdentifier: "loginVC")
             self.window?.rootViewController = loginVC
         }
         return true
