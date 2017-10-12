@@ -11,11 +11,20 @@ import UIKit
 import VaingloryAPI
 
 class MatchHistoryViewController: UIViewController, UINavigationControllerDelegate {
+    //MARK: - Outlets
+    @IBOutlet weak var timePlayedLabel: UILabel!
+    @IBOutlet weak var leftSideAcesLabel: UILabel!
+    @IBOutlet var leftSideKrakenKillsLabel: UILabel!
+    @IBOutlet var leftSideTeamGoldLabel: UILabel!
+    @IBOutlet var rightSideAcesLabel: UILabel!
+    @IBOutlet var rightSideKrakenKillsLabel: UILabel!
+    @IBOutlet var rightSideTeamGoldLabel: UILabel!
+
     
-    //MARK: -
+    //MARK: - Properties
     var matchResource: MatchResource?
     
-    
+    //MARK: = View Life Cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false

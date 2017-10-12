@@ -633,6 +633,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Match Name" id="7h5-X5-gqU"/>
+                    <connections>
+                        <outlet property="leftSideAcesLabel" destination="eaR-Uq-faC" id="zvp-nJ-rdo"/>
+                        <outlet property="leftSideKrakenKillsLabel" destination="f4C-wR-CAq" id="H2z-WC-CFF"/>
+                        <outlet property="leftSideTeamGoldLabel" destination="wCZ-rG-dJZ" id="i9Q-Xq-Wme"/>
+                        <outlet property="rightSideAcesLabel" destination="8gJ-ab-432" id="hxM-nI-mU4"/>
+                        <outlet property="rightSideKrakenKillsLabel" destination="z7u-Ze-51C" id="A7k-pn-TMr"/>
+                        <outlet property="rightSideTeamGoldLabel" destination="Adl-5J-o1i" id="58g-YL-ajU"/>
+                        <outlet property="timePlayedLabel" destination="Ee1-sg-R9M" id="KhV-bY-Y20"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z3K-g4-C77" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
