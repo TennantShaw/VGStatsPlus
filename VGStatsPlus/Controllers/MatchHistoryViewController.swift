@@ -20,12 +20,12 @@ class MatchHistoryViewController: UIViewController, UINavigationControllerDelega
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
         
-        // side menu setup
-        revealViewController().rightViewRevealWidth = self.view.frame.width / 3
-        super.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        super.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
-        
-        revealViewController().rightViewRevealWidth = self.view.frame.width - 50
+        // side menu setup // Taking out until I know why it is allowing to go to previous viewController while chat side menu is open
+//        revealViewController().rightViewRevealWidth = self.view.frame.width / 3
+//        self.view.addGestureRecognizer(super.revealViewController().panGestureRecognizer())
+//        self.view.addGestureRecognizer(super.revealViewController().tapGestureRecognizer())
+//
+//        revealViewController().rightViewRevealWidth = self.view.frame.width - 50
 
     }
     
