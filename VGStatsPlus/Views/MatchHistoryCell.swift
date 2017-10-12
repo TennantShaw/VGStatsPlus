@@ -11,13 +11,8 @@ import VaingloryAPI
 
 class MatchHistoryCell: UITableViewCell {
     //MARK: - Outlets
-    @IBOutlet var matchImageView: UIImageView!
-    @IBOutlet var killDeathAssistLabel: UILabel!
-    @IBOutlet var assistLabel: UILabel!
-    @IBOutlet var deathsLabel: UILabel!
-    @IBOutlet var killsLabel: UILabel!
-    @IBOutlet var matchTypeLabel: UILabel!
-    @IBOutlet var characterUserLabel: UILabel!
+    @IBOutlet var leftSideCharacterImageView: UIImageView!
+    @IBOutlet var rightSideCharacterImageView: UIImageView!
     
     
     //MARK: - Nib
@@ -35,7 +30,6 @@ class MatchHistoryCell: UITableViewCell {
     
     //MARK: - Class Methods
     func setupCell(match: MatchResource?) {
-        killDeathAssistLabel.text = "WORKS"
     }
 
 }

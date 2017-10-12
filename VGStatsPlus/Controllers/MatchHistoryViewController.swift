@@ -12,14 +12,15 @@ import VaingloryAPI
 
 class MatchHistoryViewController: UIViewController, UINavigationControllerDelegate {
     //MARK: - Outlets
-    @IBOutlet weak var timePlayedLabel: UILabel!
-    @IBOutlet weak var leftSideAcesLabel: UILabel!
+    @IBOutlet var timePlayedLabel: UILabel!
+    @IBOutlet var leftSideAcesLabel: UILabel!
     @IBOutlet var leftSideKrakenKillsLabel: UILabel!
     @IBOutlet var leftSideTeamGoldLabel: UILabel!
     @IBOutlet var rightSideAcesLabel: UILabel!
     @IBOutlet var rightSideKrakenKillsLabel: UILabel!
     @IBOutlet var rightSideTeamGoldLabel: UILabel!
-
+    @IBOutlet var leftSideVictoryOrDefeatLabel: UILabel!
+    @IBOutlet var rightSideVictoryOrDefeatLabel: UILabel!
     
     //MARK: - Properties
     var matchResource: MatchResource?
@@ -56,7 +57,7 @@ extension MatchHistoryViewController: UITableViewDelegate, UITableViewDataSource
     //MARK: - DataSource Methods
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "redSideCell") as? MatchHistoryCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "leftSideCell") as? MatchHistoryCell else { return UITableViewCell() }
         return cell
     }
 }
