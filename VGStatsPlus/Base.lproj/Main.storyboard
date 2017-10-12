@@ -474,7 +474,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PtA-fW-cjZ">
-                                                    <rect key="frame" x="8" y="8" width="154" height="128"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="136"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="K/D/A:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nni-3A-m7p">
                                                     <rect key="frame" x="8" y="152.5" width="75" height="20"/>
@@ -536,42 +536,42 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Zyp-9l-LNX">
                                                     <rect key="frame" x="3" y="224.5" width="165" height="25"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z2F-wz-a3P">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aegis" translatesAutoresizingMaskIntoConstraints="NO" id="Z2F-wz-a3P">
                                                             <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="25" id="UDL-ay-1Nr"/>
                                                                 <constraint firstAttribute="height" constant="25" id="xcr-oV-Fgx"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iTE-7M-YN6">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shatterglass" translatesAutoresizingMaskIntoConstraints="NO" id="iTE-7M-YN6">
                                                             <rect key="frame" x="28" y="0.0" width="25" height="25"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="25" id="0nW-Wc-BgA"/>
                                                                 <constraint firstAttribute="width" constant="25" id="TGd-As-62f"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gi4-tE-DHA">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frostburn" translatesAutoresizingMaskIntoConstraints="NO" id="gi4-tE-DHA">
                                                             <rect key="frame" x="56" y="0.0" width="25" height="25"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="25" id="PyE-t1-zSe"/>
                                                                 <constraint firstAttribute="height" constant="25" id="dVk-uN-dT6"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n1W-On-BF2">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="broken-myth" translatesAutoresizingMaskIntoConstraints="NO" id="n1W-On-BF2">
                                                             <rect key="frame" x="84" y="0.0" width="25" height="25"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="25" id="VYF-bE-Emi"/>
                                                                 <constraint firstAttribute="height" constant="25" id="g2B-bG-NOC"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XF7-5o-EtZ">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="atlas-pauldron" translatesAutoresizingMaskIntoConstraints="NO" id="XF7-5o-EtZ">
                                                             <rect key="frame" x="112" y="0.0" width="25" height="25"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="25" id="DEN-LA-CVu"/>
                                                                 <constraint firstAttribute="height" constant="25" id="dQd-Vh-ghY"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m7r-b2-3kW">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="journey-boots" translatesAutoresizingMaskIntoConstraints="NO" id="m7r-b2-3kW">
                                                             <rect key="frame" x="140" y="0.0" width="25" height="25"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="25" id="tzu-Aw-HVg"/>
@@ -588,6 +588,7 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="PtA-fW-cjZ" firstAttribute="top" secondItem="x32-FY-9Wx" secondAttribute="top" id="0AJ-O3-ptB"/>
                                                 <constraint firstItem="6VD-Mj-Xc0" firstAttribute="leading" secondItem="PMu-W8-JHv" secondAttribute="trailing" id="0bM-2a-OtZ"/>
                                                 <constraint firstItem="1iT-Uk-Le8" firstAttribute="leading" secondItem="x32-FY-9Wx" secondAttribute="leadingMargin" id="7Fi-CK-PHb"/>
                                                 <constraint firstItem="5ke-As-bGA" firstAttribute="top" secondItem="6VD-Mj-Xc0" secondAttribute="bottom" constant="4" id="Drl-r8-fG5"/>
@@ -600,16 +601,15 @@
                                                 <constraint firstItem="nni-3A-m7p" firstAttribute="top" secondItem="PtA-fW-cjZ" secondAttribute="bottom" constant="16.5" id="RTx-RB-R1V"/>
                                                 <constraint firstItem="qmI-LX-p3F" firstAttribute="centerX" secondItem="x32-FY-9Wx" secondAttribute="centerX" id="Sbf-yl-rOS"/>
                                                 <constraint firstItem="Zyp-9l-LNX" firstAttribute="top" secondItem="5ke-As-bGA" secondAttribute="bottom" constant="4" id="Tto-sd-erN"/>
-                                                <constraint firstItem="PtA-fW-cjZ" firstAttribute="top" secondItem="x32-FY-9Wx" secondAttribute="topMargin" id="aMl-wU-pDK"/>
                                                 <constraint firstItem="PMu-W8-JHv" firstAttribute="leading" secondItem="x32-FY-9Wx" secondAttribute="leadingMargin" id="bJu-G9-doH"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="qmI-LX-p3F" secondAttribute="trailing" id="e2W-OR-9VE"/>
                                                 <constraint firstItem="PtA-fW-cjZ" firstAttribute="centerX" secondItem="x32-FY-9Wx" secondAttribute="centerX" id="fYO-aX-9cp"/>
-                                                <constraint firstItem="PtA-fW-cjZ" firstAttribute="trailing" secondItem="x32-FY-9Wx" secondAttribute="trailingMargin" id="gLQ-qP-gx5"/>
+                                                <constraint firstAttribute="trailing" secondItem="PtA-fW-cjZ" secondAttribute="trailing" id="ghN-LZ-VhW"/>
                                                 <constraint firstItem="nni-3A-m7p" firstAttribute="leading" secondItem="x32-FY-9Wx" secondAttribute="leadingMargin" id="gzP-Mz-abo"/>
                                                 <constraint firstItem="PMu-W8-JHv" firstAttribute="top" secondItem="nni-3A-m7p" secondAttribute="bottom" constant="4" id="lBd-Ea-RDW"/>
+                                                <constraint firstItem="PtA-fW-cjZ" firstAttribute="leading" secondItem="x32-FY-9Wx" secondAttribute="leading" id="ldh-a6-rda"/>
                                                 <constraint firstItem="5ke-As-bGA" firstAttribute="leading" secondItem="1iT-Uk-Le8" secondAttribute="trailing" id="lsS-Vv-oZ4"/>
                                                 <constraint firstItem="qmI-LX-p3F" firstAttribute="leading" secondItem="x32-FY-9Wx" secondAttribute="leadingMargin" id="q2a-N3-J73"/>
-                                                <constraint firstItem="PtA-fW-cjZ" firstAttribute="leading" secondItem="x32-FY-9Wx" secondAttribute="leadingMargin" id="rhh-eS-yhj"/>
                                                 <constraint firstItem="Zyp-9l-LNX" firstAttribute="leading" secondItem="x32-FY-9Wx" secondAttribute="leading" constant="3" id="sBv-Z9-lwU"/>
                                                 <constraint firstItem="6VD-Mj-Xc0" firstAttribute="trailing" secondItem="x32-FY-9Wx" secondAttribute="trailingMargin" id="ues-GR-Bbg"/>
                                                 <constraint firstItem="DOn-Wz-2bG" firstAttribute="trailing" secondItem="x32-FY-9Wx" secondAttribute="trailingMargin" id="uuH-W2-T5X"/>
@@ -618,7 +618,16 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="leftSideCSLabel" destination="6VD-Mj-Xc0" id="bhF-X3-nY7"/>
                                             <outlet property="leftSideCharacterImageView" destination="PtA-fW-cjZ" id="nZU-zS-Fmc"/>
+                                            <outlet property="leftSideGoldLabel" destination="5ke-As-bGA" id="mXp-26-cok"/>
+                                            <outlet property="leftSideItemFiveImageView" destination="XF7-5o-EtZ" id="bRG-vq-6M0"/>
+                                            <outlet property="leftSideItemFourImageView" destination="n1W-On-BF2" id="QzL-3S-oYf"/>
+                                            <outlet property="leftSideItemOneImageView" destination="Z2F-wz-a3P" id="TKY-kr-bTv"/>
+                                            <outlet property="leftSideItemSixImageView" destination="m7r-b2-3kW" id="Ae9-LU-MXZ"/>
+                                            <outlet property="leftSideItemThreeImageView" destination="gi4-tE-DHA" id="591-vd-S3l"/>
+                                            <outlet property="leftSideItemTwoImageView" destination="iTE-7M-YN6" id="jyb-pr-sFw"/>
+                                            <outlet property="leftSideKDALabel" destination="DOn-Wz-2bG" id="arD-Ua-YZx"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -644,42 +653,42 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ozq-nT-pxs">
                                                     <rect key="frame" x="2" y="224.5" width="165" height="25"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kBo-dv-fgY">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aegis" translatesAutoresizingMaskIntoConstraints="NO" id="kBo-dv-fgY">
                                                             <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="25" id="FZJ-0X-biW"/>
                                                                 <constraint firstAttribute="height" constant="25" id="bE8-QF-m2s"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pnG-8l-gmi">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shatterglass" translatesAutoresizingMaskIntoConstraints="NO" id="pnG-8l-gmi">
                                                             <rect key="frame" x="28" y="0.0" width="25" height="25"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="25" id="1SC-h4-GAa"/>
                                                                 <constraint firstAttribute="width" constant="25" id="hvT-5X-Um1"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8lb-k0-dQK">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frostburn" translatesAutoresizingMaskIntoConstraints="NO" id="8lb-k0-dQK">
                                                             <rect key="frame" x="56" y="0.0" width="25" height="25"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="25" id="nnF-Zw-2cn"/>
                                                                 <constraint firstAttribute="width" constant="25" id="qNL-RQ-WIp"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IOZ-Rn-P86">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="broken-myth" translatesAutoresizingMaskIntoConstraints="NO" id="IOZ-Rn-P86">
                                                             <rect key="frame" x="84" y="0.0" width="25" height="25"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="25" id="PEo-O3-qRc"/>
                                                                 <constraint firstAttribute="width" constant="25" id="v5M-cp-mun"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="snW-U4-Zex">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="atlas-pauldron" translatesAutoresizingMaskIntoConstraints="NO" id="snW-U4-Zex">
                                                             <rect key="frame" x="112" y="0.0" width="25" height="25"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="25" id="6Ls-S7-xpO"/>
                                                                 <constraint firstAttribute="width" constant="25" id="M0P-XU-Lj8"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wUy-6f-Hyd">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="journey-boots" translatesAutoresizingMaskIntoConstraints="NO" id="wUy-6f-Hyd">
                                                             <rect key="frame" x="140" y="0.0" width="25" height="25"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="25" id="BwV-Tn-Uce"/>
@@ -782,7 +791,16 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="rightSideCSLabel" destination="AYC-5z-YOv" id="iE5-RN-cli"/>
                                             <outlet property="rightSideCharacterImageView" destination="rEz-FE-6kw" id="jrH-fN-Ule"/>
+                                            <outlet property="rightSideGoldLabel" destination="EGO-rH-8Z4" id="Pdw-3N-rDF"/>
+                                            <outlet property="rightSideItemFiveImageView" destination="snW-U4-Zex" id="b0r-kP-xXM"/>
+                                            <outlet property="rightSideItemFourImageView" destination="IOZ-Rn-P86" id="6OR-oa-WgF"/>
+                                            <outlet property="rightSideItemOneImageView" destination="kBo-dv-fgY" id="sUx-02-Jia"/>
+                                            <outlet property="rightSideItemSixImageView" destination="wUy-6f-Hyd" id="zy1-3Z-nI2"/>
+                                            <outlet property="rightSideItemThreeImageView" destination="8lb-k0-dQK" id="Bkh-Pz-C9A"/>
+                                            <outlet property="rightSideItemTwoImageView" destination="pnG-8l-gmi" id="cAz-fb-vj6"/>
+                                            <outlet property="rightSideKDALabel" destination="AYC-5z-YOv" id="Hpe-u4-gam"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1379,10 +1397,16 @@
         <image name="Adagio_Angel" width="1024" height="770"/>
         <image name="Vainglory_Dagger_DONOTEDIT" width="640" height="2000"/>
         <image name="add" width="50" height="50"/>
+        <image name="aegis" width="96" height="96"/>
+        <image name="atlas-pauldron" width="96" height="96"/>
         <image name="battle" width="50" height="50"/>
+        <image name="broken-myth" width="96" height="96"/>
         <image name="channel" width="50" height="50"/>
+        <image name="frostburn" width="96" height="96"/>
+        <image name="journey-boots" width="96" height="96"/>
         <image name="profile" width="26" height="26"/>
         <image name="send" width="26" height="26"/>
+        <image name="shatterglass" width="96" height="96"/>
         <image name="tier_10c" width="1536" height="1536"/>
     </resources>
 </document>
