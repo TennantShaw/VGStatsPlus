@@ -15,9 +15,6 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
     @IBOutlet weak var tableView: UITableView!
     
     
-    //MARK: - Actions
-    
-    
     //MARK: - Properties
     let imageView = UIImageView()
     var indexNumber: Int?
@@ -28,14 +25,7 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
         }
     }
     
-    var playerData: PlayerResource! {
-        didSet {
-            navigationItem.title = playerData.name
-        }
-    }
     
-    var matchData: ParticipantResource!
-
     //MARK: - Initializers
     // default in use
     
@@ -70,6 +60,8 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
         self.navigationController?.isNavigationBarHidden = true
     }
     
+    
+    //MARK: - Class Methods
     func checkStatus() {
         if SavedStatus.instance.isLoggedIn {
             var name: String = ""
@@ -86,14 +78,9 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
         }
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "showDetailVC" {
-//           guard let destination = segue.destination as? MatchHistoryViewController else { return }
-//        }
-//    }
 }
 
-
+//MARK: - TableView DataSource and Delegate
 extension PlayerProfileViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
