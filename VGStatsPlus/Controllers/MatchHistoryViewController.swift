@@ -19,10 +19,6 @@ class MatchHistoryViewController: UIViewController, UINavigationControllerDelega
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
-
-        // dataSource delegate setup
-        VGDataSource.instance.matchDelegate = self
-
         
         // side menu setup
         revealViewController().rightViewRevealWidth = self.view.frame.width / 3
@@ -51,7 +47,7 @@ extension MatchHistoryViewController: UITableViewDelegate, UITableViewDataSource
     //MARK: - DataSource Methods
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "redSideCell") as? UITableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "redSideCell") as? MatchHistoryCell else { return UITableViewCell() }
         return cell
     }
 }
