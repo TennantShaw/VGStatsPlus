@@ -68,7 +68,10 @@ class MatchesCollectionCell: UICollectionViewCell {
     //MARK: - Match Cell Outlets
     @IBOutlet var matchImageView: UIImageView!
     @IBOutlet var matchName: UILabel!
-    
+    @IBOutlet var winOrLossLabel: UILabel!
+    @IBOutlet var killLabel: UILabel!
+    @IBOutlet var deathsLabel: UILabel!
+    @IBOutlet var assistsLabel: UILabel!
     
     //MARK: - Match Cell Nib
     override func awakeFromNib() {
@@ -81,9 +84,19 @@ class MatchesCollectionCell: UICollectionViewCell {
     func setupCell(match: MatchResource) {
         if match.endGameReason == "victory" {
             matchImageView.image = UIImage(named: "victory")
+            winOrLossLabel.text = "Victory"
         } else {
             matchImageView.image = UIImage(named: "defeat")
+            winOrLossLabel.text = "Defeat"
         }
-            matchName.text = match.gameMode
-    }
+        
+        if match.gameMode == "ranked" {
+            matchName.text = "Ranked"
+        } else if match.gameMode == "blitz_pvp_ranked" {
+            matchName.text = "Blitz"
+        } else if match.gameMode == "casual_aral" {
+            matchName.text = "Battale Royale"
+        } else {
+            matchName.text = "need to add gameMode type to be recognized"
+        }     }
 }
