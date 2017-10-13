@@ -98,5 +98,8 @@ class MatchesCollectionCell: UICollectionViewCell {
             matchName.text = "Battale Royale"
         } else {
             matchName.text = "need to add gameMode type to be recognized"
-        }     }
+        }
+        
+    }
+    
 }

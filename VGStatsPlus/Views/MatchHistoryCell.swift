@@ -9,15 +9,19 @@
 import UIKit
 import VaingloryAPI
 
-class MatchHistoryCell: UITableViewCell {
+class LeftSideCell: UITableViewCell {
     //MARK: - Outlets
-    @IBOutlet var matchImageView: UIImageView!
-    @IBOutlet var killDeathAssistLabel: UILabel!
-    @IBOutlet var assistLabel: UILabel!
-    @IBOutlet var deathsLabel: UILabel!
-    @IBOutlet var killsLabel: UILabel!
-    @IBOutlet var matchTypeLabel: UILabel!
-    @IBOutlet var characterUserLabel: UILabel!
+    @IBOutlet var leftSideCharacterImageView: UIImageView!
+    @IBOutlet var leftSideItemOneImageView: UIImageView!
+    @IBOutlet var leftSideItemTwoImageView: UIImageView!
+    @IBOutlet var leftSideItemThreeImageView: UIImageView!
+    @IBOutlet var leftSideItemFourImageView: UIImageView!
+    @IBOutlet var leftSideItemFiveImageView: UIImageView!
+    @IBOutlet var leftSideItemSixImageView: UIImageView!
+
+    @IBOutlet var leftSideKDALabel: UILabel!
+    @IBOutlet var leftSideCSLabel: UILabel!
+    @IBOutlet var leftSideGoldLabel: UILabel!
     
     
     //MARK: - Nib
@@ -25,17 +29,43 @@ class MatchHistoryCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
     
     //MARK: - Class Methods
     func setupCell(match: MatchResource?) {
-        killDeathAssistLabel.text = "WORKS"
     }
 
 }
+
+class RightSideCell: UITableViewCell {
+    //MARK: - Outlets
+    @IBOutlet var rightSideCharacterImageView: UIImageView!
+    @IBOutlet var rightSideItemOneImageView: UIImageView!
+    @IBOutlet var rightSideItemFiveImageView: UIImageView!
+    @IBOutlet var rightSideItemFourImageView: UIImageView!
+    @IBOutlet var rightSideItemThreeImageView: UIImageView!
+    @IBOutlet var rightSideItemSixImageView: UIImageView!
+    @IBOutlet var rightSideItemTwoImageView: UIImageView!
+    
+    @IBOutlet var rightSideKDALabel: UILabel!
+    @IBOutlet var rightSideCSLabel: UILabel!
+    @IBOutlet var rightSideGoldLabel: UILabel!
+    
+    //MARK: - Nib
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+    
+    //MARK: - Class Methods
+    func setupLeftSideCell(participant: ParticipantResource?) {
+        
+    }
+    
+    func setupRightSideCell(participant: ParticipantResource?) {
+        rightSideCSLabel.text = String("\(participant?.farm)")
+    }
+    
+}
+
