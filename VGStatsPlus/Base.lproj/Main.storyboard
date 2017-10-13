@@ -466,14 +466,14 @@
                                 </constraints>
                                 <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="leftSideCell" rowHeight="250" id="Aiw-Jd-Q0Z" customClass="MatchHistoryCell" customModule="VGStatsPlus" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="leftSideCell" rowHeight="250" id="Aiw-Jd-Q0Z" customClass="LeftSideCell" customModule="VGStatsPlus" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="170" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Aiw-Jd-Q0Z" id="x32-FY-9Wx">
                                             <rect key="frame" x="0.0" y="0.0" width="170" height="249.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PtA-fW-cjZ">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ardan_Gladiator_E" translatesAutoresizingMaskIntoConstraints="NO" id="PtA-fW-cjZ">
                                                     <rect key="frame" x="0.0" y="0.0" width="170" height="136"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="K/D/A:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nni-3A-m7p">
@@ -631,6 +631,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ypS-eT-bw9" id="6H5-SY-6B2"/>
+                                    <outlet property="delegate" destination="ypS-eT-bw9" id="ekH-Gg-Edl"/>
+                                </connections>
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="250" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v3x-9S-uLq">
                                 <rect key="frame" x="190" y="268" width="169" height="350"/>
@@ -640,14 +644,14 @@
                                 </constraints>
                                 <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rightSideCell" rowHeight="250" id="S63-BF-EBV" customClass="MatchHistoryCell" customModule="VGStatsPlus" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rightSideCell" rowHeight="250" id="S63-BF-EBV" customClass="RightSideCell" customModule="VGStatsPlus" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="169" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S63-BF-EBV" id="cgu-sS-NQG">
                                             <rect key="frame" x="0.0" y="0.0" width="169" height="249.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rEz-FE-6kw">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ardan_Stormlord_I_R" translatesAutoresizingMaskIntoConstraints="NO" id="rEz-FE-6kw">
                                                     <rect key="frame" x="0.0" y="0.0" width="169" height="136"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ozq-nT-pxs">
@@ -804,6 +808,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ypS-eT-bw9" id="lqb-Lp-zQa"/>
+                                    <outlet property="delegate" destination="ypS-eT-bw9" id="2GT-10-osv"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WinOrLossLeft" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhG-g3-jTa">
                                 <rect key="frame" x="16" y="235" width="170" height="25"/>
@@ -947,10 +955,12 @@
                     <connections>
                         <outlet property="leftSideAcesLabel" destination="eaR-Uq-faC" id="zvp-nJ-rdo"/>
                         <outlet property="leftSideKrakenKillsLabel" destination="f4C-wR-CAq" id="H2z-WC-CFF"/>
+                        <outlet property="leftSideTableView" destination="r9v-yD-eU9" id="pzh-Vd-K73"/>
                         <outlet property="leftSideTeamGoldLabel" destination="wCZ-rG-dJZ" id="i9Q-Xq-Wme"/>
                         <outlet property="leftSideVictoryOrDefeatLabel" destination="NhG-g3-jTa" id="acx-YT-qAM"/>
                         <outlet property="rightSideAcesLabel" destination="8gJ-ab-432" id="hxM-nI-mU4"/>
                         <outlet property="rightSideKrakenKillsLabel" destination="z7u-Ze-51C" id="A7k-pn-TMr"/>
+                        <outlet property="rightSideTableView" destination="v3x-9S-uLq" id="Ho9-Yc-evv"/>
                         <outlet property="rightSideTeamGoldLabel" destination="Adl-5J-o1i" id="58g-YL-ajU"/>
                         <outlet property="rightSideVictoryOrDefeatLabel" destination="YRT-tZ-PqO" id="0ZX-Vm-qBM"/>
                         <outlet property="timePlayedLabel" destination="Ee1-sg-R9M" id="KhV-bY-Y20"/>
@@ -1395,6 +1405,8 @@
     </scenes>
     <resources>
         <image name="Adagio_Angel" width="1024" height="770"/>
+        <image name="Ardan_Gladiator_E" width="3386" height="2000"/>
+        <image name="Ardan_Stormlord_I_R" width="4800" height="2700"/>
         <image name="Vainglory_Dagger_DONOTEDIT" width="640" height="2000"/>
         <image name="add" width="50" height="50"/>
         <image name="aegis" width="96" height="96"/>
