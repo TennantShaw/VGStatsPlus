@@ -235,10 +235,20 @@
                                                     <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccM-L1-JR4">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vainglorious" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccM-L1-JR4">
                                                     <rect key="frame" x="8" y="159" width="359" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="Fnw-eq-vCj"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                    <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Played: 455" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czh-if-pyo">
+                                                    <rect key="frame" x="200" y="126" width="175" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="175" id="IhX-oA-QHa"/>
+                                                        <constraint firstAttribute="height" constant="25" id="P26-VO-yb9"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                     <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -247,6 +257,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Xje-80-vfL" firstAttribute="top" secondItem="ccM-L1-JR4" secondAttribute="bottom" constant="4" id="7kf-fE-cin"/>
+                                                <constraint firstItem="czh-if-pyo" firstAttribute="top" secondItem="o5L-dd-EYO" secondAttribute="bottom" constant="13" id="83t-DZ-OMW"/>
                                                 <constraint firstItem="nP8-nf-Yv8" firstAttribute="top" secondItem="Xje-80-vfL" secondAttribute="bottom" constant="8" id="Bs1-2q-rPQ"/>
                                                 <constraint firstItem="o5L-dd-EYO" firstAttribute="trailing" secondItem="3B9-ER-zVz" secondAttribute="trailingMargin" id="ERt-1Q-SNX"/>
                                                 <constraint firstItem="BdK-qx-QjL" firstAttribute="leading" secondItem="3B9-ER-zVz" secondAttribute="leadingMargin" id="GHz-CZ-9qI"/>
@@ -266,6 +277,7 @@
                                                 <constraint firstItem="Xje-80-vfL" firstAttribute="centerX" secondItem="3B9-ER-zVz" secondAttribute="centerX" id="bNO-fJ-tvD"/>
                                                 <constraint firstItem="BdK-qx-QjL" firstAttribute="top" secondItem="o5L-dd-EYO" secondAttribute="bottom" constant="13" id="cXL-cC-74p"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="ccM-L1-JR4" secondAttribute="trailing" id="kFg-XV-8Os"/>
+                                                <constraint firstAttribute="trailing" secondItem="czh-if-pyo" secondAttribute="trailing" id="m1w-4x-WZw"/>
                                                 <constraint firstItem="BdK-qx-QjL" firstAttribute="leading" secondItem="3B9-ER-zVz" secondAttribute="leadingMargin" id="tsr-eg-0tM"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="nP8-nf-Yv8" secondAttribute="bottom" constant="8" id="vGi-Al-WdV"/>
                                             </constraints>
@@ -351,7 +363,7 @@
                                                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6L-EI-qGp">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6L-EI-qGp">
                                                                                         <rect key="frame" x="50" y="0.0" width="50" height="20.5"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="width" constant="50" id="QbD-6o-eG4"/>
@@ -360,7 +372,7 @@
                                                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Sf-PR-5ml">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Sf-PR-5ml">
                                                                                         <rect key="frame" x="100" y="0.0" width="50" height="20.5"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
@@ -443,7 +455,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxi-MC-TKs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-162" y="1022"/>
+            <point key="canvasLocation" x="-162.40000000000001" y="1021.4392803598201"/>
         </scene>
         <!--MatchDetailVC-->
         <scene sceneID="MMe-kt-ESc">

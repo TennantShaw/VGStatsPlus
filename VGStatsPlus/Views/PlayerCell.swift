@@ -28,7 +28,7 @@ class PlayerCell: UITableViewCell {
         nameLabel.text = player.name!
         levelLabel.text = "Level: \(player.level!)"
         regionLabel.text = "Region: \(player.shardId!)"
-        rankLabel.text = "Rank:  \(player.playedRanked!)"
+//        rankLabel.text = "Rank:  \(player.playedRanked!)"
         winsLabel.text = "Total Wins:  \(player.wins!)"
     }
     
