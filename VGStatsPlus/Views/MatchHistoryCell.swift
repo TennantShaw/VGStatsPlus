@@ -32,9 +32,9 @@ class LeftSideCell: UITableViewCell {
     
     
     //MARK: - Class Methods
-    func setupCell(match: MatchResource?) {
+    func setupLeftSideCell(participant: ParticipantResource?) {
+        
     }
-
 }
 
 class RightSideCell: UITableViewCell {
@@ -59,12 +59,7 @@ class RightSideCell: UITableViewCell {
     
     
     //MARK: - Class Methods
-    func setupLeftSideCell(participant: ParticipantResource?) {
-        
-    }
-    
-    func setupRightSideCell(participant: ParticipantResource?) {
-        rightSideCSLabel.text = String("\(participant?.farm)")
+    func setupRightSideCell(participant: ParticipantResource) {
     }
     
 }
