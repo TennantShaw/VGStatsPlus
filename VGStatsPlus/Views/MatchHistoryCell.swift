@@ -59,7 +59,13 @@ class RightSideCell: UITableViewCell {
     
     
     //MARK: - Class Methods
-    func setupCell(match: MatchResource?) {
+    func setupLeftSideCell(participant: ParticipantResource?) {
+        
     }
+    
+    func setupRightSideCell(participant: ParticipantResource?) {
+        rightSideCSLabel.text = String("\(participant?.farm)")
+    }
+    
 }
 

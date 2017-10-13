@@ -27,7 +27,12 @@ class MatchHistoryViewController: UIViewController, UINavigationControllerDelega
     
     //MARK: - Properties
     var matchResource: MatchResource?
-    var matches: [MatchResource] = []
+    var matches: [MatchResource] = [] {
+        didSet {
+            leftSideTableView.reloadData()
+            rightSideTableView.reloadData()
+        }
+    }
     
     //MARK: = View Life Cycle
     override func viewWillAppear(_ animated: Bool) {
@@ -45,9 +50,9 @@ extension MatchHistoryViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == leftSideTableView {
-            return 1
+            return 3
         } else {
-            return 1
+            return 3
         }
     }
     
