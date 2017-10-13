@@ -17,7 +17,7 @@ class ChannelCell: UICollectionViewCell {
     //MARK: - Nib
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        self.layer.cornerRadius = 10.0
     }
     
 }

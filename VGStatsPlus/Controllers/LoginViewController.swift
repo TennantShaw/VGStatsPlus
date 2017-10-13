@@ -33,6 +33,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if textFieldIGN.text != "" { VGDataSource.instance.getUserData(name: "TennantTheVast", regional: "na", success: { (success) in
             if success {
                 print("successFully got data")
+                FirebaseDatabase.instance.updateIGN(userData: ["TennantTheVast":"na"])
+                SavedStatus.instance.savedUserIGN = ["TennantTheVast":"na"]
                 let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                 let swVC = storyBoard.instantiateViewController(withIdentifier: "SWVC") as! UIViewController
                 self.present(swVC, animated: true, completion: {
@@ -45,6 +47,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             VGDataSource.instance.getUserData(name: "TennantTheVast", regional: "na", success: { (success) in
                 if success {
                     print("successFully got data")
+                    FirebaseDatabase.instance.updateIGN(userData: ["TennantTheVast":"na"])
+                    SavedStatus.instance.savedUserIGN = ["TennantTheVast":"na"]
                     let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                     let swVC = storyBoard.instantiateViewController(withIdentifier: "SWVC") as! UIViewController
                     self.present(swVC, animated: true, completion: {

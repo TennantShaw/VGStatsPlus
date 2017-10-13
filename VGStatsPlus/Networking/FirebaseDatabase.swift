@@ -51,9 +51,9 @@ class FirebaseDatabase {
                 userCreationComplete(false, nil)
             } else {
                 let userData = ["provider": user?.providerID, "email": user?.email, "name": name, "createdAccountWith": accountType]
-                FirebaseDatabase.instance.createDBUser(uid: (user?.uid)!, userData: userData)
-                SavedStatus.instance.isLoggedIn = true
                 SavedStatus.instance.userID = (user?.uid)!
+                SavedStatus.instance.isLoggedIn = true
+                FirebaseDatabase.instance.createDBUser(name: name, userData: userData)
                 userCreationComplete(true, error)
             }
         }
@@ -65,10 +65,14 @@ class FirebaseDatabase {
             if Auth.auth().currentUser?.email == email {
                 print("Successfully logged in")
                 SavedStatus.instance.isLoggedIn = true
+                if user?.uid != nil {
                 SavedStatus.instance.userID = (user?.uid)!
                 SavedStatus.instance.currentUserEmail = (user?.email)!
                 self.currentuserID = Auth.auth().currentUser?.uid
                 loginComplete(true, nil)
+                } else {
+                    loginComplete(false, error)
+                }
             } else {
                 loginComplete(false, error)
             }
@@ -85,11 +89,11 @@ class FirebaseDatabase {
         }
     }
     
-    func createDBUser(uid: String, userData: Dictionary<String, Any>) {
-        REF_USERS.child(uid).updateChildValues(userData)
+    func createDBUser(name: String, userData: Dictionary<String, Any>) {
+        REF_USERS.child(SavedStatus.instance.userID).child(name).updateChildValues(userData)
     }
     
-    func updateIGN(uid: String, userData: Dictionary<String, Any>) {
-        REF_USERS.child(uid).child("ign").updateChildValues(userData)
+    func updateIGN(userData: Dictionary<String, Any>) {
+        REF_USERS.child(SavedStatus.instance.userID).child("ign").updateChildValues(userData)
     }
 }
