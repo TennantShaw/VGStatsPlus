@@ -50,22 +50,22 @@ class LoginToFirebaseVC: UIViewController {
     
     //Mark: Fetch userData
     func getFBUserData(){
-        if((FBSDKAccessToken.current()) != nil){
+        if((FBSDKAccessToken.current()) != nil) {
             FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "email, id, name, picture.type(large)"]).start(completionHandler: { (connection, result, error) -> Void in
-                if (error == nil){
+                if (error == nil) {
                     self.dict = result as! [String : AnyObject]
                     guard let name = self.dict["name"] as? String else { return }
                     guard let id = self.dict["id"] as? String else { return }
 
-                    FirebaseDatabase.instance.loginUserToFirebase(withEmail: "\(name.replacingOccurrences(of: " ", with: ""))@vgstatsplus.com", password: id, loginComplete: { (success, error) in
+                    VGFirebaseDB.instance.loginUserToFirebase(withEmail: "\(name.replacingOccurrences(of: " ", with: ""))@vgstatsplus.com", password: id, loginComplete: { (success, error) in
                         if success {
                             print("Successfully logged in")
                             SavedStatus.instance.isLoggedIn = true
                             self.showMainVC()
                         } else {
-                            FirebaseDatabase.instance.registerUserToFirebase(withEmail: "\(name.replacingOccurrences(of: " ", with: ""))@vgstatsplus.com", password: id, name: name, accountType: "facebook", userCreationComplete: { (success, oError) in
+                            VGFirebaseDB.instance.registerUserToFirebase(withEmail: "\(name.replacingOccurrences(of: " ", with: ""))@vgstatsplus.com", password: id, name: name, accountType: "facebook", userCreationComplete: { (success, oError) in
                                 if success {
-                                    FirebaseDatabase.instance.createDBUser(name: name, userData: self.dict)
+                                    VGFirebaseDB.instance.createDBUser(name: name, userData: self.dict)
                                     SavedStatus.instance.isLoggedIn = true
                                     self.showMainVC()
                                 }

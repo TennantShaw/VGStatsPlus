@@ -15,4 +15,7 @@ class MenuViewController: UIViewController {
         self.revealViewController().rearViewRevealWidth = self.view.frame.width / 2
     }
 
+    @IBAction func handleLogin(_ sender: Any) {
+        
+    }
 }

@@ -14,6 +14,13 @@ class ChannelVC: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var keyboardView: UIView!
     
+    var channels: [Channel] = [] {
+        didSet {
+            print(channels.count)
+            tableView.reloadData()
+            collectionView.reloadData()
+        }
+    }
     
     //MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -23,23 +30,35 @@ class ChannelVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         keyboardView.bindToKeyboard()
-        
-        let gestureRescognizer = UITapGestureRecognizer()
-        gestureRescognizer.addTarget(self, action: #selector(ChannelVC.dismissKeyboard))
-        view.addGestureRecognizer(gestureRescognizer)
-        
         self.revealViewController().rearViewRevealWidth = self.view.frame.width / 2
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Mark: Pull Channels
+        checkDatabase()
     }
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+    
+    func checkDatabase() {
+        VGFirebaseDB.instance.getAllChannels { (channels) in
+            self.channels = channels
+        }
     }
 }
 
 extension ChannelVC: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        if channels.count != 0 {
+            return channels.count + 1
+        } else {
+            return 1
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -59,6 +78,16 @@ extension ChannelVC: UICollectionViewDataSource, UICollectionViewDelegate {
     func tapToClose(_ gestureRecognizer: UIGestureRecognizer) {
         
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.row)
+        if indexPath.row == 0 {
+            let createChannelVC = CreateChannel()
+            createChannelVC.modalPresentationStyle = .custom
+            // createChannelVC.delegate = self
+            self.present(createChannelVC, animated: true, completion: nil)
+        }
+    }
 }
 
 extension ChannelVC: UITableViewDataSource, UITableViewDelegate {
@@ -77,5 +106,9 @@ extension ChannelVC: UITableViewDataSource, UITableViewDelegate {
             }
             cell.setup()
             return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
     }
 }
