@@ -73,6 +73,11 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
                 region = value as! String
             }
             VGDataSource.instance.getUserData(name: name, regional: region, success: { (success) in
+                VGFirebaseDB.instance.getIgnForTheUser(id: SavedStatus.instance.userID, gotIGN: { (succes, error) in
+                    if success {
+                        print(VGFirebaseDB.instance.playerIGN!)
+                    }
+                })
                 self.tableView.reloadData()
             })
         }

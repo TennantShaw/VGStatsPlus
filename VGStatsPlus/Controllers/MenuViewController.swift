@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MenuViewController: UIViewController {
     //MARK: - View Life Cycle
@@ -16,6 +17,7 @@ class MenuViewController: UIViewController {
     }
 
     @IBAction func handleLogin(_ sender: Any) {
-        
+        VGFirebaseDB.instance.logout()
+        SavedStatus.instance.isLoggedIn = false
     }
 }

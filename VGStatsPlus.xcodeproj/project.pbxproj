@@ -24,6 +24,7 @@
 		30D8CA811F8425AA002C923F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA801F8425AA002C923F /* LoginViewController.swift */; };
 		30D8CA851F842622002C923F /* PlayerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA841F842622002C923F /* PlayerProfileViewController.swift */; };
 		30D8CA8B1F842695002C923F /* OptionsMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA8A1F842695002C923F /* OptionsMenuViewController.swift */; };
+		AC0ECA071F9407F800B63E55 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0ECA061F9407F800B63E55 /* Message.swift */; };
 		AC1555A01F8C608F00069037 /* VGFirebaseDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC15559F1F8C608F00069037 /* VGFirebaseDB.swift */; };
 		AC3119F41F91671A007082A3 /* CreateChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3119F21F91671A007082A3 /* CreateChannel.swift */; };
 		AC3119F51F91671A007082A3 /* CreateChannel.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC3119F31F91671A007082A3 /* CreateChannel.xib */; };
@@ -90,6 +91,7 @@
 		30D8CA841F842622002C923F /* PlayerProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerProfileViewController.swift; sourceTree = "<group>"; };
 		30D8CA8A1F842695002C923F /* OptionsMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsMenuViewController.swift; sourceTree = "<group>"; };
 		AA6E6548654459025D7FD01F /* Pods_VGStatsPlusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VGStatsPlusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC0ECA061F9407F800B63E55 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		AC15559F1F8C608F00069037 /* VGFirebaseDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGFirebaseDB.swift; sourceTree = "<group>"; };
 		AC3119F21F91671A007082A3 /* CreateChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChannel.swift; sourceTree = "<group>"; };
 		AC3119F31F91671A007082A3 /* CreateChannel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateChannel.xib; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				30D471731F869C2200CC0E8C /* Participant.swift */,
 				30D471751F869FAB00CC0E8C /* Roster.swift */,
 				ACC6EBEA1F913540000842E9 /* Channel.swift */,
+				AC0ECA061F9407F800B63E55 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 				30D8CA811F8425AA002C923F /* LoginViewController.swift in Sources */,
 				30D8CA8B1F842695002C923F /* OptionsMenuViewController.swift in Sources */,
 				AC52C54F1F893AA700AF7749 /* MenuViewController.swift in Sources */,
+				AC0ECA071F9407F800B63E55 /* Message.swift in Sources */,
 				30D8CA7F1F842534002C923F /* VGDataSource.swift in Sources */,
 				302FA9D61F798EE70042DAD5 /* AppDelegate.swift in Sources */,
 				AC52C5591F8BD15900AF7749 /* ChannelVC.swift in Sources */,

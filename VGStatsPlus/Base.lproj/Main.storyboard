@@ -1259,7 +1259,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHN-V3-S30">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eN9-Fe-2PO" customClass="InsetTextField" customModule="VGStatsPlus" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eN9-Fe-2PO">
                                         <rect key="frame" x="102" y="8" width="231" height="35"/>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -1277,6 +1277,9 @@
                                             <constraint firstAttribute="width" constant="30" id="RYk-Id-1FQ"/>
                                         </constraints>
                                         <state key="normal" image="send"/>
+                                        <connections>
+                                            <action selector="sendButtonTapped:" destination="YRq-qc-MB6" eventType="touchUpInside" id="Tdh-dg-Kzb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVL-aP-Iqb">
                                         <rect key="frame" x="65" y="8" width="35" height="35"/>
@@ -1285,6 +1288,9 @@
                                             <constraint firstAttribute="height" constant="35" id="lwm-HL-Bzj"/>
                                         </constraints>
                                         <state key="normal" image="battle"/>
+                                        <connections>
+                                            <action selector="matchesButtonTapped:" destination="YRq-qc-MB6" eventType="touchUpInside" id="oT4-PP-zw2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -1316,7 +1322,9 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="qO7-ej-rpE" id="Ey7-bO-8Ev"/>
+                        <outlet property="contentTextField" destination="eN9-Fe-2PO" id="CNg-rN-qNc"/>
                         <outlet property="keyboardView" destination="dHN-V3-S30" id="mhg-3h-bHj"/>
+                        <outlet property="sendButton" destination="J3C-gA-WAy" id="1xv-kb-8Dx"/>
                         <outlet property="tableView" destination="Xif-CW-2Qe" id="50U-QR-aAO"/>
                     </connections>
                 </viewController>

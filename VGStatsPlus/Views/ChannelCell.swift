@@ -20,4 +20,8 @@ class ChannelCell: UICollectionViewCell {
         self.layer.cornerRadius = 10.0
     }
     
+    func setupCell(channel: Channel) {
+        channelNameLabel.text = channel.channelTitle
+    }
+    
 }

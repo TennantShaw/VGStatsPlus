@@ -29,10 +29,9 @@ class ChannelMessageCell: UITableViewCell {
     
     
     //MARK: - Class Methods
-    func setup() {
-        userNameLabel.text = "Alisher"
-        messageLabel.text = "Hello World of Gamers"
-        timeLabel.text = "10:00pm"
+    func setup(message: Message) {
+        userNameLabel.text = message.senderIGN
+        messageLabel.text = message.content
     }
 
 }

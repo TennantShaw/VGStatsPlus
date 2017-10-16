@@ -20,6 +20,7 @@ class VGFirebaseDB {
 
     private var _REF_BASE = DB_BASE
     private var _REF_USERS = DB_BASE.child("users")
+    private var _REF_USER_IGN = DB_BASE.child("userIGNInfo")
     private var _REF_CHANNELS = DB_BASE.child("channels")
     private var _REF_FEED = DB_BASE.child("feed")
 
@@ -39,13 +40,14 @@ class VGFirebaseDB {
         return _REF_FEED
     }
     
+    var REF_USER_IGN: DatabaseReference {
+        return _REF_USER_IGN
+    }
+    
     
     var currentuserID: String?
-    var channelsArray: [Channel] = [] {
-        didSet {
-            print(channelsArray.count)
-        }
-    }
+    var selectedChannel: Channel?
+    var playerIGN: String?
     
     
     // MARK: register user
@@ -101,7 +103,10 @@ class VGFirebaseDB {
     }
     
     func updateIGN(userData: Dictionary<String, Any>) {
-        REF_USERS.child(SavedStatus.instance.userID).child("ign").updateChildValues(userData)
+        REF_USERS.child(SavedStatus.instance.userID).child("userIGNInfo").updateChildValues(userData)
+        getIgnForTheUser(id: SavedStatus.instance.userID) { (success, error) in
+            print(success)
+        }
     }
     
     
@@ -112,6 +117,14 @@ class VGFirebaseDB {
         handler(true)
     }
     
+    func getIgnForTheUser(id: String, gotIGN: @escaping (_ success: Bool, _ error: Error?) -> ()) {
+        REF_USERS.child(id).child("userIGNInfo").observeSingleEvent(of: .value, with: { (ignSnap) in
+            print(ignSnap.value)
+            self.playerIGN = ignSnap.childSnapshot(forPath: "ign").value as! String
+            print(self.playerIGN)
+        })
+    }
+    
     func getAllChannels(handler: @escaping (_ messages: [Channel]) -> ()) {
         var channelArray = [Channel]()
         REF_CHANNELS.observeSingleEvent(of: .value, with: { (snap) in
@@ -120,10 +133,35 @@ class VGFirebaseDB {
                 let title = channel.childSnapshot(forPath: "title").value as! String
                 let desc = channel.childSnapshot(forPath: "description").value as! String
                 let channelImage = channel.childSnapshot(forPath: "image").value as! String
-                let _channel = Channel(channelTitle: title, channelDesc: desc, channelImage: channelImage)
+                let _channel = Channel(channelTitle: title, channelDesc: desc, channelImage: channelImage, channelID: channel.key)
                 channelArray.append(_channel)
             }
+            self.selectedChannel = channelArray.first
             handler(channelArray)
+        })
+    }
+    
+    //Mark: Create Message
+    func sendMessage(withContent content: String, userID id: String, channelID chID: String, handler: @escaping (_ messageSent: Bool) -> ()) {
+        let data = ["content": content, "userId": id, "senderIGN": ""]
+        REF_CHANNELS.child(chID).child("messages").updateChildValues(data)
+        handler(true)
+    }
+    
+    //Mark: Get Message for the Channel
+    func getMessages(forChannel channel: Channel, handler: @escaping (_ messages: [Message]) -> ()) {
+        REF_CHANNELS.child(channel.channelID).child("messages").observeSingleEvent(of: .value, with: { (messageSnap) in
+            var backMessage: [Message] = []
+            guard let channelMessagesSnapshot = messageSnap.children.allObjects as? [DataSnapshot] else { return }
+            print(channelMessagesSnapshot)
+            for message in channelMessagesSnapshot {
+                print(message.value)
+                let content = message.childSnapshot(forPath: "content").value as! String
+                let senderId = message.childSnapshot(forPath: "senderIGN").value as! String
+                let _message = Message(content: content, senderId: senderId, senderIGN: "", senderAvatar: "")
+                backMessage.append(_message)
+            }
+            handler(backMessage)
         })
     }
 }

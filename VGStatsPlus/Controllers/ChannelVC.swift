@@ -13,12 +13,26 @@ class ChannelVC: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var keyboardView: UIView!
+    @IBOutlet var contentTextField: UITextField!
+    @IBOutlet var sendButton: UIButton!
+    
     
     var channels: [Channel] = [] {
         didSet {
-            print(channels.count)
+            if channels.count != 0 {
+                VGFirebaseDB.instance.getMessages(forChannel: channels[0]) { (messageArray) in
+                    print(messageArray)
+                }
+            }
+            
             tableView.reloadData()
             collectionView.reloadData()
+        }
+    }
+    
+    var messages: [Message] = [] {
+        didSet {
+            print("messages count: \(messages.count)")
         }
     }
     
@@ -47,8 +61,27 @@ class ChannelVC: UIViewController {
     func checkDatabase() {
         VGFirebaseDB.instance.getAllChannels { (channels) in
             self.channels = channels
+            print(self.channels.count)
         }
     }
+    
+    @IBAction func matchesButtonTapped(_ sender: Any) {
+        
+    }
+    
+    @IBAction func sendButtonTapped(_ sender: Any) {
+        if contentTextField.text != "" {
+            sendButton.isEnabled = true
+            VGFirebaseDB.instance.sendMessage(withContent: contentTextField.text!, userID: VGFirebaseDB.instance.currentuserID!, channelID: (VGFirebaseDB.instance.selectedChannel?.channelID)!, handler: { (success) in
+                if success {
+                    print("MessageSent")
+                }
+            })
+        } else {
+            sendButton.isEnabled = false
+        }
+    }
+    
 }
 
 extension ChannelVC: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -70,6 +103,7 @@ extension ChannelVC: UICollectionViewDataSource, UICollectionViewDelegate {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "channelCell", for: indexPath) as? ChannelCell else {
             return UICollectionViewCell()
         }
+        cell.setupCell(channel: channels[indexPath.row - 1])
         cell.channelNameLabel.text = "TEST"
         return cell
       }
@@ -84,8 +118,9 @@ extension ChannelVC: UICollectionViewDataSource, UICollectionViewDelegate {
         if indexPath.row == 0 {
             let createChannelVC = CreateChannel()
             createChannelVC.modalPresentationStyle = .custom
-            // createChannelVC.delegate = self
             self.present(createChannelVC, animated: true, completion: nil)
+        } else {
+            VGFirebaseDB.instance.selectedChannel = channels[indexPath.row - 1]
         }
     }
 }
@@ -97,14 +132,18 @@ extension ChannelVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        if messages.count != 0 {
+            return messages.count
+        } else {
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "channelMessageCell") as? ChannelMessageCell else {
                 return UITableViewCell()
             }
-            cell.setup()
+            cell.setup(message: messages[indexPath.row])
             return cell
     }
     
