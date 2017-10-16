@@ -31,9 +31,7 @@ class VGDataSource {
     var selectedMatch: MatchResource? {
         didSet {
             getRosterForTheMatch(match: selectedMatch!) { (rosterArray) in
-                for i in rosterArray {
-                    self.currentRosterResource.append(i)
-                }
+                    self.currentRosterResource = rosterArray
             }
         }
     }
