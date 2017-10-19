@@ -49,4 +49,22 @@ class SavedStatus {
             defaults.set(newValue, forKey: "userID")
         }
     }
+    var userImageUrl: String {
+        get {
+            return defaults.value(forKey: "userImageUrl") as! String
+        }
+        set {
+            defaults.set(newValue, forKey: "userImageUrl")
+        }
+    }
+    
+    var userName: String {
+        get {
+            return defaults.value(forKey: "userName") as! String
+        }
+        set {
+            defaults.set(newValue, forKey: "userName")
+        }
+    }
+    
 }

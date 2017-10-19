@@ -22,6 +22,7 @@ class ChannelCell: UICollectionViewCell {
     
     func setupCell(channel: Channel) {
         channelNameLabel.text = channel.channelTitle
+        channelImage.image = UIImage(named: channel.channelImage)
     }
     
 }

@@ -67,6 +67,15 @@ class VGFirebaseDB {
     }
     
     
+    // Get User Profile pic
+    func getUserProfilePicture(withID id: String, name: String, gotImage: @escaping (_ status: Bool) -> ()) {
+        REF_USERS.child(id).child(name).child("picture").observe(.value, with: { (snap) in
+            guard let imageName = snap.childSnapshot(forPath: "data").childSnapshot(forPath: "url").value as? String else { return }
+            SavedStatus.instance.userImageUrl = imageName
+            gotImage(true)
+        })
+    }
+    
     // MARK: login to Firebase
     func loginUserToFirebase(withEmail email: String, password: String, loginComplete: @escaping (_ status: Bool, _ error: Error?) -> ()) {
         Auth.auth().signIn(withEmail: email.lowercased(), password: password) { (user, error) in
@@ -144,7 +153,7 @@ class VGFirebaseDB {
     //Mark: Create Message
     func sendMessage(withContent content: String, userID id: String, channelID chID: String, handler: @escaping (_ messageSent: Bool) -> ()) {
         let data = ["content": content, "userId": id, "senderIGN": ""]
-        REF_CHANNELS.child(chID).child("messages").updateChildValues(data)
+        REF_CHANNELS.child(chID).child("messages").childByAutoId().updateChildValues(data)
         handler(true)
     }
     
@@ -155,9 +164,8 @@ class VGFirebaseDB {
             guard let channelMessagesSnapshot = messageSnap.children.allObjects as? [DataSnapshot] else { return }
             print(channelMessagesSnapshot)
             for message in channelMessagesSnapshot {
-                print(message.value)
-                let content = message.childSnapshot(forPath: "content").value as! String
-                let senderId = message.childSnapshot(forPath: "senderIGN").value as! String
+                guard let content = message.childSnapshot(forPath: "content").value as? String else { return }
+                guard let senderId = message.childSnapshot(forPath: "senderIGN").value as? String else { return }
                 let _message = Message(content: content, senderId: senderId, senderIGN: "", senderAvatar: "")
                 backMessage.append(_message)
             }

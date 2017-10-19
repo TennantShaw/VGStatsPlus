@@ -21,7 +21,7 @@ class ChannelVC: UIViewController {
         didSet {
             if channels.count != 0 {
                 VGFirebaseDB.instance.getMessages(forChannel: channels[0]) { (messageArray) in
-                    print(messageArray)
+                self.messages = messageArray
                 }
             }
             
@@ -32,7 +32,10 @@ class ChannelVC: UIViewController {
     
     var messages: [Message] = [] {
         didSet {
-            print("messages count: \(messages.count)")
+            VGFirebaseDB.instance.getUserProfilePicture(withID: SavedStatus.instance.userID, name: SavedStatus.instance.userName, gotImage: { (success) in
+                print(success)
+            })
+            tableView.reloadData()
         }
     }
     
@@ -43,7 +46,7 @@ class ChannelVC: UIViewController {
         collectionView.dataSource = self
         tableView.delegate = self
         tableView.dataSource = self
-        keyboardView.bindToKeyboard()
+        view.bindToKeyboard()
         self.revealViewController().rearViewRevealWidth = self.view.frame.width / 2
     }
     
@@ -61,7 +64,9 @@ class ChannelVC: UIViewController {
     func checkDatabase() {
         VGFirebaseDB.instance.getAllChannels { (channels) in
             self.channels = channels
-            print(self.channels.count)
+            VGFirebaseDB.instance.getMessages(forChannel: self.channels.first!, handler: { (messagesArray) in
+                self.messages = messagesArray
+            })
         }
     }
     
@@ -74,7 +79,11 @@ class ChannelVC: UIViewController {
             sendButton.isEnabled = true
             VGFirebaseDB.instance.sendMessage(withContent: contentTextField.text!, userID: VGFirebaseDB.instance.currentuserID!, channelID: (VGFirebaseDB.instance.selectedChannel?.channelID)!, handler: { (success) in
                 if success {
-                    print("MessageSent")
+                    self.contentTextField.text = ""
+                    VGFirebaseDB.instance.getMessages(forChannel: VGFirebaseDB.instance.selectedChannel!, handler: { (messagesArray) in
+                        self.messages = messagesArray
+                        self.tableView.reloadData()
+                    })
                 }
             })
         } else {
@@ -104,7 +113,6 @@ extension ChannelVC: UICollectionViewDataSource, UICollectionViewDelegate {
             return UICollectionViewCell()
         }
         cell.setupCell(channel: channels[indexPath.row - 1])
-        cell.channelNameLabel.text = "TEST"
         return cell
       }
     }
@@ -118,9 +126,13 @@ extension ChannelVC: UICollectionViewDataSource, UICollectionViewDelegate {
         if indexPath.row == 0 {
             let createChannelVC = CreateChannel()
             createChannelVC.modalPresentationStyle = .custom
+            createChannelVC.delegate = self
             self.present(createChannelVC, animated: true, completion: nil)
         } else {
             VGFirebaseDB.instance.selectedChannel = channels[indexPath.row - 1]
+            VGFirebaseDB.instance.getMessages(forChannel: channels[indexPath.row - 1], handler: { (messagesArray) in
+                self.messages = messagesArray
+            })
         }
     }
 }

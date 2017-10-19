@@ -61,12 +61,14 @@ class LoginToFirebaseVC: UIViewController {
                         if success {
                             print("Successfully logged in")
                             SavedStatus.instance.isLoggedIn = true
+                            SavedStatus.instance.userName = name
                             self.showMainVC()
                         } else {
                             VGFirebaseDB.instance.registerUserToFirebase(withEmail: "\(name.replacingOccurrences(of: " ", with: ""))@vgstatsplus.com", password: id, name: name, accountType: "facebook", userCreationComplete: { (success, oError) in
                                 if success {
                                     VGFirebaseDB.instance.createDBUser(name: name, userData: self.dict)
                                     SavedStatus.instance.isLoggedIn = true
+                                    SavedStatus.instance.userName = name
                                     self.showMainVC()
                                 }
                             })

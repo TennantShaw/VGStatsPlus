@@ -40,6 +40,7 @@
 		AC52C55F1F8C007D00AF7749 /* BindToKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52C55E1F8C007D00AF7749 /* BindToKeyboard.swift */; };
 		AC52C5611F8C056500AF7749 /* UIViewShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52C5601F8C056500AF7749 /* UIViewShadow.swift */; };
 		AC52C5631F8C44AD00AF7749 /* LoginToFirebaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52C5621F8C44AD00AF7749 /* LoginToFirebaseVC.swift */; };
+		AC719CAB1F982C2500F76B47 /* PickAvatarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC719CAA1F982C2500F76B47 /* PickAvatarVC.swift */; };
 		AC7995661F86C60B000D399C /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7995651F86C60B000D399C /* PlayerCell.swift */; };
 		AC7995691F86CB59000D399C /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7995681F86CB59000D399C /* UIImageViewExtension.swift */; };
 		AC79956B1F86DB45000D399C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC79956A1F86DB45000D399C /* GradientView.swift */; };
@@ -109,6 +110,7 @@
 		AC52C55E1F8C007D00AF7749 /* BindToKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindToKeyboard.swift; sourceTree = "<group>"; };
 		AC52C5601F8C056500AF7749 /* UIViewShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewShadow.swift; sourceTree = "<group>"; };
 		AC52C5621F8C44AD00AF7749 /* LoginToFirebaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginToFirebaseVC.swift; sourceTree = "<group>"; };
+		AC719CAA1F982C2500F76B47 /* PickAvatarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickAvatarVC.swift; sourceTree = "<group>"; };
 		AC7995651F86C60B000D399C /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		AC7995681F86CB59000D399C /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		AC79956A1F86DB45000D399C /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				AC52C5581F8BD15900AF7749 /* ChannelVC.swift */,
 				AC3119F21F91671A007082A3 /* CreateChannel.swift */,
 				AC3119F31F91671A007082A3 /* CreateChannel.xib */,
+				AC719CAA1F982C2500F76B47 /* PickAvatarVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				AC79956B1F86DB45000D399C /* GradientView.swift in Sources */,
 				AC1555A01F8C608F00069037 /* VGFirebaseDB.swift in Sources */,
 				30D471761F869FAB00CC0E8C /* Roster.swift in Sources */,
+				AC719CAB1F982C2500F76B47 /* PickAvatarVC.swift in Sources */,
 				AC52C5531F89456100AF7749 /* SWRevealViewController.m in Sources */,
 				30D471701F86990700CC0E8C /* Match.swift in Sources */,
 				AC3119F41F91671A007082A3 /* CreateChannel.swift in Sources */,
