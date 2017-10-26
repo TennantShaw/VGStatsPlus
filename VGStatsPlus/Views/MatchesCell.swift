@@ -100,6 +100,43 @@ class MatchesCollectionCell: UICollectionViewCell {
             matchName.text = "need to add gameMode type to be recognized"
         }
         
+        let roster = match.rosters!
+        let participantArray1 = roster[0].participants!
+        let participantArray2 = roster[1].participants!
+        let player1 = participantArray1[0].player!
+        let player2 = participantArray1[1].player!
+        let player3 = participantArray1[2].player!
+        let player4 = participantArray2[0].player!
+        let player5 = participantArray2[1].player!
+        let player6 = participantArray2[2].player!
+        
+        if player1.name == "TennantTheVast" {
+            killLabel.text = participantArray1[0].kills?.description
+            deathsLabel.text = participantArray1[0].deaths?.description
+            assistsLabel.text = participantArray1[0].assists?.description
+        } else if player2.name == "TennantTheVast" {
+            killLabel.text = participantArray1[1].kills?.description
+            deathsLabel.text = participantArray1[1].deaths?.description
+            assistsLabel.text = participantArray1[1].assists?.description
+        } else if player3.name == "TennantTheVast" {
+            killLabel.text = participantArray1[2].kills?.description
+            deathsLabel.text = participantArray1[2].deaths?.description
+            assistsLabel.text = participantArray1[2].assists?.description
+        } else if player4.name == "TennantTheVast" {
+            killLabel.text = participantArray2[0].kills?.description
+            deathsLabel.text = participantArray2[0].deaths?.description
+            assistsLabel.text = participantArray2[0].assists?.description
+        } else if player5.name == "TennantTheVast" {
+            killLabel.text = participantArray2[1].kills?.description
+            deathsLabel.text = participantArray2[1].deaths?.description
+            assistsLabel.text = participantArray2[1].assists?.description
+        } else if player6.name == "TennantTheVast" {
+            killLabel.text = participantArray2[2].kills?.description
+            deathsLabel.text = participantArray2[2].deaths?.description
+            assistsLabel.text = participantArray2[2].assists?.description
+        } else {
+            print("There is an error going on here at line 128 in MatchesCell.swift")
+        }
     }
     
 }
