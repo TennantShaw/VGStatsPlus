@@ -16,10 +16,10 @@ class MatchHistoryViewController: UIViewController, UINavigationControllerDelega
     @IBOutlet var leftSideAcesLabel: UILabel!
     @IBOutlet var leftSideKrakenKillsLabel: UILabel!
     @IBOutlet var leftSideTeamGoldLabel: UILabel!
+    @IBOutlet var leftSideVictoryOrDefeatLabel: UILabel!
     @IBOutlet var rightSideAcesLabel: UILabel!
     @IBOutlet var rightSideKrakenKillsLabel: UILabel!
     @IBOutlet var rightSideTeamGoldLabel: UILabel!
-    @IBOutlet var leftSideVictoryOrDefeatLabel: UILabel!
     @IBOutlet var rightSideVictoryOrDefeatLabel: UILabel!
     
     @IBOutlet var leftSideTableView: UITableView!
@@ -27,12 +27,7 @@ class MatchHistoryViewController: UIViewController, UINavigationControllerDelega
     
     //MARK: - Properties
     var matchResource: MatchResource?
-    var matches: [MatchResource] = [] {
-        didSet {
-            leftSideTableView.reloadData()
-            rightSideTableView.reloadData()
-        }
-    }
+
     
     //MARK: = View Life Cycle
     override func viewWillAppear(_ animated: Bool) {
