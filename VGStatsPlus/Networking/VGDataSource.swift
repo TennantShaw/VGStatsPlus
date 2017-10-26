@@ -40,11 +40,14 @@ class VGDataSource {
             getParticipantsForTheMatch(rosterResource: currentRosterResource) { (participantArray) in
                 self.participantResources = participantArray
             }
+            print(currentRosterResource)
+            print("\n")
         }
     }
-    var participantResources = [ParticipantResource]() {
+    var participantResources = [String:[ParticipantResource]]() {
         didSet {
             print(participantResources)
+            print("\n")
         }
     }
     
@@ -103,11 +106,12 @@ class VGDataSource {
     }
     
     // MARK: Get Participants array
-    func getParticipantsForTheMatch(rosterResource: [RosterResource], success: @escaping ([ParticipantResource]) -> ()) {
-        var back = [ParticipantResource]()
-        for participantArray in rosterResource {
-            back = participantArray.participants!
+    func getParticipantsForTheMatch(rosterResource: [RosterResource], success: @escaping ([String : [ParticipantResource]]) -> ()) {
+        guard let leftTeam = rosterResource[0].participants,
+            let rightTeam = rosterResource[1].participants else {
+                return
         }
+        let back = ["teamL": leftTeam, "teamR": rightTeam]
         success(back)
     }
 }
