@@ -16,6 +16,7 @@ class PlayerCell: UITableViewCell {
     @IBOutlet weak var regionLabel: UILabel!
     @IBOutlet weak var rankLabel: UILabel!
     @IBOutlet weak var winsLabel: UILabel!
+    @IBOutlet weak var skillTierImage: UIImageView!
     
 
     //MARK: - View Life Cycle
@@ -36,28 +37,746 @@ class PlayerCell: UITableViewCell {
         let player4 = participantArray2[0].player!
         let player5 = participantArray2[1].player!
         let player6 = participantArray2[2].player!
-
         
         nameLabel.text = player.name!
         levelLabel.text = "Level: \(player.level!)"
         regionLabel.text = "Region: \(player.shardId!)"
-//        rankLabel.text = "Rank:  \(player.playedRanked!)"
         winsLabel.text = "Total Wins:  \(player.wins!)"
         
         if player1.name == "TennantTheVast" {
-            rankLabel.text = "Rank: \(participantArray1[0].skillTier)"
+            if participantArray1[0].skillTier == 1 {
+                rankLabel.text = "Just Beginning"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_01a")
+            } else if participantArray1[0].skillTier == 2 {
+                rankLabel.text = "Just Beginning"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_01b")
+            } else if participantArray1[0].skillTier == 3 {
+                rankLabel.text = "Just Beginning"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_01c")
+            } else if participantArray1[0].skillTier == 4 {
+                rankLabel.text = "Getting There"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_02a")
+            } else if participantArray1[0].skillTier == 5 {
+                rankLabel.text = "Getting There"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_02b")
+            } else if participantArray1[0].skillTier == 6 {
+                rankLabel.text = "Getting There"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_02c")
+            } else if participantArray1[0].skillTier == 7 {
+                rankLabel.text = "Rock Solid"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_03a")
+            } else if participantArray1[0].skillTier == 8 {
+                rankLabel.text = "Rock Solid"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_03b")
+            } else if participantArray1[0].skillTier == 9 {
+                rankLabel.text = "Rock Solid"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_03c")
+            } else if participantArray1[0].skillTier == 10 {
+                rankLabel.text = "Worthy Foe"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_04a")
+            } else if participantArray1[0].skillTier == 11 {
+                rankLabel.text = "Worthy Foe"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_04b")
+            } else if participantArray1[0].skillTier == 12 {
+                rankLabel.text = "Worthy Foe"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_04c")
+            } else if participantArray1[0].skillTier == 13 {
+                rankLabel.text = "Got Swagger"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_05a")
+            } else if participantArray1[0].skillTier == 14 {
+                rankLabel.text = "Got Swagger"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_05b")
+            } else if participantArray1[0].skillTier == 15 {
+                rankLabel.text = "Got Swagger"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_05c")
+            } else if participantArray1[0].skillTier == 16 {
+                rankLabel.text = "Credible Threat"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_06a")
+            } else if participantArray1[0].skillTier == 17 {
+                rankLabel.text = "Credible Threat"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_06b")
+            } else if participantArray1[0].skillTier == 18 {
+                rankLabel.text = "Credible Threat"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_06c")
+            } else if participantArray1[0].skillTier == 19 {
+                rankLabel.text = "The Hotness"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_07a")
+            } else if participantArray1[0].skillTier == 20 {
+                rankLabel.text = "The Hotness"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_07b")
+            } else if participantArray1[0].skillTier == 21 {
+                rankLabel.text = "The Hotness"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_07c")
+            } else if participantArray1[0].skillTier == 22 {
+                rankLabel.text = "Simply Amazing"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_08a")
+            } else if participantArray1[0].skillTier == 23 {
+                rankLabel.text = "Simply Amazing"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_08b")
+            } else if participantArray1[0].skillTier == 24 {
+                rankLabel.text = "Simply Amazing"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_08c")
+            } else if participantArray1[0].skillTier == 25 {
+                rankLabel.text = "Pinnacle of Awesome"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_09a")
+            } else if participantArray1[0].skillTier == 26 {
+                rankLabel.text = "Pinnacle of Awesome"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_09b")
+            } else if participantArray1[0].skillTier == 27 {
+                rankLabel.text = "Pinnacle of Awesome"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_09c")
+            } else if participantArray1[0].skillTier == 28 {
+                rankLabel.text = "Vainglorious"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_10a")
+            } else if participantArray1[0].skillTier == 29 {
+                rankLabel.text = "Vainglorious"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_10b")
+            } else if participantArray1[0].skillTier == 30 {
+                rankLabel.text = "Vainglorious"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_10c")
+            }
         } else if player2.name == "TennantTheVast" {
-            rankLabel.text = "Rank: \(participantArray1[1].skillTier)"
+            if participantArray1[0].skillTier == 1 {
+                rankLabel.text = "Just Beginning"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_01a")
+            } else if participantArray1[0].skillTier == 2 {
+                rankLabel.text = "Just Beginning"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_01b")
+            } else if participantArray1[0].skillTier == 3 {
+                rankLabel.text = "Just Beginning"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_01c")
+            } else if participantArray1[0].skillTier == 4 {
+                rankLabel.text = "Getting There"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_02a")
+            } else if participantArray1[0].skillTier == 5 {
+                rankLabel.text = "Getting There"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_02b")
+            } else if participantArray1[0].skillTier == 6 {
+                rankLabel.text = "Getting There"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_02c")
+            } else if participantArray1[0].skillTier == 7 {
+                rankLabel.text = "Rock Solid"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_03a")
+            } else if participantArray1[0].skillTier == 8 {
+                rankLabel.text = "Rock Solid"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_03b")
+            } else if participantArray1[0].skillTier == 9 {
+                rankLabel.text = "Rock Solid"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_03c")
+            } else if participantArray1[0].skillTier == 10 {
+                rankLabel.text = "Worthy Foe"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_04a")
+            } else if participantArray1[0].skillTier == 11 {
+                rankLabel.text = "Worthy Foe"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_04b")
+            } else if participantArray1[0].skillTier == 12 {
+                rankLabel.text = "Worthy Foe"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_04c")
+            } else if participantArray1[0].skillTier == 13 {
+                rankLabel.text = "Got Swagger"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_05a")
+            } else if participantArray1[0].skillTier == 14 {
+                rankLabel.text = "Got Swagger"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_05b")
+            } else if participantArray1[0].skillTier == 15 {
+                rankLabel.text = "Got Swagger"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_05c")
+            } else if participantArray1[0].skillTier == 16 {
+                rankLabel.text = "Credible Threat"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_06a")
+            } else if participantArray1[0].skillTier == 17 {
+                rankLabel.text = "Credible Threat"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_06b")
+            } else if participantArray1[0].skillTier == 18 {
+                rankLabel.text = "Credible Threat"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_06c")
+            } else if participantArray1[0].skillTier == 19 {
+                rankLabel.text = "The Hotness"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_07a")
+            } else if participantArray1[0].skillTier == 20 {
+                rankLabel.text = "The Hotness"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_07b")
+            } else if participantArray1[0].skillTier == 21 {
+                rankLabel.text = "The Hotness"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_07c")
+            } else if participantArray1[0].skillTier == 22 {
+                rankLabel.text = "Simply Amazing"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_08a")
+            } else if participantArray1[0].skillTier == 23 {
+                rankLabel.text = "Simply Amazing"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_08b")
+            } else if participantArray1[0].skillTier == 24 {
+                rankLabel.text = "Simply Amazing"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_08c")
+            } else if participantArray1[0].skillTier == 25 {
+                rankLabel.text = "Pinnacle of Awesome"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_09a")
+            } else if participantArray1[0].skillTier == 26 {
+                rankLabel.text = "Pinnacle of Awesome"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_09b")
+            } else if participantArray1[0].skillTier == 27 {
+                rankLabel.text = "Pinnacle of Awesome"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_09c")
+            } else if participantArray1[0].skillTier == 28 {
+                rankLabel.text = "Vainglorious"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_10a")
+            } else if participantArray1[0].skillTier == 29 {
+                rankLabel.text = "Vainglorious"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_10b")
+            } else if participantArray1[0].skillTier == 30 {
+                rankLabel.text = "Vainglorious"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_10c")
+            }
         } else if player3.name == "TennantTheVast" {
-            rankLabel.text = "Rank: \(participantArray1[2].skillTier)"
+            if participantArray1[0].skillTier == 1 {
+                rankLabel.text = "Just Beginning"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_01a")
+            } else if participantArray1[0].skillTier == 2 {
+                rankLabel.text = "Just Beginning"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_01b")
+            } else if participantArray1[0].skillTier == 3 {
+                rankLabel.text = "Just Beginning"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_01c")
+            } else if participantArray1[0].skillTier == 4 {
+                rankLabel.text = "Getting There"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_02a")
+            } else if participantArray1[0].skillTier == 5 {
+                rankLabel.text = "Getting There"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_02b")
+            } else if participantArray1[0].skillTier == 6 {
+                rankLabel.text = "Getting There"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_02c")
+            } else if participantArray1[0].skillTier == 7 {
+                rankLabel.text = "Rock Solid"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_03a")
+            } else if participantArray1[0].skillTier == 8 {
+                rankLabel.text = "Rock Solid"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_03b")
+            } else if participantArray1[0].skillTier == 9 {
+                rankLabel.text = "Rock Solid"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_03c")
+            } else if participantArray1[0].skillTier == 10 {
+                rankLabel.text = "Worthy Foe"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_04a")
+            } else if participantArray1[0].skillTier == 11 {
+                rankLabel.text = "Worthy Foe"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_04b")
+            } else if participantArray1[0].skillTier == 12 {
+                rankLabel.text = "Worthy Foe"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_04c")
+            } else if participantArray1[0].skillTier == 13 {
+                rankLabel.text = "Got Swagger"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_05a")
+            } else if participantArray1[0].skillTier == 14 {
+                rankLabel.text = "Got Swagger"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_05b")
+            } else if participantArray1[0].skillTier == 15 {
+                rankLabel.text = "Got Swagger"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_05c")
+            } else if participantArray1[0].skillTier == 16 {
+                rankLabel.text = "Credible Threat"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_06a")
+            } else if participantArray1[0].skillTier == 17 {
+                rankLabel.text = "Credible Threat"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_06b")
+            } else if participantArray1[0].skillTier == 18 {
+                rankLabel.text = "Credible Threat"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_06c")
+            } else if participantArray1[0].skillTier == 19 {
+                rankLabel.text = "The Hotness"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_07a")
+            } else if participantArray1[0].skillTier == 20 {
+                rankLabel.text = "The Hotness"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_07b")
+            } else if participantArray1[0].skillTier == 21 {
+                rankLabel.text = "The Hotness"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_07c")
+            } else if participantArray1[0].skillTier == 22 {
+                rankLabel.text = "Simply Amazing"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_08a")
+            } else if participantArray1[0].skillTier == 23 {
+                rankLabel.text = "Simply Amazing"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_08b")
+            } else if participantArray1[0].skillTier == 24 {
+                rankLabel.text = "Simply Amazing"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_08c")
+            } else if participantArray1[0].skillTier == 25 {
+                rankLabel.text = "Pinnacle of Awesome"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_09a")
+            } else if participantArray1[0].skillTier == 26 {
+                rankLabel.text = "Pinnacle of Awesome"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_09b")
+            } else if participantArray1[0].skillTier == 27 {
+                rankLabel.text = "Pinnacle of Awesome"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_09c")
+            } else if participantArray1[0].skillTier == 28 {
+                rankLabel.text = "Vainglorious"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_10a")
+            } else if participantArray1[0].skillTier == 29 {
+                rankLabel.text = "Vainglorious"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_10b")
+            } else if participantArray1[0].skillTier == 30 {
+                rankLabel.text = "Vainglorious"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_10c")
+            }
         } else if player4.name == "TennantTheVast" {
-            rankLabel.text = "Rank: \(participantArray2[0].skillTier)"
+            if participantArray1[0].skillTier == 1 {
+                rankLabel.text = "Just Beginning"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_01a")
+            } else if participantArray1[0].skillTier == 2 {
+                rankLabel.text = "Just Beginning"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_01b")
+            } else if participantArray1[0].skillTier == 3 {
+                rankLabel.text = "Just Beginning"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_01c")
+            } else if participantArray1[0].skillTier == 4 {
+                rankLabel.text = "Getting There"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_02a")
+            } else if participantArray1[0].skillTier == 5 {
+                rankLabel.text = "Getting There"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_02b")
+            } else if participantArray1[0].skillTier == 6 {
+                rankLabel.text = "Getting There"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_02c")
+            } else if participantArray1[0].skillTier == 7 {
+                rankLabel.text = "Rock Solid"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_03a")
+            } else if participantArray1[0].skillTier == 8 {
+                rankLabel.text = "Rock Solid"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_03b")
+            } else if participantArray1[0].skillTier == 9 {
+                rankLabel.text = "Rock Solid"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_03c")
+            } else if participantArray1[0].skillTier == 10 {
+                rankLabel.text = "Worthy Foe"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_04a")
+            } else if participantArray1[0].skillTier == 11 {
+                rankLabel.text = "Worthy Foe"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_04b")
+            } else if participantArray1[0].skillTier == 12 {
+                rankLabel.text = "Worthy Foe"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_04c")
+            } else if participantArray1[0].skillTier == 13 {
+                rankLabel.text = "Got Swagger"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_05a")
+            } else if participantArray1[0].skillTier == 14 {
+                rankLabel.text = "Got Swagger"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_05b")
+            } else if participantArray1[0].skillTier == 15 {
+                rankLabel.text = "Got Swagger"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_05c")
+            } else if participantArray1[0].skillTier == 16 {
+                rankLabel.text = "Credible Threat"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_06a")
+            } else if participantArray1[0].skillTier == 17 {
+                rankLabel.text = "Credible Threat"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_06b")
+            } else if participantArray1[0].skillTier == 18 {
+                rankLabel.text = "Credible Threat"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_06c")
+            } else if participantArray1[0].skillTier == 19 {
+                rankLabel.text = "The Hotness"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_07a")
+            } else if participantArray1[0].skillTier == 20 {
+                rankLabel.text = "The Hotness"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_07b")
+            } else if participantArray1[0].skillTier == 21 {
+                rankLabel.text = "The Hotness"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_07c")
+            } else if participantArray1[0].skillTier == 22 {
+                rankLabel.text = "Simply Amazing"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_08a")
+            } else if participantArray1[0].skillTier == 23 {
+                rankLabel.text = "Simply Amazing"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_08b")
+            } else if participantArray1[0].skillTier == 24 {
+                rankLabel.text = "Simply Amazing"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_08c")
+            } else if participantArray1[0].skillTier == 25 {
+                rankLabel.text = "Pinnacle of Awesome"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_09a")
+            } else if participantArray1[0].skillTier == 26 {
+                rankLabel.text = "Pinnacle of Awesome"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_09b")
+            } else if participantArray1[0].skillTier == 27 {
+                rankLabel.text = "Pinnacle of Awesome"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_09c")
+            } else if participantArray1[0].skillTier == 28 {
+                rankLabel.text = "Vainglorious"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_10a")
+            } else if participantArray1[0].skillTier == 29 {
+                rankLabel.text = "Vainglorious"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_10b")
+            } else if participantArray1[0].skillTier == 30 {
+                rankLabel.text = "Vainglorious"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_10c")
+            }
         } else if player5.name == "TennantTheVast" {
-            rankLabel.text = "Rank: \(participantArray2[1].skillTier)"
+            if participantArray1[0].skillTier == 1 {
+                rankLabel.text = "Just Beginning"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_01a")
+            } else if participantArray1[0].skillTier == 2 {
+                rankLabel.text = "Just Beginning"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_01b")
+            } else if participantArray1[0].skillTier == 3 {
+                rankLabel.text = "Just Beginning"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_01c")
+            } else if participantArray1[0].skillTier == 4 {
+                rankLabel.text = "Getting There"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_02a")
+            } else if participantArray1[0].skillTier == 5 {
+                rankLabel.text = "Getting There"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_02b")
+            } else if participantArray1[0].skillTier == 6 {
+                rankLabel.text = "Getting There"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_02c")
+            } else if participantArray1[0].skillTier == 7 {
+                rankLabel.text = "Rock Solid"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_03a")
+            } else if participantArray1[0].skillTier == 8 {
+                rankLabel.text = "Rock Solid"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_03b")
+            } else if participantArray1[0].skillTier == 9 {
+                rankLabel.text = "Rock Solid"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_03c")
+            } else if participantArray1[0].skillTier == 10 {
+                rankLabel.text = "Worthy Foe"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_04a")
+            } else if participantArray1[0].skillTier == 11 {
+                rankLabel.text = "Worthy Foe"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_04b")
+            } else if participantArray1[0].skillTier == 12 {
+                rankLabel.text = "Worthy Foe"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_04c")
+            } else if participantArray1[0].skillTier == 13 {
+                rankLabel.text = "Got Swagger"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_05a")
+            } else if participantArray1[0].skillTier == 14 {
+                rankLabel.text = "Got Swagger"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_05b")
+            } else if participantArray1[0].skillTier == 15 {
+                rankLabel.text = "Got Swagger"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_05c")
+            } else if participantArray1[0].skillTier == 16 {
+                rankLabel.text = "Credible Threat"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_06a")
+            } else if participantArray1[0].skillTier == 17 {
+                rankLabel.text = "Credible Threat"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_06b")
+            } else if participantArray1[0].skillTier == 18 {
+                rankLabel.text = "Credible Threat"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_06c")
+            } else if participantArray1[0].skillTier == 19 {
+                rankLabel.text = "The Hotness"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_07a")
+            } else if participantArray1[0].skillTier == 20 {
+                rankLabel.text = "The Hotness"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_07b")
+            } else if participantArray1[0].skillTier == 21 {
+                rankLabel.text = "The Hotness"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_07c")
+            } else if participantArray1[0].skillTier == 22 {
+                rankLabel.text = "Simply Amazing"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_08a")
+            } else if participantArray1[0].skillTier == 23 {
+                rankLabel.text = "Simply Amazing"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_08b")
+            } else if participantArray1[0].skillTier == 24 {
+                rankLabel.text = "Simply Amazing"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_08c")
+            } else if participantArray1[0].skillTier == 25 {
+                rankLabel.text = "Pinnacle of Awesome"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_09a")
+            } else if participantArray1[0].skillTier == 26 {
+                rankLabel.text = "Pinnacle of Awesome"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_09b")
+            } else if participantArray1[0].skillTier == 27 {
+                rankLabel.text = "Pinnacle of Awesome"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_09c")
+            } else if participantArray1[0].skillTier == 28 {
+                rankLabel.text = "Vainglorious"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_10a")
+            } else if participantArray1[0].skillTier == 29 {
+                rankLabel.text = "Vainglorious"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_10b")
+            } else if participantArray1[0].skillTier == 30 {
+                rankLabel.text = "Vainglorious"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_10c")
+            }
         } else if player6.name == "TennantTheVast" {
-            rankLabel.text = "Rank: \(participantArray2[2].skillTier)"
+            if participantArray1[0].skillTier == 1 {
+                rankLabel.text = "Just Beginning"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_01a")
+            } else if participantArray1[0].skillTier == 2 {
+                rankLabel.text = "Just Beginning"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_01b")
+            } else if participantArray1[0].skillTier == 3 {
+                rankLabel.text = "Just Beginning"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_01c")
+            } else if participantArray1[0].skillTier == 4 {
+                rankLabel.text = "Getting There"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_02a")
+            } else if participantArray1[0].skillTier == 5 {
+                rankLabel.text = "Getting There"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_02b")
+            } else if participantArray1[0].skillTier == 6 {
+                rankLabel.text = "Getting There"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_02c")
+            } else if participantArray1[0].skillTier == 7 {
+                rankLabel.text = "Rock Solid"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_03a")
+            } else if participantArray1[0].skillTier == 8 {
+                rankLabel.text = "Rock Solid"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_03b")
+            } else if participantArray1[0].skillTier == 9 {
+                rankLabel.text = "Rock Solid"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_03c")
+            } else if participantArray1[0].skillTier == 10 {
+                rankLabel.text = "Worthy Foe"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_04a")
+            } else if participantArray1[0].skillTier == 11 {
+                rankLabel.text = "Worthy Foe"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_04b")
+            } else if participantArray1[0].skillTier == 12 {
+                rankLabel.text = "Worthy Foe"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_04c")
+            } else if participantArray1[0].skillTier == 13 {
+                rankLabel.text = "Got Swagger"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_05a")
+            } else if participantArray1[0].skillTier == 14 {
+                rankLabel.text = "Got Swagger"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_05b")
+            } else if participantArray1[0].skillTier == 15 {
+                rankLabel.text = "Got Swagger"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_05c")
+            } else if participantArray1[0].skillTier == 16 {
+                rankLabel.text = "Credible Threat"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_06a")
+            } else if participantArray1[0].skillTier == 17 {
+                rankLabel.text = "Credible Threat"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_06b")
+            } else if participantArray1[0].skillTier == 18 {
+                rankLabel.text = "Credible Threat"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_06c")
+            } else if participantArray1[0].skillTier == 19 {
+                rankLabel.text = "The Hotness"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_07a")
+            } else if participantArray1[0].skillTier == 20 {
+                rankLabel.text = "The Hotness"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_07b")
+            } else if participantArray1[0].skillTier == 21 {
+                rankLabel.text = "The Hotness"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_07c")
+            } else if participantArray1[0].skillTier == 22 {
+                rankLabel.text = "Simply Amazing"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_08a")
+            } else if participantArray1[0].skillTier == 23 {
+                rankLabel.text = "Simply Amazing"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_08b")
+            } else if participantArray1[0].skillTier == 24 {
+                rankLabel.text = "Simply Amazing"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_08c")
+            } else if participantArray1[0].skillTier == 25 {
+                rankLabel.text = "Pinnacle of Awesome"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_09a")
+            } else if participantArray1[0].skillTier == 26 {
+                rankLabel.text = "Pinnacle of Awesome"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_09b")
+            } else if participantArray1[0].skillTier == 27 {
+                rankLabel.text = "Pinnacle of Awesome"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_09c")
+            } else if participantArray1[0].skillTier == 28 {
+                rankLabel.text = "Vainglorious"
+                rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_10a")
+            } else if participantArray1[0].skillTier == 29 {
+                rankLabel.text = "Vainglorious"
+                rankLabel.textColor = UIColor(red: 0.753, green: 0.753, blue: 0.753, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_10b")
+            } else if participantArray1[0].skillTier == 30 {
+                rankLabel.text = "Vainglorious"
+                rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
+                skillTierImage.image = UIImage(named: "tier_10c")
+            }
         } else {
-            print("There is an error going on here at line 128 in MatchesCell.swift")
+            print("There is an error going on here at line 598 in MatchesCell.swift")
         }
 
     }
