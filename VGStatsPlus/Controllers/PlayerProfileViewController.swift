@@ -19,6 +19,12 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
     let imageView = UIImageView()
     var indexNumber: Int?
     
+    var matches: [MatchResource] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
     var player = VGDataSource.instance.player {
         didSet {
             print("Changed")
@@ -100,7 +106,11 @@ extension PlayerProfileViewController: UITableViewDelegate, UITableViewDataSourc
         if indexPath.row == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "playerCell") as? PlayerCell else  { return UITableViewCell() }
             if VGDataSource.instance.player != nil {
-                cell.setup(player: VGDataSource.instance.player!)
+                VGDataSource.instance.getMatches(regional: (VGDataSource.instance.player!.shardId)!, success: { (success) in
+                    if success {
+                        cell.setup(player: VGDataSource.instance.player!, match: VGDataSource.instance.matches[0])
+                    }
+                })
             }
             return cell
         } else {
@@ -116,19 +126,19 @@ extension PlayerProfileViewController: UITableViewDelegate, UITableViewDataSourc
         }
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-        let y = 300 - (scrollView.contentOffset.y + 300)
-        let height = min(max(y, 60), 400)
-        
-        imageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: height)
-    }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
             return CGFloat(320)
         } else {
             return CGFloat(280)
         }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let y = 300 - (scrollView.contentOffset.y + 300)
+        let height = min(max(y, 60), 400)
+        
+        imageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: height)
     }
 }
