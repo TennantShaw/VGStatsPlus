@@ -32,8 +32,8 @@ class LeftSideCell: UITableViewCell {
     
     
     //MARK: - Class Methods
-    func setupLeftSideCell(participant: ParticipantResource?) {
-        
+    func setupCell(participant: ParticipantResource?) {
+        print(participant)
     }
 }
 
@@ -59,7 +59,8 @@ class RightSideCell: UITableViewCell {
     
     
     //MARK: - Class Methods
-    func setupRightSideCell(participant: ParticipantResource) {
+    func setupCell(participant: ParticipantResource?) {
+        print(participant)
     }
     
 }

@@ -28,6 +28,7 @@ class VGDataSource {
     }
     
     var matches = [MatchResource]()
+    
     var selectedMatch: MatchResource? {
         didSet {
             getRosterForTheMatch(match: selectedMatch!) { (rosterArray) in

@@ -29,6 +29,8 @@ class MatchHistoryViewController: UIViewController, UINavigationControllerDelega
     var matchResource: MatchResource?
 
     
+    var participantResources = [String:[ParticipantResource]]()
+    
     //MARK: = View Life Cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -44,10 +46,14 @@ extension MatchHistoryViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if tableView == leftSideTableView {
-            return 3
+        if tableView == leftSideTableView && VGDataSource.instance.participantResources["teamL"]?.count != 0 {
+            guard let teamLParticipantCount = VGDataSource.instance.participantResources["teamL"]?.count else { return 0 }
+            return teamLParticipantCount
+        } else if tableView == rightSideTableView && VGDataSource.instance.participantResources["teamR"]?.count != 0 {
+            guard let teamRParticipantCount = VGDataSource.instance.participantResources["teamR"]?.count else { return 0 }
+            return teamRParticipantCount
         } else {
-            return 3
+            return 0
         }
     }
     
@@ -55,12 +61,15 @@ extension MatchHistoryViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == leftSideTableView {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "leftSideCell") as? LeftSideCell else { return UITableViewCell() }
+            cell.setupCell(participant: (VGDataSource.instance.participantResources["teamL"]?[indexPath.row]))
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "rightSideCell") as? RightSideCell else { return UITableViewCell() }
+            cell.setupCell(participant: (VGDataSource.instance.participantResources["teamR"]?[indexPath.row]))
             return cell
         }
     }
+    
     
 }
 
