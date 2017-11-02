@@ -624,9 +624,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="3tn-eD-uBa"/>
                                 </constraints>
-                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rightSideCell" rowHeight="250" id="S63-BF-EBV" customClass="RightSideCell" customModule="VGStatsPlus" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rightSideCell" rowHeight="250" id="S63-BF-EBV" customClass="RightSideCell" customModule="VGStatsPlus" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="180" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S63-BF-EBV" id="cgu-sS-NQG">
@@ -819,9 +819,9 @@
                                     <constraint firstAttribute="width" constant="180" id="UL3-2E-VSy"/>
                                 </constraints>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
-                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="leftSideCell" rowHeight="250" id="Aiw-Jd-Q0Z" customClass="LeftSideCell" customModule="VGStatsPlus" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="leftSideCell" rowHeight="250" id="Aiw-Jd-Q0Z" customClass="LeftSideCell" customModule="VGStatsPlus" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="180" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Aiw-Jd-Q0Z" id="x32-FY-9Wx">
