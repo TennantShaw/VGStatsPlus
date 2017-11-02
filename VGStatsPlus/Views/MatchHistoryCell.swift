@@ -40,19 +40,19 @@ class LeftSideCell: UITableViewCell {
         
         leftSideCharacterImageView.image = UIImage(named: "\(participant!.actor!.description)")
         
-        if participant!.items!.count == 1 {
+        if participant!.items!.count >= 1 {
             leftSideItemOneImageView.image = UIImage(named: "\(participant!.items![0].description)")
         }
-        if participant!.items!.count == 2 {
+        if participant!.items!.count >= 2 {
             leftSideItemTwoImageView.image = UIImage(named: "\(participant!.items![1].description)")
         }
-        if participant!.items!.count == 3 {
+        if participant!.items!.count >= 3 {
             leftSideItemThreeImageView.image = UIImage(named: "\(participant!.items![2].description)")
         }
-        if participant!.items!.count == 4 {
+        if participant!.items!.count >= 4 {
             leftSideItemFourImageView.image = UIImage(named: "\(participant!.items![3].description)")
         }
-        if participant!.items!.count == 5 {
+        if participant!.items!.count >= 5 {
             leftSideItemFiveImageView.image = UIImage(named: "\(participant!.items![4].description)")
         }
         if participant!.items!.count == 6 {
@@ -102,19 +102,19 @@ class RightSideCell: UITableViewCell {
         
         rightSideCharacterImageView.image = UIImage(named: "\(participant!.actor!.description)")
         
-        if participant!.items!.count == 1 {
+        if participant!.items!.count >= 1 {
             rightSideItemOneImageView.image = UIImage(named: "\(participant!.items![0].description)")
         }
-        if participant!.items!.count == 2 {
+        if participant!.items!.count >= 2 {
             rightSideItemTwoImageView.image = UIImage(named: "\(participant!.items![1].description)")
         }
-        if participant!.items!.count == 3 {
+        if participant!.items!.count >= 3 {
             rightSideItemThreeImageView.image = UIImage(named: "\(participant!.items![2].description)")
         }
-        if participant!.items!.count == 4 {
+        if participant!.items!.count >= 4 {
             rightSideItemFourImageView.image = UIImage(named: "\(participant!.items![3].description)")
         }
-        if participant!.items!.count == 5 {
+        if participant!.items!.count >= 5 {
             rightSideItemFiveImageView.image = UIImage(named: "\(participant!.items![4].description)")
         }
         if participant!.items!.count == 6 {
