@@ -12,6 +12,10 @@ protocol GetSelectedAvatarImageDelegate {
     func getSelectedAvatarImage(selectedImageName: String)
 }
 
+protocol GetSelectedFriendsDelegate {
+    func getSelectedFriends(selectedFriendsIDs: [String])
+}
+
 class CreateChannel: UIViewController {
     
     @IBOutlet weak var backgroundVIew: UIView!
@@ -22,6 +26,7 @@ class CreateChannel: UIViewController {
     
     var delegate: ChannelVC!
     
+    var selectedFriends: [String] = [SavedStatus.instance.userID]
     var avatarName: String = "dark0" {
         didSet {
             channelImageView.image = UIImage(named: avatarName)
@@ -49,7 +54,7 @@ class CreateChannel: UIViewController {
     }
     @IBAction func createBtnTapped(_ sender: Any) {
         if nameTextField.text != "" && descriptionTextField.text != "" {
-            VGFirebaseDB.instance.createChannel(withTitle: nameTextField.text!, withDiscription: descriptionTextField.text!, channelImage: avatarName, handler: { (success) in
+            VGFirebaseDB.instance.createChannel(withTitle: nameTextField.text!, withDiscription: descriptionTextField.text!, withId: SavedStatus.instance.userID, channelImage: avatarName, friendsUID: selectedFriends, handler: { (success) in
                 if success {
                     self.dismiss(animated: true, completion: {
                         self.delegate.checkDatabase()
@@ -60,11 +65,22 @@ class CreateChannel: UIViewController {
             })
         }
     }
+    
+    @IBAction func selectFriendBtnTapped(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let friendsVC = storyBoard.instantiateViewController(withIdentifier: "pickFriendsVC") as! PickFriendsVC
+        self.present(friendsVC, animated: true, completion: nil)
+    }
+    
 }
 
-extension CreateChannel: GetSelectedAvatarImageDelegate {
+extension CreateChannel: GetSelectedAvatarImageDelegate, GetSelectedFriendsDelegate {
     
     func getSelectedAvatarImage(selectedImageName: String) {
         avatarName = selectedImageName
+    }
+    
+    func getSelectedFriends(selectedFriendsIDs: [String]) {
+        selectedFriends = selectedFriendsIDs
     }
 }

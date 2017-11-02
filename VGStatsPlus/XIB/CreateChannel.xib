@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13526"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,8 +37,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8J-Ir-Wgj" customClass="RoundedUIView">
                     <rect key="frame" x="82.5" y="158.5" width="240" height="350"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KG6-3o-Vqd">
-                            <rect key="frame" x="15" y="12.5" width="210" height="305"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KG6-3o-Vqd">
+                            <rect key="frame" x="15" y="17.5" width="210" height="295"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Channel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ke7-Ay-WT5">
                                     <rect key="frame" x="0.0" y="0.0" width="210" height="41"/>
@@ -51,7 +51,7 @@
                                     <color key="highlightedColor" red="0.34128272529999998" green="0.52568405870000001" blue="0.72512274980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jPK-Iw-ekr">
-                                    <rect key="frame" x="0.0" y="56" width="210" height="40"/>
+                                    <rect key="frame" x="0.0" y="46" width="210" height="40"/>
                                     <color key="backgroundColor" red="0.173940599" green="0.24193984269999999" blue="0.31265199179999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
@@ -63,7 +63,7 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FlK-a4-w2c">
-                                    <rect key="frame" x="0.0" y="111" width="210" height="40"/>
+                                    <rect key="frame" x="0.0" y="91" width="210" height="40"/>
                                     <color key="backgroundColor" red="0.173940599" green="0.24193984269999999" blue="0.31265199179999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
@@ -75,9 +75,9 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6ap-xP-RgB" userLabel="imageSetupStack">
-                                    <rect key="frame" x="75" y="166" width="60" height="84"/>
+                                    <rect key="frame" x="75" y="136" width="60" height="84"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defeat" translatesAutoresizingMaskIntoConstraints="NO" id="uSc-e7-y65" customClass="CircleImage" customModule="iMonocle" customModuleProvider="target">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defeat" translatesAutoresizingMaskIntoConstraints="NO" id="uSc-e7-y65" customClass="CircleImage" customModule="VGStatsPlus" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="60" id="E3Z-mG-lBb"/>
@@ -86,6 +86,7 @@
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bj-9G-HtZ">
                                             <rect key="frame" x="0.0" y="60" width="60" height="24"/>
+                                            <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                             <color key="tintColor" red="0.173940599" green="0.24193984269999999" blue="0.31265199179999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" title="Choose Icon">
@@ -97,8 +98,22 @@
                                         </button>
                                     </subviews>
                                 </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZW-Bw-Te1" customClass="RoundedButton" customModule="VGStatsPlus" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="225" width="210" height="25"/>
+                                    <color key="backgroundColor" red="0.173940599" green="0.24193984269999999" blue="0.31265199179999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="210" id="MLd-PD-bp7"/>
+                                        <constraint firstAttribute="height" constant="25" id="hRJ-jx-NEx"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <state key="normal" title="Add Friends"/>
+                                    <connections>
+                                        <action selector="selectFriendBtnTapped:" destination="-1" eventType="touchUpInside" id="u71-yy-WYa"/>
+                                    </connections>
+                                </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVu-Ic-ov1" customClass="RoundedButton" customModule="VGStatsPlus" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="265" width="210" height="40"/>
+                                    <rect key="frame" x="0.0" y="255" width="210" height="40"/>
                                     <color key="backgroundColor" red="0.173940599" green="0.24193984269999999" blue="0.31265199179999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="210" id="ns6-PM-6sJ"/>

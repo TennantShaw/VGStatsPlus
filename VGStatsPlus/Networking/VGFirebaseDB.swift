@@ -121,16 +121,14 @@ class VGFirebaseDB {
     
     // MARK: Create a Channel
     
-    func createChannel(withTitle title: String, withDiscription description: String, channelImage image: String, handler: @escaping (_ groupCreated: Bool) -> ()) {
-        REF_CHANNELS.childByAutoId().updateChildValues(["title": title, "description": description, "image": image])
+    func createChannel(withTitle title: String, withDiscription description: String, withId id: String, channelImage image: String, friendsUID uid: [String], handler: @escaping (_ groupCreated: Bool) -> ()) {
+        REF_CHANNELS.childByAutoId().updateChildValues(["title": title, "description": description, "image": image, "id": id, "friends": uid])
         handler(true)
     }
     
     func getIgnForTheUser(id: String, gotIGN: @escaping (_ success: Bool, _ error: Error?) -> ()) {
         REF_USERS.child(id).child("userIGNInfo").observeSingleEvent(of: .value, with: { (ignSnap) in
-            print(ignSnap.value)
             self.playerIGN = ignSnap.childSnapshot(forPath: "ign").value as! String
-            print(self.playerIGN)
         })
     }
     
@@ -147,6 +145,18 @@ class VGFirebaseDB {
             }
             self.selectedChannel = channelArray.first
             handler(channelArray)
+        })
+    }
+    
+    func getAllFriendsIDs(handler: @escaping (_ ids: [String]) -> ()) {
+        var idsArray = [String]()
+        REF_USERS.observeSingleEvent(of: .value, with: { (snap) in
+            guard let channelSnap = snap.children.allObjects as? [DataSnapshot] else { return }
+            for _id in channelSnap {
+                let id = _id.key
+                idsArray.append(id)
+            }
+            handler(idsArray)
         })
     }
     
