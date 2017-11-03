@@ -64,9 +64,11 @@ class ChannelVC: UIViewController {
     func checkDatabase() {
         VGFirebaseDB.instance.getAllChannels { (channels) in
             self.channels = channels
-            VGFirebaseDB.instance.getMessages(forChannel: self.channels.first!, handler: { (messagesArray) in
-                self.messages = messagesArray
-            })
+            if self.channels.count != 0 {
+                VGFirebaseDB.instance.getMessages(forChannel: self.channels.first!, handler: { (messagesArray) in
+                    self.messages = messagesArray
+                })                
+            }
         }
     }
     

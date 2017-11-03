@@ -18,4 +18,11 @@ class SelectFriendCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    override var isSelected: Bool {
+        didSet {
+//            self.accessoryType = isSelected ? .checkmark : .none
+//            self.nameLabel.textColor = isSelected ? UIColor.darkGray : UIColor.white
+        }
+    }
 }

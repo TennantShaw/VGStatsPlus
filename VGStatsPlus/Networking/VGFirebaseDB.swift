@@ -48,7 +48,7 @@ class VGFirebaseDB {
     var currentuserID: String?
     var selectedChannel: Channel?
     var playerIGN: String?
-    
+    var friendsIGNs: [String]?
     
     // MARK: register user
     func registerUserToFirebase(withEmail email: String, password: String, name: String, accountType: String, userCreationComplete: @escaping (_ status: Bool, _ error: Error?) -> ()) {
@@ -128,8 +128,20 @@ class VGFirebaseDB {
     
     func getIgnForTheUser(id: String, gotIGN: @escaping (_ success: Bool, _ error: Error?) -> ()) {
         REF_USERS.child(id).child("userIGNInfo").observeSingleEvent(of: .value, with: { (ignSnap) in
-            self.playerIGN = ignSnap.childSnapshot(forPath: "ign").value as! String
+            self.playerIGN = ignSnap.childSnapshot(forPath: "ign").value as? String
+            gotIGN(true, nil)
         })
+        
+    }
+    
+    func getAllIgn(ids: [String], gotIGNS: @escaping (_ success: [String]) -> ()) {
+        var back: [String] = []
+        for id in ids {
+            REF_USERS.child(id).child("userIGNInfo").observeSingleEvent(of: .value, with: { (ignSnap) in
+                back.append(ignSnap.childSnapshot(forPath: "ign").value as! String)
+            })
+        }
+        gotIGNS(back)
     }
     
     func getAllChannels(handler: @escaping (_ messages: [Channel]) -> ()) {

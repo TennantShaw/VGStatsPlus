@@ -12,7 +12,9 @@ class PickFriendsVC: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var nameTextField: UITextField!
+    @IBOutlet var backgroundView: UIView!
     
+    var channelFriendsDelegate: GetSelectedFriendsDelegate!
     
     var ids: [String] = [SavedStatus.instance.userID] {
         didSet {
@@ -25,8 +27,18 @@ class PickFriendsVC: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         VGFirebaseDB.instance.getAllFriendsIDs { (arrayOfIDs) in
-            self.ids = arrayOfIDs
+            VGFirebaseDB.instance.getAllIgn(ids: arrayOfIDs, gotIGNS: { (IGNIds) in
+                self.ids = IGNIds
+            })
         }
+        
+        let gestureRescognizer = UITapGestureRecognizer()
+        gestureRescognizer.addTarget(self, action: #selector(PickFriendsVC.tapToClose(_:)))
+        backgroundView.addGestureRecognizer(gestureRescognizer)
+    }
+    
+    @objc func tapToClose(_ gestureRecognizer: UITapGestureRecognizer) {
+        dismiss(animated: true, completion: nil)
     }
 }
 
@@ -50,5 +62,9 @@ extension PickFriendsVC: UITableViewDelegate, UITableViewDataSource {
         }
         cell.nameLabel.text = ids[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 }
