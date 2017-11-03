@@ -27,9 +27,8 @@ class MatchHistoryViewController: UIViewController, UINavigationControllerDelega
     
     //MARK: - Properties
     var matchResource: MatchResource?
-
-    
     var participantResources = [String:[ParticipantResource]]()
+    
     
     //MARK: = View Life Cycle
     override func viewWillAppear(_ animated: Bool) {
