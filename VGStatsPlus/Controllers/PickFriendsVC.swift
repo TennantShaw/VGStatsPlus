@@ -13,10 +13,12 @@ class PickFriendsVC: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var backgroundView: UIView!
+    @IBOutlet var addedLabel: UILabel!
+    @IBOutlet var doneBtn: UIButton!
     
     var channelFriendsDelegate: GetSelectedFriendsDelegate!
     
-    var ids: [String] = [SavedStatus.instance.userID] {
+    var dict: [String:String] = [:] {
         didSet {
             tableView.reloadData()
         }
@@ -26,19 +28,25 @@ class PickFriendsVC: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        VGFirebaseDB.instance.getAllFriendsIDs { (arrayOfIDs) in
-            VGFirebaseDB.instance.getAllIgn(ids: arrayOfIDs, gotIGNS: { (IGNIds) in
-                self.ids = IGNIds
-            })
-        }
         
         let gestureRescognizer = UITapGestureRecognizer()
         gestureRescognizer.addTarget(self, action: #selector(PickFriendsVC.tapToClose(_:)))
         backgroundView.addGestureRecognizer(gestureRescognizer)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        VGFirebaseDB.instance.getAllFriendsIDs { (dictOfIDs) in
+            self.dict = dictOfIDs
+        }
+    }
+    
     @objc func tapToClose(_ gestureRecognizer: UITapGestureRecognizer) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func doneButtonTapped(_ sender: Any) {
+        
     }
 }
 
@@ -49,8 +57,8 @@ extension PickFriendsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if ids.count != 0 {
-            return ids.count
+        if dict.count != 0 {
+            return dict.count
         } else {
             return 0
         }
@@ -60,11 +68,13 @@ extension PickFriendsVC: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellID") as? SelectFriendCell else {
             return UITableViewCell()
         }
-        cell.nameLabel.text = ids[indexPath.row]
+        cell.nameLabel.text = Array(dict.values)[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
+    
+    
 }
