@@ -28,12 +28,7 @@ class MatchHistoryViewController: UIViewController, UINavigationControllerDelega
     //MARK: - Properties
     var matchResource: MatchResource?
     var participantResources = [String:[ParticipantResource]]()
-//    let dateFormatter: DateFormatter = {
-//        let formatter = DateFormatter()
-//        formatter.dateStyle = .medium
-//        formatter.timeStyle = .none
-//        return formatter
-//    }()
+
     
     //MARK: = View Life Cycle
     override func viewWillAppear(_ animated: Bool) {
@@ -53,7 +48,7 @@ class MatchHistoryViewController: UIViewController, UINavigationControllerDelega
         let leftPlayer = leftRoster.participants![0]
         let rightPlayer = rightRoster.participants![0]
         
-//        timePlayedLabel.text = dateFormatter.
+        timePlayedLabel.text = convertToTimePlayed(duration: match!.duration!)
         leftSideAcesLabel.text = leftRoster.acesEarned?.description
         leftSideKrakenKillsLabel.text = leftRoster.krakenCaptures?.description
         leftSideAcesLabel.text = leftRoster.acesEarned?.description
@@ -76,6 +71,16 @@ class MatchHistoryViewController: UIViewController, UINavigationControllerDelega
             rightSideVictoryOrDefeatLabel.text = "Defeat"
         }
     }
+    
+    func convertToTimePlayed(duration: Int) -> String {
+        let minutes = duration/60
+        var seconds = Double(duration).truncatingRemainder(dividingBy: 60)
+        let formattedSeconds = Int(seconds)
+        
+        let back = "\(minutes):\(formattedSeconds)"
+        return back
+    }
+
     
 }
 
