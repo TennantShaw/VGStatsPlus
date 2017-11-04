@@ -134,16 +134,6 @@ class VGFirebaseDB {
         
     }
     
-    func getAllIgn(ids: [String], gotIGNS: @escaping (_ success: [String]) -> ()) {
-        var back: [String] = []
-        for id in ids {
-            REF_USERS.child(id).child("userIGNInfo").observeSingleEvent(of: .value, with: { (ignSnap) in
-                back.append(ignSnap.childSnapshot(forPath: "ign").value as! String)
-            })
-        }
-        gotIGNS(back)
-    }
-    
     func getAllChannels(handler: @escaping (_ messages: [Channel]) -> ()) {
         var channelArray = [Channel]()
         REF_CHANNELS.observeSingleEvent(of: .value, with: { (snap) in
@@ -160,15 +150,17 @@ class VGFirebaseDB {
         })
     }
     
-    func getAllFriendsIDs(handler: @escaping (_ ids: [String]) -> ()) {
-        var idsArray = [String]()
+    // MARK: Observe Users IDS
+    func getAllFriendsIDs(handler: @escaping (_ ids: [String:String]) -> ()) {
+        var idsDictionary = [String:String]()
         REF_USERS.observeSingleEvent(of: .value, with: { (snap) in
             guard let channelSnap = snap.children.allObjects as? [DataSnapshot] else { return }
             for _id in channelSnap {
                 let id = _id.key
-                idsArray.append(id)
+                guard let ign = _id.childSnapshot(forPath: "userIGNInfo").childSnapshot(forPath: "ign").value as? String else { return }
+                idsDictionary[id] = ign
             }
-            handler(idsArray)
+            handler(idsDictionary)
         })
     }
     
@@ -184,7 +176,6 @@ class VGFirebaseDB {
         REF_CHANNELS.child(channel.channelID).child("messages").observeSingleEvent(of: .value, with: { (messageSnap) in
             var backMessage: [Message] = []
             guard let channelMessagesSnapshot = messageSnap.children.allObjects as? [DataSnapshot] else { return }
-            print(channelMessagesSnapshot)
             for message in channelMessagesSnapshot {
                 guard let content = message.childSnapshot(forPath: "content").value as? String else { return }
                 guard let senderId = message.childSnapshot(forPath: "senderIGN").value as? String else { return }
