@@ -41,22 +41,22 @@ class LeftSideCell: UITableViewCell {
         leftSideCharacterImageView.image = UIImage(named: "\(participant!.actor!.description)")
         
         if participant!.items!.count >= 1 {
-            leftSideItemOneImageView.image = UIImage(named: "\(participant!.items![0].description)")
+            leftSideItemOneImageView.image = UIImage(named: "\(participant!.items![0])")
         }
         if participant!.items!.count >= 2 {
-            leftSideItemTwoImageView.image = UIImage(named: "\(participant!.items![1].description)")
+            leftSideItemTwoImageView.image = UIImage(named: "\(participant!.items![1])")
         }
         if participant!.items!.count >= 3 {
-            leftSideItemThreeImageView.image = UIImage(named: "\(participant!.items![2].description)")
+            leftSideItemThreeImageView.image = UIImage(named: "\(participant!.items![2])")
         }
         if participant!.items!.count >= 4 {
-            leftSideItemFourImageView.image = UIImage(named: "\(participant!.items![3].description)")
+            leftSideItemFourImageView.image = UIImage(named: "\(participant!.items![3])")
         }
         if participant!.items!.count >= 5 {
-            leftSideItemFiveImageView.image = UIImage(named: "\(participant!.items![4].description)")
+                leftSideItemFiveImageView.image = UIImage(named: "\(participant!.items![4])")
         }
         if participant!.items!.count == 6 {
-            leftSideItemSixImageView.image = UIImage(named: "\(participant!.items![5].description)")
+            leftSideItemSixImageView.image = UIImage(named: "\(participant!.items![5])")
         }
         
         leftSidePlayerNameLabel.text = "\(player!.name!.description)"

@@ -633,7 +633,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="249.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ardan_Stormlord_I_R" translatesAutoresizingMaskIntoConstraints="NO" id="rEz-FE-6kw">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rEz-FE-6kw">
                                                     <rect key="frame" x="0.0" y="0.0" width="180" height="120"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="120" id="h16-b9-vp2"/>
@@ -828,7 +828,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="249.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ardan_Gladiator_E" translatesAutoresizingMaskIntoConstraints="NO" id="PtA-fW-cjZ">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PtA-fW-cjZ">
                                                     <rect key="frame" x="0.0" y="0.0" width="180" height="120"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="120" id="lYQ-wf-4wp"/>
@@ -1146,7 +1146,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXX-2y-fKj">
-                                                            <rect key="frame" x="55" y="8" width="280" height="33.5"/>
+                                                            <rect key="frame" x="55" y="8" width="280" height="23.5"/>
                                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -1596,8 +1596,6 @@
     </scenes>
     <resources>
         <image name="Adagio_Angel" width="1024" height="770"/>
-        <image name="Ardan_Gladiator_E" width="3386" height="2000"/>
-        <image name="Ardan_Stormlord_I_R" width="4800" height="2700"/>
         <image name="Vainglory_Dagger_DONOTEDIT" width="640" height="2000"/>
         <image name="add" width="50" height="50"/>
         <image name="battle" width="50" height="50"/>
