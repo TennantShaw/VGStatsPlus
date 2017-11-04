@@ -28,14 +28,55 @@ class MatchHistoryViewController: UIViewController, UINavigationControllerDelega
     //MARK: - Properties
     var matchResource: MatchResource?
     var participantResources = [String:[ParticipantResource]]()
-    
+//    let dateFormatter: DateFormatter = {
+//        let formatter = DateFormatter()
+//        formatter.dateStyle = .medium
+//        formatter.timeStyle = .none
+//        return formatter
+//    }()
     
     //MARK: = View Life Cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupMatchHistory(match: matchResource)
+    }
 
+    func setupMatchHistory(match: MatchResource?) {
+        guard match != nil else { return }
+        let leftRoster = match!.rosters![0]
+        let rightRoster = match!.rosters![1]
+        let leftPlayer = leftRoster.participants![0]
+        let rightPlayer = rightRoster.participants![0]
+        
+//        timePlayedLabel.text = dateFormatter.
+        leftSideAcesLabel.text = leftRoster.acesEarned?.description
+        leftSideKrakenKillsLabel.text = leftRoster.krakenCaptures?.description
+        leftSideAcesLabel.text = leftRoster.acesEarned?.description
+        leftSideTeamGoldLabel.text = leftRoster.gold?.description
+        
+        if leftPlayer.winner?.description == "true" {
+            leftSideVictoryOrDefeatLabel.text = "Victory"
+        } else {
+            leftSideVictoryOrDefeatLabel.text = "Defeat"
+        }
+        
+        rightSideAcesLabel.text = rightRoster.acesEarned?.description
+        rightSideKrakenKillsLabel.text = rightRoster.krakenCaptures?.description
+        rightSideAcesLabel.text = rightRoster.acesEarned?.description
+        rightSideTeamGoldLabel.text = rightRoster.gold?.description
+        
+        if rightPlayer.winner?.description == "true" {
+            rightSideVictoryOrDefeatLabel.text = "Victory"
+        } else {
+            rightSideVictoryOrDefeatLabel.text = "Defeat"
+        }
+    }
+    
 }
 
 extension MatchHistoryViewController: UITableViewDelegate, UITableViewDataSource {
@@ -61,10 +102,12 @@ extension MatchHistoryViewController: UITableViewDelegate, UITableViewDataSource
         if tableView == leftSideTableView {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "leftSideCell") as? LeftSideCell else { return UITableViewCell() }
             cell.setupCell(participant: (VGDataSource.instance.participantResources["teamL"]?[indexPath.row]))
+            setupMatchHistory(match: (VGDataSource.instance.selectedMatch))
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "rightSideCell") as? RightSideCell else { return UITableViewCell() }
             cell.setupCell(participant: (VGDataSource.instance.participantResources["teamR"]?[indexPath.row]))
+            setupMatchHistory(match: (VGDataSource.instance.selectedMatch))
             return cell
         }
     }
