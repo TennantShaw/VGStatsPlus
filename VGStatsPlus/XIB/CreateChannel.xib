@@ -20,7 +20,6 @@
                 <outlet property="backgroundVIew" destination="8Tu-gh-wpk" id="LtG-zx-wrB"/>
                 <outlet property="channelImageView" destination="uSc-e7-y65" id="6EY-Ha-9Q4"/>
                 <outlet property="createBtn" destination="AVu-Ic-ov1" id="f1x-X9-XDN"/>
-                <outlet property="descriptionTextField" destination="FlK-a4-w2c" id="MjO-Ou-p3b"/>
                 <outlet property="nameTextField" destination="jPK-Iw-ekr" id="RsE-Y2-UTY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -38,7 +37,7 @@
                     <rect key="frame" x="82.5" y="158.5" width="240" height="350"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KG6-3o-Vqd">
-                            <rect key="frame" x="15" y="17.5" width="210" height="295"/>
+                            <rect key="frame" x="15" y="40" width="210" height="250"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Channel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ke7-Ay-WT5">
                                     <rect key="frame" x="0.0" y="0.0" width="210" height="41"/>
@@ -53,44 +52,32 @@
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jPK-Iw-ekr">
                                     <rect key="frame" x="0.0" y="46" width="210" height="40"/>
                                     <color key="backgroundColor" red="0.173940599" green="0.24193984269999999" blue="0.31265199179999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="1pG-L6-WgR"/>
                                         <constraint firstAttribute="width" constant="210" id="rVU-2N-01E"/>
                                     </constraints>
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FlK-a4-w2c">
-                                    <rect key="frame" x="0.0" y="91" width="210" height="40"/>
-                                    <color key="backgroundColor" red="0.173940599" green="0.24193984269999999" blue="0.31265199179999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="40" id="Z5U-nl-TbH"/>
-                                        <constraint firstAttribute="width" constant="210" id="b1i-iT-0os"/>
-                                    </constraints>
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6ap-xP-RgB" userLabel="imageSetupStack">
-                                    <rect key="frame" x="75" y="136" width="60" height="84"/>
+                                    <rect key="frame" x="75" y="91" width="60" height="84"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defeat" translatesAutoresizingMaskIntoConstraints="NO" id="uSc-e7-y65" customClass="CircleImage" customModule="VGStatsPlus" customModuleProvider="target">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dark0" translatesAutoresizingMaskIntoConstraints="NO" id="uSc-e7-y65" customClass="CircleImage" customModule="VGStatsPlus" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="60" id="E3Z-mG-lBb"/>
                                                 <constraint firstAttribute="width" constant="60" id="U7H-BC-EWe"/>
                                             </constraints>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bj-9G-HtZ">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bj-9G-HtZ" customClass="RoundedButton" customModule="VGStatsPlus" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="60" width="60" height="24"/>
-                                            <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.1714009047" green="0.1984312832" blue="0.27726286649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                             <color key="tintColor" red="0.173940599" green="0.24193984269999999" blue="0.31265199179999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" title="Choose Icon">
-                                                <color key="titleColor" red="0.173940599" green="0.24193984269999999" blue="0.31265199179999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                             <connections>
                                                 <action selector="chooseImageBtnTapped:" destination="-1" eventType="touchUpInside" id="zXk-9Y-pwj"/>
@@ -99,7 +86,7 @@
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZW-Bw-Te1" customClass="RoundedButton" customModule="VGStatsPlus" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="225" width="210" height="25"/>
+                                    <rect key="frame" x="0.0" y="180" width="210" height="25"/>
                                     <color key="backgroundColor" red="0.173940599" green="0.24193984269999999" blue="0.31265199179999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="210" id="MLd-PD-bp7"/>
@@ -113,7 +100,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVu-Ic-ov1" customClass="RoundedButton" customModule="VGStatsPlus" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="255" width="210" height="40"/>
+                                    <rect key="frame" x="0.0" y="210" width="210" height="40"/>
                                     <color key="backgroundColor" red="0.173940599" green="0.24193984269999999" blue="0.31265199179999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="210" id="ns6-PM-6sJ"/>
@@ -152,6 +139,6 @@
         </view>
     </objects>
     <resources>
-        <image name="defeat" width="217" height="340"/>
+        <image name="dark0" width="100" height="100"/>
     </resources>
 </document>

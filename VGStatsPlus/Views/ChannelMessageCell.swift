@@ -30,7 +30,10 @@ class ChannelMessageCell: UITableViewCell {
     
     //MARK: - Class Methods
     func setup(message: Message) {
-        userNameLabel.text = message.senderIGN
+        VGFirebaseDB.instance.getUserInfo(withID: message.senderId) { (name, image) in
+            self.userNameLabel.text = name
+            self.userProfileImage.downloadedFrom(link: image)
+        }
         messageLabel.text = message.content
     }
 

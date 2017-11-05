@@ -170,7 +170,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LX0-aL-8RE">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <prototypes>
@@ -181,6 +181,22 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="312"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPC-hP-t0f">
+                                                    <rect key="frame" x="175" y="143" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="IC8-eb-74N"/>
+                                                        <constraint firstAttribute="width" constant="25" id="jR8-ng-nPc"/>
+                                                    </constraints>
+                                                    <state key="normal" image="chat"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izz-hd-BxQ">
+                                                    <rect key="frame" x="175" y="143" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="8Mn-5b-nJg"/>
+                                                        <constraint firstAttribute="width" constant="25" id="8Yu-dn-2XS"/>
+                                                    </constraints>
+                                                    <state key="normal" image="menu"/>
+                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMr-je-EGF">
                                                     <rect key="frame" x="15" y="53" width="345" height="23"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
@@ -281,6 +297,12 @@
                                                 <constraint firstItem="BdK-qx-QjL" firstAttribute="leading" secondItem="3B9-ER-zVz" secondAttribute="leadingMargin" id="tsr-eg-0tM"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="nP8-nf-Yv8" secondAttribute="bottom" constant="8" id="vGi-Al-WdV"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="sPC-hP-t0f"/>
+                                                    <exclude reference="izz-hd-BxQ"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
@@ -437,7 +459,7 @@
                         <constraints>
                             <constraint firstItem="0iD-Nc-qCa" firstAttribute="top" secondItem="LX0-aL-8RE" secondAttribute="bottom" id="CIX-t7-WyC"/>
                             <constraint firstItem="LX0-aL-8RE" firstAttribute="leading" secondItem="0xK-dI-iAg" secondAttribute="leading" id="Fix-mQ-7i2"/>
-                            <constraint firstItem="LX0-aL-8RE" firstAttribute="top" secondItem="0xK-dI-iAg" secondAttribute="top" id="SEb-tR-FbH"/>
+                            <constraint firstItem="LX0-aL-8RE" firstAttribute="top" secondItem="TA4-Q5-Rnn" secondAttribute="bottom" id="YAW-eI-Ggw"/>
                             <constraint firstAttribute="trailing" secondItem="LX0-aL-8RE" secondAttribute="trailing" id="YZi-FB-Qwj"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -1193,7 +1215,7 @@
                                             <action selector="doneButtonTapped:" destination="jQG-bu-6oW" eventType="touchUpInside" id="WT4-1e-bUb"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Added People" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aqp-rr-6L5">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Added Friends" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Aqp-rr-6L5">
                                         <rect key="frame" x="0.0" y="477" width="343" height="30"/>
                                         <color key="backgroundColor" red="0.34128272529999998" green="0.52568405870000001" blue="0.72512274980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -1634,6 +1656,8 @@
         <image name="add" width="50" height="50"/>
         <image name="battle" width="50" height="50"/>
         <image name="channel" width="50" height="50"/>
+        <image name="chat" width="50" height="50"/>
+        <image name="menu" width="50" height="50"/>
         <image name="profile" width="26" height="26"/>
         <image name="send" width="26" height="26"/>
     </resources>

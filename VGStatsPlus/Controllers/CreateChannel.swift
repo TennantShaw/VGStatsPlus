@@ -13,20 +13,19 @@ protocol GetSelectedAvatarImageDelegate {
 }
 
 protocol GetSelectedFriendsDelegate {
-    func getSelectedFriends(selectedFriendsIDs: [String])
+    func getSelectedFriends(selectedFriendsIDs: [String:String])
 }
 
-class CreateChannel: UIViewController {
+class CreateChannel: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var backgroundVIew: UIView!
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var channelImageView: CircleImage!
     @IBOutlet var createBtn: RoundedButton!
-    @IBOutlet var descriptionTextField: UITextField!
     
     var delegate: ChannelVC!
     
-    var selectedFriends: [String] = [SavedStatus.instance.userID]
+    var selectedFriends: [String:String] = [:]
     var avatarName: String = "dark0" {
         didSet {
             channelImageView.image = UIImage(named: avatarName)
@@ -35,7 +34,12 @@ class CreateChannel: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        nameTextField.delegate = self
+        
+        let str = NSAttributedString(string: "name", attributes: [NSForegroundColorAttributeName:UIColor.white])
+        nameTextField.attributedPlaceholder = str
+        
         let gestureRescognizer = UITapGestureRecognizer()
         gestureRescognizer.addTarget(self, action: #selector(CreateChannel.tapToClose(_:)))
         backgroundVIew.addGestureRecognizer(gestureRescognizer)
@@ -52,9 +56,11 @@ class CreateChannel: UIViewController {
         avatarVC.avatarNameDelegate = self
         self.present(avatarVC, animated: true, completion: nil)
     }
+    
+    //MARK: Create Channel Btn 
     @IBAction func createBtnTapped(_ sender: Any) {
-        if nameTextField.text != "" && descriptionTextField.text != "" {
-            VGFirebaseDB.instance.createChannel(withTitle: nameTextField.text!, withDiscription: descriptionTextField.text!, withId: SavedStatus.instance.userID, channelImage: avatarName, friendsUID: selectedFriends, handler: { (success) in
+        if nameTextField.text != "" && selectedFriends.count != 0 {
+            VGFirebaseDB.instance.createChannel(withTitle: nameTextField.text!, withId: SavedStatus.instance.userID, channelImage: avatarName, friendsUID: selectedFriends, handler: { (success) in
                 if success {
                     self.dismiss(animated: true, completion: {
                         self.delegate.checkDatabase()
@@ -66,9 +72,11 @@ class CreateChannel: UIViewController {
         }
     }
     
+    //MARK: Select Friends for the Channel
     @IBAction func selectFriendBtnTapped(_ sender: Any) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let friendsVC = storyBoard.instantiateViewController(withIdentifier: "pickFriendsVC") as! PickFriendsVC
+        friendsVC.channelFriendsDelegate = self
         self.present(friendsVC, animated: true, completion: nil)
     }
     
@@ -80,7 +88,7 @@ extension CreateChannel: GetSelectedAvatarImageDelegate, GetSelectedFriendsDeleg
         avatarName = selectedImageName
     }
     
-    func getSelectedFriends(selectedFriendsIDs: [String]) {
+    func getSelectedFriends(selectedFriendsIDs: [String:String]) {
         selectedFriends = selectedFriendsIDs
     }
 }

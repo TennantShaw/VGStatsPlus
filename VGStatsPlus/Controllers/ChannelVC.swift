@@ -32,9 +32,6 @@ class ChannelVC: UIViewController {
     
     var messages: [Message] = [] {
         didSet {
-            VGFirebaseDB.instance.getUserProfilePicture(withID: SavedStatus.instance.userID, name: SavedStatus.instance.userName, gotImage: { (success) in
-                print(success)
-            })
             tableView.reloadData()
         }
     }

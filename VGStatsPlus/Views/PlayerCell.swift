@@ -17,6 +17,7 @@ class PlayerCell: UITableViewCell {
     @IBOutlet weak var rankLabel: UILabel!
     @IBOutlet weak var winsLabel: UILabel!
     @IBOutlet weak var skillTierImage: UIImageView!
+  
     
 
     //MARK: - View Life Cycle

@@ -13,8 +13,7 @@ import VaingloryAPI
 class PlayerProfileViewController: UIViewController, UINavigationControllerDelegate {
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
-    
-    
+
     //MARK: - Properties
     let imageView = UIImageView()
     var indexNumber: Int?
@@ -138,7 +137,6 @@ extension PlayerProfileViewController: UITableViewDelegate, UITableViewDataSourc
         
         let y = 300 - (scrollView.contentOffset.y + 300)
         let height = min(max(y, 60), 400)
-        
         imageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: height)
     }
 }
