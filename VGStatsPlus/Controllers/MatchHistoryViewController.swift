@@ -39,6 +39,10 @@ class MatchHistoryViewController: UIViewController, UINavigationControllerDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMatchHistory(match: matchResource)
+        let nav = self.navigationController?.navigationBar
+        nav?.barStyle = UIBarStyle.black
+        nav?.tintColor = UIColor.white
+        nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
     }
 
     func setupMatchHistory(match: MatchResource?) {

@@ -57,6 +57,9 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
         
         revealViewController().rightViewRevealWidth = self.view.frame.width - 50
         
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
+        
+        
         checkStatus()
         
     }

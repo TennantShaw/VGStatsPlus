@@ -28,6 +28,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let loginVC = storyBoard.instantiateViewController(withIdentifier: "loginToFirebase")
             self.window?.rootViewController = loginVC
         }
+        
+        UINavigationBar.appearance().barTintColor = UIColor.black
+        UINavigationBar.appearance().tintColor = UIColor.white
+        
+        let navigationFont = UIFont(name: "Futura", size: 18)!
+        let navigationFontAttributes = [NSFontAttributeName : navigationFont]
+        
+        UINavigationBar.appearance().titleTextAttributes = navigationFontAttributes
+        UIBarButtonItem.appearance().setTitleTextAttributes(navigationFontAttributes, for: .normal)
+        
+        
         return true
     }
 

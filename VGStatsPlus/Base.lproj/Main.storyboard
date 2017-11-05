@@ -1042,7 +1042,7 @@
                             <constraint firstItem="QPy-45-lKi" firstAttribute="top" secondItem="taK-iR-qAQ" secondAttribute="bottom" constant="10" id="wqe-Or-5VZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Match Name" id="7h5-X5-gqU"/>
+                    <navigationItem key="navigationItem" title="Match" id="7h5-X5-gqU"/>
                     <connections>
                         <outlet property="leftSideAcesLabel" destination="eaR-Uq-faC" id="zvp-nJ-rdo"/>
                         <outlet property="leftSideKrakenKillsLabel" destination="f4C-wR-CAq" id="H2z-WC-CFF"/>
@@ -1059,7 +1059,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z3K-g4-C77" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-162.40000000000001" y="1860.7196401799101"/>
+            <point key="canvasLocation" x="-164" y="1771"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="3RG-tq-TlJ">
