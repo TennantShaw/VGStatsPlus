@@ -42,6 +42,7 @@ class CreateChannel: UIViewController, UITextFieldDelegate {
         
         let gestureRescognizer = UITapGestureRecognizer()
         gestureRescognizer.addTarget(self, action: #selector(CreateChannel.tapToClose(_:)))
+        self.view.bindToKeyboard()
         backgroundVIew.addGestureRecognizer(gestureRescognizer)
     }
 

@@ -84,7 +84,11 @@ extension PickFriendsVC: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellID") as? SelectFriendCell else {
             return UITableViewCell()
         }
-        cell.nameLabel.text = Array(dict.values)[indexPath.row]
+        VGFirebaseDB.instance.getUserInfo(withID: Array(dict.keys)[indexPath.row]) { (name, image) in
+            cell.nameLabel.text = name
+            cell.profileImage.downloadedFrom(link: image)
+        }
+        
         return cell
     }
     
