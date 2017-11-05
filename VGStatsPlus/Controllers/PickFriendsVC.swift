@@ -42,6 +42,7 @@ class PickFriendsVC: UIViewController {
         let gestureRescognizer = UITapGestureRecognizer()
         gestureRescognizer.addTarget(self, action: #selector(PickFriendsVC.tapToClose(_:)))
         backgroundView.addGestureRecognizer(gestureRescognizer)
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -97,6 +98,8 @@ extension PickFriendsVC: UITableViewDelegate, UITableViewDataSource {
            selectedFriends[Array(dict.keys)[indexPath.row]] = Array(dict.values)[indexPath.row]
            addedLabel.text = Array(selectedFriends.values).description
         }
+            self.view.endEditing(true)
+            nameTextField.text = ""
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {

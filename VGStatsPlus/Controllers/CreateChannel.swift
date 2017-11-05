@@ -47,6 +47,7 @@ class CreateChannel: UIViewController, UITextFieldDelegate {
     }
 
     @objc func tapToClose(_ gestureRecognizer: UITapGestureRecognizer) {
+        delegate.backView.isHidden = true
         dismiss(animated: true, completion: nil)
     }
     
@@ -65,6 +66,7 @@ class CreateChannel: UIViewController, UITextFieldDelegate {
                 if success {
                     self.dismiss(animated: true, completion: {
                         self.delegate.checkDatabase()
+                        self.delegate.backView.isHidden = true
                     })
                 } else {
                     
