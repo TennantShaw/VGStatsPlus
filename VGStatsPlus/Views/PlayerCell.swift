@@ -17,6 +17,8 @@ class PlayerCell: UITableViewCell {
     @IBOutlet weak var rankLabel: UILabel!
     @IBOutlet weak var winsLabel: UILabel!
     @IBOutlet weak var skillTierImage: UIImageView!
+    @IBOutlet var userImageView: CircleImage!
+    
     
 
     //MARK: - View Life Cycle
@@ -42,6 +44,9 @@ class PlayerCell: UITableViewCell {
         levelLabel.text = "Level: \(player.level!)"
         regionLabel.text = "Region: \(player.shardId!)"
         winsLabel.text = "Total Wins:  \(player.wins!)"
+        VGFirebaseDB.instance.getUserInfo(withID: SavedStatus.instance.userID) { (name, image) in
+            self.userImageView.downloadedFrom(link: image)
+        }
         
         if player1.name == "TennantTheVast" {
             if participantArray1[0].skillTier == 0 {

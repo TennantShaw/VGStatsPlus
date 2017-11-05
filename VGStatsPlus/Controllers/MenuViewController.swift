@@ -13,7 +13,7 @@ class MenuViewController: UIViewController {
     //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.revealViewController().rearViewRevealWidth = self.view.frame.width / 2
+        self.revealViewController().rearViewRevealWidth = self.view.frame.width - 50
     }
 
     @IBAction func handleLogin(_ sender: Any) {

@@ -13,8 +13,7 @@ import VaingloryAPI
 class PlayerProfileViewController: UIViewController, UINavigationControllerDelegate {
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
-    
-    
+
     //MARK: - Properties
     let imageView = UIImageView()
     var indexNumber: Int?
@@ -52,11 +51,13 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
         imageView.clipsToBounds = true
         view.addSubview(imageView)
         
-        revealViewController().rightViewRevealWidth = self.view.frame.width / 3
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         
         revealViewController().rightViewRevealWidth = self.view.frame.width - 50
+        
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
+        
         
         checkStatus()
         
@@ -138,7 +139,6 @@ extension PlayerProfileViewController: UITableViewDelegate, UITableViewDataSourc
         
         let y = 300 - (scrollView.contentOffset.y + 300)
         let height = min(max(y, 60), 400)
-        
         imageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: height)
     }
 }

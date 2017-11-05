@@ -12,8 +12,6 @@ class Message {
     
     private var _content: String
     private var _senderId: String
-    private var _senderIGN: String
-    private var _senderAvatar: String
     
     var content: String {
         return _content
@@ -23,19 +21,9 @@ class Message {
         return _senderId
     }
     
-    var senderIGN: String {
-        return _senderIGN
-    }
-    
-    var senderAvatar: String {
-        return _senderAvatar
-    }
-    
-    init(content: String, senderId: String, senderIGN: String, senderAvatar: String) {
+    init(content: String, senderId: String) {
         self._senderId = senderId
         self._content = content
-        self._senderIGN = senderIGN
-        self._senderAvatar = senderAvatar
     }
 }
 

@@ -11,16 +11,14 @@ import Foundation
 class Channel {
     
     private var _channelTitle: String
-    private var _channelDesc: String
     private var _channelImage: String
     private var _channelID: String
+    private var _channelFriends: [String:String]
     
     var channelTitle: String {
         return _channelTitle
     }
-    var channelDesc: String {
-        return _channelDesc
-    }
+    
     var channelImage: String {
         return _channelImage
     }
@@ -28,12 +26,15 @@ class Channel {
     var channelID: String {
         return _channelID
     }
+    var channelFriends: [String:String] {
+        return _channelFriends
+    }
     
-    init(channelTitle: String, channelDesc: String, channelImage: String, channelID: String) {
+    init(channelTitle: String, channelImage: String, channelID: String, channelFriends: [String:String]) {
         self._channelTitle = channelTitle
-        self._channelDesc = channelDesc
         self._channelImage = channelImage
         self._channelID = channelID
+        self._channelFriends = channelFriends
     }
     
     func setAvatar(avatar: String) {

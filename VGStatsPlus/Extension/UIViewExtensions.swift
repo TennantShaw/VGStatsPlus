@@ -1,17 +1,16 @@
 //
-//  RoundedButton.swift
+//  UIViewExtensions.swift
 //  VGStatsPlus
 //
-//  Created by Alisher Abdukarimov on 10/14/17.
+//  Created by Alisher Abdukarimov on 11/4/17.
 //  Copyright © 2017 Tennant Shaw. All rights reserved.
 //
 
 import UIKit
-
 @IBDesignable
-class RoundedButton: UIButton {
+class RoundedUIView: UIView {
     
-    @IBInspectable var cornerRadius: CGFloat = 5.0 {
+    @IBInspectable var cornerRadius: CGFloat = 10.0 {
         didSet {
             self.layer.cornerRadius = cornerRadius
             self.tintColor = UIColor.white

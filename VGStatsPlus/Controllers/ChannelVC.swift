@@ -15,6 +15,7 @@ class ChannelVC: UIViewController {
     @IBOutlet var keyboardView: UIView!
     @IBOutlet var contentTextField: UITextField!
     @IBOutlet var sendButton: UIButton!
+    @IBOutlet var backView: UIView!
     
     
     var channels: [Channel] = [] {
@@ -32,9 +33,6 @@ class ChannelVC: UIViewController {
     
     var messages: [Message] = [] {
         didSet {
-            VGFirebaseDB.instance.getUserProfilePicture(withID: SavedStatus.instance.userID, name: SavedStatus.instance.userName, gotImage: { (success) in
-                print(success)
-            })
             tableView.reloadData()
         }
     }
@@ -47,14 +45,19 @@ class ChannelVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         view.bindToKeyboard()
-        self.revealViewController().rearViewRevealWidth = self.view.frame.width / 2
+        self.revealViewController().rearViewRevealWidth = self.view.frame.width - 50
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         // Mark: Pull Channels
+        self.backView.isHidden = true
         checkDatabase()
+        
+        let gestureRescognizer = UITapGestureRecognizer()
+        gestureRescognizer.addTarget(self, action: #selector(ChannelVC.tapToEnd(_:)))
+        self.tableView.addGestureRecognizer(gestureRescognizer)
     }
     
     @objc func dismissKeyboard() {
@@ -72,6 +75,10 @@ class ChannelVC: UIViewController {
         }
     }
     
+    @objc func tapToEnd(_ gestureRecognizer: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
+    
     @IBAction func matchesButtonTapped(_ sender: Any) {
         
     }
@@ -84,6 +91,7 @@ class ChannelVC: UIViewController {
                     self.contentTextField.text = ""
                     VGFirebaseDB.instance.getMessages(forChannel: VGFirebaseDB.instance.selectedChannel!, handler: { (messagesArray) in
                         self.messages = messagesArray
+                        self.view.endEditing(true)
                         self.tableView.reloadData()
                     })
                 }
@@ -130,6 +138,7 @@ extension ChannelVC: UICollectionViewDataSource, UICollectionViewDelegate {
             createChannelVC.modalPresentationStyle = .custom
             createChannelVC.delegate = self
             self.present(createChannelVC, animated: true, completion: nil)
+            self.backView.isHidden = false
         } else {
             VGFirebaseDB.instance.selectedChannel = channels[indexPath.row - 1]
             VGFirebaseDB.instance.getMessages(forChannel: channels[indexPath.row - 1], handler: { (messagesArray) in

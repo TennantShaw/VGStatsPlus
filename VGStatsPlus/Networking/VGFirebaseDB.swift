@@ -68,11 +68,14 @@ class VGFirebaseDB {
     
     
     // Get User Profile pic
-    func getUserProfilePicture(withID id: String, name: String, gotImage: @escaping (_ status: Bool) -> ()) {
-        REF_USERS.child(id).child(name).child("picture").observe(.value, with: { (snap) in
-            guard let imageName = snap.childSnapshot(forPath: "data").childSnapshot(forPath: "url").value as? String else { return }
-            SavedStatus.instance.userImageUrl = imageName
-            gotImage(true)
+    func getUserInfo(withID id: String, success: @escaping (_ name: String, _ imageUrl: String) -> ()) {
+        REF_USERS.child(id).observe(.value, with: { (snap) in
+            guard let userSnap = snap.children.allObjects as? [DataSnapshot] else { return }
+            for userInfo in userSnap {
+                let userName = userInfo.key
+                guard let imageUrl = userInfo.childSnapshot(forPath: "picture").childSnapshot(forPath: "data").childSnapshot(forPath: "url").value as? String else { return }
+                success(userName, imageUrl)
+            }
         })
     }
     
@@ -121,8 +124,8 @@ class VGFirebaseDB {
     
     // MARK: Create a Channel
     
-    func createChannel(withTitle title: String, withDiscription description: String, withId id: String, channelImage image: String, friendsUID uid: [String], handler: @escaping (_ groupCreated: Bool) -> ()) {
-        REF_CHANNELS.childByAutoId().updateChildValues(["title": title, "description": description, "image": image, "id": id, "friends": uid])
+    func createChannel(withTitle title: String, withId id: String, channelImage image: String, friendsUID uid: [String:String], handler: @escaping (_ groupCreated: Bool) -> ()) {
+        REF_CHANNELS.childByAutoId().updateChildValues(["title": title, "admin": SavedStatus.instance.userID, "image": image, "id": id, "friends": uid])
         handler(true)
     }
     
@@ -139,11 +142,13 @@ class VGFirebaseDB {
         REF_CHANNELS.observeSingleEvent(of: .value, with: { (snap) in
             guard let channelSnap = snap.children.allObjects as? [DataSnapshot] else { return }
             for channel in channelSnap {
-                let title = channel.childSnapshot(forPath: "title").value as! String
-                let desc = channel.childSnapshot(forPath: "description").value as! String
-                let channelImage = channel.childSnapshot(forPath: "image").value as! String
-                let _channel = Channel(channelTitle: title, channelDesc: desc, channelImage: channelImage, channelID: channel.key)
-                channelArray.append(_channel)
+                if channel.childSnapshot(forPath: "admin").value as! String == SavedStatus.instance.userID || channel.childSnapshot(forPath: "messages").hasChild(SavedStatus.instance.userID) {
+                    let title = channel.childSnapshot(forPath: "title").value as! String
+                    let channelImage = channel.childSnapshot(forPath: "image").value as! String
+                    let friends = channel.childSnapshot(forPath: "friends").value as! [String:String]
+                    let _channel = Channel(channelTitle: title, channelImage: channelImage, channelID: channel.key, channelFriends: friends)
+                    channelArray.append(_channel)
+                }
             }
             self.selectedChannel = channelArray.first
             handler(channelArray)
@@ -166,7 +171,7 @@ class VGFirebaseDB {
     
     //Mark: Create Message
     func sendMessage(withContent content: String, userID id: String, channelID chID: String, handler: @escaping (_ messageSent: Bool) -> ()) {
-        let data = ["content": content, "userId": id, "senderIGN": ""]
+        let data = ["content": content, "userId": id]
         REF_CHANNELS.child(chID).child("messages").childByAutoId().updateChildValues(data)
         handler(true)
     }
@@ -178,8 +183,8 @@ class VGFirebaseDB {
             guard let channelMessagesSnapshot = messageSnap.children.allObjects as? [DataSnapshot] else { return }
             for message in channelMessagesSnapshot {
                 guard let content = message.childSnapshot(forPath: "content").value as? String else { return }
-                guard let senderId = message.childSnapshot(forPath: "senderIGN").value as? String else { return }
-                let _message = Message(content: content, senderId: senderId, senderIGN: "", senderAvatar: "")
+                guard let senderId = message.childSnapshot(forPath: "userId").value as? String else { return }
+                let _message = Message(content: content, senderId: senderId)
                 backMessage.append(_message)
             }
             handler(backMessage)
