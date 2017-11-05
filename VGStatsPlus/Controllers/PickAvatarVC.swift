@@ -8,19 +8,12 @@
 
 import UIKit
 
-enum AvatarType {
-    case dark
-    case light
-}
-
 class PickAvatarVC: UIViewController {
     
-    @IBOutlet var segmentControl: UISegmentedControl!
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var backgroundView: UIView!
     
     // Variables
-    var avatarType = AvatarType.dark
     var avatarNameDelegate: GetSelectedAvatarImageDelegate!
     
     override func viewDidLoad() {
@@ -37,19 +30,6 @@ class PickAvatarVC: UIViewController {
     @objc func tapToClose(_ gestureRecognizer: UITapGestureRecognizer) {
         dismiss(animated: true, completion: nil)
     }
-    
-    
-    @IBAction func segmentValueChanged(_ sender: Any) {
-        if segmentControl.selectedSegmentIndex == 0 {
-            avatarType = .dark
-        } else {
-            avatarType = .light
-        }
-        
-        collectionView.reloadData()
-    }
-    
-    
 }
 
 extension PickAvatarVC: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -66,7 +46,7 @@ extension PickAvatarVC: UICollectionViewDelegate, UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellID", for: indexPath) as? AvatarCell else {
             return UICollectionViewCell()
         }
-        cell.configureCell(index: indexPath.row, type: avatarType)
+        cell.configureCell(index: indexPath.row)
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -82,11 +62,7 @@ extension PickAvatarVC: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if avatarType == .dark {
             avatarNameDelegate.getSelectedAvatarImage(selectedImageName: "dark\(indexPath.row)")
-        } else {
-            avatarNameDelegate.getSelectedAvatarImage(selectedImageName: "light\(indexPath.row)")
-        }
         self.dismiss(animated: true, completion: nil)
     }
 }
@@ -100,14 +76,9 @@ class AvatarCell: UICollectionViewCell {
         setup()
     }
     
-    func configureCell(index: Int, type: AvatarType) {
-        if type == AvatarType.dark {
+    func configureCell(index: Int) {
             avatarImage.image = UIImage(named: "dark\(index)")
             self.layer.backgroundColor = UIColor.lightGray.cgColor
-        } else {
-            avatarImage.image = UIImage(named: "light\(index)")
-            self.layer.backgroundColor = UIColor.lightGray.cgColor
-        }
     }
     
     func setup() {

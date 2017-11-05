@@ -49,6 +49,7 @@
 		AC9745111FAAD1A9002AC9AC /* SelectFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9745101FAAD1A9002AC9AC /* SelectFriendCell.swift */; };
 		ACC6EBE91F900A0C000842E9 /* RoundedCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6EBE81F900A0C000842E9 /* RoundedCellExtension.swift */; };
 		ACC6EBEB1F913540000842E9 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6EBEA1F913540000842E9 /* Channel.swift */; };
+		ACF73A171FAEC4FA00CBC133 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF73A161FAEC4FA00CBC133 /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,7 @@
 		AC9745101FAAD1A9002AC9AC /* SelectFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFriendCell.swift; sourceTree = "<group>"; };
 		ACC6EBE81F900A0C000842E9 /* RoundedCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCellExtension.swift; sourceTree = "<group>"; };
 		ACC6EBEA1F913540000842E9 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		ACF73A161FAEC4FA00CBC133 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		BCABD4D6EC47A852AAFC5FAC /* Pods-VGStatsPlus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VGStatsPlus.release.xcconfig"; path = "Pods/Target Support Files/Pods-VGStatsPlus/Pods-VGStatsPlus.release.xcconfig"; sourceTree = "<group>"; };
 		F768D22E7A12E74B8FBD6AEE /* Pods_VGStatsPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VGStatsPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -311,6 +313,7 @@
 				AC52C5601F8C056500AF7749 /* UIViewShadow.swift */,
 				ACC6EBE81F900A0C000842E9 /* RoundedCellExtension.swift */,
 				AC3119F61F928D31007082A3 /* RoundedButton.swift */,
+				ACF73A161FAEC4FA00CBC133 /* UIViewExtensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC52C55F1F8C007D00AF7749 /* BindToKeyboard.swift in Sources */,
+				ACF73A171FAEC4FA00CBC133 /* UIViewExtensions.swift in Sources */,
 				AC3119F71F928D31007082A3 /* RoundedButton.swift in Sources */,
 				AC52C55D1F8BE53C00AF7749 /* ChannelMessageCell.swift in Sources */,
 				AC52C5571F8B311200AF7749 /* MatchHistoryCell.swift in Sources */,

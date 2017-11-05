@@ -33,11 +33,11 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8J-Ir-Wgj" customClass="RoundedUIView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8J-Ir-Wgj" customClass="RoundedUIView" customModule="VGStatsPlus" customModuleProvider="target">
                     <rect key="frame" x="82.5" y="158.5" width="240" height="350"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KG6-3o-Vqd">
-                            <rect key="frame" x="15" y="40" width="210" height="250"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KG6-3o-Vqd">
+                            <rect key="frame" x="15" y="11" width="210" height="308"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Channel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ke7-Ay-WT5">
                                     <rect key="frame" x="0.0" y="0.0" width="210" height="41"/>
@@ -46,12 +46,12 @@
                                         <constraint firstAttribute="height" constant="41" id="gP1-Ff-lKn"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
-                                    <color key="textColor" red="0.173940599" green="0.24193984269999999" blue="0.31265199179999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="highlightedColor" red="0.34128272529999998" green="0.52568405870000001" blue="0.72512274980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jPK-Iw-ekr">
-                                    <rect key="frame" x="0.0" y="46" width="210" height="40"/>
-                                    <color key="backgroundColor" red="0.173940599" green="0.24193984269999999" blue="0.31265199179999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <rect key="frame" x="0.0" y="56" width="210" height="40"/>
+                                    <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="1pG-L6-WgR"/>
@@ -61,20 +61,24 @@
                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6ap-xP-RgB" userLabel="imageSetupStack">
-                                    <rect key="frame" x="75" y="91" width="60" height="84"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6ap-xP-RgB" userLabel="imageSetupStack">
+                                    <rect key="frame" x="75" y="111" width="60" height="87"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dark0" translatesAutoresizingMaskIntoConstraints="NO" id="uSc-e7-y65" customClass="CircleImage" customModule="VGStatsPlus" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                            <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="60" id="E3Z-mG-lBb"/>
                                                 <constraint firstAttribute="width" constant="60" id="U7H-BC-EWe"/>
                                             </constraints>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bj-9G-HtZ" customClass="RoundedButton" customModule="VGStatsPlus" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="60" width="60" height="24"/>
-                                            <color key="backgroundColor" red="0.1714009047" green="0.1984312832" blue="0.27726286649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <rect key="frame" x="0.0" y="65" width="60" height="22"/>
+                                            <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="sXD-bf-1Hl"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                             <color key="tintColor" red="0.173940599" green="0.24193984269999999" blue="0.31265199179999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" title="Choose Icon">
                                                 <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -84,13 +88,14 @@
                                             </connections>
                                         </button>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZW-Bw-Te1" customClass="RoundedButton" customModule="VGStatsPlus" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="180" width="210" height="25"/>
-                                    <color key="backgroundColor" red="0.173940599" green="0.24193984269999999" blue="0.31265199179999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <rect key="frame" x="0.0" y="213" width="210" height="40"/>
+                                    <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="210" id="MLd-PD-bp7"/>
-                                        <constraint firstAttribute="height" constant="25" id="hRJ-jx-NEx"/>
+                                        <constraint firstAttribute="height" constant="40" id="hRJ-jx-NEx"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -100,8 +105,8 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVu-Ic-ov1" customClass="RoundedButton" customModule="VGStatsPlus" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="210" width="210" height="40"/>
-                                    <color key="backgroundColor" red="0.173940599" green="0.24193984269999999" blue="0.31265199179999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <rect key="frame" x="0.0" y="268" width="210" height="40"/>
+                                    <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="210" id="ns6-PM-6sJ"/>
                                         <constraint firstAttribute="height" constant="40" id="qUc-LE-44J"/>
@@ -116,7 +121,7 @@
                             </subviews>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.29452592134475708" green="0.29477626085281372" blue="0.29456472396850586" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="KG6-3o-Vqd" firstAttribute="centerX" secondItem="l8J-Ir-Wgj" secondAttribute="centerX" id="FZ0-HW-yBc"/>
                         <constraint firstAttribute="width" constant="240" id="Z25-7c-4oD"/>
