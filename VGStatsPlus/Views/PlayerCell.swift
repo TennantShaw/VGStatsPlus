@@ -13,9 +13,8 @@ class PlayerCell: UITableViewCell {
     //MARK: - Outlets
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
-    @IBOutlet weak var regionLabel: UILabel!
-    @IBOutlet weak var rankLabel: UILabel!
     @IBOutlet weak var winsLabel: UILabel!
+    @IBOutlet weak var rankLabel: UILabel!
     @IBOutlet weak var skillTierImage: UIImageView!
     @IBOutlet var userImageView: CircleImage!
     
@@ -42,7 +41,6 @@ class PlayerCell: UITableViewCell {
         
         nameLabel.text = player.name!
         levelLabel.text = "Level: \(player.level!)"
-        regionLabel.text = "Region: \(player.shardId!)"
         winsLabel.text = "Total Wins:  \(player.wins!)"
         VGFirebaseDB.instance.getUserInfo(withID: SavedStatus.instance.userID) { (name, image) in
             self.userImageView.downloadedFrom(link: image)
