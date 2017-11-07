@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 import Firebase
 
 class MenuViewController: UIViewController {
@@ -20,4 +21,9 @@ class MenuViewController: UIViewController {
         VGFirebaseDB.instance.logout()
         SavedStatus.instance.isLoggedIn = false
     }
+    
+    @IBAction func goToIGNView(_ sender: Any) {
+        performSegue(withIdentifier: "IGNSeq", sender: self)
+    }
+    
 }
