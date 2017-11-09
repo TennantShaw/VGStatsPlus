@@ -25,8 +25,6 @@ class ChannelVC: UIViewController {
                 self.messages = messageArray
                 }
             }
-            
-            tableView.reloadData()
             collectionView.reloadData()
         }
     }
@@ -34,6 +32,7 @@ class ChannelVC: UIViewController {
     var messages: [Message] = [] {
         didSet {
             tableView.reloadData()
+            tableView.scrollToRow(at: IndexPath(row: self.messages.count - 1, section: 0) , at: .none, animated: true)
         }
     }
     
