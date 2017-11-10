@@ -171,7 +171,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="B07-zP-fn0">
                                 <rect key="frame" x="0.0" y="70" width="414" height="666"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.1714009047" green="0.1984312832" blue="0.27726286649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0Mu-hu-T9v">
                                     <size key="itemSize" width="150" height="200"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -269,7 +269,7 @@
                                 <color key="color" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.1714009047" green="0.1984312832" blue="0.27726286649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="B07-zP-fn0" firstAttribute="top" secondItem="Xwd-j6-3at" secondAttribute="bottom" constant="10" id="Rl9-Rg-nWp"/>
                             <constraint firstAttribute="trailing" secondItem="Xwd-j6-3at" secondAttribute="trailing" id="TJw-Mi-ygg"/>

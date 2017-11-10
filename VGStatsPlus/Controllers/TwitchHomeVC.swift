@@ -14,6 +14,8 @@ class TwitchHomeVC: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var activitiyIndicator: UIActivityIndicatorView!
     @IBOutlet var backBtn: UIButton!
+    var refreshController: UIRefreshControl!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,16 +28,25 @@ class TwitchHomeVC: UIViewController {
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         
+        refreshController = UIRefreshControl()
+        refreshController.addTarget(self, action: #selector(TwitchHomeVC.reloadData), for: .valueChanged)
+        collectionView.insertSubview(refreshController, at: 0)
+        
+        reloadData()
+    }
+
+    @objc fileprivate func reloadData() {
         TwitchDataService.instance.downloadTopGames {
             for game in TwitchDataService.instance.games {
                 game.downloadGameImage {
                     self.collectionView.reloadData()
                     self.activitiyIndicator.stopAnimating()
+                    self.refreshController.endRefreshing()
                 }
             }
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -51,6 +62,7 @@ extension TwitchHomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellID", for: indexPath) as? TwitchCell else { return UICollectionViewCell() }
+        
         cell.setup(game: TwitchDataService.instance.games[indexPath.row])
         return cell
     }

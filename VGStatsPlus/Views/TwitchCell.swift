@@ -20,6 +20,16 @@ class TwitchCell: UICollectionViewCell {
             }
         }
         nameLabel.text = game.gameName
+        
+        self.contentView.layer.cornerRadius = 10.0
+        self.contentView.layer.masksToBounds = true
+        
+        self.layer.shadowColor = UIColor.white.cgColor
+        self.layer.shadowOffset = CGSize(width:4,height: 2.0)
+        self.layer.shadowRadius = 4.0
+        self.layer.shadowOpacity = 1.0
+        self.layer.masksToBounds = false;
+        self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
     }
     
 }
