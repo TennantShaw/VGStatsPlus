@@ -18,8 +18,8 @@ class MenuViewController: UIViewController {
     }
 
     @IBAction func handleLogin(_ sender: Any) {
-        VGFirebaseDB.instance.logout()
-        SavedStatus.instance.isLoggedIn = false
+//        VGFirebaseDB.instance.logout()
+//        SavedStatus.instance.isLoggedIn = false
     }
     
     @IBAction func goToIGNView(_ sender: Any) {
