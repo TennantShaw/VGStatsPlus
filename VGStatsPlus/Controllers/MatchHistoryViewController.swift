@@ -26,7 +26,7 @@ class MatchHistoryViewController: UIViewController, UINavigationControllerDelega
     @IBOutlet var rightSideTableView: UITableView!
     
     //MARK: - Properties
-    var matchResource: MatchResource?
+    var matchResource: MatchResource? = VGDataSource.instance.selectedMatch
     var participantResources = [String:[ParticipantResource]]()
 
     
@@ -78,15 +78,44 @@ class MatchHistoryViewController: UIViewController, UINavigationControllerDelega
     
     func convertToTimePlayed(duration: Int) -> String {
         let minutes = duration/60
-        var seconds = Double(duration).truncatingRemainder(dividingBy: 60)
+        let seconds = Double(duration).truncatingRemainder(dividingBy: 60)
         let formattedSeconds = Int(seconds)
         
-        let back = "\(minutes):\(formattedSeconds)"
-        return back
+        if formattedSeconds == 1 {
+            let back = "\(minutes):0\(formattedSeconds)"
+            return back
+        } else if formattedSeconds == 2 {
+            let back = "\(minutes):0\(formattedSeconds)"
+            return back
+        } else if formattedSeconds == 3 {
+            let back = "\(minutes):0\(formattedSeconds)"
+            return back
+        } else if formattedSeconds == 4 {
+            let back = "\(minutes):0\(formattedSeconds)"
+            return back
+        } else if formattedSeconds == 5 {
+            let back = "\(minutes):0\(formattedSeconds)"
+            return back
+        } else if formattedSeconds == 6 {
+            let back = "\(minutes):0\(formattedSeconds)"
+            return back
+        } else if formattedSeconds == 7 {
+            let back = "\(minutes):0\(formattedSeconds)"
+            return back
+        } else if formattedSeconds == 8 {
+            let back = "\(minutes):0\(formattedSeconds)"
+            return back
+        } else if formattedSeconds == 9 {
+            let back = "\(minutes):0\(formattedSeconds)"
+            return back
+        } else {
+            let back = "\(minutes):\(formattedSeconds)"
+            return back
+        }
     }
-
     
 }
+
 
 extension MatchHistoryViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -111,12 +140,12 @@ extension MatchHistoryViewController: UITableViewDelegate, UITableViewDataSource
         if tableView == leftSideTableView {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "leftSideCell") as? LeftSideCell else { return UITableViewCell() }
             cell.setupCell(participant: (VGDataSource.instance.participantResources["teamL"]?[indexPath.row]))
-            setupMatchHistory(match: (VGDataSource.instance.selectedMatch))
+            setupMatchHistory(match: matchResource)
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "rightSideCell") as? RightSideCell else { return UITableViewCell() }
             cell.setupCell(participant: (VGDataSource.instance.participantResources["teamR"]?[indexPath.row]))
-            setupMatchHistory(match: (VGDataSource.instance.selectedMatch))
+            setupMatchHistory(match: matchResource)
             return cell
         }
     }

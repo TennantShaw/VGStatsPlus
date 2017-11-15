@@ -82,14 +82,6 @@ class MatchesCollectionCell: UICollectionViewCell {
     
     //MARK: - MatchCollectionCell Class Methods
     func setupCell(match: MatchResource) {
-//        if match.endGameReason == "victory" {
-//            matchImageView.image = UIImage(named: "victory")
-//            winOrLossLabel.text = "Victory"
-//        } else {
-//            matchImageView.image = UIImage(named: "defeat")
-//            winOrLossLabel.text = "Defeat"
-//        }
-        
         if match.gameMode == "ranked" {
             matchName.text = "Ranked"
         } else if match.gameMode == "blitz_pvp_ranked" {
@@ -177,7 +169,7 @@ class MatchesCollectionCell: UICollectionViewCell {
             deathsLabel.text = participantArray2[2].deaths?.description
             assistsLabel.text = participantArray2[2].assists?.description
         } else {
-            print("There is an error going on here at line 128 in MatchesCell.swift")
+            print("There is an error going on here at line 172 in MatchesCell.swift")
         }
     }
     
