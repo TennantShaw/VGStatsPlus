@@ -1216,7 +1216,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uIY-9E-m3D">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uIY-9E-m3D" customClass="CircleImage" customModule="VGStatsPlus" customModuleProvider="target">
                                 <rect key="frame" x="10" y="64" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Xm4-rf-mcH"/>
@@ -1238,14 +1238,14 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4H-qz-axr">
-                                <rect key="frame" x="9" y="122" width="201" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4H-qz-axr" customClass="RoundedButton" customModule="VGStatsPlus" customModuleProvider="target">
+                                <rect key="frame" x="9" y="122" width="334" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ZSs-82-79G"/>
-                                    <constraint firstAttribute="width" constant="201" id="liw-xo-moY"/>
-                                </constraints>
-                                <state key="normal" title="Login"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <state key="normal" title="Switch To Twitch ">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="handleLogin:" destination="FVK-XN-S54" eventType="touchUpInside" id="nCp-6m-xg2"/>
                                     <segue destination="bWq-47-6A5" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="GiO-tV-gwi"/>
@@ -1256,13 +1256,11 @@
                         <constraints>
                             <constraint firstItem="uIY-9E-m3D" firstAttribute="leading" secondItem="vqa-gc-qcn" secondAttribute="leading" constant="10" id="2mX-dI-bTl"/>
                             <constraint firstItem="hhZ-je-cJg" firstAttribute="top" secondItem="v00-ts-k2I" secondAttribute="bottom" constant="-4" id="I0d-A4-1qV"/>
-                            <constraint firstItem="o4H-qz-axr" firstAttribute="top" secondItem="uIY-9E-m3D" secondAttribute="bottom" constant="8" id="Pej-gJ-PRg"/>
                             <constraint firstItem="uIY-9E-m3D" firstAttribute="top" secondItem="v00-ts-k2I" secondAttribute="bottom" constant="44" id="XGf-iJ-vpZ"/>
                             <constraint firstItem="fhZ-iP-DCm" firstAttribute="trailing" secondItem="hhZ-je-cJg" secondAttribute="trailing" id="h88-mz-Gqp"/>
                             <constraint firstItem="fhZ-iP-DCm" firstAttribute="leading" secondItem="uIY-9E-m3D" secondAttribute="trailing" constant="16" id="iab-bb-mi9"/>
                             <constraint firstItem="fhZ-iP-DCm" firstAttribute="top" secondItem="hhZ-je-cJg" secondAttribute="bottom" constant="22" id="ijH-Lb-cJj"/>
                             <constraint firstItem="hhZ-je-cJg" firstAttribute="leading" secondItem="vqa-gc-qcn" secondAttribute="leading" constant="10" id="nMB-eN-Vss"/>
-                            <constraint firstItem="o4H-qz-axr" firstAttribute="leading" secondItem="vqa-gc-qcn" secondAttribute="leading" constant="9" id="uSf-bF-ALb"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="topColor">
@@ -1273,10 +1271,14 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="fhZ-iP-DCm" id="mP4-t9-4HT"/>
+                        <outlet property="userProfileImage" destination="uIY-9E-m3D" id="cYh-61-a93"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i2S-iN-UTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1130.4000000000001" y="152.47376311844079"/>
+            <point key="canvasLocation" x="-1130.4347826086957" y="152.44565217391306"/>
         </scene>
         <!--pickFriendsVC-->
         <scene sceneID="Hht-kL-50G">
