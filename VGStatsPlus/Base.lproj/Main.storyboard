@@ -189,7 +189,7 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f1d-AG-ZCJ">
                                                     <rect key="frame" x="0.0" y="0.0" width="384" height="200"/>
                                                 </imageView>
-                                                <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bvT-sG-9rc">
+                                                <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bvT-sG-9rc">
                                                     <rect key="frame" x="0.0" y="114" width="384" height="86"/>
                                                     <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -1802,7 +1802,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.21520381025520777" green="0.33642704723626471" blue="0.46415748964771575" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="UVL-aP-Iqb" firstAttribute="top" secondItem="dHN-V3-S30" secondAttribute="top" constant="8" id="1fk-WL-vrp"/>
                                     <constraint firstAttribute="height" constant="50" id="FTS-C0-bJL"/>
@@ -1901,6 +1901,11 @@
                                     <constraint firstAttribute="height" constant="100" id="pKY-uf-Pal"/>
                                     <constraint firstItem="qO7-ej-rpE" firstAttribute="top" secondItem="UFp-dP-8ve" secondAttribute="top" constant="20" id="pfc-ot-huc"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZK-vy-6d4" userLabel="BackView">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>

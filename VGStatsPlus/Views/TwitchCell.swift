@@ -25,7 +25,9 @@ class TwitchCell: UICollectionViewCell {
         }
         nameLabel.text = stream.broadcasterName
         streamNameLabel.text = stream.streamTitle
-        viewCountLabel.text = "\(stream.streamViewerCount)"
+        if let numberOfViewers = stream.streamViewerCount {
+            viewCountLabel.text = "#viewers: \(Int(numberOfViewers))"
+        }
         
         self.contentView.layer.cornerRadius = 10.0
         self.contentView.layer.masksToBounds = true
