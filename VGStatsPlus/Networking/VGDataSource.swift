@@ -28,6 +28,15 @@ class VGDataSource {
     }
     
     var matches = [MatchResource]()
+    var assets = [AssetResource]()
+    
+    var selectedAsset: AssetResource? {
+        didSet {
+            getAssetForTheMatch(match: selectedMatch!) { (assetArray) in
+                self.assets = assetArray
+            }
+        }
+    }
     
     var selectedMatch: MatchResource? {
         didSet {
@@ -104,6 +113,14 @@ class VGDataSource {
             return
         }
         success(roster)
+    }
+    
+    //MARK: Get Asset for the match
+    func getAssetForTheMatch(match: MatchResource, success: @escaping ([AssetResource]) -> ()) {
+        guard let asset = match.asset else {
+            return
+        }
+        success(asset)
     }
     
     // MARK: Get Participants array
