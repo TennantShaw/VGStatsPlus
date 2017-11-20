@@ -13,7 +13,6 @@ class MatchesCell: UITableViewCell {
     //MARK: - Outlets
     @IBOutlet var collectionView: UICollectionView!
     
-    
     //MARK: - Properties
     var delegate: PlayerProfileViewController?
     
@@ -58,7 +57,11 @@ extension MatchesCell: UICollectionViewDelegate, UICollectionViewDataSource, UIC
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         VGDataSource.instance.getMatch(withId: matches[indexPath.row].id, regional: matches[indexPath.row].shardId!) { (success) in
             if success {
-                print(success)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let destinationVC = storyboard.instantiateViewController(withIdentifier: "MatchDetailVC") as! MatchHistoryViewController
+                if VGDataSource.instance.selectedMatch != nil {
+                    self.delegate?.present(destinationVC, animated: true, completion: nil)
+                }
             }
         }
     }
