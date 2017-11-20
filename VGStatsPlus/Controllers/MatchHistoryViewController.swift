@@ -25,8 +25,11 @@ class MatchHistoryViewController: UIViewController, UINavigationControllerDelega
     @IBOutlet var leftSideTableView: UITableView!
     @IBOutlet var rightSideTableView: UITableView!
     
+    @IBOutlet var matchNameLabel: UILabel!
+    
+    
     //MARK: - Properties
-    var matchResource: MatchResource? = VGDataSource.instance.selectedMatch
+    var matchResource = VGDataSource.instance.selectedMatch
     var participantResources = [String:[ParticipantResource]]()
 
     
@@ -38,11 +41,11 @@ class MatchHistoryViewController: UIViewController, UINavigationControllerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupMatchHistory(match: matchResource)
         let nav = self.navigationController?.navigationBar
         nav?.barStyle = UIBarStyle.black
         nav?.tintColor = UIColor.white
         nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        setupMatchHistory(match: matchResource)
     }
 
     func setupMatchHistory(match: MatchResource?) {
@@ -113,6 +116,11 @@ class MatchHistoryViewController: UIViewController, UINavigationControllerDelega
             return back
         }
     }
+
+    @IBAction func backBtnTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
 }
 

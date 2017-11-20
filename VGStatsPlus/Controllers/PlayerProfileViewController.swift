@@ -123,6 +123,7 @@ extension PlayerProfileViewController: UITableViewDelegate, UITableViewDataSourc
                     }
                 })
             }
+            cell.delegate = self
             return cell
         }
     }
