@@ -348,7 +348,7 @@
                                             <constraint firstAttribute="height" constant="30" id="bND-aw-orl"/>
                                             <constraint firstAttribute="width" constant="30" id="vKg-V8-VFQ"/>
                                         </constraints>
-                                        <state key="normal" image="back"/>
+                                        <state key="normal" image="downArrow"/>
                                         <connections>
                                             <action selector="dismissBtnTapped:" destination="4cJ-ew-QBd" eventType="touchUpInside" id="toW-bA-M1d"/>
                                         </connections>
@@ -1316,7 +1316,7 @@
                                             <constraint firstAttribute="width" constant="30" id="Rg3-8H-UrG"/>
                                             <constraint firstAttribute="height" constant="30" id="vod-cL-awS"/>
                                         </constraints>
-                                        <state key="normal" image="back"/>
+                                        <state key="normal" image="downArrow"/>
                                         <connections>
                                             <action selector="backBtnTapped:" destination="ypS-eT-bw9" eventType="touchUpInside" id="zYo-Y1-yhP"/>
                                         </connections>
@@ -2065,6 +2065,7 @@
         <image name="battle" width="50" height="50"/>
         <image name="channel" width="50" height="50"/>
         <image name="chat" width="50" height="50"/>
+        <image name="downArrow" width="50" height="50"/>
         <image name="menu" width="50" height="50"/>
         <image name="profile" width="26" height="26"/>
         <image name="profile-user" width="71" height="71"/>
