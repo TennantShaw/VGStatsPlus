@@ -12,21 +12,19 @@ import WebKit
 
 class TwitchChannelVC: UIViewController {
 
+    @IBOutlet var webView: UIWebView!
     var stream: Stream!
-    var webView: WKWebView!
     @IBOutlet var webViewContainerView: UIView!
+    @IBOutlet var broadcasterName: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        webView = WKWebView(frame: view.frame)
-        webViewContainerView.addSubview(webView)
-        
+        broadcasterName.text = stream.broadcasterName
         let urlString = TWITCH_URL_EMBED_BASE + stream.broadcasterName
-        print(urlString)
         if let url = URL(string: urlString) {
             let request = URLRequest(url: url)
-            webView.load(request)
+            webView.loadRequest(request)
         }
     }
     

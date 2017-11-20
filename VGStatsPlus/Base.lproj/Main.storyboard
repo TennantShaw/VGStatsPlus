@@ -375,7 +375,19 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpo-rm-VR3">
                                 <rect key="frame" x="0.0" y="60" width="414" height="676"/>
+                                <subviews>
+                                    <webView contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDb-s2-hHq">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="676"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </webView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="LDb-s2-hHq" secondAttribute="trailing" id="2mB-v5-bMy"/>
+                                    <constraint firstItem="LDb-s2-hHq" firstAttribute="top" secondItem="dpo-rm-VR3" secondAttribute="top" id="Zp1-0f-bym"/>
+                                    <constraint firstAttribute="bottom" secondItem="LDb-s2-hHq" secondAttribute="bottom" id="f1i-Us-DSg"/>
+                                    <constraint firstItem="LDb-s2-hHq" firstAttribute="leading" secondItem="dpo-rm-VR3" secondAttribute="leading" id="wYN-Tt-hM8"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -390,12 +402,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="broadcasterName" destination="bQN-tm-JOq" id="R4T-jL-9Uo"/>
+                        <outlet property="webView" destination="LDb-s2-hHq" id="Ufv-I7-B3L"/>
                         <outlet property="webViewContainerView" destination="dpo-rm-VR3" id="fHZ-aI-qGQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahO-pf-EBv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-265" y="1727"/>
+            <point key="canvasLocation" x="-265.21739130434787" y="1726.6304347826087"/>
         </scene>
         <!--Player Profile View Controller-->
         <scene sceneID="W7I-wX-eYd">
