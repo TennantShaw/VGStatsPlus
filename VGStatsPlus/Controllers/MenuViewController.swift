@@ -20,8 +20,10 @@ class MenuViewController: UIViewController {
         super.viewDidLoad()
         self.revealViewController().rearViewRevealWidth = self.view.frame.width - 50
         VGFirebaseDB.instance.getUserInfo(withID: SavedStatus.instance.userID) { (name, image) in
-          //  self.userImageView.downloadedFrom(link: image)
+            self.userProfileImage.downloadedFrom(link: image)
+            self.nameLabel.text = name
         }
+        
     }
 
     @IBAction func handleLogin(_ sender: Any) {

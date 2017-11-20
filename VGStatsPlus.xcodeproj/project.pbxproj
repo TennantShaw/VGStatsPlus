@@ -25,6 +25,8 @@
 		30D8CA811F8425AA002C923F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA801F8425AA002C923F /* LoginViewController.swift */; };
 		30D8CA851F842622002C923F /* PlayerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA841F842622002C923F /* PlayerProfileViewController.swift */; };
 		30D8CA8B1F842695002C923F /* OptionsMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8CA8A1F842695002C923F /* OptionsMenuViewController.swift */; };
+		AC0657121FC34CD4004A1BB1 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0657111FC34CD4004A1BB1 /* Stream.swift */; };
+		AC0657141FC35476004A1BB1 /* TwitchChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0657131FC35476004A1BB1 /* TwitchChannelVC.swift */; };
 		AC0BD6A61FB4FE5D004D95D8 /* TwitchHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0BD6A51FB4FE5D004D95D8 /* TwitchHomeVC.swift */; };
 		AC0BD6A81FB4FE7A004D95D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0BD6A71FB4FE7A004D95D8 /* Constants.swift */; };
 		AC0BD6AA1FB505E8004D95D8 /* TwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0BD6A91FB505E8004D95D8 /* TwitchCell.swift */; };
@@ -101,6 +103,8 @@
 		30D8CA841F842622002C923F /* PlayerProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerProfileViewController.swift; sourceTree = "<group>"; };
 		30D8CA8A1F842695002C923F /* OptionsMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsMenuViewController.swift; sourceTree = "<group>"; };
 		AA6E6548654459025D7FD01F /* Pods_VGStatsPlusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VGStatsPlusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC0657111FC34CD4004A1BB1 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
+		AC0657131FC35476004A1BB1 /* TwitchChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchChannelVC.swift; sourceTree = "<group>"; };
 		AC0BD6A51FB4FE5D004D95D8 /* TwitchHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchHomeVC.swift; sourceTree = "<group>"; };
 		AC0BD6A71FB4FE7A004D95D8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AC0BD6A91FB505E8004D95D8 /* TwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchCell.swift; sourceTree = "<group>"; };
@@ -264,6 +268,7 @@
 				AC719CAA1F982C2500F76B47 /* PickAvatarVC.swift */,
 				AC97450B1FAACFD0002AC9AC /* PickFriendsVC.swift */,
 				AC0BD6A51FB4FE5D004D95D8 /* TwitchHomeVC.swift */,
+				AC0657131FC35476004A1BB1 /* TwitchChannelVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 				ACC6EBEA1F913540000842E9 /* Channel.swift */,
 				AC0ECA061F9407F800B63E55 /* Message.swift */,
 				AC0BD6AB1FB5084A004D95D8 /* Game.swift */,
+				AC0657111FC34CD4004A1BB1 /* Stream.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -575,6 +581,7 @@
 				AC3119F71F928D31007082A3 /* RoundedButton.swift in Sources */,
 				AC52C55D1F8BE53C00AF7749 /* ChannelMessageCell.swift in Sources */,
 				AC52C5571F8B311200AF7749 /* MatchHistoryCell.swift in Sources */,
+				AC0657121FC34CD4004A1BB1 /* Stream.swift in Sources */,
 				30D8CA7D1F842509002C923F /* Player.swift in Sources */,
 				30D8CA851F842622002C923F /* PlayerProfileViewController.swift in Sources */,
 				AC52C55B1F8BE40700AF7749 /* ChannelCell.swift in Sources */,
@@ -602,6 +609,7 @@
 				302FA9D61F798EE70042DAD5 /* AppDelegate.swift in Sources */,
 				AC52C5591F8BD15900AF7749 /* ChannelVC.swift in Sources */,
 				ACC6EBEB1F913540000842E9 /* Channel.swift in Sources */,
+				AC0657141FC35476004A1BB1 /* TwitchChannelVC.swift in Sources */,
 				AC7995691F86CB59000D399C /* UIImageViewExtension.swift in Sources */,
 				30D471741F869C2200CC0E8C /* Participant.swift in Sources */,
 				30D471781F87B87300CC0E8C /* MatchHistoryViewController.swift in Sources */,
