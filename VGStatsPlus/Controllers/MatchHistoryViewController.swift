@@ -77,6 +77,16 @@ class MatchHistoryViewController: UIViewController, UINavigationControllerDelega
         } else {
             rightSideVictoryOrDefeatLabel.text = "Defeat"
         }
+        
+        if match!.gameMode == "ranked" {
+            matchNameLabel.text = "Ranked"
+        } else if match!.gameMode == "blitz_pvp_ranked" {
+            matchNameLabel.text = "Blitz"
+        } else if match!.gameMode == "casual_aral" {
+            matchNameLabel.text = "Battale Royale"
+        } else {
+            matchNameLabel.text = "need to add gameMode type to be recognized"
+        }
     }
     
     func convertToTimePlayed(duration: Int) -> String {
