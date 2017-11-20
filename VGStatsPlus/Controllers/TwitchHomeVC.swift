@@ -119,7 +119,7 @@ extension TwitchHomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (collectionView.bounds.width) - 15
-        let height = collectionView.bounds.height / 2
+        let height = collectionView.bounds.height / 3
         return CGSize(width: width, height: height)
     }
 }

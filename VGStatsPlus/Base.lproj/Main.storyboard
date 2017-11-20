@@ -464,7 +464,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Gpw-e8-tqn">
-                                                    <rect key="frame" x="304" y="81.666666666666671" width="100" height="22.333333333333329"/>
+                                                    <rect key="frame" x="304" y="82" width="100" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="UXI-6X-rZN"/>
                                                     </constraints>
@@ -480,7 +480,7 @@
                                                     </constraints>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xje-80-vfL">
-                                                    <rect key="frame" x="169.66666666666666" y="185" width="75" height="75"/>
+                                                    <rect key="frame" x="170" y="185" width="75" height="75"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="75" id="GER-57-Kuj"/>
                                                         <constraint firstAttribute="height" constant="75" id="a5F-US-X3u"/>
@@ -524,8 +524,16 @@
                                                     <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="epR-Jf-eLR" customClass="CircleImage" customModule="VGStatsPlus" customModuleProvider="target">
+                                                    <rect key="frame" x="179" y="0.0" width="56" height="56"/>
+                                                    <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="56" id="2ME-u2-Vy9"/>
+                                                        <constraint firstAttribute="width" constant="56" id="9iN-kj-LK4"/>
+                                                    </constraints>
+                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UDD-6F-kqR" customClass="CircleImage" customModule="VGStatsPlus" customModuleProvider="target">
-                                                    <rect key="frame" x="182" y="0.0" width="50" height="50"/>
+                                                    <rect key="frame" x="182" y="2" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="NgE-hB-4mv"/>
                                                         <constraint firstAttribute="height" constant="50" id="lji-DM-4vn"/>
@@ -539,19 +547,21 @@
                                                 <constraint firstItem="o5L-dd-EYO" firstAttribute="trailing" secondItem="3B9-ER-zVz" secondAttribute="trailingMargin" id="ERt-1Q-SNX"/>
                                                 <constraint firstItem="BdK-qx-QjL" firstAttribute="leading" secondItem="3B9-ER-zVz" secondAttribute="leadingMargin" id="GHz-CZ-9qI"/>
                                                 <constraint firstItem="ccM-L1-JR4" firstAttribute="leading" secondItem="3B9-ER-zVz" secondAttribute="leadingMargin" id="H4V-U9-qFB"/>
+                                                <constraint firstItem="epR-Jf-eLR" firstAttribute="centerX" secondItem="UDD-6F-kqR" secondAttribute="centerX" id="IkL-EO-Fk3"/>
                                                 <constraint firstItem="o5L-dd-EYO" firstAttribute="leading" secondItem="3B9-ER-zVz" secondAttribute="leadingMargin" id="KHI-kn-Llv"/>
                                                 <constraint firstItem="o5L-dd-EYO" firstAttribute="top" secondItem="O4Y-OK-dTn" secondAttribute="bottom" constant="4" id="MDH-6n-Wxa"/>
                                                 <constraint firstItem="vMr-je-EGF" firstAttribute="leading" secondItem="3B9-ER-zVz" secondAttribute="leadingMargin" id="PDI-pN-CVA"/>
                                                 <constraint firstItem="o5L-dd-EYO" firstAttribute="top" secondItem="Gpw-e8-tqn" secondAttribute="bottom" constant="4" id="R5T-QB-Idi"/>
                                                 <constraint firstItem="O4Y-OK-dTn" firstAttribute="top" secondItem="vMr-je-EGF" secondAttribute="bottom" constant="5" id="RpC-NF-K1M"/>
                                                 <constraint firstItem="nP8-nf-Yv8" firstAttribute="leading" secondItem="3B9-ER-zVz" secondAttribute="leadingMargin" id="Tea-ne-jWe"/>
+                                                <constraint firstItem="epR-Jf-eLR" firstAttribute="top" secondItem="3B9-ER-zVz" secondAttribute="top" id="Tq6-lU-BUa"/>
                                                 <constraint firstItem="Gpw-e8-tqn" firstAttribute="leading" secondItem="O4Y-OK-dTn" secondAttribute="trailing" id="Y09-yR-XP0"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="vMr-je-EGF" secondAttribute="trailing" id="YET-l2-ZP2"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="nP8-nf-Yv8" secondAttribute="trailing" id="YTz-IL-E8n"/>
                                                 <constraint firstItem="ccM-L1-JR4" firstAttribute="top" secondItem="BdK-qx-QjL" secondAttribute="bottom" constant="8" id="Zw4-H2-tQj"/>
                                                 <constraint firstItem="O4Y-OK-dTn" firstAttribute="leading" secondItem="3B9-ER-zVz" secondAttribute="leadingMargin" id="a0X-Bs-zGM"/>
                                                 <constraint firstAttribute="trailing" secondItem="Gpw-e8-tqn" secondAttribute="trailing" constant="10" id="a9A-r9-h7k"/>
-                                                <constraint firstItem="UDD-6F-kqR" firstAttribute="top" secondItem="3B9-ER-zVz" secondAttribute="top" id="aY2-oy-tMR"/>
+                                                <constraint firstItem="UDD-6F-kqR" firstAttribute="top" secondItem="3B9-ER-zVz" secondAttribute="top" constant="2.5" id="aY2-oy-tMR"/>
                                                 <constraint firstItem="Xje-80-vfL" firstAttribute="centerX" secondItem="3B9-ER-zVz" secondAttribute="centerX" id="bNO-fJ-tvD"/>
                                                 <constraint firstItem="BdK-qx-QjL" firstAttribute="top" secondItem="o5L-dd-EYO" secondAttribute="bottom" constant="13" id="cXL-cC-74p"/>
                                                 <constraint firstItem="UDD-6F-kqR" firstAttribute="centerX" secondItem="vMr-je-EGF" secondAttribute="centerX" id="iUq-gr-YNc"/>
@@ -1380,61 +1390,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" VGStatsPlus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhZ-je-cJg">
+                                <rect key="frame" x="20" y="40" width="354" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Hx9-Vu-OJH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="okB-fo-ysk" customClass="CircleImage" customModule="VGStatsPlus" customModuleProvider="target">
+                                <rect key="frame" x="7" y="608" width="56" height="56"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="G0u-8f-hOa"/>
+                                    <constraint firstAttribute="height" constant="56" id="mAL-w7-PXX"/>
+                                </constraints>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Protector Contract" translatesAutoresizingMaskIntoConstraints="NO" id="uIY-9E-m3D" customClass="CircleImage" customModule="VGStatsPlus" customModuleProvider="target">
-                                <rect key="frame" x="10" y="626" width="50" height="50"/>
+                                <rect key="frame" x="10" y="611" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="G32-TC-vtA"/>
                                     <constraint firstAttribute="height" constant="50" id="dme-wd-mBl"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhZ-iP-DCm">
-                                <rect key="frame" x="70" y="640" width="240" height="22.333333333333371"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="2Q8-tE-dlU"/>
-                                </constraints>
+                                <rect key="frame" x="65" y="625" width="349" height="22.333333333333371"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="alC-iA-yau">
-                                <rect key="frame" x="10" y="76" width="300" height="155"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nH-61-aMs">
+                                <rect key="frame" x="0.0" y="100" width="414" height="501"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtN-wK-j51" customClass="RoundedButton" customModule="VGStatsPlus" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="45"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yz2-zN-Iaj" customClass="RoundedButton" customModule="VGStatsPlus" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="60" width="389" height="50"/>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="vIX-md-rgU"/>
-                                            <constraint firstAttribute="width" constant="300" id="xIt-HS-m15"/>
+                                            <constraint firstAttribute="height" constant="50" id="PQ7-Fa-Bex"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                        <state key="normal" title="Home">
+                                        <state key="normal" title="  IGN">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtN-wK-j51" customClass="RoundedButton" customModule="VGStatsPlus" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="5" width="389" height="50"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="fWQ-sa-Ssu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                        <state key="normal" title="  Home">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <segue destination="Ab2-MG-hpX" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="oNN-WX-NJ4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yz2-zN-Iaj" customClass="RoundedButton" customModule="VGStatsPlus" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55" width="300" height="45"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4H-qz-axr" customClass="RoundedButton" customModule="VGStatsPlus" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="115" width="389" height="50"/>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="5bH-Si-Txg"/>
-                                            <constraint firstAttribute="height" constant="45" id="pVo-xT-9vG"/>
+                                            <constraint firstAttribute="height" constant="50" id="NAr-SW-EHl"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                        <state key="normal" title="IGN">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4H-qz-axr" customClass="RoundedButton" customModule="VGStatsPlus" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="110" width="300" height="45"/>
-                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="1jj-Ll-2XA"/>
-                                            <constraint firstAttribute="width" constant="300" id="LZd-FP-jhf"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                        <state key="normal" title="Switch To Twitch ">
+                                        <state key="normal" title="  Switch To Twitch ">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -1443,41 +1464,50 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wql-PN-Uig" customClass="RoundedButton" customModule="VGStatsPlus" customModuleProvider="target">
-                                <rect key="frame" x="10" y="686" width="300" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Yz2-zN-Iaj" firstAttribute="leading" secondItem="0nH-61-aMs" secondAttribute="leading" constant="5" id="6CG-kz-FG2"/>
+                                    <constraint firstItem="o4H-qz-axr" firstAttribute="leading" secondItem="0nH-61-aMs" secondAttribute="leading" constant="5" id="8Kj-aX-fuq"/>
+                                    <constraint firstItem="BtN-wK-j51" firstAttribute="leading" secondItem="0nH-61-aMs" secondAttribute="leading" constant="5" id="G9e-0K-XM5"/>
+                                    <constraint firstItem="BtN-wK-j51" firstAttribute="top" secondItem="0nH-61-aMs" secondAttribute="top" constant="5" id="Jrj-vW-wpM"/>
+                                    <constraint firstItem="o4H-qz-axr" firstAttribute="top" secondItem="Yz2-zN-Iaj" secondAttribute="bottom" constant="5" id="QrK-qZ-4sJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yz2-zN-Iaj" secondAttribute="trailing" constant="20" id="R6b-dF-ILC"/>
+                                    <constraint firstItem="Yz2-zN-Iaj" firstAttribute="top" secondItem="BtN-wK-j51" secondAttribute="bottom" constant="5" id="eUO-nq-q6K"/>
+                                    <constraint firstAttribute="trailing" secondItem="BtN-wK-j51" secondAttribute="trailing" constant="20" id="fSN-VM-GHX"/>
+                                    <constraint firstAttribute="trailing" secondItem="o4H-qz-axr" secondAttribute="trailing" constant="20" id="qfW-Nm-N0K"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wql-PN-Uig" customClass="RoundedButton" customModule="VGStatsPlus" customModuleProvider="target">
+                                <rect key="frame" x="5" y="671" width="389" height="50"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="K6b-Ry-Ip4"/>
-                                    <constraint firstAttribute="height" constant="40" id="VkO-73-zjJ"/>
+                                    <constraint firstAttribute="height" constant="50" id="VkO-73-zjJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                <state key="normal" title="log out">
+                                <state key="normal" title="  log out">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VGStatsPlus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhZ-je-cJg">
-                                <rect key="frame" x="60" y="30" width="200" height="26"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Fg2-ps-HWM"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="0nH-61-aMs" firstAttribute="leading" secondItem="vqa-gc-qcn" secondAttribute="leading" id="0aG-hr-nfi"/>
                             <constraint firstItem="Wql-PN-Uig" firstAttribute="top" secondItem="uIY-9E-m3D" secondAttribute="bottom" constant="10" id="3eR-Ji-nma"/>
-                            <constraint firstItem="hhZ-je-cJg" firstAttribute="top" secondItem="v00-ts-k2I" secondAttribute="bottom" constant="10" id="I0d-A4-1qV"/>
-                            <constraint firstItem="fhZ-iP-DCm" firstAttribute="centerY" secondItem="uIY-9E-m3D" secondAttribute="centerY" id="OCb-hm-v98"/>
-                            <constraint firstItem="Wql-PN-Uig" firstAttribute="leading" secondItem="vqa-gc-qcn" secondAttribute="leading" constant="10" id="Tp8-XZ-kg9"/>
+                            <constraint firstItem="hhZ-je-cJg" firstAttribute="leading" secondItem="vqa-gc-qcn" secondAttribute="leadingMargin" id="Cws-xG-a0L"/>
+                            <constraint firstItem="fhZ-iP-DCm" firstAttribute="leading" secondItem="uIY-9E-m3D" secondAttribute="trailing" constant="5" id="IHW-Ks-Vvs"/>
+                            <constraint firstItem="fhZ-iP-DCm" firstAttribute="centerY" secondItem="uIY-9E-m3D" secondAttribute="centerY" id="NEI-36-n6x"/>
+                            <constraint firstItem="Wql-PN-Uig" firstAttribute="top" secondItem="okB-fo-ysk" secondAttribute="bottom" constant="7" id="OwE-f2-itc"/>
+                            <constraint firstItem="Wql-PN-Uig" firstAttribute="leading" secondItem="vqa-gc-qcn" secondAttribute="leading" constant="5" id="Tp8-XZ-kg9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hhZ-je-cJg" secondAttribute="trailing" constant="20" id="Ub3-M7-TGu"/>
+                            <constraint firstAttribute="trailing" secondItem="0nH-61-aMs" secondAttribute="trailing" id="Ub9-WA-AMv"/>
                             <constraint firstItem="uIY-9E-m3D" firstAttribute="leading" secondItem="vqa-gc-qcn" secondAttribute="leading" constant="10" id="V8l-ER-pG4"/>
-                            <constraint firstItem="alC-iA-yau" firstAttribute="leading" secondItem="vqa-gc-qcn" secondAttribute="leading" constant="10" id="gUj-3C-hCe"/>
-                            <constraint firstItem="hhZ-je-cJg" firstAttribute="leading" secondItem="vqa-gc-qcn" secondAttribute="leading" constant="60" id="nMB-eN-Vss"/>
-                            <constraint firstItem="nrn-Ys-vrF" firstAttribute="top" secondItem="Wql-PN-Uig" secondAttribute="bottom" constant="10" id="oCR-h0-hfS"/>
-                            <constraint firstItem="alC-iA-yau" firstAttribute="top" secondItem="hhZ-je-cJg" secondAttribute="bottom" constant="20" id="uNB-2H-iji"/>
-                            <constraint firstItem="fhZ-iP-DCm" firstAttribute="trailing" secondItem="Wql-PN-Uig" secondAttribute="trailing" id="zSl-Ct-Gbb"/>
+                            <constraint firstAttribute="trailing" secondItem="Wql-PN-Uig" secondAttribute="trailing" constant="20" id="cmX-o0-lnG"/>
+                            <constraint firstItem="hhZ-je-cJg" firstAttribute="top" secondItem="v00-ts-k2I" secondAttribute="bottom" constant="20" id="dJZ-r8-Pi5"/>
+                            <constraint firstItem="fhZ-iP-DCm" firstAttribute="trailing" secondItem="vqa-gc-qcn" secondAttribute="trailingMargin" constant="20" id="dVv-9G-j55"/>
+                            <constraint firstItem="0nH-61-aMs" firstAttribute="top" secondItem="hhZ-je-cJg" secondAttribute="bottom" id="ebu-2D-k7x"/>
+                            <constraint firstItem="nrn-Ys-vrF" firstAttribute="top" secondItem="Wql-PN-Uig" secondAttribute="bottom" constant="15" id="oCR-h0-hfS"/>
+                            <constraint firstItem="uIY-9E-m3D" firstAttribute="top" secondItem="0nH-61-aMs" secondAttribute="bottom" constant="10" id="oXB-5x-wyj"/>
+                            <constraint firstItem="okB-fo-ysk" firstAttribute="leading" secondItem="vqa-gc-qcn" secondAttribute="leading" constant="7" id="sqj-Qm-giS"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="topColor">
@@ -1682,8 +1712,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="Slv-hD-jxJ" customClass="CircleImage" customModule="VGStatsPlus" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-user" translatesAutoresizingMaskIntoConstraints="NO" id="Slv-hD-jxJ" customClass="CircleImage" customModule="VGStatsPlus" customModuleProvider="target">
                                                     <rect key="frame" x="75" y="11" width="50" height="50"/>
+                                                    <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="3ue-3L-JJf"/>
                                                         <constraint firstAttribute="width" constant="50" id="L0E-nS-aSs"/>
@@ -2031,6 +2062,7 @@
         <image name="chat" width="50" height="50"/>
         <image name="menu" width="50" height="50"/>
         <image name="profile" width="26" height="26"/>
+        <image name="profile-user" width="71" height="71"/>
         <image name="send" width="26" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>
