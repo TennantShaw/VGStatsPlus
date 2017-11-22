@@ -53,14 +53,11 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
         
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
-        
         revealViewController().rightViewRevealWidth = self.view.frame.width - 50
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
-        
-        
-        checkStatus()
-        
+
+        checkStatus()        
     }
     
     override func viewWillAppear(_ animated: Bool) {
