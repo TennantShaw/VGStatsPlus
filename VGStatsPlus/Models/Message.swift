@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 class Message {
     
@@ -21,6 +22,7 @@ class Message {
         return _senderId
     }
     
+
     init(content: String, senderId: String) {
         self._senderId = senderId
         self._content = content

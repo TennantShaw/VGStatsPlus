@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        SavedStatus.instance.isLoggedIn = false 
+        SavedStatus.instance.isLoggedIn = false
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         if SavedStatus.instance.isLoggedIn {
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)

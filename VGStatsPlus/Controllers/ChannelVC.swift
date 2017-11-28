@@ -32,7 +32,9 @@ class ChannelVC: UIViewController {
     var messages: [Message] = [] {
         didSet {
             tableView.reloadData()
-            tableView.scrollToRow(at: IndexPath(row: self.messages.count - 1, section: 0) , at: .none, animated: true)
+            if messages.count != 0 {
+                tableView.scrollToRow(at: IndexPath(row: self.messages.count - 1, section: 0) , at: .none, animated: true)
+            }
         }
     }
     

@@ -79,6 +79,11 @@ class VGFirebaseDB {
         })
     }
     
+    // Update User with id
+    func updateUserChannels(withID id: String, channel: [String:Any], success: @escaping (_ updated: Bool) -> ()) {
+        REF_USERS.child(id).child("channels").updateChildValues(channel)
+    }
+    
     // MARK: login to Firebase
     func loginUserToFirebase(withEmail email: String, password: String, loginComplete: @escaping (_ status: Bool, _ error: Error?) -> ()) {
         Auth.auth().signIn(withEmail: email.lowercased(), password: password) { (user, error) in
@@ -125,7 +130,13 @@ class VGFirebaseDB {
     // MARK: Create a Channel
     
     func createChannel(withTitle title: String, withId id: String, channelImage image: String, friendsUID uid: [String:String], handler: @escaping (_ groupCreated: Bool) -> ()) {
-        REF_CHANNELS.childByAutoId().updateChildValues(["title": title, "admin": SavedStatus.instance.userID, "image": image, "id": id, "friends": uid])
+        let channelID = UUID()
+        REF_CHANNELS.child("\(channelID)").updateChildValues(["title": title, "admin": SavedStatus.instance.userID, "image": image, "id": id, "friends": uid])
+        for id in uid {
+            updateUserChannels(withID: id.key, channel: [title : "\(channelID)"], success: { (success) in
+                print("ChannelUpdated")
+            })
+        }
         handler(true)
     }
     
