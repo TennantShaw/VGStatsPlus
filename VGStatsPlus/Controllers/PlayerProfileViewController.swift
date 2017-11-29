@@ -56,7 +56,7 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
         revealViewController().rightViewRevealWidth = self.view.frame.width - 50
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
-
+        
         checkStatus()        
     }
     
@@ -116,7 +116,12 @@ extension PlayerProfileViewController: UITableViewDelegate, UITableViewDataSourc
             if VGDataSource.instance.player != nil {
                 VGDataSource.instance.getMatches(regional: (VGDataSource.instance.player?.shardId)!, success: { (success) in
                     if success {
-                     cell.matches = VGDataSource.instance.matches
+                       cell.matches = VGDataSource.instance.matches
+                        print("\n")
+                        print("MATCH DATA:")
+                        print(cell.matches[0])
+                        print("MATCH DATA:")
+                        print("\n")
                     }
                 })
             }
@@ -139,4 +144,9 @@ extension PlayerProfileViewController: UITableViewDelegate, UITableViewDataSourc
         let height = min(max(y, 60), 400)
         imageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: height)
     }
+    
+    // Need to dig into the asset array of a match to sort by createdAt. Not sure how to do this. Researching
+//    func sortMatches(_ matches: [MatchResource]) -> [MatchResource] {
+//
+//    }
 }
