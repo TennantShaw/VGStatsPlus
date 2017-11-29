@@ -116,7 +116,9 @@ extension PlayerProfileViewController: UITableViewDelegate, UITableViewDataSourc
             if VGDataSource.instance.player != nil {
                 VGDataSource.instance.getMatches(regional: (VGDataSource.instance.player?.shardId)!, success: { (success) in
                     if success {
-                       cell.matches = VGDataSource.instance.matches
+                        cell.matches = VGDataSource.instance.matches.sorted {
+                            $0.duration! > $1.duration!
+                        }
                         print("\n")
                         print("MATCH DATA:")
                         print(cell.matches[0])
