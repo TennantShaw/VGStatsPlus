@@ -16,8 +16,10 @@ class ChannelVC: UIViewController {
     @IBOutlet var contentTextField: UITextField!
     @IBOutlet var sendButton: UIButton!
     @IBOutlet var backView: UIView!
+    @IBOutlet var channelMenuView: UIView!
+    @IBOutlet var swipeGestureRecognizer: UISwipeGestureRecognizer!
     
-    
+    var isShowingChannelMenu = false
     var channels: [Channel] = [] {
         didSet {
             if channels.count != 0 {
@@ -47,6 +49,14 @@ class ChannelVC: UIViewController {
         tableView.dataSource = self
         view.bindToKeyboard()
         self.revealViewController().rearViewRevealWidth = self.view.frame.width - 50
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(ChannelVC.handleSwipe(_:)))
+        swipeLeft.direction = .left
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(ChannelVC.handleSwipe(_:)))
+        swipeRight.direction = .right
+        view.addGestureRecognizer(swipeRight)
+        view.addGestureRecognizer(swipeLeft)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,10 +69,44 @@ class ChannelVC: UIViewController {
         let gestureRescognizer = UITapGestureRecognizer()
         gestureRescognizer.addTarget(self, action: #selector(ChannelVC.tapToEnd(_:)))
         self.tableView.addGestureRecognizer(gestureRescognizer)
+        channelMenuView.addGestureRecognizer(gestureRescognizer)
     }
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+    
+    @objc func handleSwipe(_ gesture: UIGestureRecognizer) {
+        
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            
+            switch swipeGesture.direction {
+            case .left:
+                //Show ChannelMenuView
+                self.channelMenuView.bounds.size.width = self.view.bounds.width - 60
+                self.channelMenuView.bounds.size.height = self.view.bounds.height / 2
+                self.channelMenuView.center = CGPoint(x: 400, y: self.view.bounds.height / 2)
+                self.view.addSubview(self.channelMenuView)
+                UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: {
+                     self.channelMenuView.transform = CGAffineTransform(translationX: 20, y: 0)
+                }, completion: { (success) in
+                    self.isShowingChannelMenu = true
+                })
+            case .right:
+                if isShowingChannelMenu {
+                    UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: {
+                        self.channelMenuView.transform = CGAffineTransform(translationX: -20, y: (self.view.bounds.height / 2))
+                    }, completion: { (success) in
+                        UIView.animate(withDuration: 0.3, animations: {
+                            self.channelMenuView.transform = CGAffineTransform(translationX: (self.view.bounds.width / 2) + 400, y: (self.view.bounds.height / 2) + 400)
+                        })
+                    })
+                    self.isShowingChannelMenu = false
+                }
+            default:
+                print("")
+            }
+        }
     }
     
     func checkDatabase() {
@@ -129,7 +173,7 @@ extension ChannelVC: UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     func tapToClose(_ gestureRecognizer: UIGestureRecognizer) {
-        
+      channelMenuView.removeFromSuperview()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
