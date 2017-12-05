@@ -116,14 +116,43 @@ extension PlayerProfileViewController: UITableViewDelegate, UITableViewDataSourc
             if VGDataSource.instance.player != nil {
                 VGDataSource.instance.getMatches(regional: (VGDataSource.instance.player?.shardId)!, success: { (success) in
                     if success {
+                        var assetArrays: [[AssetResource]] = []
+                        var createdAt: [String] = []
+                        var sortedArray: [String] = []
+                        
                         cell.matches = VGDataSource.instance.matches.sorted {
                             $0.duration! > $1.duration!
                         }
+                        
+                        for asset in cell.matches {
+                            assetArrays.append(asset.asset!)
+                        }
+                        
+                        for array in assetArrays {
+                            for gameDate in array {
+                                createdAt.append(gameDate.createdAt!)
+                            }
+                        }
+                        
+                        print("\n")
+                        print("SORTED")
+                        sortedArray = createdAt.sorted()
+                        print(createdAt.sorted())
+                        print("SORTED")
+                        print("\n")
+
+                        
                         print("\n")
                         print("MATCH DATA:")
                         print(cell.matches[0])
                         print("MATCH DATA:")
                         print("\n")
+                        print("\n")
+                        print("CREATEDAT:")
+                        print(createdAt)
+                        print("CREATEDAT:")
+                        print("\n")
+
                     }
                 })
             }
@@ -147,8 +176,14 @@ extension PlayerProfileViewController: UITableViewDelegate, UITableViewDataSourc
         imageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: height)
     }
     
-    // Need to dig into the asset array of a match to sort by createdAt. Not sure how to do this. Researching
-//    func sortMatches(_ matches: [MatchResource]) -> [MatchResource] {
+//    func sortArrayOfString(_ array: [String]) -> [String] {
+//        var back: [String] = []
+//        if array.count != 0 {
+//            array.sorted(by: { (, <#String#>) -> Bool in
+//                <#code#>
+//            })
+//        }
 //
+//        return back
 //    }
 }
