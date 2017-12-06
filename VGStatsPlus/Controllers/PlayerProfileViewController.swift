@@ -116,50 +116,18 @@ extension PlayerProfileViewController: UITableViewDelegate, UITableViewDataSourc
             if VGDataSource.instance.player != nil {
                 VGDataSource.instance.getMatches(regional: (VGDataSource.instance.player?.shardId)!, success: { (success) in
                     if success {
-                        var assetArrays: [[AssetResource]] = []
-                        var createdAt: [String] = []
-                        var sortedArray: [String] = []
-                        
                         cell.matches = VGDataSource.instance.matches.sorted {
-                            $0.duration! > $1.duration!
+                            $0.createdAt! > $1.createdAt!
                         }
-                        
-                        for asset in cell.matches {
-                            assetArrays.append(asset.asset!)
-                        }
-                        
-                        for array in assetArrays {
-                            for gameDate in array {
-                                createdAt.append(gameDate.createdAt!)
-                            }
-                        }
-                        
                         print("\n")
-                        print("SORTED")
-                        sortedArray = createdAt.sorted()
-                        print(sortedArray.reversed())
-                        print("SORTED")
-                        print("\n")
-
-                        
-                        print("\n")
-                        print("MATCH DATA:")
+                        print("FirstMatch")
                         print(cell.matches[0])
-                        print("MATCH DATA:")
+                        print("FirstMatch")
                         print("\n")
+                        print("SecondMatch")
+                        print(cell.matches[1])
+                        print("SecondMatch")
                         print("\n")
-                        print("CREATEDAT:")
-                        print(createdAt)
-                        print("CREATEDAT:")
-                        print("\n")
-                        let reversedArray = Array(sortedArray.reversed())
-                        
-                        print("\n")
-                        print("ReversedArray:")
-                        print(reversedArray)
-                        print("ReversedArray:")
-                        print("\n")
-
                     }
                 })
             }
@@ -183,14 +151,4 @@ extension PlayerProfileViewController: UITableViewDelegate, UITableViewDataSourc
         imageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: height)
     }
     
-//    func sortArrayOfString(_ array: [String]) -> [String] {
-//        var back: [String] = []
-//        if array.count != 0 {
-//            array.sorted(by: { (, <#String#>) -> Bool in
-//                <#code#>
-//            })
-//        }
-//
-//        return back
-//    }
 }
