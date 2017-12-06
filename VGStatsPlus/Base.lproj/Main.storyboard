@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cy2-MY-XF1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cy2-MY-XF1">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Unknown constraint types" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -1690,7 +1690,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xif-CW-2Qe">
-                                <rect key="frame" x="0.0" y="100" width="414" height="586"/>
+                                <rect key="frame" x="0.0" y="110" width="414" height="576"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="channelMessageCell" rowHeight="80" id="u18-fq-hl2" customClass="ChannelMessageCell" customModule="VGStatsPlus" customModuleProvider="target">
@@ -1913,7 +1913,7 @@
                             <constraint firstItem="xZK-vy-6d4" firstAttribute="top" secondItem="8T0-sg-j4X" secondAttribute="top" id="SqR-eF-Tqb"/>
                             <constraint firstAttribute="trailing" secondItem="Xif-CW-2Qe" secondAttribute="trailing" id="VM4-Mv-UMs"/>
                             <constraint firstItem="UFp-dP-8ve" firstAttribute="leading" secondItem="8T0-sg-j4X" secondAttribute="leading" id="cZr-vV-4bz"/>
-                            <constraint firstItem="Xif-CW-2Qe" firstAttribute="top" secondItem="UFp-dP-8ve" secondAttribute="bottom" id="gZ7-Wl-ITF"/>
+                            <constraint firstItem="Xif-CW-2Qe" firstAttribute="top" secondItem="UFp-dP-8ve" secondAttribute="bottom" constant="10" id="gZ7-Wl-ITF"/>
                             <constraint firstItem="xZK-vy-6d4" firstAttribute="leading" secondItem="8T0-sg-j4X" secondAttribute="leading" id="hhY-gZ-KvJ"/>
                             <constraint firstItem="Xif-CW-2Qe" firstAttribute="leading" secondItem="8T0-sg-j4X" secondAttribute="leading" id="j4g-uP-zxn"/>
                             <constraint firstItem="UFp-dP-8ve" firstAttribute="top" secondItem="8T0-sg-j4X" secondAttribute="top" id="uQc-vP-z14"/>
@@ -1934,16 +1934,36 @@
                     </view>
                     <connections>
                         <outlet property="backView" destination="xZK-vy-6d4" id="H2h-2H-0Dy"/>
+                        <outlet property="channelMenuView" destination="Rtd-63-jI6" id="7ed-wv-G9m"/>
                         <outlet property="collectionView" destination="qO7-ej-rpE" id="Ey7-bO-8Ev"/>
                         <outlet property="contentTextField" destination="eN9-Fe-2PO" id="CNg-rN-qNc"/>
                         <outlet property="keyboardView" destination="dHN-V3-S30" id="mhg-3h-bHj"/>
                         <outlet property="sendButton" destination="J3C-gA-WAy" id="1xv-kb-8Dx"/>
+                        <outlet property="swipeGestureRecognizer" destination="8M4-bk-NYC" id="ip3-0D-bIb"/>
                         <outlet property="tableView" destination="Xif-CW-2Qe" id="50U-QR-aAO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cy-U8-lO4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="8M4-bk-NYC"/>
+                <view contentMode="scaleToFill" id="Rtd-63-jI6">
+                    <rect key="frame" x="0.0" y="0.0" width="382" height="349"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="skD-96-baH" customClass="RoundedUIView" customModule="VGStatsPlus" customModuleProvider="target">
+                            <rect key="frame" x="45" y="10" width="327" height="299"/>
+                            <color key="backgroundColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="skD-96-baH" firstAttribute="leading" secondItem="Rtd-63-jI6" secondAttribute="leading" constant="45" id="Pkn-Cb-uFk"/>
+                        <constraint firstAttribute="bottom" secondItem="skD-96-baH" secondAttribute="bottom" constant="40" id="Y2l-xB-jgq"/>
+                        <constraint firstAttribute="trailing" secondItem="skD-96-baH" secondAttribute="trailing" constant="10" id="ecA-oa-wQn"/>
+                        <constraint firstItem="skD-96-baH" firstAttribute="top" secondItem="Rtd-63-jI6" secondAttribute="top" constant="10" id="ein-d0-Y1o"/>
+                    </constraints>
+                </view>
             </objects>
-            <point key="canvasLocation" x="913.04347826086962" y="152.44565217391306"/>
+            <point key="canvasLocation" x="852" y="263"/>
         </scene>
         <!--Pick AvatarVC-->
         <scene sceneID="qCd-Dg-r1N">
