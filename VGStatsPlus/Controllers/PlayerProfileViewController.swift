@@ -137,7 +137,7 @@ extension PlayerProfileViewController: UITableViewDelegate, UITableViewDataSourc
                         print("\n")
                         print("SORTED")
                         sortedArray = createdAt.sorted()
-                        print(createdAt.sorted())
+                        print(sortedArray.reversed())
                         print("SORTED")
                         print("\n")
 
@@ -151,6 +151,13 @@ extension PlayerProfileViewController: UITableViewDelegate, UITableViewDataSourc
                         print("CREATEDAT:")
                         print(createdAt)
                         print("CREATEDAT:")
+                        print("\n")
+                        let reversedArray = Array(sortedArray.reversed())
+                        
+                        print("\n")
+                        print("ReversedArray:")
+                        print(reversedArray)
+                        print("ReversedArray:")
                         print("\n")
 
                     }
