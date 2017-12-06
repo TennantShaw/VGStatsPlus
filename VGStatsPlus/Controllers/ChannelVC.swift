@@ -85,7 +85,7 @@ class ChannelVC: UIViewController {
                 //Show ChannelMenuView
                 self.channelMenuView.bounds.size.width = self.view.bounds.width - 60
                 self.channelMenuView.bounds.size.height = self.view.bounds.height / 2
-                self.channelMenuView.center = CGPoint(x: 400, y: self.view.bounds.height / 2)
+                self.channelMenuView.center = CGPoint(x: -60, y: self.view.bounds.height / 2)
                 self.view.addSubview(self.channelMenuView)
                 UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: {
                      self.channelMenuView.transform = CGAffineTransform(translationX: 20, y: 0)
