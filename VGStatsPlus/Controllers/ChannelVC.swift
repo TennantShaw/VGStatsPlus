@@ -18,6 +18,8 @@ class ChannelVC: UIViewController {
     @IBOutlet var backView: UIView!
     @IBOutlet var channelMenuView: UIView!
     @IBOutlet var swipeGestureRecognizer: UISwipeGestureRecognizer!
+    @IBOutlet var leftArrowbtn: UIButton!
+    @IBOutlet var blurEffect: UIVisualEffectView!
     
     var isShowingChannelMenu = false
     var channels: [Channel] = [] {
@@ -31,14 +33,7 @@ class ChannelVC: UIViewController {
         }
     }
     
-    var messages: [Message] = [] {
-        didSet {
-            tableView.reloadData()
-            if messages.count != 0 {
-                tableView.scrollToRow(at: IndexPath(row: self.messages.count - 1, section: 0) , at: .none, animated: true)
-            }
-        }
-    }
+    var messages: [Message] = []
     
     //MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -47,6 +42,10 @@ class ChannelVC: UIViewController {
         collectionView.dataSource = self
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.estimatedRowHeight = 60
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
         view.bindToKeyboard()
         self.revealViewController().rearViewRevealWidth = self.view.frame.width - 50
         
@@ -70,11 +69,16 @@ class ChannelVC: UIViewController {
         gestureRescognizer.addTarget(self, action: #selector(ChannelVC.tapToEnd(_:)))
         self.tableView.addGestureRecognizer(gestureRescognizer)
         channelMenuView.addGestureRecognizer(gestureRescognizer)
+        VGFirebaseDB.instance.REF_CHANNELS.observe(.value, with: { (snapshot) in
+            self.checkDatabase()
+            
+        })
     }
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
+    
     
     @objc func handleSwipe(_ gesture: UIGestureRecognizer) {
         
@@ -82,39 +86,26 @@ class ChannelVC: UIViewController {
             
             switch swipeGesture.direction {
             case .left:
-                //Show ChannelMenuView
-                self.channelMenuView.bounds.size.width = self.view.bounds.width - 60
-                self.channelMenuView.bounds.size.height = self.view.bounds.height / 2
-                self.channelMenuView.center = CGPoint(x: -60, y: self.view.bounds.height / 2)
-                self.view.addSubview(self.channelMenuView)
-                UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: {
-                     self.channelMenuView.transform = CGAffineTransform(translationX: 20, y: 0)
-                }, completion: { (success) in
-                    self.isShowingChannelMenu = true
-                })
+                handleLeftSlide()
             case .right:
-                if isShowingChannelMenu {
-                    UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: {
-                        self.channelMenuView.transform = CGAffineTransform(translationX: -20, y: (self.view.bounds.height / 2))
-                    }, completion: { (success) in
-                        UIView.animate(withDuration: 0.3, animations: {
-                            self.channelMenuView.transform = CGAffineTransform(translationX: (self.view.bounds.width / 2) + 400, y: (self.view.bounds.height / 2) + 400)
-                        })
-                    })
-                    self.isShowingChannelMenu = false
-                }
+                handleRightSlide()
             default:
                 print("")
             }
         }
     }
     
+    @IBAction func leftBtnTapped(_ sender: Any) {
+        handleLeftSlide()
+    }
     func checkDatabase() {
         VGFirebaseDB.instance.getAllChannels { (channels) in
             self.channels = channels
             if self.channels.count != 0 {
                 VGFirebaseDB.instance.getMessages(forChannel: self.channels.first!, handler: { (messagesArray) in
                     self.messages = messagesArray
+                    self.tableView.reloadData()
+                    self.tableView.scrollToRow(at: IndexPath(row: self.messages.count - 1, section: 0 ), at: .none, animated: true)
                 })                
             }
         }
@@ -134,11 +125,7 @@ class ChannelVC: UIViewController {
             VGFirebaseDB.instance.sendMessage(withContent: contentTextField.text!, userID: VGFirebaseDB.instance.currentuserID!, channelID: (VGFirebaseDB.instance.selectedChannel?.channelID)!, handler: { (success) in
                 if success {
                     self.contentTextField.text = ""
-                    VGFirebaseDB.instance.getMessages(forChannel: VGFirebaseDB.instance.selectedChannel!, handler: { (messagesArray) in
-                        self.messages = messagesArray
-                        self.view.endEditing(true)
-                        self.tableView.reloadData()
-                    })
+                    self.view.endEditing(true)
                 }
             })
         } else {
@@ -146,6 +133,31 @@ class ChannelVC: UIViewController {
         }
     }
     
+    fileprivate func handleLeftSlide() {
+        //Show ChannelMenuView
+        self.channelMenuView.bounds.size.width = self.view.bounds.width - 60
+        self.channelMenuView.bounds.size.height = self.view.bounds.height / 2
+        self.channelMenuView.center = CGPoint(x: 400, y: 370.0)
+        self.view.addSubview(self.channelMenuView)
+        UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: {
+            self.channelMenuView.transform = CGAffineTransform(translationX: -190, y: 0)
+            self.leftArrowbtn.layer.opacity = 0
+        }, completion: { (success) in
+            self.isShowingChannelMenu = true
+        })
+    }
+    
+    fileprivate func handleRightSlide() {
+        if isShowingChannelMenu {
+            UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: {
+                self.channelMenuView.transform = CGAffineTransform(translationX: 190, y: 0)
+                self.leftArrowbtn.layer.opacity = 1
+                self.isShowingChannelMenu = false
+                self.leftArrowbtn.isHidden = false
+            }, completion: { (success) in
+            })
+        }
+    }
 }
 
 extension ChannelVC: UICollectionViewDataSource, UICollectionViewDelegate {
