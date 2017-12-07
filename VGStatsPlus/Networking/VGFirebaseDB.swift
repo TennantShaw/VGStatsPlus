@@ -161,7 +161,9 @@ class VGFirebaseDB {
                     channelArray.append(_channel)
                 }
             }
-            self.selectedChannel = channelArray.first
+            if self.selectedChannel == nil {
+                self.selectedChannel = channelArray.first
+            }
             handler(channelArray)
         })
     }

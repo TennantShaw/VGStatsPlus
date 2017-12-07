@@ -1959,7 +1959,10 @@
                     </view>
                     <connections>
                         <outlet property="backView" destination="xZK-vy-6d4" id="H2h-2H-0Dy"/>
+                        <outlet property="channelAdminNameLabel" destination="2wA-hv-i1K" id="g4k-m8-IOq"/>
+                        <outlet property="channelImage" destination="4hy-XC-mrd" id="uw7-xr-60q"/>
                         <outlet property="channelMenuView" destination="Rtd-63-jI6" id="7ed-wv-G9m"/>
+                        <outlet property="channelNameLabel" destination="GZz-49-g5y" id="oaI-gX-ike"/>
                         <outlet property="collectionView" destination="qO7-ej-rpE" id="Ey7-bO-8Ev"/>
                         <outlet property="contentTextField" destination="eN9-Fe-2PO" id="CNg-rN-qNc"/>
                         <outlet property="keyboardView" destination="dHN-V3-S30" id="mhg-3h-bHj"/>
@@ -1977,7 +1980,85 @@
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="skD-96-baH" customClass="RoundedUIView" customModule="VGStatsPlus" customModuleProvider="target">
                             <rect key="frame" x="45" y="10" width="327" height="299"/>
-                            <color key="backgroundColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4hy-XC-mrd" customClass="CircleImage" customModule="VGStatsPlus" customModuleProvider="target">
+                                    <rect key="frame" x="140.66666666666666" y="17" width="45" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="45" id="6Kg-Ei-yB6"/>
+                                        <constraint firstAttribute="height" constant="45" id="9gE-TK-RTq"/>
+                                    </constraints>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="mie-76-tSZ" userLabel="mainStack">
+                                    <rect key="frame" x="13" y="66.999999999999986" width="300" height="225.66666666666663"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2wt-oB-cV8" userLabel="labelStack">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="55.666666666666664"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZz-49-g5y">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="26"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="300" id="vaA-pr-ltO"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                    <color key="textColor" red="0.29452592129999999" green="0.29477626089999998" blue="0.294564724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group Admin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wA-hv-i1K">
+                                                    <rect key="frame" x="0.0" y="36" width="300" height="19.666666666666671"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="300" id="u5N-dS-lSG"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                                    <color key="textColor" red="0.29452592129999999" green="0.29477626089999998" blue="0.294564724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qro-d7-V0E" userLabel="buttonStack">
+                                            <rect key="frame" x="0.0" y="155.66666666666666" width="300" height="70"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoB-TH-Man" customClass="RoundedButton" customModule="VGStatsPlus" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
+                                                    <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="300" id="0Vi-ho-w80"/>
+                                                        <constraint firstAttribute="height" constant="30" id="Gn7-AJ-EMi"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                    <state key="normal" title="Gourp Members">
+                                                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="groupMembersTapped:" destination="YRq-qc-MB6" eventType="touchUpInside" id="Xhi-I8-lgL"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSo-0x-YEL" customClass="RoundedButton" customModule="VGStatsPlus" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="40.000000000000028" width="300" height="30"/>
+                                                    <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="300" id="7uB-rj-zko"/>
+                                                        <constraint firstAttribute="height" constant="30" id="hz5-d6-P7N"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                    <state key="normal" title="Quit Channel">
+                                                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="quitChannelTapped:" destination="YRq-qc-MB6" eventType="touchUpInside" id="dWd-5q-5gZ"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.84865993923611116" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="4hy-XC-mrd" firstAttribute="centerY" secondItem="skD-96-baH" secondAttribute="centerY" constant="-110" id="4yc-FS-ltk"/>
+                                <constraint firstItem="4hy-XC-mrd" firstAttribute="centerX" secondItem="skD-96-baH" secondAttribute="centerX" id="U4w-lM-KbG"/>
+                                <constraint firstItem="mie-76-tSZ" firstAttribute="centerX" secondItem="skD-96-baH" secondAttribute="centerX" id="aRm-f7-iI7"/>
+                                <constraint firstItem="mie-76-tSZ" firstAttribute="centerY" secondItem="skD-96-baH" secondAttribute="centerY" constant="30" id="ejG-ne-M8i"/>
+                            </constraints>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

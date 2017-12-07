@@ -12,14 +12,26 @@ class ChannelVC: UIViewController {
     //MARK: - Outlets
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var tableView: UITableView!
+    
+    // View outlets
     @IBOutlet var keyboardView: UIView!
-    @IBOutlet var contentTextField: UITextField!
-    @IBOutlet var sendButton: UIButton!
     @IBOutlet var backView: UIView!
     @IBOutlet var channelMenuView: UIView!
+
+    // Other outlets
+    @IBOutlet var contentTextField: UITextField!
+    @IBOutlet var sendButton: UIButton!
     @IBOutlet var swipeGestureRecognizer: UISwipeGestureRecognizer!
     @IBOutlet var leftArrowbtn: UIButton!
     @IBOutlet var blurEffect: UIVisualEffectView!
+    
+    
+    // ChannelMenuViewOutlets
+    @IBOutlet var channelImage: CircleImage!
+    @IBOutlet var channelNameLabel: UILabel!
+    @IBOutlet var channelAdminNameLabel: UILabel!
+    
+    
     
     var isShowingChannelMenu = false
     var channels: [Channel] = [] {
@@ -102,7 +114,7 @@ class ChannelVC: UIViewController {
         VGFirebaseDB.instance.getAllChannels { (channels) in
             self.channels = channels
             if self.channels.count != 0 {
-                VGFirebaseDB.instance.getMessages(forChannel: self.channels.first!, handler: { (messagesArray) in
+                VGFirebaseDB.instance.getMessages(forChannel: VGFirebaseDB.instance.selectedChannel!, handler: { (messagesArray) in
                     self.messages = messagesArray
                     self.tableView.reloadData()
                     self.tableView.scrollToRow(at: IndexPath(row: self.messages.count - 1, section: 0 ), at: .none, animated: true)
@@ -133,6 +145,7 @@ class ChannelVC: UIViewController {
         }
     }
     
+    // Mark: Handling slide to left
     fileprivate func handleLeftSlide() {
         //Show ChannelMenuView
         self.channelMenuView.bounds.size.width = self.view.bounds.width - 60
@@ -142,11 +155,17 @@ class ChannelVC: UIViewController {
         UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: {
             self.channelMenuView.transform = CGAffineTransform(translationX: -190, y: 0)
             self.leftArrowbtn.layer.opacity = 0
+            if VGFirebaseDB.instance.selectedChannel != nil {
+                self.channelImage.image = UIImage(named: (VGFirebaseDB.instance.selectedChannel?.channelImage)!)
+                self.channelNameLabel.text = VGFirebaseDB.instance.selectedChannel?.channelTitle
+                
+            }
         }, completion: { (success) in
             self.isShowingChannelMenu = true
         })
     }
     
+    // Handling slide to right
     fileprivate func handleRightSlide() {
         if isShowingChannelMenu {
             UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: {
@@ -158,6 +177,19 @@ class ChannelVC: UIViewController {
             })
         }
     }
+    
+    
+    //Mark: ChannelMenuView action outlets
+    
+    @IBAction func groupMembersTapped(_ sender: Any) {
+        
+    }
+    
+    @IBAction func quitChannelTapped(_ sender: Any) {
+        
+    }
+    
+    
 }
 
 extension ChannelVC: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -200,6 +232,10 @@ extension ChannelVC: UICollectionViewDataSource, UICollectionViewDelegate {
             VGFirebaseDB.instance.selectedChannel = channels[indexPath.row - 1]
             VGFirebaseDB.instance.getMessages(forChannel: channels[indexPath.row - 1], handler: { (messagesArray) in
                 self.messages = messagesArray
+                self.tableView.reloadData()
+                if self.messages.count != 0 {
+                    self.tableView.scrollToRow(at: IndexPath(row: self.messages.count - 1, section: 0 ), at: .none, animated: true)
+                }
             })
         }
     }
