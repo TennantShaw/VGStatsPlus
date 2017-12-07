@@ -45,7 +45,7 @@ class PlayerCell: UITableViewCell {
         VGFirebaseDB.instance.getUserInfo(withID: SavedStatus.instance.userID) { (name, image) in
             self.userImageView.downloadedFrom(link: image)
         }
-        
+    
         if player1.name == "TennantTheVast" {
             if participantArray1[0].skillTier == 0 {
                 rankLabel.text = "Just Beginning"
