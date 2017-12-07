@@ -24,11 +24,7 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
         }
     }
     
-    var player = VGDataSource.instance.player {
-        didSet {
-            print("Changed")
-        }
-    }
+    var player = VGDataSource.instance.player
     
     
     //MARK: - Initializers
@@ -106,7 +102,10 @@ extension PlayerProfileViewController: UITableViewDelegate, UITableViewDataSourc
             if VGDataSource.instance.player != nil {
                 VGDataSource.instance.getMatches(regional: (VGDataSource.instance.player!.shardId)!, success: { (success) in
                     if success {
-                        cell.setup(player: VGDataSource.instance.player!, match: VGDataSource.instance.matches[0])
+                        let matches = VGDataSource.instance.matches.sorted {
+                            $0.createdAt! > $1.createdAt!
+                        }
+                        cell.setup(player: VGDataSource.instance.player!, match: matches[0])
                     }
                 })
             }
@@ -125,7 +124,7 @@ extension PlayerProfileViewController: UITableViewDelegate, UITableViewDataSourc
                         print("FirstMatch")
                         print("\n")
                         print("SecondMatch")
-                        print(cell.matches[1])
+                        print(cell.matches[4])
                         print("SecondMatch")
                         print("\n")
                     }
