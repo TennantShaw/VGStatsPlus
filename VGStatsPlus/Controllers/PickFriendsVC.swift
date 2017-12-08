@@ -17,6 +17,7 @@ class PickFriendsVC: UIViewController {
     @IBOutlet var doneBtn: UIButton!
     
     var channelFriendsDelegate: GetSelectedFriendsDelegate!
+    var isChangingFriendsList: Bool = false
     
     var dict: [String:String] = [:] {
         didSet {

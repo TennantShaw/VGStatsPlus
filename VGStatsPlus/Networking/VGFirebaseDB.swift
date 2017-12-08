@@ -126,6 +126,10 @@ class VGFirebaseDB {
         }
     }
     
+    func addIGNToDatabase() {
+        
+    }
+    
     
     // MARK: Create a Channel
     

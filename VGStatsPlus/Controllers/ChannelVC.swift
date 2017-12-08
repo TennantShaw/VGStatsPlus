@@ -182,7 +182,9 @@ class ChannelVC: UIViewController {
     //Mark: ChannelMenuView action outlets
     
     @IBAction func groupMembersTapped(_ sender: Any) {
-        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let friendsVC = storyBoard.instantiateViewController(withIdentifier: "pickFriendsVC") as! PickFriendsVC
+        self.present(friendsVC, animated: true, completion: nil)
     }
     
     @IBAction func quitChannelTapped(_ sender: Any) {

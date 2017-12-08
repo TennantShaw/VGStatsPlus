@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cy2-MY-XF1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cy2-MY-XF1">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Unknown constraint types" minToolsVersion="5.1"/>
@@ -1452,17 +1452,88 @@
                                             <segue destination="bWq-47-6A5" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="GiO-tV-gwi"/>
                                         </connections>
                                     </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WpH-YQ-pon">
+                                        <rect key="frame" x="5" y="170" width="404" height="326"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="addCell" rowHeight="93" id="ceW-lO-NBl" customClass="AddCell" customModule="VGStatsPlus" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="404" height="93"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ceW-lO-NBl" id="9zT-ZP-85a">
+                                                    <rect key="frame" x="0.0" y="0.0" width="404" height="92.666666666666671"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQC-Nx-9AR">
+                                                            <rect key="frame" x="20" y="16" width="364" height="61"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Evx-zr-P2N">
+                                                            <rect key="frame" x="5" y="5" width="394" height="82.666666666666671"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                            <state key="normal" title="  add IGN">
+                                                                <color key="titleColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="addBtnTapped:" destination="ceW-lO-NBl" eventType="touchUpInside" id="Adz-Tj-ce7"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="AQC-Nx-9AR" firstAttribute="top" secondItem="9zT-ZP-85a" secondAttribute="topMargin" constant="5" id="5dE-8l-gKz"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Evx-zr-P2N" secondAttribute="bottom" constant="5" id="CRe-a0-kXr"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="AQC-Nx-9AR" secondAttribute="trailing" constant="5" id="FYv-lY-yCV"/>
+                                                        <constraint firstItem="Evx-zr-P2N" firstAttribute="leading" secondItem="9zT-ZP-85a" secondAttribute="leading" constant="5" id="Qav-xw-z1m"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Evx-zr-P2N" secondAttribute="trailing" constant="5" id="RaY-hY-42a"/>
+                                                        <constraint firstItem="Evx-zr-P2N" firstAttribute="top" secondItem="9zT-ZP-85a" secondAttribute="top" constant="5" id="WWV-w7-FNP"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="AQC-Nx-9AR" secondAttribute="bottom" constant="5" id="hV9-hC-wcW"/>
+                                                        <constraint firstItem="AQC-Nx-9AR" firstAttribute="leading" secondItem="9zT-ZP-85a" secondAttribute="leadingMargin" constant="5" id="vh1-Kw-64K"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="IGNCell" rowHeight="93" id="GTS-cH-c6B" customClass="IGNCell" customModule="VGStatsPlus" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="121" width="404" height="93"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GTS-cH-c6B" id="jlf-pI-3tr">
+                                                    <rect key="frame" x="0.0" y="0.0" width="404" height="92.666666666666671"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IGN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4v-RF-zgQ">
+                                                            <rect key="frame" x="20" y="16" width="364" height="61"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="X4v-RF-zgQ" firstAttribute="top" secondItem="jlf-pI-3tr" secondAttribute="topMargin" constant="5" id="Xxu-kP-4I7"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="X4v-RF-zgQ" secondAttribute="trailing" constant="5" id="bM7-99-GcI"/>
+                                                        <constraint firstItem="X4v-RF-zgQ" firstAttribute="leading" secondItem="jlf-pI-3tr" secondAttribute="leadingMargin" constant="5" id="oIj-Fh-GDX"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="X4v-RF-zgQ" secondAttribute="bottom" constant="5" id="slU-pE-J1f"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="ignNameLabel" destination="X4v-RF-zgQ" id="m7z-JE-Tba"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="WpH-YQ-pon" secondAttribute="bottom" constant="5" id="0v7-dT-rfX"/>
                                     <constraint firstItem="Yz2-zN-Iaj" firstAttribute="leading" secondItem="0nH-61-aMs" secondAttribute="leading" constant="5" id="6CG-kz-FG2"/>
                                     <constraint firstItem="o4H-qz-axr" firstAttribute="leading" secondItem="0nH-61-aMs" secondAttribute="leading" constant="5" id="8Kj-aX-fuq"/>
                                     <constraint firstItem="BtN-wK-j51" firstAttribute="leading" secondItem="0nH-61-aMs" secondAttribute="leading" constant="5" id="G9e-0K-XM5"/>
                                     <constraint firstItem="BtN-wK-j51" firstAttribute="top" secondItem="0nH-61-aMs" secondAttribute="top" constant="5" id="Jrj-vW-wpM"/>
                                     <constraint firstItem="o4H-qz-axr" firstAttribute="top" secondItem="Yz2-zN-Iaj" secondAttribute="bottom" constant="5" id="QrK-qZ-4sJ"/>
                                     <constraint firstAttribute="trailing" secondItem="Yz2-zN-Iaj" secondAttribute="trailing" constant="20" id="R6b-dF-ILC"/>
+                                    <constraint firstItem="WpH-YQ-pon" firstAttribute="leading" secondItem="0nH-61-aMs" secondAttribute="leading" constant="5" id="Rg1-ea-Kl4"/>
+                                    <constraint firstAttribute="trailing" secondItem="WpH-YQ-pon" secondAttribute="trailing" constant="5" id="Rmz-tv-jGO"/>
                                     <constraint firstItem="Yz2-zN-Iaj" firstAttribute="top" secondItem="BtN-wK-j51" secondAttribute="bottom" constant="5" id="eUO-nq-q6K"/>
                                     <constraint firstAttribute="trailing" secondItem="BtN-wK-j51" secondAttribute="trailing" constant="20" id="fSN-VM-GHX"/>
+                                    <constraint firstItem="WpH-YQ-pon" firstAttribute="top" secondItem="o4H-qz-axr" secondAttribute="bottom" constant="5" id="q2p-hx-lzb"/>
                                     <constraint firstAttribute="trailing" secondItem="o4H-qz-axr" secondAttribute="trailing" constant="20" id="qfW-Nm-N0K"/>
                                 </constraints>
                             </view>
@@ -1509,6 +1580,7 @@
                     </view>
                     <connections>
                         <outlet property="nameLabel" destination="fhZ-iP-DCm" id="mP4-t9-4HT"/>
+                        <outlet property="tableView" destination="WpH-YQ-pon" id="lFe-on-p09"/>
                         <outlet property="userProfileImage" destination="uIY-9E-m3D" id="cYh-61-a93"/>
                     </connections>
                 </viewController>
@@ -2025,7 +2097,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="Gn7-AJ-EMi"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                                    <state key="normal" title="Gourp Members">
+                                                    <state key="normal" title="Group Members">
                                                         <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
