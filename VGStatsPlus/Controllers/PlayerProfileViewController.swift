@@ -118,15 +118,6 @@ extension PlayerProfileViewController: UITableViewDelegate, UITableViewDataSourc
                         cell.matches = VGDataSource.instance.matches.sorted {
                             $0.createdAt! > $1.createdAt!
                         }
-                        print("\n")
-                        print("FirstMatch")
-                        print(cell.matches[0])
-                        print("FirstMatch")
-                        print("\n")
-                        print("SecondMatch")
-                        print(cell.matches[4])
-                        print("SecondMatch")
-                        print("\n")
                     }
                 })
             }
