@@ -115,7 +115,22 @@ extension PlayerProfileViewController: UITableViewDelegate, UITableViewDataSourc
             if VGDataSource.instance.player != nil {
                 VGDataSource.instance.getMatches(regional: (VGDataSource.instance.player?.shardId)!, success: { (success) in
                     if success {
-                        cell.matches = VGDataSource.instance.matches.sorted {
+                        let matches = VGDataSource.instance.matches.sorted {
+                            $0.createdAt! > $1.createdAt!
+                        }
+                        
+                        var createdAtSet = Set<MatchResource>()
+                        var arrayOfMatches: [MatchResource] = []
+
+                        for match in matches {
+                            createdAtSet.insert(match)
+                        }
+                        
+                        for createdDate in createdAtSet {
+                            arrayOfMatches.append(createdDate)
+                        }
+                        
+                        cell.matches = arrayOfMatches.sorted {
                             $0.createdAt! > $1.createdAt!
                         }
                     }
@@ -140,5 +155,23 @@ extension PlayerProfileViewController: UITableViewDelegate, UITableViewDataSourc
         let height = min(max(y, 60), 400)
         imageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: height)
     }
+    
+    func uniqueElementsFrom(array: [String]) -> [String] {
+        //Create an empty Set to track unique items
+        var set = Set<String>()
+        let result = array.filter {
+            guard !set.contains($0) else {
+                //If the set already contains this object, return false
+                //so we skip it
+                return false
+            }
+            //Add this item to the set since it will now be in the array
+            set.insert($0)
+            //Return true so that filtered array will contain this item.
+            return true
+        }
+        return result
+    }
+
     
 }

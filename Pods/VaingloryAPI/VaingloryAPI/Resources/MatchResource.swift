@@ -49,3 +49,14 @@ public struct MatchResource: Resource {
     }
 }
 
+extension MatchResource: Equatable {
+    public static func == (lhs: MatchResource, rhs: MatchResource) -> Bool {
+        return lhs.createdAt == rhs.createdAt
+    }
+}
+
+extension MatchResource: Hashable {
+    public var hashValue: Int {
+        return createdAt!.hashValue
+    }
+}
