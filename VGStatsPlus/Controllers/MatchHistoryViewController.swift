@@ -84,6 +84,8 @@ class MatchHistoryViewController: UIViewController, UINavigationControllerDelega
             matchNameLabel.text = "Blitz"
         } else if match!.gameMode == "casual_aral" {
             matchNameLabel.text = "Battale Royale"
+        } else if match!.gameMode == "blitz_rounds_pvp_casual" {
+            matchNameLabel.text = "Onslaught"
         } else {
             matchNameLabel.text = "need to add gameMode type to be recognized"
         }
