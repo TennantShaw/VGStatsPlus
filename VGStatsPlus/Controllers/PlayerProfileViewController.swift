@@ -42,7 +42,6 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
         tableView.backgroundColor = UIColor.clear
         
         imageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 300)
-        imageView.image = UIImage(named: "Ardan_Splash")
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         view.addSubview(imageView)
@@ -119,9 +118,43 @@ extension PlayerProfileViewController: UITableViewDelegate, UITableViewDataSourc
                             $0.createdAt! > $1.createdAt!
                         }
                         
+                        var skinToUse: String = ""
+                        let firstMatchRoster: [RosterResource] = matches[0].rosters!
+                        let firstTeam: [ParticipantResource] = firstMatchRoster[0].participants!
+                        let secondTeam: [ParticipantResource] = firstMatchRoster[1].participants!
+                        let playerOne = firstTeam[0].player!
+                        let playerTwo = firstTeam[1].player!
+                        let playerThree = firstTeam[2].player!
+                        let playerFour = secondTeam[0].player!
+                        let playerFive = secondTeam[1].player!
+                        let playerSix = secondTeam[2].player!
+                        
+                        if playerOne.name == "TennantTheVast" {
+                            skinToUse = firstTeam[0].actor! + "_Splash"
+                            print(skinToUse)
+                        } else if playerTwo.name == "TennantTheVast" {
+                            skinToUse = firstTeam[1].actor! + "_Splash"
+                            print(skinToUse)
+                        } else if playerThree.name == "TennantTheVast" {
+                            skinToUse = firstTeam[2].actor! + "_Splash"
+                            print(skinToUse)
+                        } else if playerFour.name == "TennantTheVast" {
+                            skinToUse = secondTeam[0].actor! + "_Splash"
+                            print(skinToUse)
+                        } else if playerFive.name == "TennantTheVast" {
+                            skinToUse = secondTeam[1].actor! + "_Splash"
+                            print(skinToUse)
+                        } else if playerSix.name == "TennantTheVast" {
+                            skinToUse = secondTeam[2].actor! + "_Splash"
+                            print(skinToUse)
+                        }
+                        
                         var createdAtSet = Set<MatchResource>()
                         var arrayOfMatches: [MatchResource] = []
-
+                        
+                        print(firstMatchRoster)
+                        
+                        
                         for match in matches {
                             createdAtSet.insert(match)
                         }
@@ -133,6 +166,8 @@ extension PlayerProfileViewController: UITableViewDelegate, UITableViewDataSourc
                         cell.matches = arrayOfMatches.sorted {
                             $0.createdAt! > $1.createdAt!
                         }
+                        
+                        self.setImage(skinToUse) // needs to be the actor from participantResource
                     }
                 })
             }
@@ -154,6 +189,10 @@ extension PlayerProfileViewController: UITableViewDelegate, UITableViewDataSourc
         let y = 300 - (scrollView.contentOffset.y + 300)
         let height = min(max(y, 60), 400)
         imageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: height)
+    }
+    
+    func setImage(_ imageName: String) {
+        imageView.image = UIImage(named: imageName)
     }
     
 }
