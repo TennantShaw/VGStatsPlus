@@ -82,7 +82,7 @@ class LoginToFirebaseVC: UIViewController {
     
     func showMainVC() {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let swVC = storyBoard.instantiateViewController(withIdentifier: "chooseIGNVC") as! LoginViewController
+        let swVC = storyBoard.instantiateViewController(withIdentifier: "chooseIGNVC") as! InitialIGNVC
         self.present(swVC, animated: true, completion: nil)
     }
 

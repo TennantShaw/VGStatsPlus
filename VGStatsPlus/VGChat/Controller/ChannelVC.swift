@@ -110,6 +110,8 @@ class ChannelVC: UIViewController {
     @IBAction func leftBtnTapped(_ sender: Any) {
         handleLeftSlide()
     }
+    
+    
     func checkDatabase() {
         VGFirebaseDB.instance.getAllChannels { (channels) in
             self.channels = channels

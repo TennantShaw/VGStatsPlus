@@ -84,7 +84,7 @@
         <!--VGStatsPlus-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="chooseIGNVC" id="BYZ-38-t0r" customClass="LoginViewController" customModule="VGStatsPlus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chooseIGNVC" id="BYZ-38-t0r" customClass="InitialIGNVC" customModule="VGStatsPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -413,10 +413,10 @@
             </objects>
             <point key="canvasLocation" x="-265.21739130434787" y="1726.6304347826087"/>
         </scene>
-        <!--Player Profile View Controller-->
+        <!--HomeVC-->
         <scene sceneID="W7I-wX-eYd">
             <objects>
-                <viewController id="Ab2-MG-hpX" customClass="PlayerProfileViewController" customModule="VGStatsPlus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ab2-MG-hpX" customClass="HomeVC" customModule="VGStatsPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TA4-Q5-Rnn"/>
                         <viewControllerLayoutGuide type="bottom" id="0iD-Nc-qCa"/>

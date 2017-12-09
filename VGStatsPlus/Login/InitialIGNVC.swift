@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  InitialIGNVC.swift
 //  VGStatsPlus
 //
 //  Created by Tennant Shaw on 10/3/17.
@@ -11,7 +11,7 @@ import UIKit
 import VaingloryAPI
 
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class InitialIGNVC: UIViewController, UITextFieldDelegate {
     //MARK: - Outlets
     @IBOutlet var imgView: UIImageView!
     @IBOutlet var textFieldIGN: UITextField!
@@ -50,6 +50,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     VGFirebaseDB.instance.updateIGN(userData: ["ign":"TennantTheVast", "shardID": "na"])
                     SavedStatus.instance.savedUserIGN = ["TennantTheVast":"na"]
                     let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                    
                     let swVC = storyBoard.instantiateViewController(withIdentifier: "SWVC") as! UIViewController
                     self.present(swVC, animated: true, completion: {
                         SavedStatus.instance.isLoggedIn = true
@@ -110,7 +111,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         toolbar.barTintColor = .black
         toolbar.tintColor = .white
         
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(LoginViewController.dismissKeyboard))
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(InitialIGNVC.dismissKeyboard))
         
         toolbar.setItems([doneButton], animated: false)
         toolbar.isUserInteractionEnabled = true
@@ -127,7 +128,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
 
 
-extension LoginViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+extension InitialIGNVC: UIPickerViewDelegate, UIPickerViewDataSource {
     //MARK: - PickerViewDataSource Methods
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return regionalShards.count

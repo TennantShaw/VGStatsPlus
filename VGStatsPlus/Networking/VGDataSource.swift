@@ -13,7 +13,7 @@ class VGDataSource {
     
     static let instance = VGDataSource()
     
-    var delegate: PlayerProfileViewController?
+    var delegate: HomeVC?
     var matchDelegate: MatchHistoryViewController?
     let filters = RouterFilters()
     var player: PlayerResource? {

@@ -207,4 +207,10 @@ class VGFirebaseDB {
             handler(backMessage)
         })
     }
+    
+    func sendMatch(toChannel chID: String, matchID: String, userIGN: String, shardID: String, handler: @escaping (_ matchSent: Bool) -> ()) {
+        let data = ["matchId": matchID, "userIGN": userIGN, "shardId" : shardID]
+        REF_CHANNELS.child(chID).child("messages").childByAutoId().updateChildValues(data)
+        handler(true)
+    }
 }

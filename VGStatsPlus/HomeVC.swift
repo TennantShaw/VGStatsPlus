@@ -1,5 +1,5 @@
 //
-//  PlayerProfileViewController.swift
+//  HomeVC.swift
 //  VGStatsPlus
 //
 //  Created by Tennant Shaw on 10/3/17.
@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import VaingloryAPI
 
-class PlayerProfileViewController: UIViewController, UINavigationControllerDelegate {
+class HomeVC: UIViewController, UINavigationControllerDelegate {
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
 
@@ -85,7 +85,7 @@ class PlayerProfileViewController: UIViewController, UINavigationControllerDeleg
 }
 
 //MARK: - TableView DataSource and Delegate
-extension PlayerProfileViewController: UITableViewDelegate, UITableViewDataSource {
+extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
