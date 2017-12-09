@@ -41,27 +41,29 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>fb120243818653644</string>
-            </array>
-        </dict>
-    </array>
-    <key>FacebookAppID</key>
-    <string>120243818653644</string>
-    <key>FacebookDisplayName</key>
-    <string>VGStatsPlus</string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>fbapi</string>
-        <string>fb-messenger-api</string>
-        <string>fbauth2</string>
-        <string>fbshareextension</string>
-    </array>
-    <key>NSPhotoLibraryUsageDescription</key>
-    <string>We want to get your profile picture for this app and create VGStatsPlus account with FB</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb120243818653644</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>120243818653644</string>
+	<key>FacebookDisplayName</key>
+	<string>VGStatsPlus</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We want to get your profile picture for this app and create VGStatsPlus account with FB</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let loginVC = storyBoard.instantiateViewController(withIdentifier: "loginToFirebase")
             self.window?.rootViewController = loginVC
         }
-        
+        UIApplication.shared.statusBarStyle = .lightContent
         UINavigationBar.appearance().barTintColor = UIColor.black
         UINavigationBar.appearance().tintColor = UIColor.white
         
