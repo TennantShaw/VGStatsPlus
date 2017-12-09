@@ -63,12 +63,6 @@ class LeftSideCell: UITableViewCell {
         leftSideKDALabel.text = "\(participant!.kills!.description) / \(participant!.deaths!.description) / \(participant!.assists!.description)"
         leftSideCSLabel.text = "\(participant!.minionKills!.description)"
         leftSideGoldLabel.text = "\(participant!.gold!.description)"
-        
-        print("\n")
-        print("----------Left")
-        print(participant)
-        print("----------Left")
-        print("\n")
     }
 }
 
@@ -125,12 +119,6 @@ class RightSideCell: UITableViewCell {
         rightSideKDALabel.text = "\(participant!.kills!.description) / \(participant!.deaths!.description) / \(participant!.assists!.description)"
         rightSideCSLabel.text = "\(participant!.minionKills!.description)"
         rightSideGoldLabel.text = "\(participant!.gold!.description)"
-
-        print("\n")
-        print("----------Right")
-        print(participant)
-        print("----------Right")
-        print("\n")
     }
     
 }
