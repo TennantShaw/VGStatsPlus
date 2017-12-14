@@ -14,7 +14,7 @@ class MatchesCell: UITableViewCell {
     @IBOutlet var collectionView: UICollectionView!
     
     //MARK: - Properties
-    var delegate: PlayerProfileViewController?
+    var delegate: HomeVC?
     
     var matches: [MatchResource] = [] {
         didSet {
