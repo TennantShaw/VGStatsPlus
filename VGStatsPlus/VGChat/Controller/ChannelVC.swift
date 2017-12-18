@@ -132,7 +132,10 @@ class ChannelVC: UIViewController {
     }
     
     @IBAction func matchesButtonTapped(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let friendsVC = storyBoard.instantiateViewController(withIdentifier: "selectMatchVC") as! SelectMatchVC
         
+        self.present(friendsVC, animated: true, completion: nil)
     }
     
     @IBAction func sendButtonTapped(_ sender: Any) {

@@ -55,8 +55,9 @@
 		AC9745111FAAD1A9002AC9AC /* SelectFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9745101FAAD1A9002AC9AC /* SelectFriendCell.swift */; };
 		ACC6EBE91F900A0C000842E9 /* RoundedCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6EBE81F900A0C000842E9 /* RoundedCellExtension.swift */; };
 		ACC6EBEB1F913540000842E9 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6EBEA1F913540000842E9 /* Channel.swift */; };
+		ACCD84851FE7764500E78259 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD84841FE7764500E78259 /* MatchCell.swift */; };
+		ACCD84871FE77E5A00E78259 /* SelectMatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD84861FE77E5A00E78259 /* SelectMatchCell.swift */; };
 		ACF294DD1FDCA8020049D8E2 /* SelectMatchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF294DB1FDCA8020049D8E2 /* SelectMatchVC.swift */; };
-		ACF294DE1FDCA8020049D8E2 /* SelectMatchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACF294DC1FDCA8020049D8E2 /* SelectMatchVC.xib */; };
 		ACF73A171FAEC4FA00CBC133 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF73A161FAEC4FA00CBC133 /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -136,8 +137,9 @@
 		AC9745101FAAD1A9002AC9AC /* SelectFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFriendCell.swift; sourceTree = "<group>"; };
 		ACC6EBE81F900A0C000842E9 /* RoundedCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCellExtension.swift; sourceTree = "<group>"; };
 		ACC6EBEA1F913540000842E9 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		ACCD84841FE7764500E78259 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
+		ACCD84861FE77E5A00E78259 /* SelectMatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMatchCell.swift; sourceTree = "<group>"; };
 		ACF294DB1FDCA8020049D8E2 /* SelectMatchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMatchVC.swift; sourceTree = "<group>"; };
-		ACF294DC1FDCA8020049D8E2 /* SelectMatchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectMatchVC.xib; sourceTree = "<group>"; };
 		ACF73A161FAEC4FA00CBC133 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		BCABD4D6EC47A852AAFC5FAC /* Pods-VGStatsPlus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VGStatsPlus.release.xcconfig"; path = "Pods/Target Support Files/Pods-VGStatsPlus/Pods-VGStatsPlus.release.xcconfig"; sourceTree = "<group>"; };
 		F768D22E7A12E74B8FBD6AEE /* Pods_VGStatsPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VGStatsPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -314,7 +316,6 @@
 		AC97450F1FAACFEE002AC9AC /* XIB */ = {
 			isa = PBXGroup;
 			children = (
-				ACF294DC1FDCA8020049D8E2 /* SelectMatchVC.xib */,
 				AC3119F31F91671A007082A3 /* CreateChannel.xib */,
 			);
 			path = XIB;
@@ -394,6 +395,8 @@
 				AC52C55A1F8BE40700AF7749 /* ChannelCell.swift */,
 				AC52C55C1F8BE53C00AF7749 /* ChannelMessageCell.swift */,
 				AC9745101FAAD1A9002AC9AC /* SelectFriendCell.swift */,
+				ACCD84841FE7764500E78259 /* MatchCell.swift */,
+				ACCD84861FE77E5A00E78259 /* SelectMatchCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -556,7 +559,6 @@
 			files = (
 				302FA9E01F798EE70042DAD5 /* LaunchScreen.storyboard in Resources */,
 				AC3119F51F91671A007082A3 /* CreateChannel.xib in Resources */,
-				ACF294DE1FDCA8020049D8E2 /* SelectMatchVC.xib in Resources */,
 				3086DB601F9505E5007FCF3D /* GoogleService-Info.plist in Resources */,
 				302FA9DD1F798EE70042DAD5 /* Assets.xcassets in Resources */,
 				302FA9DB1F798EE70042DAD5 /* Main.storyboard in Resources */,
@@ -697,6 +699,7 @@
 				AC52C54F1F893AA700AF7749 /* MenuViewController.swift in Sources */,
 				AC0ECA071F9407F800B63E55 /* Message.swift in Sources */,
 				30D8CA7F1F842534002C923F /* VGDataSource.swift in Sources */,
+				ACCD84871FE77E5A00E78259 /* SelectMatchCell.swift in Sources */,
 				302FA9D61F798EE70042DAD5 /* AppDelegate.swift in Sources */,
 				AC52C5591F8BD15900AF7749 /* ChannelVC.swift in Sources */,
 				ACC6EBEB1F913540000842E9 /* Channel.swift in Sources */,
@@ -705,6 +708,7 @@
 				30D471741F869C2200CC0E8C /* Participant.swift in Sources */,
 				ACF294DD1FDCA8020049D8E2 /* SelectMatchVC.swift in Sources */,
 				30D471781F87B87300CC0E8C /* MatchHistoryViewController.swift in Sources */,
+				ACCD84851FE7764500E78259 /* MatchCell.swift in Sources */,
 				30D471721F869A6C00CC0E8C /* Assets.swift in Sources */,
 				AC7995661F86C60B000D399C /* PlayerCell.swift in Sources */,
 				AC0BD6A61FB4FE5D004D95D8 /* TwitchHomeVC.swift in Sources */,
