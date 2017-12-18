@@ -118,8 +118,10 @@ class ChannelVC: UIViewController {
             if self.channels.count != 0 {
                 VGFirebaseDB.instance.getMessages(forChannel: VGFirebaseDB.instance.selectedChannel!, handler: { (messagesArray) in
                     self.messages = messagesArray
-                    self.tableView.reloadData()
-                    self.tableView.scrollToRow(at: IndexPath(row: self.messages.count - 1, section: 0 ), at: .none, animated: true)
+                    if self.messages.count != 0 {
+                        self.tableView.reloadData()
+                        self.tableView.scrollToRow(at: IndexPath(row: self.messages.count - 1, section: 0 ), at: .none, animated: true)
+                    }
                 })                
             }
         }
@@ -190,7 +192,10 @@ class ChannelVC: UIViewController {
     }
     
     @IBAction func quitChannelTapped(_ sender: Any) {
-        
+        VGFirebaseDB.instance.quitChannel((VGFirebaseDB.instance.selectedChannel?.channelID)!)
+        messages.removeAll()
+        tableView.reloadData()
+        handleRightSlide()
     }
     
     
@@ -263,8 +268,10 @@ extension ChannelVC: UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "channelMessageCell") as? ChannelMessageCell else {
                 return UITableViewCell()
             }
+        if messages.count != 0 {
             cell.setup(message: messages[indexPath.row])
-            return cell
+        }
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

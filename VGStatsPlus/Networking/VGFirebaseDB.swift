@@ -115,10 +115,12 @@ class VGFirebaseDB {
         }
     }
     
+    // MARK: Create User in Database
     func createDBUser(name: String, userData: Dictionary<String, Any>) {
         REF_USERS.child(SavedStatus.instance.userID).child(name).updateChildValues(userData)
     }
     
+    //MARK: Update IGN in Database
     func updateIGN(userData: Dictionary<String, Any>) {
         REF_USERS.child(SavedStatus.instance.userID).child("userIGNInfo").updateChildValues(userData)
         getIgnForTheUser(id: SavedStatus.instance.userID) { (success, error) in
@@ -126,22 +128,10 @@ class VGFirebaseDB {
         }
     }
     
+    
+    // MARK: Add IGN To Database
     func addIGNToDatabase() {
         
-    }
-    
-    
-    // MARK: Create a Channel
-    
-    func createChannel(withTitle title: String, withId id: String, channelImage image: String, friendsUID uid: [String:String], handler: @escaping (_ groupCreated: Bool) -> ()) {
-        let channelID = UUID()
-        REF_CHANNELS.child("\(channelID)").updateChildValues(["title": title, "admin": SavedStatus.instance.userID, "image": image, "id": id, "friends": uid])
-        for id in uid {
-            updateUserChannels(withID: id.key, channel: [title : "\(channelID)"], success: { (success) in
-                print("ChannelUpdated")
-            })
-        }
-        handler(true)
     }
     
     func getIgnForTheUser(id: String, gotIGN: @escaping (_ success: Bool, _ error: Error?) -> ()) {
@@ -150,6 +140,20 @@ class VGFirebaseDB {
             gotIGN(true, nil)
         })
         
+    }
+    
+    // MARK: Create a Channel
+ 
+    
+    func createChannel(withTitle title: String, withId id: String, channelImage image: String, friendsUID uid: [String:String], handler: @escaping (_ groupCreated: Bool) -> ()) {
+        let channelID = UUID()
+        REF_CHANNELS.child("\(channelID)").updateChildValues(["title": title, "admin": SavedStatus.instance.userID, "image": image, "id": id, "friends": uid])
+        for id in uid {
+            updateUserChannels(withID: id.key, channel: ["\(channelID)" : title], success: { (success) in
+                print("ChannelUpdated")
+            })
+        }
+        handler(true)
     }
     
     func getAllChannels(handler: @escaping (_ messages: [Channel]) -> ()) {
@@ -169,6 +173,25 @@ class VGFirebaseDB {
                 self.selectedChannel = channelArray.first
             }
             handler(channelArray)
+        })
+    }
+    
+    // MARK: Quitting or deleting channel
+    func quitChannel(_ channelID: String) {
+        REF_CHANNELS.child(channelID).observe(.value, with: { (snap) in
+            guard let channelAdminID = snap.childSnapshot(forPath: "admin").value as? String else { return }
+            if channelAdminID == SavedStatus.instance.userID {
+                guard let channelUsers = snap.childSnapshot(forPath: "friends").value as? [String:Any] else { return }
+                print(channelUsers)
+                for (id,_) in channelUsers {
+                self.REF_USERS.child(id).child("channels").child(channelID).removeValue()
+                }
+                self.REF_CHANNELS.child(channelID).removeValue()
+            } else {
+                self.REF_CHANNELS.child("friends").child(SavedStatus.instance.userID).removeValue()
+                self.REF_USERS.child(SavedStatus.instance.userID).child("channels").child(channelID).removeValue()
+            }
+            
         })
     }
     
