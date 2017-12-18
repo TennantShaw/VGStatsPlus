@@ -13,6 +13,7 @@ class SelectMatchVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var indexNum = 1
+    var delegate: ChannelVC!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,14 @@ class SelectMatchVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func selectBtnTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier: "MatchDetailVC") as! MatchHistoryViewController
+        VGDataSource.instance.selectedMatch = VGDataSource.instance.matches[indexNum]
+        if VGDataSource.instance.selectedMatch != nil {
+            self.delegate?.present(destinationVC, animated: true, completion: nil)
+        }
+    }
     
 }
 

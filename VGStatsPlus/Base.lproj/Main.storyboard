@@ -1625,6 +1625,7 @@
                                         </state>
                                         <connections>
                                             <action selector="cancellBtnTapped:" destination="dQ5-3C-OXi" eventType="touchUpInside" id="6dR-So-aSr"/>
+                                            <action selector="selectBtnTapped:" destination="dQ5-3C-OXi" eventType="touchUpInside" id="djC-66-SUm"/>
                                         </connections>
                                     </button>
                                 </subviews>
