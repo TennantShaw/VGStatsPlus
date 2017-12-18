@@ -14,6 +14,15 @@ class SavedStatus {
     static let instance = SavedStatus()
     let defaults = UserDefaults.standard
     
+    var selectedShard: String {
+        get {
+            return defaults.string(forKey: "selectedShard")!
+        }
+        set {
+            defaults.set(newValue, forKey: "selectedShard")
+        }
+    }
+    
     var isLoggedIn: Bool {
         get {
             return defaults.bool(forKey: "loggedIn")

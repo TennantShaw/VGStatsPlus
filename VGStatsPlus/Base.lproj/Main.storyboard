@@ -1666,7 +1666,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ta-Jh-DF2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="905.79710144927549" y="905.70652173913049"/>
+            <point key="canvasLocation" x="851" y="944"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="3RG-tq-TlJ">
@@ -2124,7 +2124,7 @@
                                             <outlet property="userProfileImage" destination="Slv-hD-jxJ" id="YBs-y7-QAI"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="matchCell" rowHeight="218" id="qER-CF-otv" customClass="MatchCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="matchCell" rowHeight="218" id="qER-CF-otv" customClass="MatchCell" customModule="VGStatsPlus" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="108" width="414" height="218"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qER-CF-otv" id="UaK-ie-oRl">
@@ -2174,12 +2174,10 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="matchImage" destination="dFX-rM-MXe" id="dOS-zS-P0t"/>
-                                            <outlet property="messageLabel" destination="Rsd-oo-bjN" id="3yA-EQ-TXO"/>
-                                            <outlet property="nameLabel" destination="0Mg-im-MPa" id="QAA-ba-Yhj"/>
-                                            <outlet property="timeLabel" destination="gM5-hL-092" id="jvZ-LZ-ago"/>
-                                            <outlet property="userNameLabel" destination="0Mg-im-MPa" id="FOn-RG-6aL"/>
-                                            <outlet property="userProfileImage" destination="dFX-rM-MXe" id="D7M-69-kaF"/>
+                                            <outlet property="matchImage" destination="dFX-rM-MXe" id="PVw-i2-tc4"/>
+                                            <outlet property="messageLabel" destination="Rsd-oo-bjN" id="qrk-Ja-OKA"/>
+                                            <outlet property="nameLabel" destination="0Mg-im-MPa" id="Asq-tU-ilY"/>
+                                            <outlet property="timeLabel" destination="gM5-hL-092" id="Pod-vG-96o"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

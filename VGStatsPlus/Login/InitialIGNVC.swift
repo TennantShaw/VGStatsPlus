@@ -48,6 +48,7 @@ class InitialIGNVC: UIViewController, UITextFieldDelegate {
                 if success {
                     print("successFully got data")
                     VGFirebaseDB.instance.updateIGN(userData: ["ign":"TennantTheVast", "shardID": "na"])
+                    SavedStatus.instance.selectedShard = "na"
                     SavedStatus.instance.savedUserIGN = ["TennantTheVast":"na"]
                     let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                     

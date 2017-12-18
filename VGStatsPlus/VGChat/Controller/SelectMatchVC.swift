@@ -34,11 +34,10 @@ class SelectMatchVC: UIViewController {
     }
     
     @IBAction func selectBtnTapped(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let destinationVC = storyboard.instantiateViewController(withIdentifier: "MatchDetailVC") as! MatchHistoryViewController
-        VGDataSource.instance.selectedMatch = VGDataSource.instance.matches[indexNum]
-        if VGDataSource.instance.selectedMatch != nil {
-            self.delegate?.present(destinationVC, animated: true, completion: nil)
+        VGFirebaseDB.instance.sendMatch(toChannel: (VGFirebaseDB.instance.selectedChannel?.channelID)!, matchID: VGDataSource.instance.matches[indexNum].id,  shardID: VGDataSource.instance.matches[indexNum].shardId!) { (success) in
+            if success {
+                self.dismiss(animated: true, completion: nil)
+            }
         }
     }
     

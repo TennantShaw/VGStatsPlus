@@ -210,8 +210,14 @@ class VGFirebaseDB {
     }
     
     //Mark: Create Message
-    func sendMessage(withContent content: String, userID id: String, channelID chID: String, handler: @escaping (_ messageSent: Bool) -> ()) {
-        let data = ["content": content, "userId": id]
+    func sendMessage(withContent content: String, userID id: String, channelID chID: String, userShard shard: String, handler: @escaping (_ messageSent: Bool) -> ()) {
+        let data = ["content": content, "userId": id, "userShard" : shard, "messageType" : "text"]
+        REF_CHANNELS.child(chID).child("messages").childByAutoId().updateChildValues(data)
+        handler(true)
+    }
+    // MARK: Send Match
+    func sendMatch(toChannel chID: String, matchID: String, shardID: String, handler: @escaping (_ matchSent: Bool) -> ()) {
+        let data = ["content": matchID, "userId": SavedStatus.instance.userID, "userShard" : shardID, "messageType" : "match"]
         REF_CHANNELS.child(chID).child("messages").childByAutoId().updateChildValues(data)
         handler(true)
     }
@@ -222,18 +228,14 @@ class VGFirebaseDB {
             var backMessage: [Message] = []
             guard let channelMessagesSnapshot = messageSnap.children.allObjects as? [DataSnapshot] else { return }
             for message in channelMessagesSnapshot {
-                guard let content = message.childSnapshot(forPath: "content").value as? String else { return }
-                guard let senderId = message.childSnapshot(forPath: "userId").value as? String else { return }
-                let _message = Message(content: content, senderId: senderId)
-                backMessage.append(_message)
-            }
+                    guard let content = message.childSnapshot(forPath: "content").value as? String else { return }
+                    guard let senderId = message.childSnapshot(forPath: "userId").value as? String else { return }
+                    guard let userShard = message.childSnapshot(forPath: "userShard").value as? String else { return }
+                    guard let messageType = message.childSnapshot(forPath: "messageType").value as? String else { return }
+                let _message = Message(content: content, senderId: senderId, messageType: messageType, userShard: userShard )
+                    backMessage.append(_message)
+                }
             handler(backMessage)
         })
-    }
-    
-    func sendMatch(toChannel chID: String, matchID: String, userIGN: String, shardID: String, handler: @escaping (_ matchSent: Bool) -> ()) {
-        let data = ["matchId": matchID, "userIGN": userIGN, "shardId" : shardID]
-        REF_CHANNELS.child(chID).child("messages").childByAutoId().updateChildValues(data)
-        handler(true)
     }
 }

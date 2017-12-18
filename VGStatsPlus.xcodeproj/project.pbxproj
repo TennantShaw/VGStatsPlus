@@ -53,9 +53,9 @@
 		AC79956B1F86DB45000D399C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC79956A1F86DB45000D399C /* GradientView.swift */; };
 		AC97450D1FAACFD0002AC9AC /* PickFriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC97450B1FAACFD0002AC9AC /* PickFriendsVC.swift */; };
 		AC9745111FAAD1A9002AC9AC /* SelectFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9745101FAAD1A9002AC9AC /* SelectFriendCell.swift */; };
+		ACA728F31FE81087005670F5 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA728F21FE81087005670F5 /* MatchCell.swift */; };
 		ACC6EBE91F900A0C000842E9 /* RoundedCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6EBE81F900A0C000842E9 /* RoundedCellExtension.swift */; };
 		ACC6EBEB1F913540000842E9 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6EBEA1F913540000842E9 /* Channel.swift */; };
-		ACCD84851FE7764500E78259 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD84841FE7764500E78259 /* MatchCell.swift */; };
 		ACCD84871FE77E5A00E78259 /* SelectMatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD84861FE77E5A00E78259 /* SelectMatchCell.swift */; };
 		ACF294DD1FDCA8020049D8E2 /* SelectMatchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF294DB1FDCA8020049D8E2 /* SelectMatchVC.swift */; };
 		ACF73A171FAEC4FA00CBC133 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF73A161FAEC4FA00CBC133 /* UIViewExtensions.swift */; };
@@ -135,9 +135,9 @@
 		AC79956A1F86DB45000D399C /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		AC97450B1FAACFD0002AC9AC /* PickFriendsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickFriendsVC.swift; sourceTree = "<group>"; };
 		AC9745101FAAD1A9002AC9AC /* SelectFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFriendCell.swift; sourceTree = "<group>"; };
+		ACA728F21FE81087005670F5 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
 		ACC6EBE81F900A0C000842E9 /* RoundedCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCellExtension.swift; sourceTree = "<group>"; };
 		ACC6EBEA1F913540000842E9 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
-		ACCD84841FE7764500E78259 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
 		ACCD84861FE77E5A00E78259 /* SelectMatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMatchCell.swift; sourceTree = "<group>"; };
 		ACF294DB1FDCA8020049D8E2 /* SelectMatchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMatchVC.swift; sourceTree = "<group>"; };
 		ACF73A161FAEC4FA00CBC133 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
@@ -395,8 +395,8 @@
 				AC52C55A1F8BE40700AF7749 /* ChannelCell.swift */,
 				AC52C55C1F8BE53C00AF7749 /* ChannelMessageCell.swift */,
 				AC9745101FAAD1A9002AC9AC /* SelectFriendCell.swift */,
-				ACCD84841FE7764500E78259 /* MatchCell.swift */,
 				ACCD84861FE77E5A00E78259 /* SelectMatchCell.swift */,
+				ACA728F21FE81087005670F5 /* MatchCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -670,6 +670,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACA728F31FE81087005670F5 /* MatchCell.swift in Sources */,
 				AC52C55F1F8C007D00AF7749 /* BindToKeyboard.swift in Sources */,
 				ACF73A171FAEC4FA00CBC133 /* UIViewExtensions.swift in Sources */,
 				AC3119F71F928D31007082A3 /* RoundedButton.swift in Sources */,
@@ -708,7 +709,6 @@
 				30D471741F869C2200CC0E8C /* Participant.swift in Sources */,
 				ACF294DD1FDCA8020049D8E2 /* SelectMatchVC.swift in Sources */,
 				30D471781F87B87300CC0E8C /* MatchHistoryViewController.swift in Sources */,
-				ACCD84851FE7764500E78259 /* MatchCell.swift in Sources */,
 				30D471721F869A6C00CC0E8C /* Assets.swift in Sources */,
 				AC7995661F86C60B000D399C /* PlayerCell.swift in Sources */,
 				AC0BD6A61FB4FE5D004D95D8 /* TwitchHomeVC.swift in Sources */,

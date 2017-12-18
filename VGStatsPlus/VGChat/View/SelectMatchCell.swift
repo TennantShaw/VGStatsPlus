@@ -120,7 +120,7 @@ class SelectMatchCell: UICollectionViewCell {
             goldsLabel.text = participantArray2[2].gold?.description
             heroImageView.image = UIImage(named: participantArray2[2].actor!)
         } else {
-            print("There is an error going on here at line 172 in MatchesCell.swift")
+            print("There is an error going on here")
         }
     }
     

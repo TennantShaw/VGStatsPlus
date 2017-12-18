@@ -141,7 +141,7 @@ class ChannelVC: UIViewController {
     @IBAction func sendButtonTapped(_ sender: Any) {
         if contentTextField.text != "" {
             sendButton.isEnabled = true
-            VGFirebaseDB.instance.sendMessage(withContent: contentTextField.text!, userID: VGFirebaseDB.instance.currentuserID!, channelID: (VGFirebaseDB.instance.selectedChannel?.channelID)!, handler: { (success) in
+            VGFirebaseDB.instance.sendMessage(withContent: contentTextField.text!, userID: VGFirebaseDB.instance.currentuserID!, channelID: (VGFirebaseDB.instance.selectedChannel?.channelID)!, userShard: SavedStatus.instance.selectedShard, handler: { (success) in
                 if success {
                     self.contentTextField.text = ""
                     self.view.endEditing(true)
@@ -268,16 +268,31 @@ extension ChannelVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "channelMessageCell") as? ChannelMessageCell else {
-                return UITableViewCell()
-            }
         if messages.count != 0 {
-            cell.setup(message: messages[indexPath.row])
+            if messages[indexPath.row].messageType == "text" {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "channelMessageCell") as? ChannelMessageCell else {
+                    return UITableViewCell()
+                }
+                cell.setup(message: messages[indexPath.row])
+                return cell
+            } else {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "matchCell") as? MatchCell else {
+                    return UITableViewCell()
+                }
+                cell.setupCell(match: messages[indexPath.row])
+                return cell
+            }
         }
-        return cell
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let destinationVC = storyboard.instantiateViewController(withIdentifier: "MatchDetailVC") as! MatchHistoryViewController
+//        VGDataSource.instance.selectedMatch = VGDataSource.instance.matches[indexNum]
+        //        if VGDataSource.instance.selectedMatch != nil {
+        //            self.delegate?.present(destinationVC, animated: true, completion: nil)
+        //        }
     }
 }
