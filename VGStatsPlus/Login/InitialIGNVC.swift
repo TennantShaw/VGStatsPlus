@@ -46,7 +46,9 @@ class InitialIGNVC: UIViewController, UITextFieldDelegate {
         })
         } else {
             // let user know that they cannot submit until they have added an IGN and selected a server region
-            
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let popUpVC = storyBoard.instantiateViewController(withIdentifier: "PopUpVC")
+            self.present(popUpVC, animated: true, completion: nil)
         }
     }
 

@@ -59,6 +59,7 @@
 		ACCD84871FE77E5A00E78259 /* SelectMatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD84861FE77E5A00E78259 /* SelectMatchCell.swift */; };
 		ACF294DD1FDCA8020049D8E2 /* SelectMatchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF294DB1FDCA8020049D8E2 /* SelectMatchVC.swift */; };
 		ACF73A171FAEC4FA00CBC133 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF73A161FAEC4FA00CBC133 /* UIViewExtensions.swift */; };
+		FFF7DA581FED91FF004D8ED8 /* PopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF7DA571FED91FF004D8ED8 /* PopupVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,7 @@
 		ACF73A161FAEC4FA00CBC133 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		BCABD4D6EC47A852AAFC5FAC /* Pods-VGStatsPlus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VGStatsPlus.release.xcconfig"; path = "Pods/Target Support Files/Pods-VGStatsPlus/Pods-VGStatsPlus.release.xcconfig"; sourceTree = "<group>"; };
 		F768D22E7A12E74B8FBD6AEE /* Pods_VGStatsPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VGStatsPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFF7DA571FED91FF004D8ED8 /* PopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 		302FA9D41F798EE70042DAD5 /* VGStatsPlus */ = {
 			isa = PBXGroup;
 			children = (
+				FFF7DA541FED8EB3004D8ED8 /* PopUps */,
 				ACF294EC1FDCABAF0049D8E2 /* Login */,
 				ACF294E21FDCAA300049D8E2 /* Twitch */,
 				ACF294E11FDCAA280049D8E2 /* Menu */,
@@ -439,6 +442,14 @@
 				30D8CA801F8425AA002C923F /* InitialIGNVC.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		FFF7DA541FED8EB3004D8ED8 /* PopUps */ = {
+			isa = PBXGroup;
+			children = (
+				FFF7DA571FED91FF004D8ED8 /* PopupVC.swift */,
+			);
+			path = PopUps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -703,6 +714,7 @@
 				ACCD84871FE77E5A00E78259 /* SelectMatchCell.swift in Sources */,
 				302FA9D61F798EE70042DAD5 /* AppDelegate.swift in Sources */,
 				AC52C5591F8BD15900AF7749 /* ChannelVC.swift in Sources */,
+				FFF7DA581FED91FF004D8ED8 /* PopupVC.swift in Sources */,
 				ACC6EBEB1F913540000842E9 /* Channel.swift in Sources */,
 				AC0657141FC35476004A1BB1 /* TwitchChannelVC.swift in Sources */,
 				AC7995691F86CB59000D399C /* UIImageViewExtension.swift in Sources */,
