@@ -46,7 +46,7 @@ class PlayerCell: UITableViewCell {
             self.userImageView.downloadedFrom(link: image)
         }
     
-        if player1.name == "TennantTheVast" {
+        if player1.name == player.name! {
             if participantArray1[0].skillTier == 0 {
                 rankLabel.text = "Just Beginning"
                 rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
@@ -168,7 +168,7 @@ class PlayerCell: UITableViewCell {
                 rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
                 skillTierImage.image = UIImage(named: "tier_10c")
             }
-        } else if player2.name == "TennantTheVast" {
+        } else if player2.name == player.name! {
             if participantArray1[1].skillTier == 0 {
                 rankLabel.text = "Just Beginning"
                 rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
@@ -290,7 +290,7 @@ class PlayerCell: UITableViewCell {
                 rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
                 skillTierImage.image = UIImage(named: "tier_10c")
             }
-        } else if player3.name == "TennantTheVast" {
+        } else if player3.name == player.name! {
             if participantArray1[2].skillTier == 0 {
                 rankLabel.text = "Just Beginning"
                 rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
@@ -412,7 +412,7 @@ class PlayerCell: UITableViewCell {
                 rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
                 skillTierImage.image = UIImage(named: "tier_10c")
             }
-        } else if player4.name == "TennantTheVast" {
+        } else if player4.name == player.name! {
             if participantArray2[0].skillTier == 0 {
                 rankLabel.text = "Just Beginning"
                 rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
@@ -534,7 +534,7 @@ class PlayerCell: UITableViewCell {
                 rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
                 skillTierImage.image = UIImage(named: "tier_10c")
             }
-        } else if player5.name == "TennantTheVast" {
+        } else if player5.name == player.name! {
             if participantArray2[1].skillTier == 0 {
                 rankLabel.text = "Just Beginning"
                 rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)
@@ -656,7 +656,7 @@ class PlayerCell: UITableViewCell {
                 rankLabel.textColor = UIColor(red: 0.5426, green: 0.4574, blue: 0.0, alpha: 1)
                 skillTierImage.image = UIImage(named: "tier_10c")
             }
-        } else if player6.name == "TennantTheVast" {
+        } else if player6.name == player.name! {
             if participantArray2[2].skillTier == 0 {
                 rankLabel.text = "Just Beginning"
                 rankLabel.textColor = UIColor(red: 0.3333, green: 0.2902, blue: 0.2353, alpha: 1)

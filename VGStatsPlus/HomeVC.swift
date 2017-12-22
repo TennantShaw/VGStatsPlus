@@ -25,7 +25,7 @@ class HomeVC: UIViewController, UINavigationControllerDelegate {
     }
     
     var player = VGDataSource.instance.player
-    
+    var playerIGN: String = ""
     
     //MARK: - Initializers
     // default in use
@@ -51,7 +51,6 @@ class HomeVC: UIViewController, UINavigationControllerDelegate {
         revealViewController().rightViewRevealWidth = self.view.frame.width - 50
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
-        
         checkStatus()        
     }
     
@@ -105,6 +104,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
                             $0.createdAt! > $1.createdAt!
                         }
                         cell.setup(player: VGDataSource.instance.player!, match: matches[0])
+                        self.playerIGN = self.player!.name!
                     }
                 })
             }
@@ -117,6 +117,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
                         let matches = VGDataSource.instance.matches.sorted {
                             $0.createdAt! > $1.createdAt!
                         }
+                        let player = VGDataSource.instance.player
                         
                         var skinToUse: String = ""
                         let firstMatchRoster: [RosterResource] = matches[0].rosters!
@@ -129,22 +130,22 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
                         let playerFive = secondTeam[1].player!
                         let playerSix = secondTeam[2].player!
                         
-                        if playerOne.name == "TennantTheVast" {
+                        if playerOne.name == player?.name {
                             skinToUse = firstTeam[0].actor! + "_Splash"
                             print(skinToUse)
-                        } else if playerTwo.name == "TennantTheVast" {
+                        } else if playerTwo.name == player?.name {
                             skinToUse = firstTeam[1].actor! + "_Splash"
                             print(skinToUse)
-                        } else if playerThree.name == "TennantTheVast" {
+                        } else if playerThree.name == player?.name {
                             skinToUse = firstTeam[2].actor! + "_Splash"
                             print(skinToUse)
-                        } else if playerFour.name == "TennantTheVast" {
+                        } else if playerFour.name == player?.name {
                             skinToUse = secondTeam[0].actor! + "_Splash"
                             print(skinToUse)
-                        } else if playerFive.name == "TennantTheVast" {
+                        } else if playerFive.name == player?.name {
                             skinToUse = secondTeam[1].actor! + "_Splash"
                             print(skinToUse)
-                        } else if playerSix.name == "TennantTheVast" {
+                        } else if playerSix.name == player?.name {
                             skinToUse = secondTeam[2].actor! + "_Splash"
                             print(skinToUse)
                         }

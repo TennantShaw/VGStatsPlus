@@ -45,7 +45,7 @@ extension MatchesCell: UICollectionViewDelegate, UICollectionViewDataSource, UIC
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "matchCollectionCell", for: indexPath) as? MatchesCollectionCell else { return UICollectionViewCell() }
-        cell.setupCell(match: matches[indexPath.row])
+        cell.setupCell(player: VGDataSource.instance.player!, match: matches[indexPath.row])
         
         return cell
     }
@@ -85,7 +85,7 @@ class MatchesCollectionCell: UICollectionViewCell {
     
     
     //MARK: - MatchCollectionCell Class Methods
-    func setupCell(match: MatchResource) {
+    func setupCell(player: PlayerResource, match: MatchResource) {
         if match.gameMode == "ranked" {
             matchName.text = "Ranked"
         } else if match.gameMode == "blitz_pvp_ranked" {
@@ -94,6 +94,8 @@ class MatchesCollectionCell: UICollectionViewCell {
             matchName.text = "Battale Royale"
         } else if match.gameMode == "blitz_rounds_pvp_casual" {
             matchName.text = "Onslaught"
+        } else if match.gameMode == "casual" {
+            matchName.text = "Casual"
         } else {
             matchName.text = "need to add gameMode type to be recognized"
         }
@@ -108,7 +110,7 @@ class MatchesCollectionCell: UICollectionViewCell {
         let player5 = participantArray2[1].player!
         let player6 = participantArray2[2].player!
         
-        if player1.name == "TennantTheVast" {
+        if player1.name == player.name! {
             if participantArray1[0].winner?.description == "true" {
                 matchImageView.image = UIImage(named: "victory")
                 winOrLossLabel.text = "Victory"
@@ -120,7 +122,7 @@ class MatchesCollectionCell: UICollectionViewCell {
             deathsLabel.text = participantArray1[0].deaths?.description
             assistsLabel.text = participantArray1[0].assists?.description
             lastPlayedChampionImageView.image = UIImage(named: participantArray1[0].actor!)
-        } else if player2.name == "TennantTheVast" {
+        } else if player2.name == player.name! {
             if participantArray1[1].winner?.description == "true" {
                 matchImageView.image = UIImage(named: "victory")
                 winOrLossLabel.text = "Victory"
@@ -132,7 +134,7 @@ class MatchesCollectionCell: UICollectionViewCell {
             deathsLabel.text = participantArray1[1].deaths?.description
             assistsLabel.text = participantArray1[1].assists?.description
             lastPlayedChampionImageView.image = UIImage(named: participantArray1[1].actor!)
-        } else if player3.name == "TennantTheVast" {
+        } else if player3.name == player.name! {
             if participantArray1[2].winner?.description == "true" {
                 matchImageView.image = UIImage(named: "victory")
                 winOrLossLabel.text = "Victory"
@@ -144,7 +146,7 @@ class MatchesCollectionCell: UICollectionViewCell {
             deathsLabel.text = participantArray1[2].deaths?.description
             assistsLabel.text = participantArray1[2].assists?.description
             lastPlayedChampionImageView.image = UIImage(named: participantArray1[2].actor!)
-        } else if player4.name == "TennantTheVast" {
+        } else if player4.name == player.name! {
             if participantArray2[0].winner?.description == "true" {
                 matchImageView.image = UIImage(named: "victory")
                 winOrLossLabel.text = "Victory"
@@ -156,7 +158,7 @@ class MatchesCollectionCell: UICollectionViewCell {
             deathsLabel.text = participantArray2[0].deaths?.description
             assistsLabel.text = participantArray2[0].assists?.description
             lastPlayedChampionImageView.image = UIImage(named: participantArray2[0].actor!)
-        } else if player5.name == "TennantTheVast" {
+        } else if player5.name == player.name! {
             if participantArray2[1].winner?.description == "true" {
                 matchImageView.image = UIImage(named: "victory")
                 winOrLossLabel.text = "Victory"
@@ -168,7 +170,7 @@ class MatchesCollectionCell: UICollectionViewCell {
             deathsLabel.text = participantArray2[1].deaths?.description
             assistsLabel.text = participantArray2[1].assists?.description
             lastPlayedChampionImageView.image = UIImage(named: participantArray2[1].actor!)
-        } else if player6.name == "TennantTheVast" {
+        } else if player6.name == player.name! {
             if participantArray2[2].winner?.description == "true" {
                 matchImageView.image = UIImage(named: "victory")
                 winOrLossLabel.text = "Victory"
