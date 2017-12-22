@@ -94,6 +94,8 @@ class MatchesCollectionCell: UICollectionViewCell {
             matchName.text = "Battale Royale"
         } else if match.gameMode == "blitz_rounds_pvp_casual" {
             matchName.text = "Onslaught"
+        } else if match.gameMode == "casual" {
+            matchName.text = "Casual"
         } else {
             matchName.text = "need to add gameMode type to be recognized"
         }
