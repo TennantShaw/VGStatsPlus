@@ -25,7 +25,7 @@ class HomeVC: UIViewController, UINavigationControllerDelegate {
     }
     
     var player = VGDataSource.instance.player
-    
+    var playerIGN: String = ""
     
     //MARK: - Initializers
     // default in use
@@ -51,7 +51,6 @@ class HomeVC: UIViewController, UINavigationControllerDelegate {
         revealViewController().rightViewRevealWidth = self.view.frame.width - 50
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
-        
         checkStatus()        
     }
     
@@ -105,6 +104,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
                             $0.createdAt! > $1.createdAt!
                         }
                         cell.setup(player: VGDataSource.instance.player!, match: matches[0])
+                        self.playerIGN = self.player!.name!
                     }
                 })
             }
