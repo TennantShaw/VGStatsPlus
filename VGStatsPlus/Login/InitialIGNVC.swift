@@ -30,8 +30,6 @@ class InitialIGNVC: UIViewController, UITextFieldDelegate {
     @IBAction func submitButton(_ sender: UIButton) {
         let name = playerName
         let region = playerRegionShard
-        let myVC = storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? HomeVC
-        myVC!.playerIGN = name!
         
         if textFieldIGN.text != "" { VGDataSource.instance.getUserData(name: name!, regional: region!, success: { (success) in
             if success {
