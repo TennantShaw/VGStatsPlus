@@ -416,7 +416,7 @@
         <!--PopupVC-->
         <scene sceneID="Qgo-cA-5sN">
             <objects>
-                <viewController storyboardIdentifier="PopUpVC" id="T68-oq-Xv9" customClass="PopupVC" customModule="VGStatsPlus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PopUpVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="T68-oq-Xv9" customClass="PopupVC" customModule="VGStatsPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="G08-Ui-BDK"/>
                         <viewControllerLayoutGuide type="bottom" id="2ph-dP-aQl"/>
@@ -452,7 +452,7 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="0.25489619006849318" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SN6-85-p6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
