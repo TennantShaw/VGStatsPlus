@@ -24,7 +24,8 @@ class InitialIGNVC: UIViewController, UITextFieldDelegate {
     var regionalShards = ["ea", "eu", "sg", "na", "sa"] // does not include tournament shards at this time
     
     var playerName: String?
-    var playerRegionShard: String?
+    var playerRegionShard: String? 
+    
     
     //MARK: - Actions
     @IBAction func submitButton(_ sender: UIButton) {
@@ -53,6 +54,7 @@ class InitialIGNVC: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func IGNTextFieldChanged(_ sender: UITextField) {
+        playerName = sender.text
     }
     
     @IBAction func dismissKeyboardGesture(_ sender: UITapGestureRecognizer) {
