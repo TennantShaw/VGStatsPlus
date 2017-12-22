@@ -28,19 +28,19 @@ class InitialIGNVC: UIViewController, UITextFieldDelegate {
     
     //MARK: - Actions
     @IBAction func submitButton(_ sender: UIButton) {
-        let name = playerName
-        let region = playerRegionShard
+        guard let name = playerName else { return }
+        guard let region = playerRegionShard else { return }
         
-        if textFieldIGN.text != "" { VGDataSource.instance.getUserData(name: name!, regional: region!, success: { (success) in
+        if textFieldIGN.text != "" { VGDataSource.instance.getUserData(name: name, regional: region, success: { (success) in
             if success {
                 print("successFully got data")
-                VGFirebaseDB.instance.updateIGN(userData: ["ign":name!, "shardID": region!])
-                SavedStatus.instance.savedUserIGN = [name!:region!]
+                VGFirebaseDB.instance.updateIGN(userData: ["ign":name, "shardID": region])
+                SavedStatus.instance.savedUserIGN = [name:region]
                 let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                 let swVC = storyBoard.instantiateViewController(withIdentifier: "SWVC")
                 self.present(swVC, animated: true, completion: {
                     SavedStatus.instance.isLoggedIn = true
-                    SavedStatus.instance.savedUserIGN = [name!:region!]
+                    SavedStatus.instance.savedUserIGN = [name:region]
                 })
             } // may need to write code here to let me display error message to user.
         })
