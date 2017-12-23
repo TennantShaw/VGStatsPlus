@@ -433,7 +433,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="307" height="165"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oby-BH-zwY">
@@ -1769,6 +1769,10 @@
                                         <state key="normal" title=" change IGN">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="goToIGNView:" destination="FVK-XN-S54" eventType="touchUpInside" id="vnT-Ap-hmb"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="IGNSeq" id="MBA-lk-6Lb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtN-wK-j51" customClass="RoundedButton" customModule="VGStatsPlus" customModuleProvider="target">
                                         <rect key="frame" x="5" y="5" width="389" height="50"/>
