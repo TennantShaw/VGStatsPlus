@@ -28,8 +28,19 @@ class InitialIGNVC: UIViewController, UITextFieldDelegate {
     
     //MARK: - Actions
     @IBAction func submitButton(_ sender: UIButton) {
-        guard let name = playerName else { return }
-        guard let region = playerRegionShard else { return }
+        guard let name = playerName else {
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let popUpVC = storyBoard.instantiateViewController(withIdentifier: "PopUpVC")
+            self.present(popUpVC, animated: true, completion: nil)
+            return
+        }
+ 
+        guard let region = playerRegionShard else {
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let popUpVC = storyBoard.instantiateViewController(withIdentifier: "PopUpVC")
+            self.present(popUpVC, animated: true, completion: nil)
+            return
+        }
         
         if textFieldIGN.text != "" { VGDataSource.instance.getUserData(name: name, regional: region, success: { (success) in
             if success {
@@ -42,13 +53,8 @@ class InitialIGNVC: UIViewController, UITextFieldDelegate {
                     SavedStatus.instance.isLoggedIn = true
                     SavedStatus.instance.savedUserIGN = [name:region]
                 })
-            } // may need to write code here to let me display error message to user.
+            }
         })
-        } else {
-            // let user know that they cannot submit until they have added an IGN and selected a server region
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let popUpVC = storyBoard.instantiateViewController(withIdentifier: "PopUpVC")
-            self.present(popUpVC, animated: true, completion: nil)
         }
     }
 
