@@ -523,7 +523,7 @@
 				TargetAttributes = {
 					302FA9D11F798EE60042DAD5 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = U3FSDK5XFF;
+						DevelopmentTeam = F8QRZL97KT;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -898,7 +898,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = U3FSDK5XFF;
+				DEVELOPMENT_TEAM = F8QRZL97KT;
 				INFOPLIST_FILE = VGStatsPlus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Tennant.Shaw.VGStatsPlus;
@@ -915,7 +915,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = U3FSDK5XFF;
+				DEVELOPMENT_TEAM = F8QRZL97KT;
 				INFOPLIST_FILE = VGStatsPlus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Tennant.Shaw.VGStatsPlus;
