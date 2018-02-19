@@ -241,6 +241,8 @@ extension ChannelVC: UICollectionViewDataSource, UICollectionViewDelegate {
             self.present(createChannelVC, animated: true, completion: nil)
             self.backView.isHidden = false
         } else {
+            self.messages.removeAll()
+            self.tableView.reloadData()
             VGFirebaseDB.instance.selectedChannel = channels[indexPath.row - 1]
             VGFirebaseDB.instance.getMessages(forChannel: channels[indexPath.row - 1], handler: { (messagesArray) in
                 self.messages = messagesArray
@@ -287,12 +289,16 @@ extension ChannelVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let destinationVC = storyboard.instantiateViewController(withIdentifier: "MatchDetailVC") as! MatchHistoryViewController
-//        VGDataSource.instance.selectedMatch = VGDataSource.instance.matches[indexNum]
-        //        if VGDataSource.instance.selectedMatch != nil {
-        //            self.delegate?.present(destinationVC, animated: true, completion: nil)
-        //        }
+        if messages[indexPath.row].messageType == "match" {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let destinationVC = storyboard.instantiateViewController(withIdentifier: "MatchDetailVC") as! MatchHistoryViewController
+            let match = messages[indexPath.row]
+            VGDataSource.instance.getMatch(withId: match.content, regional: match.userShard, success: { (success) in
+                if success {
+                   self.present(destinationVC, animated: true, completion: nil)
+                }
+            })
+            
+        }
     }
 }

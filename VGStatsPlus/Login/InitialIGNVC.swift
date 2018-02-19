@@ -26,6 +26,7 @@ class InitialIGNVC: UIViewController, UITextFieldDelegate {
     var playerName: String?
     var playerRegionShard: String?
     
+    
     //MARK: - Actions
     @IBAction func submitButton(_ sender: UIButton) {
         guard let name = playerName else {
@@ -42,7 +43,11 @@ class InitialIGNVC: UIViewController, UITextFieldDelegate {
             return
         }
         
-        if textFieldIGN.text != "" { VGDataSource.instance.getUserData(name: name, regional: region, success: { (success) in
+        if textFieldIGN.text != "" {
+            guard let name = playerName else { return }
+            guard let region = playerRegionShard else { return }
+            
+            VGDataSource.instance.getUserData(name: name, regional: region, success: { (success) in
             if success {
                 print("successFully got data")
                 VGFirebaseDB.instance.updateIGN(userData: ["ign":name, "shardID": region])
@@ -59,6 +64,7 @@ class InitialIGNVC: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func IGNTextFieldChanged(_ sender: UITextField) {
+        playerName = sender.text
     }
     
     @IBAction func dismissKeyboardGesture(_ sender: UITapGestureRecognizer) {
