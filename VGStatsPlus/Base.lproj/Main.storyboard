@@ -119,6 +119,7 @@
                                 <rect key="frame" x="142" y="502.66666666666674" width="130" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="6as-oX-VPe"/>
+                                    <constraint firstAttribute="width" constant="130" id="9Pa-xJ-aZ9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Submit">
@@ -135,14 +136,13 @@
                         <constraints>
                             <constraint firstItem="5h3-Oo-NwA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2hn-hD-12M"/>
                             <constraint firstItem="0Zn-bh-2YZ" firstAttribute="top" secondItem="87u-fG-VlX" secondAttribute="bottom" constant="50" id="Irc-YK-tfg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0Zn-bh-2YZ" secondAttribute="trailing" constant="122" id="L6O-yw-lx6"/>
                             <constraint firstItem="ZtT-zP-sB2" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Mfr-24-23i"/>
                             <constraint firstItem="87u-fG-VlX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="68" id="PzP-I5-GeO"/>
                             <constraint firstItem="87u-fG-VlX" firstAttribute="top" secondItem="ZtT-zP-sB2" secondAttribute="bottom" constant="40" id="ULX-2M-Yz4"/>
                             <constraint firstItem="ZtT-zP-sB2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="c5h-A4-7t6"/>
                             <constraint firstItem="5h3-Oo-NwA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="fz3-Dg-l5d"/>
+                            <constraint firstItem="0Zn-bh-2YZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j6n-8i-AZQ"/>
                             <constraint firstItem="ZtT-zP-sB2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kOp-ry-PIf"/>
-                            <constraint firstItem="0Zn-bh-2YZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="122" id="qu2-aT-Cho"/>
                             <constraint firstAttribute="trailingMargin" secondItem="87u-fG-VlX" secondAttribute="trailing" constant="68" id="rhC-dk-VK5"/>
                         </constraints>
                     </view>
