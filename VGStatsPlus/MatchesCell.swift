@@ -96,6 +96,10 @@ class MatchesCollectionCell: UICollectionViewCell {
             matchName.text = "Onslaught"
         } else if match.gameMode == "casual" {
             matchName.text = "Casual"
+        } else if match.gameMode == "private_party_vg_5v5" {
+            matchName.text = "5v5 Custom"
+        } else if match.gameMode == "5v5_pvp_casual" {
+            matchName.text = "5v5 Casual"
         } else {
             matchName.text = "need to add gameMode type to be recognized"
         }
